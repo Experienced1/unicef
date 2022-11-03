@@ -1,0 +1,42 @@
+.main{
+    width: 100%;
+}
+
+/* main-header *//* main-header */
+.main-header{
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* header-top */
+.main-header .header-top{
+    display: flex;
+    justify-content: space-between;
+    width: 455px;
+}
+
+.main-header .header-top li{
+    line-height: 30px;
+    margin: 5px 0px 5px 8px;
+}
+
+.main-header .header-top a{
+    padding: 0px 0px 0px 8px;
+    border-left: 0.3px solid gray;
+}
+
+.main-header .header-top button{
+    border: none;
+    background-color: rgb(28, 171, 226);
+    color: white;
+}
+
+.main-header .header-top input{
+    height: 30px;
+}
+
+.main-header .header-top li:first-child{
+    border-right: none
+}

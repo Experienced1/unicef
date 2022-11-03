@@ -1,0 +1,36 @@
+/* reset.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+*{margin: 0; padding: 0;}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+    color: #2D2926;
+}
+
+img{
+    border:0;
+}
+
+ul, ol, li{
+    list-style:none;
+}
+
+a:link{
+    text-decoration: none;
+    color: #2D2926;
+}
+
+a:hover{ /*마우스를 올렸을 때*/
+    color: rgb(28, 171, 226);
+}
+
+a:active{ /*눌렀을 때*/
+    text-decoration: underline;
+}
+
+a:visited{ /*눌렀다가 뗐을 때*/
+    color: rgb(28, 171, 226);
+}
