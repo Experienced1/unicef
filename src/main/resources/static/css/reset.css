@@ -1,13 +1,21 @@
 /* reset.css */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
-*{margin: 0; padding: 0;}
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
 
 body{
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 0.9em;
-    font-weight: 400;
+    font-weight: 500;
     color: #2D2926;
+}
+
+.container{
+    min-width: 1000px;
+    width: 100%;
 }
 
 img{
@@ -33,4 +41,59 @@ a:active{ /*눌렀을 때*/
 
 a:visited{ /*눌렀다가 뗐을 때*/
     color: rgb(28, 171, 226);
+}
+
+input{
+    padding: 0px 10px;
+    border: 0.3px solid rgb(150, 150, 150);
+}
+
+input:focus{
+    outline: none;
+    border: 0.3px solid rgb(28, 171, 226);
+}
+
+/* 버튼 */
+
+.button{
+    cursor: pointer;
+    width: 100%; height: 60px;
+    font-size: 20px;
+    font-weight: 800;
+    border: none;
+    color: rgb(45, 41, 38);
+    background-color: rgb(28, 171, 226);
+}
+
+.button:focus{
+    outline: none;
+    border: none;
+}
+
+.yellow-button{
+    color: rgb(45, 41, 38);
+    background-color: rgb(255, 220, 14);
+}
+
+.white-button{
+    color: rgb(28, 171, 226);
+    background-color: rgb(255, 255, 255);
+}
+
+.sky-button{
+    color: rgb(255, 255, 255);
+    background-color: rgb(28, 171, 226);
+}
+
+.yellow-button:hover{
+    background-color: rgb(255, 191, 14);
+}
+
+.white-button:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(28, 171, 226);
+}
+
+.sky-button:hover{
+    background-color: rgb(28, 120, 226);
 }
