@@ -3,22 +3,20 @@ main{
     position: relative;
 }
 
+/* main-header *//* main-header *//* main-header *//* main-header */
 /* .header-top *//* .header-top *//* .header-top */
 .header-top{
     width: 1200px; height: 150px;
+    max-width: 1200px;
+    min-width: 1000px;
     margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 30px;
 }
 
 /* header-top-auto *//* header-top-auto */
 .header-top-auto{
-    display: flex;
-    justify-content: flex-end;
-    max-width: 1200px;
-    min-width: 1000px;
-    padding: 10px 30px;
-}
-
-.header-top-auto ul{
     float: right;
     display: flex;
     justify-content: space-between;
@@ -63,16 +61,16 @@ main{
 .header-mid-auto{
     max-width: 1200px;
     min-width: 1000px;
-    height: 100px;
     margin: 0 auto;
+    height: 100px;
     padding: 0px 30px;
 }
 
 /* logo */
 .header-mid-auto .header-logo{
     float: left;
-    margin: 20px 40px 0px 0px;
-    height: 60px;
+    margin: 10px 70px 0px 0px;
+    height: 80px;
 }
 
 .header-mid-auto .header-logo img{
@@ -81,11 +79,10 @@ main{
 
 /* main-menu */
 .main-menu{
-    width: 600px;
+    width: 680px;
     float: left;
     display: flex;
     justify-content: space-between;
-    background-color: aquamarine;
 }
 
 .main-menu > li{
@@ -101,35 +98,31 @@ main{
 /* header-bot *//* header-bot *//* header-bot */
 .header-bot{
     position: fixed; left: 0px; top: 150px;
-    display: flex;
     width: 100%; height: 200px;
     background-color: white;
     border-bottom: 0.3px solid rgb(200,200,200);
-    /* display: none; */
 }
 
 /* header-bot-auto *//* header-bot-auto */
 .header-bot-auto{
     max-width: 1200px;
     min-width: 1000px;
-    display: flex;
     margin: 0 auto;
-    padding: 0px 30px;
+    display: flex;
+    padding: 0px 230px;
 }
 
 .header-bot-auto > ul{
-    width: 150px; height: 200px;
+    width: 170px; height: 200px;
     padding: 25px 0px;
     border-bottom: 0.3px solid rgb(200,200,200);
-
-    background-color: aquamarine;
 }
 
 .header-bot-auto > ul li{
     width: 100%;
     display: block;
     line-height:50px;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 
@@ -141,9 +134,9 @@ main{
 }
 
 
-/* main-content *//* main-content */
+/* main-content *//* main-content *//* main-content *//* main-content */
 .main-content{
-    width: 100%; height: 200px;
+    width: 100%; height: 900px;
     background-color: #888;
 }
 
