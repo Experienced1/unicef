@@ -54,10 +54,11 @@ main{
     position: fixed; left: 0px; top: 50px;
     width: 100%;
     height: 100px;
+    background-color: white;
     border-bottom: 0.3px solid rgb(200,200,200);
 }
 
-/* header-mid-auto *//* header-mid-auto */
+/* header-mid-auto *//* header-mid-auto1 */
 .header-mid-auto{
     max-width: 1200px;
     min-width: 1000px;
@@ -78,53 +79,22 @@ main{
 }
 
 /* main-menu */
-.main-menu{
+.header-mid-auto .main-menu{
     width: 680px;
     float: left;
     display: flex;
     justify-content: space-between;
 }
 
-.main-menu > li{
+.header-mid-auto .main-menu > li{
     width: 100%;
 }
 
-.main-menu> li > a{
+.header-mid-auto .main-menu> li > a{
     display: block;
     line-height: 100px;
     font-size: 20px;
 }
-
-/* header-bot *//* header-bot *//* header-bot */
-.header-bot{
-    position: fixed; left: 0px; top: 150px;
-    width: 100%; height: 200px;
-    background-color: white;
-    border-bottom: 0.3px solid rgb(200,200,200);
-}
-
-/* header-bot-auto *//* header-bot-auto */
-.header-bot-auto{
-    max-width: 1200px;
-    min-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    padding: 0px 230px;
-}
-
-.header-bot-auto > ul{
-    width: 170px; height: 200px;
-    padding: 25px 0px;
-    border-bottom: 0.3px solid rgb(200,200,200);
-}
-
-.header-bot-auto > ul li{
-    width: 100%;
-    display: block;
-    line-height:50px;
-    font-size: 17px;
-}
-
 
 /* support-button */
 .header-mid-auto .support-button{
@@ -132,6 +102,64 @@ main{
     width: 158px;
     margin: 20px 0px;
 }
+
+/* header-midsub *//* header-midsub */
+.header-midsub{
+    position: fixed; left: 0px; top: 150px;
+    width: 100%; height: 200px;
+    background-color: white;
+    border-bottom: 0.3px solid rgb(200,200,200);
+}
+
+/* header-midsub-auto *//* header-midsub-auto */
+.header-midsub-auto{
+    max-width: 1200px;
+    min-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0px 230px;
+}
+
+.header-midsub-auto > ul{
+    width: 170px; height: 200px;
+    padding: 25px 0px;
+    border-bottom: 0.3px solid rgb(200,200,200);
+}
+
+.header-midsub-auto > ul li{
+    width: 100%;
+    display: block;
+    line-height:50px;
+    font-size: 17px;
+}
+
+/* header-bot *//* header-bot *//* header-bot */
+.header-bot{
+    top: 150px;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(28, 171, 226);
+}
+
+/* header-bot-auto *//* header-bot-auto */
+.header-bot-auto{
+    max-width: 1200px;
+    min-width: 1000px;
+    margin: 0 auto;
+    height: 200px;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-bot-auto > h1{
+    font-size: 48px;
+    line-height: 200px;
+    color: white;
+}
+
+
+
 
 
 /* main-content *//* main-content *//* main-content *//* main-content */
