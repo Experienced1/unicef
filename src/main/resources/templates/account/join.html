@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/account/join.css">
+    <title>어린이 정기후원 및 정기기부 단체</title>
+</head>
+<body>
+    <div class="container">
+        <main>
+<!-- header -->
+            <header class="main-header">
+                <!-- header-top -->
+                <div class="header-top">
+                    <ul class="header-top-auto">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><button>기부금영수증</button></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><input type="text"></li>
+                    </ul>
+                </div>
+                <!-- header-mid -->
+                <div class="header-mid">
+                    <div class="header-mid-auto">                                    
+                        <a href="#" class="header-logo">
+                            <img src="/static/images/header/logo.png" alt="logo">
+                        </a>  
+                        <ul class="main-menu">
+                            <li>
+                                <a href="#">하는일</a>  
+                            </li>
+                            <li>
+                                <a href="#">후원하기</a>
+                            </li>
+                            <li>
+                                <a href="#">참여활동</a> 
+                            </li>
+                            <li>
+                                <a href="#">유니세프 소개</a>
+                            </li>
+                        </ul>
+                        <input type="button" value="후원하기" class="support-button button yellow-button">
+                    </div>
+                    <div class="header-midsub invisible">
+                        <div class="header-midsub-auto">                                
+                            <ul>
+                                <li><a href="#">활동지역</a></li>
+                                <li><a href="#">스쿨스포아시아</a></li>
+                                <li><a href="#">소식</a></li>
+                            </ul>                  
+                            <ul>
+                                <li><a href="#">정기후원</a></li>
+                                <li><a href="#">일시후원</a></li>
+                                <li><a href="#">생명을 구하는 선물</a></li>
+                            </ul>                    
+                            <ul>
+                                <li><a href="#">후원자이야기</a></li>
+                                <li><a href="#">자원봉사</a></li>
+                            </ul>                
+                            <ul>
+                                <li><a href="#">소개</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">소식</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- header-bot -->
+                <div class="header-bot">
+                    <div class="header-bot-auto">
+                        <div class="header-bot-title">
+                            <h1>회원가입</h1>
+                            <strong>유니세프한국위원회에 오신것을 환영합니다</strong>
+                        </div>
+                    </div>
+                </div>
+            </header>
+<!-- section -->
+            <section class="join">
+                <div class="join-container">
+                    <div class="title-wrap join-title-wrap">
+                        <h2>일반 회원가입</h2>
+                        <p>아이디, 패스워드 등록으로 회원가입 하실 수 있습니다.</p>
+                        <button type="button" class="button sky-button join-button">회원가입하기</button>
+
+                    </div>
+                    <div class="title-wrap sns-join-title-wrap">
+                        <h2>SNS 간편 회원가입</h2>
+                        <p>SNS 계정으로 간편하게 회원가입 하실 수 있습니다.</p>
+                        <div class="sns-join">
+                            <div class="sns">
+                                <div class="sns-img naver">
+                                    <img src="/static/images/sns/naver.png" alt="네이버">
+                                    <p>네이버</p>
+                                </div>
+                            </div>
+                            <div class="sns">
+                                <div class="sns-img kakao">
+                                    <img src="/static/images/sns/kakao.png" alt="카카오">
+                                    <p>카카오</p>
+                                </div>
+                            </div>
+                            <div class="sns">
+                                <div class="sns-img google">
+                                    <img src="/static/images/sns/google.png" alt="구글">
+                                    <p>구글</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+<!-- footer -->
+            <footer class="main-footer">
+            </footer>
+        </main>
+    </div>
+    <script src="/static/js/main_header.js"></script>
+</body>
+</html>

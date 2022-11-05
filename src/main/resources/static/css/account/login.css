@@ -1,0 +1,122 @@
+/* login *//* login *//* login *//* login */
+.login{
+    width: 100%; 
+    height: 900px;
+}
+
+/* login-container *//* login-container *//* login-container */
+.login-container{
+    max-width: 544px;
+    width: 100%;
+    padding-bottom: 240px;
+    margin: 0 auto;
+}
+.login-title-wrap{
+    padding: 96px 30px 95px;
+}
+
+h2{
+    color: rgb(28, 171, 226);
+}
+
+.login-title-wrap > h2{
+    font-size: 40px;
+    line-height: 1.56;
+    font-weight: 400 !important;
+}
+
+.login-title-wrap > p{
+    margin-top: 22px;
+    font-size: 14px;
+    font-weight: normal !important;
+}
+
+.login-current{
+    padding: 0px 30px;
+}
+
+.login-form-group{
+    padding-bottom: 24px;
+}
+
+.login-input{
+    width: 100%;
+    padding: 17px;
+    margin-bottom: 17px;
+}
+
+.login-save-find{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-save-find a{
+    text-decoration: underline;
+    color: #828385;
+}
+
+.id-save{
+    color: #2D2926;
+    font-weight: normal !important;
+}
+.input-checkbox{
+    display: flex;
+    align-items: center;
+}
+.id-check{
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.id-text{
+    font-size: 15px;
+    font-weight: normal !important;
+    padding-left: 8px;
+}
+
+.login-form-group > p{
+    margin-top: 38px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: normal !important;
+}
+hr{
+    height: 1px;
+    background-color:rgb(229, 230, 232);
+    border: none;
+    margin: 40px 0;
+}
+/* SNS-login *//* SNS-login *//* SNS-login */
+h3{
+    font-size: 16px;
+    letter-spacing: -1.2px;
+}
+
+
+.sns-login{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.sns{
+    width: 100%;
+    cursor: pointer;
+}
+.sns-img{
+    text-align: center;
+}
+
+.sns img{
+    width: 60px;
+    height: 60px;
+}
+.sns p{
+    font-size: 16px;
+    font-weight: normal !important;
+    line-height: 2;
+
+}
+
