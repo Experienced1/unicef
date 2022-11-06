@@ -223,6 +223,8 @@
     width: 1140px;
     padding: 0 0 48px;
     box-sizing: border-box;
+    font-size: 30px;
+    font-weight: 700 !important;
 }
 .box {
     padding: 48px 20px;
