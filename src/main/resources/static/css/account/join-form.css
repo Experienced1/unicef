@@ -27,6 +27,7 @@
 label{
     font-size: 16px;
     font-weight: normal;
+    line-height: 1.75;
     position: relative;
 }
 label::after{
