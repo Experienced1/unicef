@@ -8,6 +8,7 @@
 .join-container{
     max-width: 584px;
     width: 100%;
+    padding-bottom: 120px;
     margin: 0 auto;
 }
 .title-wrap{
@@ -40,7 +41,7 @@ h2{
 /* SNS-join *//* SNS-join *//* SNS-join */
 
 .sns-join-title-wrap{
-    padding: 64px 0px 120px;
+    padding: 64px 0px 0px;
 }
 
 .sns-join{
