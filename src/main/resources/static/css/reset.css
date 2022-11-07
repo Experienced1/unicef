@@ -36,16 +36,15 @@ a:link{
     display: none;
 }
 
+a:visited{ /*눌렀다가 뗐을 때*/
+    color: #2D2926;
+}
 
 a:hover{ /*마우스를 올렸을 때*/
     color: rgb(28, 171, 226);
 }
 
 a:active{ /*눌렀을 때*/
-    text-decoration: underline;
-}
-
-a:visited{ /*눌렀다가 뗐을 때*/
     color: rgb(28, 171, 226);
 }
 
@@ -102,4 +101,9 @@ input:focus{
 
 .sky-button:hover{
     background-color: rgb(28, 120, 226);
+}
+
+/* 글자색상 */
+.font-color{
+    color: rgb(28, 171, 226);
 }
