@@ -204,6 +204,11 @@ main{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
+    max-width: 1200px;
+    min-width: 1000px;
+    margin: 0 auto;
+    padding: 0px 20px;
+    justify-content: space-between;
 }
 
 .pledge-oneofflist > li{
