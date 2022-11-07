@@ -36,8 +36,10 @@ mainMenu.onclick = () => {
 
 
 // 스크롤 이동에 따른 헤더 변형 //
-
 $(window).scroll(function(){
+    $('.header-mid').css('left', 0-$(this).scrollLeft());
+    $('.header-midsub').css('left', 0-$(this).scrollLeft());
+
     const scrollP = $(window).scrollTop();
     
     if(scrollP > 50){
@@ -48,3 +50,4 @@ $(window).scroll(function(){
         headerMidsub.style.top = "150px";        
     }
   });
+

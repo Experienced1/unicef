@@ -1,0 +1,24 @@
+/* main-footer *//* main-footer *//* main-footer *//* main-footer */
+.main-footer{
+    width: 100%;
+    background-color: #F8F9FA;
+}
+
+.main-footer > ul {
+    width: 1200px; height: 200px;
+    max-width: 1200px;
+    min-width: 1000px;
+    margin: 0 auto;
+    padding: 46px 60px;
+    background-color: orange;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-footer > ul > li:first-child{
+}
+
+.main-footer > ul > li:last-child{
+    width: 200px; height: 32px;
+    background-color: olive;
+}

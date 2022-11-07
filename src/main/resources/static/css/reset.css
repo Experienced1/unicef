@@ -107,3 +107,10 @@ input:focus{
 .font-color{
     color: rgb(28, 171, 226);
 }
+
+/* float 속성 */
+.clearfix::after{
+    display: block; 
+    content: ''; 
+    clear: both;
+}
