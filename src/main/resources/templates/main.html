@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/44bcb903a4.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
     <title>어린이 정기후원 및 정기기부 단체</title>
 </head>
 <body>
@@ -15,7 +18,7 @@
 <!-- header -->
             <header class="main-header">
                 <!-- header-top -->
-                <div class="header-top">
+                <div class="header-top clearfix">
                     <ul class="header-top-auto">
                         <li><a href="#">로그인</a></li>
                         <li><a href="#">회원가입</a></li>
@@ -26,7 +29,7 @@
                 </div>
                 <!-- header-mid -->
                 <div class="header-mid">
-                    <div class="header-mid-auto">                                    
+                    <div class="header-mid-auto clearfix">                                    
                         <a href="#" class="header-logo">
                             <img src="/static/images/header/logo.png" alt="logo">
                         </a>  
@@ -70,23 +73,194 @@
                         </div>
                     </div>
                 </div>
-            </header>            
-            <!-- header-bot -->
-            <div class="header-bot">
-                <div class="header-bot-auto">
-                    <h1>활동지역</h1>
-                    <img src="/static/images/header/pattern.png" alt="">
+                <!-- header-bot -->
+                <div class="header-bot invisible">
+                    <div class="header-bot-auto">
+                        <h1>활동지역</h1>
+                        <img src="/static/images/header/pattern.png" alt="title">
+                    </div>
                 </div>
-            </div>
+
+            </header>
 <!-- section -->
             <section class="main-content">
                 <div class="main-banner">
+                    <ul class="slide-banner">
+                        <li><img src="/static/images/main/banner1.jpg" alt="banner1"></li>
+                        <li><img src="/static/images/main/banner2.jpg" alt="banner2"></li>
+                        <li><img src="/static/images/main/banner3.jpg" alt="banner3"></li>
+                    </ul>                                    
+                    <ul class="slide-banner-txt">
+                        <li>
+                            <div><b><span>UNICEFF TEAM</span></b></div>
+                            <div><span>우리가 한 팀이라면 해낼 수 있습니다</span></div>
+                            <button class="button sky-button">자세히 보기</button>
+                        </li>
+                        <li>
+                            <div><b><span>
+                                어린이를 지키는 약속<br>
+                                유니세프 Promise 링 
+                            </span></b></div>
+                            <div>
+                                <span>어린이를 위해 약속해주세요</span>
+                            </div>
+                            <button class="button sky-button">자세히 보기</button>
+                        </li>
+                        <li>
+                            <div><b><span>파키스탄 어린이 돕기</span></b></div>
+                            <div><span>최악의 홍수로 위험에 처한 어린이를 구해주세요</span></div>
+                            <div>
+                                <button class="button sky-button">바로 후원하기</button>
+                                <button class="button sky-button">자세히 보기</button>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+    <!-- section2_youtube -->
+                <div class="section2">
+                    <iframe src="https://www.youtube.com/embed/WK40EOcSboM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+    <!-- section3_info -->
+                <ul class="section3">
+                    <li class="section3-1">                            
+                        <h1>유니세프는</h1>
+                        <h1><strong>효율적입니다</strong></h1>
+                        <ul class="section3-2">
+                            <li>
+                                <img src="/static/images/main/main_section3_2_1.png" alt="main_section3_2_1">
+                                <p>
+                                    유니세프한국위원회는 <strong>후원금 100원 중 85원</strong>을 어린이들을 위해 유니세프 본부로 송금하여, <strong>전 세계 33개 유니세프국가위원회 중 가장 높은 송금률</strong>을 자랑합니다.
+                                </p>
+                            </li>
+                            <li>
+                                <img src="/static/images/main/main_section3_2_2.png" alt="main_section3_2_2">
+                                <p>
+                                    <strong>유니세프한국위원회는 호율성, 투명성, 재무안정성 분야의 종합평가에서ⅰ)만점인 별 3개 ⅱ)크라운 인증 ⅲ)20개 세부항목 평가에서 만점을 획득하였는데</strong> 위와 같이 3개 분야에서 각각 최고의 평가를 받은 기관은 피평가 비영리기관 9,648개 중 유니세프한국위원회를 포함 4개에 불과합니다.
+                                </p>
+                            </li>
+                        </ul>
+                        <article class="section3-3">
+                            <div>
+                                유니세프 팩트체크
+                                <h1>유니세프, 믿을 수 있나요?</h1>
+                            </div>
+                            <img src="/static/images/main/main_section3_article1.png" alt="article1.png">
+                        </article>
+                    </li>
+                    <li class="section3-1">                            
+                        <h1>유니세프는</h1>
+                        <h1><strong>투명합니다</strong></h1>
+                        <ul class="section3-2">
+                            <li>
+                                <img src="/static/images/main/main_section3_2_3.png" alt="main_section3_2_3">
+                                <p>
+                                    유니세프한국위원회는 유니세프 본부 및 외부회계법인 감사를 통해 후원금 사용의 투명성을 검증받습니다.    
+                                </p>
+                            </li>
+                            <li>
+                                <img src="/static/images/main/main_section3_2_4.png" alt="main_section3_2_4">
+                                <p>
+                                    유니세프한국위원회는 2021 대한민국 국가사회산업 공헌대상 비영리 기관 '세계 어린이 구호' 부문을 수상했습니다.    
+                                </p>
+                            </li>
+                            <li>
+                                <img src="/static/images/main/main_section3_2_5.png" alt="main_section3_2_5">
+                                <p>
+                                    유니세프는 국제 원조 투명성 캠페인 기관인 Publish What You Fund(PWYF)의 2020년 원조투명성지수(Aid Transparency Index, ATI) 평가에서 2020년에 이어 2회 연속 최상급 등급(Very Good)을 받았습니다.
+                                </p>
+                            </li>
+                        </ul>
+                        <article class="section3-3">
+                            <div>
+                                후원금 사용 내역
+                                <h1>후원금은 어떻게 쓰이나요?</h1>    
+                            </div>
+                            <img src="/static/images/main/main_section3_article2.png" alt="article2.png">
+                        </article>
+                    </li>
+                </ul>
+    <!-- section4_supportButton -->
+                <div class="section4">
+                    <div>
+                        <select name="" class="section4-1">
+                            <option value="">정기</option>
+                            <option value="">일시</option>
+                        </select>
+                        <div class="section4-2">
+                            <div>                                    
+                                <button class="white-button button">30,000원</button>
+                                <button class="white-button button">50,000원</button>
+                                <button class="white-button button">100,000원</button>
+                                <input type="text" placeholder="금액 직접 입력">
+                            </div>
+                            <ul>
+                                <li>월 <strong>30,000원</strong>이면, 전 세계 어린이를 위해 <strong>DTP 예방백신 1,200회분</strong>을 지원할 수 있습니다.</li>
+                                <li class="invisible">월 <strong>50,000원</strong>이면, 전 세계 어린이를 위해 <strong>식수정화제 130,000알</strong>을 지원할 수 있습니다.</li>
+                                <li class="invisible">월 <strong>100,000원</strong>이면, 전 세계 어린이를 위해 <strong>구강수분보충염 12,000포</strong>를 지원할 수 있습니다.</li>
+                            </ul>
+                        </div>
+                        <button class="support-button yellow-button button">후원하기</button>
+                    </div>
+                </div>
+    <!-- section5_note -->
+                <div class="section5">
+                    <h1>유니세프아동친화사회만들기</h1>
+                    <p>
+                        유니세프아동친화사회 만들기 사업은 아동이 생활하는 사회(지역사회, 학교 등)와 아동에게 영향을 미치는 사회(기업, 병원 등)를 모두 아동에게 친화적인 환경으로 만들기 위한 프로젝트입니다. 유니세프한국위원회는 이러한 목적 달성을 위해 유니세프아동친화도시, 유니세프아동친화학교, 유니세프아동친화기업, 유니세프아동친화병원 등을 추진하며 점차 그 영역을 확대해 나가고 있습니다.
+                    </p>
+                    <ul>
+                        <li><a href="#">    
+                            <img src="/static/images/main/main_section5_1.png" alt="section5_1.png">
+                            <span>유니세프아동친화도시</span>
+                        </a></li>
+                        <li><a href="#">    
+                            <img src="/static/images/main/main_section5_2.png" alt="section5_2.png">
+                            <span>유니세프아동친화학교</span>
+                        </a></li>
+                        <li><a href="#">    
+                            <img src="/static/images/main/main_section5_3.png" alt="section5_3.png">
+                            <span>유니세프아동친화기업</span>
+                        </a></li>
+                        <li><a href="#">    
+                            <img src="/static/images/main/main_section5_4.png" alt="section5_4.png">
+                            <span>유니세프아동친화병원</span>
+                        </a></li>
+                    </ul>
                 </div>
             </section>
+<!-- footer -->
             <footer class="main-footer">
+                <ul>
+                    <li class="main-footer-left">
+                        <ul>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">사이트맵</a></li>
+                            <li>후원문의 02.737.1004</li>
+                        </ul>
+                        <div>
+                            사단법인 유니세프한국위원회　대표자: 정갑영　고유번호: 102-82-07606[04099]　서울시 마포구 서강로 60(창전동)
+                        </div>
+                        <div>
+                            COPYRIGHT @ THE KOREAN COMMITTEE FOR UNICEF. ALL RIGHT RESERVED
+                        </div>
+                    </li>
+                    <li class="main-footer-right">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
             </footer>
         </main>
     </div>
-    <script src="/static/js/main_header.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/header.js"></script>
 </body>
 </html>

@@ -1,0 +1,73 @@
+/* main-footer *//* main-footer *//* main-footer *//* main-footer */
+.main-footer{
+    width: 100%;
+    background-color: #F8F9FA;
+}
+
+.main-footer > ul {
+    width: 1200px; height: 200px;
+    max-width: 1200px;
+    min-width: 1000px;
+    margin: 0 auto;
+    padding: 46px 60px;
+    display: flex;
+    justify-content: space-between;
+    color: #828385;
+}
+
+.main-footer a{
+    color: #828385;
+}
+
+.main-footer a:hover{
+    color: #828385;
+}
+
+/* 좌_Adress */
+.main-footer .main-footer-left{
+}
+
+.main-footer .main-footer-left > ul{
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+    margin: 0px 0px 24px;
+}
+
+.main-footer .main-footer-left > ul li{
+    line-height: 25px;
+}
+
+.main-footer .main-footer-left > ul li::before{
+    padding-right: 10px;
+    content: "|";
+    color: #828385;
+}
+
+.main-footer .main-footer-left > ul li:first-child:before{
+    content: "";
+    padding-right: 0px;
+}
+
+.main-footer .main-footer-left > ul li:last-child:before{
+    content: "";
+}
+.main-footer .main-footer-left li:last-child{
+    border: 1px solid #828385;
+    padding-right: 10px;
+}
+
+.main-footer .main-footer-left > div{
+    margin-bottom: 12px;
+}
+
+/* 우_SNS */
+.main-footer .main-footer-right:last-child{
+    width: 200px; height: 32px;
+}
+
+.main-footer .main-footer-right ul{
+    display: flex;
+    justify-content: space-between;    
+    font-size: 30px;
+}
