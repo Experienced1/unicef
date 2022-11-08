@@ -1,0 +1,254 @@
+/* 매달 어린이를 위한 약속 */
+
+.main-banner > h1{
+    margin-top: 100px;
+    font-size: 48px;
+}
+
+.main-contents{
+    max-width: 1200px;
+    min-width: 1000px;
+    margin: 0 auto;
+    height: 200px;
+    padding: 0px 30px;
+    justify-content: space-between;
+}
+
+.main-contents > h1{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.pledge-oneofflist{
+    margin-left: -16px;
+    margin-right: -16px;
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    max-width: 1200px;
+    min-width: 1000px;
+    margin: 0 auto;
+    padding: 0px 20px;
+    justify-content: space-between;
+}
+
+.pledge-oneofflist > li{
+    width: 33.33%;
+    padding: 0px 16px;
+}
+
+
+.pledge-oneoffitem{
+    border: 1px solid rgb(229, 230, 232);
+    background: rgb(255, 255, 255);
+    padding: 24px 24px 128px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.pledge-oneoffthumb > img{
+    max-width: 100%;
+}
+
+.world-children, .refugee-children, .ukraine-children{
+    display: inline-block;
+    line-height: 1.56;
+    letter-spacing: -0.8px;
+    color: rgb(28, 171, 226);
+    font-size: 20px;
+    font-weight: 700 !important;
+}
+
+.world-children-text, .refugee-children-text, .ukraine-children-text{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.pledge-buttoncontainer{
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: 32px;
+}
+
+button:not(:disabled){
+    cursor: pointer;
+}
+
+/* 유니세프 어린이 정기후원자가 되면 */
+
+.section-sub{
+    width: 100%;
+    position: relative;
+    padding: 120px 0px;
+    display: block;
+}
+
+.container-become{
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+}
+
+.section-sub-header{
+    padding-bottom: 96px;
+    display: block;
+}
+
+.section-sub-header-title{
+    display: inline-block;
+    line-height: 1.56;
+    letter-spacing: -0.8px;
+    font-size: 48px;
+    font-weight: 700 !important;
+}
+
+.pledge-pledgebenefit{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.col-img{
+    width: 448px;
+    display: block;
+}
+
+.pledge-benefitImageObject{
+    position: relative;
+    width: 100%;
+    padding-top: 125%;
+    height: 0px;
+    display: block;
+}
+
+:root {
+    --swiper-theme-color: #007aff;
+}
+
+.pledge-benefitImageObject::before{
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 125%;
+    background: rgb(226, 240, 246);
+    position: absolute;
+    left: -64px;
+    top: 74px;
+    transform: rotate(-3deg);
+    z-index: -1;
+}
+
+::before{
+    box-sizing: border-box;
+}
+
+.pledge-img-box{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(/static/images/regular/img_pledge_benefit-5a93c8ca6c40e01469f2738f3f50a97a.png);
+}
+
+.pledge-benefitList{
+    width: 480px;
+    list-style: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.pledge-benefitItem, .pledge-benefitItem-first{
+    background: rgb(248, 249, 250);
+    border-radius: 40px;
+    font-weight: bold;
+    padding: 12px;
+    text-align: center;
+    list-style: none;
+    display: list-item;
+}
+
+.pledge-benefitItem{
+    margin-top: 20px;
+}
+
+.anchorText{
+    text-decoration: none;
+    vertical-align: baseline;
+    color: rgb(28, 171, 226);
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: -0.8px;
+}
+
+button:not(:disabled){
+    cursor: pointer;
+}
+
+button{
+    background: transparent;
+    border: none;
+}
+
+/* 하지만 여전히 도움이 필요한 어린이가 많습니다 */
+
+.pledge-sectionSlide{
+    width: 100%;
+    position: relative;
+    padding: 120px 0px;
+    display: block;
+}
+
+.container-sectionSlide{
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+}
+
+.section-header{
+    padding-bottom: 96px;
+    display: block;
+}
+
+.title-sectionSlide{
+    display: inline-block;
+    line-height: 1.56;
+    letter-spacing: -0.8px;
+    font-size: 48px;
+    font-weight: 700 !important;
+}
+
+.swiper-slide{
+    width: 1224px;
+    opacity: 0.957516;
+    transform: translate3d(-52px, 0px, 0px);
+}
