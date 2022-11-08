@@ -157,22 +157,3 @@ main{
     line-height: 200px;
     color: white;
 }
-
-.main-banner{
-    max-width: 1200px;
-    min-width: 1000px;
-    margin: 0 auto;
-    height: 200px;
-    padding: 0px 30px;
-    display: flex;
-    justify-content: space-between;
-}
-
-
-
-
-/* main-content *//* main-content *//* main-content *//* main-content */
-.main-content{
-    width: 100%; height: 900px;
-}
-
