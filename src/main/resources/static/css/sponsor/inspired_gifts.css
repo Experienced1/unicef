@@ -1,0 +1,24 @@
+#container-wrap{
+    width: 100%;
+}
+
+.container{
+    width: 1120px;
+    margin: 0 auto;
+}
+
+.relief-goods{
+    padding: 96px 30px 120px 0px;
+}
+.relief-goods-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    line-height: 1.56;
+    letter-spacing: -0.8px;
+    font-size: 48px;
+    font-weight: 700 !important;
+}
