@@ -1,6 +1,19 @@
 // 메인배너 슬라이딩 //
 $(function(){
-    setInterval(function(){        
+    var activeBanner = setInterval(slideBanner,5000);
+    let slide = true;
+
+    $(".slide-banner-txt").hover(function(e){
+        if(slide){
+            clearInterval(activeBanner)
+            slide = false;
+        }else{
+            activeBanner = setInterval(slideBanner,5000);
+            slide = true;
+        }
+    });
+
+    function slideBanner(){        
         $('.slide-banner-txt').animate({
             marginLeft: -100 + "%"
         },500,function(){
@@ -16,9 +29,10 @@ $(function(){
             $('.slide-banner').append(web2);
             $('.slide-banner').css("margin-left","0");
         });        
-    },5000);
-    
+    }
 });
+
+
 
 // section4 후원하기 클릭 이벤트 //
 $(function(){
