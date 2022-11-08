@@ -156,10 +156,17 @@ main{
     justify-content: space-between;
 }
 
-.header-bot-auto > h1{
-    font-size: 48px;
-    line-height: 200px;
+.header-bot-auto > div {
     color: white;
+    padding: 50px 0px;
+
+}
+.header-bot-auto > div > h1{
+    font-size: 48px;
+}
+
+.header-bot-auto > div > strong{
+    font-size: 20px;
 }
 
 
