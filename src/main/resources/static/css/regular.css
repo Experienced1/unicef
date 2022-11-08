@@ -315,6 +315,19 @@ button{
     display: block;
 }
 
+next::after{
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAASUExURUdwTDg3Jy0pJy4qJy4rJy0pJruFN0kAAAAFdFJOUwAPxuCoiVkkIwAAAExJREFUOMtjYBgF1AaMAjgkhBVxaDANwq6FJTQUuxZG1VAcWoToryUUFSC0oEkgtBArgd12XO7F6Vzaa8AdUbiilhFXYsCdfEYBAwMAGeAjUrR1MSoAAAAASUVORK5CYII=
+    ) center center / cover no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .swiper-wrapper{
     transition-duration: 0ms;
     position: relative;
@@ -344,3 +357,108 @@ button{
     display: block;
 }
 
+.styledImg{
+    width: 100%;
+    color: rgb(45, 31, 38);
+    vertical-align: middle;
+    border: 0px;
+    max-width: 100%;
+    pointer-events: auto;
+}
+
+.container-qa{
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%, 0px);
+    text-align: right;
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+}
+
+.pledge-children{
+    background: rgb(248, 249, 250);
+    padding: 72px 96px 118px;
+    width: 100%;
+    max-width: 640px;
+    display: inline-block;
+    font-weight: bold;
+    text-align: left;
+}
+
+.pledge-percent{
+    display: block;
+    font-size: 48px;
+    color: rgb(28, 171, 226);
+    margin-top: 24px;
+    font-weight: bold;
+}
+
+/* 어린이는 정기후원을 통해 어떤 도움을 받나요? */
+
+.section-sc-ln{
+    width: 100%;
+    position: relative;
+    padding: 120px 0px;
+    display: block;
+}
+
+.container-qaj{
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+}
+
+.sectionheader{
+    padding-bottom: 96px;
+    display: block;
+}
+
+.titles{
+    display: inline-block;
+    line-height: 1.56;
+    letter-spacing: -0.8px;
+    font-size: 48px;
+    font-weight: 700 !important;
+}
+
+.pledge-tab{
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.col-left{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.maintab-button{
+    background: transparent;
+    border-radius: 0px;
+    line-height: 1.1;
+    height: auto;
+    padding: 0px;
+    display: inline-block;
+    margin-right: 16px;
+    color: rgb(45, 41, 38);
+    font-size: 20px;
+    border: none;
+    font-weight: bold;
+    letter-spacing: -1.2px;
+    transition: all 0.2s ease 0s;
+    text-decoration: none;
+    vertical-align: middle;
+}
