@@ -1,0 +1,257 @@
+/* 유니세프 소개페이지 */
+
+/* unicef_introduction *//* unicef_introduction *//* unicef_introduction */
+.uinicef {
+    width: 100%;
+    
+}
+
+
+/* -------------------------------------------------------------------------------------------- */
+.unicef-container-1 {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1000px;
+    width: 1200px;
+    padding: 96px 30px 120px;
+    box-sizing: border-box;
+}
+/* unicef-introduction *//* unicef-introduction */
+/* 유니세프 소개 글 내용 부분*/
+.unicef-introduction {
+    height: 445px;
+}
+/* description - 설명 글 부분 */
+.description {
+    margin-bottom: 64px;
+    line-height: 2;
+    font-size: 14px;
+    font-weight: normal !important;
+}
+.des-title {
+    display: inline-block;
+    line-height: 1.56;
+    letter-spacing: -0.8px;
+    color: rgb(28, 171, 226);
+    font-size: 40px;
+    font-weight: 400 !important;
+}
+
+
+/* -------------------------------------------------------------------------------------------- */
+.unicef-container-2 {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1000px;
+    width: 1200px;
+    padding: 120px 30px 96px;
+    box-sizing: border-box;
+}
+/* introduction-header-1 *//* introduction-header-1 */
+.introduction-header-1 {
+    margin: 0 auto;
+    /* padding-bottom: 96px; */
+    display: inline-block;
+    line-height: 1.56;
+    letter-spacing: -0.8px;
+    font-size: 30px;
+    font-weight: 700 !important;
+}
+/* slide-contents *//* slide-contents */
+.slide-container {
+    margin: 0 auto;
+    /* width: 1920px; */
+    /* height: 2300px; */
+    height: 100%;
+    background-color: #f8f9fa;
+}
+.slide-contents {
+    margin: 0 auto;
+    width: 1120px;
+    height: 100%;
+}
+.contents {
+    display: flex;
+}
+.contents > dt {
+    padding: 96px 20px 0 0;
+    box-sizing: border-box;
+    width: 560px;
+    height: 557px;
+}
+.contents > dt > span {
+    display: inline-block;
+    line-height: 1.56;
+    letter-spacing: -0.8px;
+    color: rgb(28, 171, 226);
+}
+.contents-titles-1 {
+    font-size: 32px;
+    font-weight: 700 !important;
+}
+.contents-titles-2 {
+    margin-bottom: 32px;
+    font-size: 40px;
+    font-weight: 700 !important;
+}
+.contents-description {
+    line-height: 2;
+    letter-spacing: -1px;
+    font-size: 14px;
+    font-weight: normal !important;
+}
+.contents > dd {
+    width: 560px;
+    height: 557px;
+    background-color: rgb(118, 118, 246);
+}
+.introduction_img {
+    width: 100%;
+}
+.introduction_img > img {
+    width: 560px;
+    height: 557px;
+}
+
+
+/* ------------------------------------------------------------------------------------------- */
+.unicef-container-3 {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1000px;
+    width: 1200px;
+    height: 100%;
+    padding: 240px 30px 120px;
+    box-sizing: border-box;
+}
+/* introduction-header-2 *//* introduction-header-2 */
+.introduction-header-2 {
+    width: 1140px;
+    padding: 0 0 48px;
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 1.56;
+    letter-spacing: -0.8px;
+    font-size: 30px;
+    font-weight: 700 !important;
+}
+ .list {
+    font-size: 16px;
+    font-weight: normal !important;
+}
+.list > li {
+    height: 42px;
+    margin: 0 0 32px;
+    padding: 7px 0px;
+    box-sizing: border-box;
+    line-height: 1.7;
+    letter-spacing: -0.5px;
+}
+.list > li::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: rgb(28, 171, 226);
+    border-radius: 100%;
+} 
+.list > li:nth-child(1)::before {
+    content: "1";
+}
+.list > li:nth-child(2)::before {
+    content: "2";
+}
+.list > li:nth-child(3)::before {
+    content: "3";
+}
+.list > li span {
+    padding-left: 10px;
+}
+.list-description {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: -1px;
+    color: rgb(28, 171, 226);
+} 
+
+
+/* -------------------------------------------------------------------------------------------- */
+.unicef-container-4 {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1000px;
+    width: 1200px;
+    height: 100%;
+    padding: 120px 30px ;
+    box-sizing: border-box;
+}
+/* introduction-header-3 *//* introduction-header-3 */
+.introduction-header-3 {
+    width: 765px;
+    display: inline-block;
+    line-height: 1.56;
+    letter-spacing: -0.8px;
+    padding: 0 0 44px;
+    font-size: 30px;
+    font-weight: 700 !important;
+}
+.header-description {
+    width: 1140px;
+    margin: 32px 0 0;
+    line-height: 2;
+    letter-spacing: -1px;
+    font-size: 16px;
+    font-weight: normal !important;
+}
+
+
+/* -------------------------------------------------------------------------------------------- */
+.unicef-container-5 {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1000px;
+    width: 1200px;
+    height: 100%;
+    padding: 120px 30px 240px;
+    box-sizing: border-box;
+}
+/* introduction-header-4 *//* introduction-header-4 */
+.introduction-header-4 {
+    width: 1140px;
+    padding: 0 0 48px;
+    box-sizing: border-box;
+    font-size: 30px;
+    font-weight: 700 !important;
+}
+.box {
+    padding: 64px 32px;
+    border: 1px solid rgb(229, 230, 232);
+}
+.dl-wrap {
+    width: 100%;
+    height: 100%;
+    letter-spacing: -0.8px;
+}
+.dl-wrap > dt {
+    font-size: 24px;
+    font-weight: 700 !important;
+}
+.dl-wrap > dd {
+    margin: 16px 0 16px;
+    font-size: 16px;
+    font-weight: normal !important;
+}
+.tagline-logo-img {
+    padding: 20px 0 0;
+}
+
+
+
+
+
+
+
+
