@@ -7,31 +7,8 @@
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="/static/css/reset.css">
     <link rel="stylesheet" href="/static/css/header.css">
-    <link rel="stylesheet" href="/static/css/sponsor/inspired_gifts.css">
-    <title>Document</title>
-</head>
-<body>
-    <div id ="container-wrap">
-        <div class = "container">
-            <section class="relief-goods">
-                <header class="relief-goods-header">
-                    <div class="relief-goods-title">
-                        <strong class="title">지구촌 어린이들의<br> 생명을 살리는 구호물품</strong>
-                    </div>
-                </header>
-                <main class="relief-goods-contents">
-
-                </main>
-            </section>
-            <section class="gift">
-
-            </section>
-            <section class="delivery">
-
-            </section>
-        </div>
-    </div>
-
+    <link rel="stylesheet" href="/static/css/account/join.css">
+    <link rel="stylesheet" href="/static/css/faq.css">
     <title>어린이 정기후원 및 정기기부 단체</title>
 </head>
 <body>
@@ -45,7 +22,7 @@
                     <li><a href="#">로그인</a></li>
                     <li><a href="#">회원가입</a></li>
                     <li><button>기부금영수증</button></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="/templates/faq.html">FAQ</a></li>
                     <li><input type="text"></li>
                 </ul>
             </div>
@@ -66,7 +43,7 @@
                             <a href="#">참여활동</a> 
                         </li>
                         <li>
-                            <a href="#">유니세프 소개</a>
+                            <a href="/templates/unicef/unicef_introduction.html">유니세프 소개</a>
                         </li>
                     </ul>
                     <input type="button" value="후원하기" class="support-button button yellow-button">
@@ -88,7 +65,7 @@
                             <li><a href="#">자원봉사</a></li>
                         </ul>                
                         <ul>
-                            <li><a href="#">소개</a></li>
+                            <li><a href="/templates/unicef/unicef_introduction.html">소개</a></li>
                             <li><a href="#">공지사항</a></li>
                             <li><a href="#">소식</a></li>
                         </ul>
@@ -99,21 +76,46 @@
             <div class="header-bot">
                 <div class="header-bot-auto">
                     <div class="header-bot-title">
-                        <h1>생명을 구하는 선물</h1>
-                        <strong>for every child, inspired gifts</strong>
+                        <h1>FAQ</h1>
+                        <strong></strong>
                     </div>
                 </div>
             </div>
             </header>
-        <!-- sponsor-후원과 참여 -->
-            <section class="sponsor">
-                <div>
+        <!-- FAQ 페이지 부분 -->
+            <section class="faq">
+                <div class="faq-container-1">
+        <!-- FAQ 상단부분  -->
+                    <header class="faq-header">
+                        <div class="faq-img">
+                            <img src="/static/images/faq/faq_img1.png" alt="">
+                        </div>
+                        <div class="faq-des">
+                            <h2>
+                                후원금은 투명하게 쓰이나요?
+                            </h2>
+                            <p>
+                                유니세프한국위원회는 후원금 100원 중 85원을 어린이들을 위해 유니세프 본부로 송금하여, 전세계 33개<br>
+                                유니세프국가위원회 중 가장 높은 송금률을 자랑합니다. 유니세프한국위원회는 국내 평가 전문<br>
+                                기관으로부터 높은 효율성과 투명성도 인정받고 있습니다.<br>
+                                <br>
+                                유니세프한국위원회는 독립적인 국내평가 기관이 실시한 공익법인 재무 종합평가에서 재무 안정성 및<br>
+                                효율성, 투명성 및 책무성 종합평가에서 만점인 별3개와 크라운 인증을 2019~2020년 2년 연속<br>
+                                획득했습니다. 특히 2020년에는 20개 세부항목 평가에서도 모두 만점을 받았습니다. 이 3가지 사항을 모두<br>
+                                충족한 법인은 평가 대상 9,648곳 중 유니세프한국위원회를 포함해 4곳(0.04%)에 불과합니다.
+                            </p>
+                        </div>
+                        
+                    </header>
+                    <section class="faq-answer">
+
+                    </section>
 
                 </div>
 
             </section>
         </main>
     </div>    
-    <script src="/static/js/header.js"></script>
+    <script src="/static/js/main_header.js"></script>
 </body>
 </html>
