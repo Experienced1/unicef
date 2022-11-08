@@ -1,0 +1,110 @@
+/* faq *//* faq *//* faq */
+.faq {
+    width: 100%;
+}
+
+/* faq-header *//* faq-header *//* faq-header */
+/* faq 상단 text *//* faq 상단 text *//* faq 상단 text */
+.faq-container-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.faq-header{
+    margin: 96px 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.faq-img-1 {
+    width: 100%;
+    margin-right: 90px;
+}
+
+.faq-img-1 > img {
+    width: 400px;
+    height: 400px;
+}
+
+.faq-img-2{
+    position: absolute;
+    bottom: 0;
+    left: -400px;
+}
+
+.fap-title-wrap{
+    margin-left: 90px;
+    /* 배경이 안먹혀요...ㅜㅜ */
+    width: 100px;
+    height: 100px;
+    background-color:  rgb(82, 151, 219);
+}
+
+.fap-title{
+    text-align: justify;
+    word-break: break-all;
+    font-size: 32px;
+    font-weight: 700 ;
+}
+
+.faq-subtexts {
+    padding-top: 32px ;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+
+/* 하단 list *//* 하단 list *//* 하단 list */
+.faq-container-2 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.faq-main{
+    padding-top: 64px;
+    padding: 0 30px;
+}
+
+.form-group{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-input{
+    position: relative;
+    padding-right: 56px
+}
+
+.input-text{
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 0px 16px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(229, 230, 232);
+    font-size: 16px;
+}
+
+.search-button{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: block;
+    width: 56px;
+    height: 60px;
+    border: none;
+    background: rgb(28, 171, 226) url(/static/images/faq/search.png) no-repeat center center;
+    background-size: 24px;
+}
+
+
+.all-btn > button{
+    width: 120px;
+    font-size: 18px;
+    margin-left: 16px;
+}
