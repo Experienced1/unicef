@@ -28,6 +28,7 @@ $(window).scroll(function(){
     $('.header-mid').css('left', 0-$(this).scrollLeft());
     $('.header-midsub').css('left', 0-$(this).scrollLeft());
 
+
     const scrollP = $(window).scrollTop();
     
     if(scrollP > 50){
