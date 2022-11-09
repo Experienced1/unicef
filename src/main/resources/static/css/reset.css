@@ -48,12 +48,12 @@ a:active{ /*눌렀을 때*/
     color: rgb(28, 171, 226);
 }
 
-input{
+input, textarea{
     padding: 0px 10px;
     border: 0.3px solid rgb(150, 150, 150);
 }
 
-input:focus{
+input:focus, textarea:focus{
     outline: none;
     border: 0.3px solid rgb(28, 171, 226);
 }

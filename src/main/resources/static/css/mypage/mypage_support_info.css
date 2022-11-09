@@ -1,0 +1,30 @@
+
+
+/* support_후원 및 결제정보 */
+.mypage-content-bot .support-info{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.mypage-content-bot .support-info article h2{
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.mypage-content-bot .support-info article p{
+    font-size: 16px;    
+    margin-bottom: 20px;
+}
+
+.mypage-content-bot .support-info article div{
+    text-align: center;
+    font-size: 20px;
+    padding: 96px 16px;
+    border-top: 2px solid #1CABE2;
+    border-bottom: 2px solid rgb(200,200,200);
+}
+
+.mypage-content-bot .support-info img{
+    width: 100%;
+    margin: 50px 0px;
+}

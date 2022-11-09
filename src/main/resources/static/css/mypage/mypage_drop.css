@@ -1,0 +1,119 @@
+
+/* .mypage-drop *//* .mypage-drop *//* .mypage-drop *//* .mypage-drop */
+.mypage-drop{
+    min-width: 1200px;
+    padding: 96px 30px 240px 30px;
+}
+
+/* .mypage-drop-auto *//* .mypage-drop-auto *//* .mypage-drop-auto */
+.mypage-drop-auto{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+/* article1_안내사항 */
+.mypage-drop-auto .article1{
+    width: 100%;
+    background-color: #F8F9FA;
+    border: 1px solid rgb(229, 230, 232);
+    padding: 16px 24px;
+}
+
+.mypage-drop-auto .article1 li{ 
+    position: relative;
+    padding-left: 15px;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+.mypage-drop-auto .article1 li::after{ 
+    content: "";
+    display: block;
+    width: 3px; height: 3px;
+    background: rgb(28, 171, 226);
+    border-radius: 100%;
+    position: absolute; left: 0px; top: 15px;
+}
+
+.mypage-drop-auto .article1 li span{ 
+    color: red;
+    font-weight: 400;
+}
+
+/* article2 ~ 5 */
+.mypage-drop-auto article{
+    margin-top: 80px;
+}
+
+.mypage-drop-auto article > h2{
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.mypage-drop-auto article > p{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.mypage-drop-auto article > div{
+    padding: 32px 0px;
+    border-top: 2px solid rgb(28, 171, 226);
+    border-bottom: 1px solid rgb(183, 184, 186);
+    display: flex;
+    justify-content: space-between;
+}
+
+.mypage-drop-auto article > div label{
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* article2_웹사이트 회원 탈퇴 사유 */
+.mypage-drop-auto .article2 > div label:first-child{
+    padding-left: 20px;
+}
+
+.mypage-drop-auto .article2 > div label:last-child{
+    padding-right: 70px;
+}
+
+/* article3_E-소식지 수신여부 */
+.mypage-drop-auto .article3 > div label:first-child{
+    padding-left: 20px;
+}
+
+.mypage-drop-auto .article3 > div label:last-child{
+    padding-right: 450px;
+}
+
+/* article4_유니세프에 바라는 의견 */
+.mypage-drop-auto .article4 > div textarea{
+    width: 100%; height: 240px;
+    padding: 16px;
+    font-size: 16px;
+    resize: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* article5_본인확인 */
+.mypage-drop-auto .article5 > div{
+    width: 100%;
+}
+
+.mypage-drop-auto .article5 > div > div{
+    width: 50%;
+}
+
+.mypage-content-bot .my-info-edit .article2 > div label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.mypage-content-bot .my-info-edit .article2 > div input{
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 24px;
+    font-size: 16px;
+    border: 1px solid rgb(229, 230, 232);
+}

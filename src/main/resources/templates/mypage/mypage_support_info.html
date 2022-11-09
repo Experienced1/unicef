@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/44bcb903a4.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="/static/css/reset.css">
     <link rel="stylesheet" href="/static/css/header.css">
-    <link rel="stylesheet" href="/static/css/account/join.css">
-    <link rel="stylesheet" href="/static">
+    <link rel="stylesheet" href="/static/css/mypage/mypage.css">
+    <link rel="stylesheet" href="/static/css/mypage/mypage_support_info.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
     <title>어린이 정기후원 및 정기기부 단체</title>
 </head>
 <body>
-    <div class="containel">
+    <div class="container">
         <main>
-        <!-- header -->
+<!-- header -->
             <header class="main-header">
                 <!-- header-top -->
                 <div class="header-top clearfix">
@@ -72,25 +74,80 @@
                         </div>
                     </div>
                 </div>
-            </header>
-        <!-- header-bot -->
+            </header>       
+            <!-- header-bot -->
             <div class="header-bot">
                 <div class="header-bot-auto">
                     <div class="header-bot-title">
-                        <h1>생명을 구하는 선물</h1>
-                        <strong>for every child, inspired gifts</strong>
+                        <h1>마이페이지</h1>
+                        <strong>for every child, UNICEF</strong>
                     </div>
+                    <img src="/static/images/header/pattern.png" alt="title">
                 </div>
             </div>
-        <!-- sponsor-후원과 참여 -->
-            <section class="sponsor">
-                <div>
-
+<!-- section -->
+            <section class="mypage-content">
+                <div class="mypage-content-top">                        
+                    <ul>
+                        <li><a href="/templates/mypage/mypage_my_info.html">개인정보</a></li>
+                        <li><a href="/templates/mypage/mypage_support_info.html" class="active">후원 및 결제정보</a></li>
+                        <li><a href="/templates/mypage/mypage_my_receipt.html">기부금영수증</a></li>
+                        <li><a href="/templates/mypage/mypage_onetoone.html">1:1문의</a></li>
+                    </ul>
                 </div>
-
+                <div class="mypage-content-bot">                        
+                    <ul>
+                        <li class="support-info">
+                            <article>
+                                <h2>정기후원 정보</h2>
+                                <p>현재 유니세프에 후원하고 계신 정기후원 정보입니다.</p>
+                                <div>
+                                    후원내역이 없습니다.
+                                </div>
+                            </article>
+                                <a href="#"><img src="/static/images/mypage/mypage_support.png" alt="mypage_support.png"></a>
+                            <article>
+                                <h2>결제정보</h2>
+                                <p>후원금의 결제정보 변경을 원하시면 [수정]버튼을 눌러주세요.</p>
+                                <div>
+                                    결제 정보가 없습니다.
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
             </section>
+<!-- footer -->
+            <footer class="main-footer">
+                <ul>
+                    <li class="main-footer-left">
+                        <ul>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">사이트맵</a></li>
+                            <li>후원문의 02.737.1004</li>
+                        </ul>
+                        <div>
+                            사단법인 유니세프한국위원회　대표자: 정갑영　고유번호: 102-82-07606[04099]　서울시 마포구 서강로 60(창전동)
+                        </div>
+                        <div>
+                            COPYRIGHT @ THE KOREAN COMMITTEE FOR UNICEF. ALL RIGHT RESERVED
+                        </div>
+                    </li>
+                    <li class="main-footer-right">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </footer>
         </main>
-    </div>    
+    </div>
     <script src="/static/js/header.js"></script>
 </body>
 </html>
