@@ -1,0 +1,169 @@
+
+/* contact_1:1문의 */
+.mypage-content-bot .onetoone{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.mypage-content-bot .onetoone::after{
+    position: absolute;
+    left: 0px; top: 430px;
+    content: "";
+    display: block;
+    width: 100%;
+    min-width: 1200px;
+    height: 440px;
+    background: rgb(226, 240, 246);
+    z-index: -10;
+}
+
+/* contact1 */
+.mypage-content-bot .onetoone .contact_1{ 
+    width: 100%;
+    background-color: #F8F9FA;
+    padding: 16px 24px;
+}
+
+.mypage-content-bot .onetoone .contact_1 li{ 
+    position: relative;
+    padding-left: 15px;
+    font-weight: 300;
+}
+
+.mypage-content-bot .onetoone .contact_1 li::after{ 
+    content: "";
+    display: block;
+    width: 3px;
+    height: 3px;
+    background: rgb(28, 171, 226);
+    border-radius: 100%;
+    position: absolute; left: 0px; top: 10px;
+    z-index: -10;
+}
+
+/* contact2 */
+.mypage-content-bot .onetoone .contact_2{ 
+    margin-top: 48px;
+    text-align: right;
+    color: #828385;
+}
+
+.mypage-content-bot .onetoone .contact_2 a{ 
+    color: #1CABE2;
+    padding-left: 8px;
+    text-decoration: underline;
+}
+
+/* contact3 */
+.mypage-content-bot .onetoone .contact_3{ 
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0px;
+}
+
+.mypage-content-bot .onetoone .contact_3 li{ 
+    display: block;
+    width: 343.5px;
+    height: 300px;
+    margin: 0px 32px 50px 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.mypage-content-bot .onetoone .contact_3 li:nth-child(3), .mypage-content-bot .onetoone .contact_3 li:nth-child(6){ 
+    margin-right: 0px;
+}
+
+.mypage-content-bot .onetoone .contact_3 li a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 320px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #1CABE2;
+    border-radius: 0px 0px 60px;
+    box-shadow: rgb(0 0 0 / 8%) 3px 10px 28px 0px;
+}
+
+.mypage-content-bot .onetoone .contact_3 a:hover{ 
+    border: 5px solid #1CABE2;
+}
+
+.mypage-content-bot .onetoone .contact_3 img{
+    width: 80px; height: 80px;
+}
+
+.mypage-content-bot .onetoone .contact_3 h3{
+    line-height: 1.75;
+    margin-top: 24px;
+}
+
+/* contact4 */
+.mypage-content-bot .onetoone .contact_4{ 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.mypage-content-bot .onetoone .contact_4 button{ 
+    width: 160px;
+}
+
+.mypage-content-bot .onetoone .contact_4 div{ 
+    width: 100%;
+    text-align: center;
+    padding: 96px 0px;
+    margin-top: 50px;
+    border-top: 0.3px solid rgb(200,200,200);
+    border-bottom: 0.3px solid rgb(200,200,200);
+}
+
+/* contact5 */
+.mypage-content-bot .onetoone .contact_5{ 
+    margin-top: 240px;
+    padding: 0px 20px;
+}
+
+.mypage-content-bot .onetoone .contact_5 h3{
+    font-size: 24px;
+    color: #1CABE2;
+    margin-bottom: 40px;
+}
+
+.mypage-content-bot .onetoone .contact_5 p{
+    font-size: 16px;
+    margin-bottom: 70px;
+}
+
+.mypage-content-bot .onetoone .contact_5 table{
+    width: 100%;
+}
+
+.mypage-content-bot .onetoone .contact_5 table th{
+    position: relative;
+    width: 33%;
+    padding: 0px 0px 14px 14px;
+}
+
+.mypage-content-bot .onetoone .contact_5 table th::after{ 
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: rgb(28, 171, 226);
+    border-radius: 100%;
+    position: absolute; left: 0px; top: 7.5px;
+    z-index: -10;
+}
+
+.mypage-content-bot .onetoone .contact_5 table td{
+    padding-left: 14px;
+}
+
+.mypage-content-bot .onetoone .contact_5 table a{
+    color: rgb(28, 171, 226);
+    text-decoration: underline;
+}
+

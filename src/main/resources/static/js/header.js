@@ -22,6 +22,12 @@ headerMidsub.onmouseout = () => {
     headerMidsub.classList.add("invisible");
 }
 
+// 후원하기 페이지 이동 //
+$(function(){
+    $('.support-button').click(function(){
+        location.href = '/templates/donate.html';
+    });
+});
 
 // 스크롤 이동에 따른 헤더 변형 //
 $(window).scroll(function(){
@@ -38,5 +44,5 @@ $(window).scroll(function(){
         headerMid.style.top = "50px";
         headerMidsub.style.top = "150px";        
     }
-  });
+});
 

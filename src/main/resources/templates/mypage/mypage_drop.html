@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/44bcb903a4.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/mypage/mypage_drop.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <title>어린이 정기후원 및 정기기부 단체</title>
+</head>
+<body>
+    <div class="container">
+        <main>
+<!-- header -->
+            <header class="main-header">
+                <!-- header-top -->
+                <div class="header-top clearfix">
+                    <ul class="header-top-auto">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><button>기부금영수증</button></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><input type="text"></li>
+                    </ul>
+                </div>
+                <!-- header-mid -->
+                <div class="header-mid">
+                    <div class="header-mid-auto clearfix">                                    
+                        <a href="/templates/main.html" class="header-logo">
+                            <img src="/static/images/header/logo.png" alt="logo">
+                        </a>  
+                        <ul class="main-menu">
+                            <li>
+                                <a href="#">하는일</a>  
+                            </li>
+                            <li>
+                                <a href="#">후원하기</a>
+                            </li>
+                            <li>
+                                <a href="#">참여활동</a> 
+                            </li>
+                            <li>
+                                <a href="/templates/unicef/unicef_introduction.html">유니세프 소개</a>
+                            </li>
+                        </ul>
+                        <input type="button" value="후원하기" class="support-button button yellow-button">
+                    </div>
+                    <div class="header-midsub invisible">
+                        <div class="header-midsub-auto">                                
+                            <ul>
+                                <li><a href="#">활동지역</a></li>
+                                <li><a href="#">스쿨스포아시아</a></li>
+                                <li><a href="#">소식</a></li>
+                            </ul>                  
+                            <ul>
+                                <li><a href="#">정기후원</a></li>
+                                <li><a href="#">일시후원</a></li>
+                                <li><a href="/templates/sponsor/inspired_gifts.html">생명을 구하는 선물</a></li>
+                            </ul>                    
+                            <ul>
+                                <li><a href="#">후원자이야기</a></li>
+                                <li><a href="#">자원봉사</a></li>
+                            </ul>                
+                            <ul>
+                                <li><a href="/templates/unicef/unicef_introduction.html">소개</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">소식</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>      
+            <!-- header-bot -->
+            <div class="header-bot">
+                <div class="header-bot-auto">
+                    <div class="header-bot-title">
+                        <h1>웹사이트 회원탈퇴</h1>
+                        <strong>for every child, UNICEF</strong>
+                    </div>
+                    <img src="/static/images/header/pattern.png" alt="title">
+                </div>
+            </div>
+<!-- section -->
+            <section class="mypage-drop">
+                <div class="mypage-drop-auto">
+                    <ul class="article1">
+                        <li>유니세프 웹사이트의 회원 탈퇴를 하셔도 후원은 계속해서 진행됩니다.</li>
+                        <li>단, 후원 또는 활동내역을 확인하시는데 불편이 발생할 수 있습니다.</li>
+                        <li>웹 회원 탈퇴 후 재가입은 가능하지만 한 번 탈퇴한 아이디는 다시 사용하실 수 없습니다.</li>
+                        <li><span>웹 회원 탈퇴와 함께 정기후원 중단을 원하시면 후원본부 02-737-1004로 연락</span>주시길 바랍니다.</li>
+                    </ul>
+                    <article class="article2">
+                        <h2>웹사이트 회원 탈퇴 사유</h2>
+                        <p>불편했던 사항을 체크해주시고 유니세프에 바라는 점을 적어주세요</p>
+                        <div>
+                            <label for="dropReason1-1">
+                                <input id="dropReason1-1" name="dropReason1" type="radio" value="아이디 변경/재가입을 위해서">
+                                <span>아이디 변경/재가입을 위해서</span>
+                            </label>
+                            <label for="dropReason1-2">
+                                <input id="dropReason1-2" name="dropReason1" type="radio" value="사용빈도가 낮아서">
+                                <span>사용빈도가 낮아서</span>
+                            </label>
+                            <label for="dropReason1-3">
+                                <input id="dropReason1-3" name="dropReason1" type="radio" value="필요한 정보가 없어서">
+                                <span>필요한 정보가 없어서</span>
+                            </label>
+                            <label for="dropReason1-4">
+                                <input id="dropReason1-4" name="dropReason1" type="radio" value="웹서비스장애빈번">
+                                <span>웹서비스장애빈번</span>
+                            </label>
+                            <label for="dropReason1-5">
+                                <input id="dropReason1-5" name="dropReason1" type="radio" value="기타">
+                                <span>기타</span>
+                            </label>
+                        </div>
+                    </article>
+                    <article class="article3">
+                        <h2>E-소식지 수신여부</h2>
+                        <p>회원탈퇴 후에도 유니세프 E-소식지를 계속 받아보시겠습니까?</p>
+                        <div>
+                            <label for="dropReason2-1">
+                                <input id="dropReason2-1" name="dropReason2" type="radio" value="예, 계속 받아보겠습니다">
+                                <span>예, 계속 받아보겠습니다</span>
+                            </label>
+                            <label for="dropReason2-2">
+                                <input id="dropReason2-2" name="dropReason2" type="radio" value="아니오">
+                                <span>아니오</span>
+                            </label>
+                        </div>
+                    </article>
+                    <article class="article4">
+                        <h2>유니세프에 바라는 의견</h2>
+                        <p>유니세프에 바라는 의견부탁드립니다.</p>
+                        <div>
+                            <textarea placeholder="유니세프에 바라는 의견 부탁드립니다"></textarea>
+                        </div>
+                    </article>
+                    <article class="article5">
+                        <h2>본인 확인</h2>
+                        <p>회원님의 정보 보호를 위해 비밀번호를 한 번 더 입력해주세요.</p>
+                        <div>
+                            <div>                                    
+                                <label>아이디</label>
+                                <input type="text" placeholder="">
+                            </div>
+                            <div>                                    
+                                <label>비밀번호</label>
+                                <input type="password" placeholder="비밀번호 입력">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="article6">
+                        <a href="/templates/mypage/mypage_my_info.html"><button class="sky-button button">취소하기</button></a>
+                        <button class="white-button button">탈퇴하기</button>
+                    </article>
+                </div>
+            </section>
+<!-- footer -->
+            <footer class="main-footer">
+                <ul>
+                    <li class="main-footer-left">
+                        <ul>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">사이트맵</a></li>
+                            <li>후원문의 02.737.1004</li>
+                        </ul>
+                        <div>
+                            사단법인 유니세프한국위원회　대표자: 정갑영　고유번호: 102-82-07606[04099]　서울시 마포구 서강로 60(창전동)
+                        </div>
+                        <div>
+                            COPYRIGHT @ THE KOREAN COMMITTEE FOR UNICEF. ALL RIGHT RESERVED
+                        </div>
+                    </li>
+                    <li class="main-footer-right">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </footer>
+        </main>
+    </div>
+    <script src="/static/js/header.js"></script>
+</body>
+</html>

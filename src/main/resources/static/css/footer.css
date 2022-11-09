@@ -8,6 +8,7 @@
 .main-footer > ul {
     height: 200px;
     min-width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 46px 60px;
     display: flex;
@@ -24,9 +25,6 @@
 }
 
 /* 좌_Address */
-.main-footer .main-footer-left{
-}
-
 .main-footer .main-footer-left > ul{
     display: flex;
     justify-content: space-between;

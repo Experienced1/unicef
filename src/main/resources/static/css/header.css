@@ -12,6 +12,7 @@ main{
 .header-top{
     height: 150px;
     min-width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 10px 30px;
 }
@@ -62,6 +63,7 @@ main{
 /* header-mid-auto *//* header-mid-auto */
 .header-mid-auto{
     min-width: 1200px;
+    max-width: 1200px;
     background-color: white;
     height: 100px;
     margin: 0 auto;
@@ -104,6 +106,7 @@ main{
     float: right;
     width: 158px;
     margin: 20px 0px;
+    font-weight: 900;
 }
 
 /* header-midsub *//* header-midsub */
@@ -118,6 +121,7 @@ main{
 /* header-midsub-auto *//* header-midsub-auto */
 .header-midsub-auto{
     min-width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     padding: 0px 230px;
@@ -147,6 +151,7 @@ main{
 /* header-bot-auto *//* header-bot-auto */
 .header-bot-auto{
     min-width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     height: 200px;
     padding: 0px 30px;

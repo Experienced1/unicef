@@ -1,0 +1,60 @@
+/* receipt_기부금 영수증 */
+.mypage-content-bot .my-receipt {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* receipt1 */
+.mypage-content-bot .my-receipt .receipt_1{
+    width: 100%;
+    background-color: #F8F9FA;
+    padding: 16px 24px;
+}
+
+.mypage-content-bot .my-receipt .receipt_1 strong{
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.mypage-content-bot .my-receipt .receipt_1 li{ 
+    position: relative;
+    padding-left: 15px;
+    font-weight: 300;
+}
+
+.mypage-content-bot .my-receipt .receipt_1 li::after{ 
+    content: "";
+    display: block;
+    width: 3px;
+    height: 3px;
+    background: rgb(28, 171, 226);
+    border-radius: 100%;
+    position: absolute;
+    left: 0px;
+    top: 10px;
+}
+
+/* receipt2 */
+.mypage-content-bot .my-receipt .receipt_2{
+    text-align: center;
+    padding: 96px 0px;
+    margin: 100px 0px;
+    border-top: 0.3px solid rgb(200,200,200);
+    border-bottom: 0.3px solid rgb(200,200,200);
+}
+
+.mypage-content-bot .my-receipt .receipt_2 h3{
+    font-size: 20px;
+}
+
+/* receipt3 */
+.mypage-content-bot .my-receipt .receipt_3 strong{
+    font-size: 24px;
+    color: #1CABE2;
+}
+
+.mypage-content-bot .my-receipt .receipt_3 p{
+    font-size: 16px;
+    padding-top: 30px;
+}

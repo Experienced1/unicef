@@ -8,7 +8,8 @@
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="/static/css/reset.css">
     <link rel="stylesheet" href="/static/css/header.css">
-    <link rel="stylesheet" href="/static/css/mypage.css">
+    <link rel="stylesheet" href="/static/css/mypage/mypage.css">
+    <link rel="stylesheet" href="/static/css/mypage/mypage_onetoone.css">
     <link rel="stylesheet" href="/static/css/footer.css">
     <title>어린이 정기후원 및 정기기부 단체</title>
 </head>
@@ -30,7 +31,7 @@
                 <!-- header-mid -->
                 <div class="header-mid">
                     <div class="header-mid-auto clearfix">                                    
-                        <a href="#" class="header-logo">
+                        <a href="/templates/main.html" class="header-logo">
                             <img src="/static/images/header/logo.png" alt="logo">
                         </a>  
                         <ul class="main-menu">
@@ -44,7 +45,7 @@
                                 <a href="#">참여활동</a> 
                             </li>
                             <li>
-                                <a href="#">유니세프 소개</a>
+                                <a href="/templates/unicef/unicef_introduction.html">유니세프 소개</a>
                             </li>
                         </ul>
                         <input type="button" value="후원하기" class="support-button button yellow-button">
@@ -59,21 +60,21 @@
                             <ul>
                                 <li><a href="#">정기후원</a></li>
                                 <li><a href="#">일시후원</a></li>
-                                <li><a href="#">생명을 구하는 선물</a></li>
+                                <li><a href="/templates/sponsor/inspired_gifts.html">생명을 구하는 선물</a></li>
                             </ul>                    
                             <ul>
                                 <li><a href="#">후원자이야기</a></li>
                                 <li><a href="#">자원봉사</a></li>
                             </ul>                
                             <ul>
-                                <li><a href="#">소개</a></li>
+                                <li><a href="/templates/unicef/unicef_introduction.html">소개</a></li>
                                 <li><a href="#">공지사항</a></li>
                                 <li><a href="#">소식</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-            </header>            
+            </header>          
             <!-- header-bot -->
             <div class="header-bot">
                 <div class="header-bot-auto">
@@ -88,65 +89,15 @@
             <section class="mypage-content">
                 <div class="mypage-content-top">                        
                     <ul>
-                        <li><a href="#" class="active">개인정보</a></li>
-                        <li><a href="#">후원 및 결제정보</a></li>
-                        <li><a href="#">기부금영수증</a></li>
-                        <li><a href="#">1:1문의</a></li>
+                        <li><a href="/templates/mypage/mypage_my_info.html">개인정보</a></li>
+                        <li><a href="/templates/mypage/mypage_support_info.html">후원 및 결제정보</a></li>
+                        <li><a href="/templates/mypage/mypage_my_receipt.html">기부금영수증</a></li>
+                        <li><a href="/templates/mypage/mypage_onetoone.html" class="active">1:1문의</a></li>
                     </ul>
                 </div>
                 <div class="mypage-content-bot">                        
                     <ul>
-                        <li class="privacy">
-                            <h3>아이디 재인증</h3>
-                            <h3>
-                                개인정보를 안전하게 보호하기 위해 <br>
-                                비밀번호를 한번 더 입력해주세요.
-                            </h3>
-                            <div>
-                                <label>비밀번호</label>
-                                <input type="text" placeholder="8-16자의 영문 및 숫자, 특수문자를 모두 포함">
-                            </div>
-                            <button class="sky-button button">확인</button>
-                        </li>
-                        <li class="support invisible">
-                            <article>
-                                <h2>정기후원 정보</h2>
-                                <p>현재 유니세프에 후원하고 계신 정기후원 정보입니다.</p>
-                                <div>
-                                    후원내역이 없습니다.
-                                </div>
-                            </article>
-                                <a href="#"><img src="/static/images/mypage/mypage_support.png" alt="mypage_support.png"></a>
-                            <article>
-                                <h2>결제정보</h2>
-                                <p>후원금의 결제정보 변경을 원하시면 [수정]버튼을 눌러주세요.</p>
-                                <div>
-                                    결제 정보가 없습니다.
-                                </div>
-                            </article>
-                        </li>
-                        <li class="receipt invisible">
-                            <ul class="receipt_1">
-                                <strong>영수증 발급 안내</strong>
-                                <li>후원자 본인 명의로만 발급 가능하며, 주민등록번호 13자리가 모두 정확히 등록된 개인 후원자의 경우 국세청 홈택스에서 자동 확인 가능합니다.</li>
-                                <li>매년 초 우편으로 보내드리던 연말정산 기부금 영수증이 2016년 1월부터 일괄 발송되지 않습니다.</li>
-                                <li>우편 발급 신청은 지속적으로 가능하며, 요청시 익일 발송되어 도착까지 3~4일이 소요됩니다. (주말/공휴일 제외)</li>
-                            </ul>
-                            <div class="receipt_2">
-                                <h3>
-                                    후원본부(02-737-1004, 평일 09:00~18:00)로 연락주시면 <br>
-                                    빠르게 도와드리겠습니다.
-                                </h3>
-                            </div>
-                            <div class="receipt_3">
-                                <strong>문의사항이 있으신가요?</strong>
-                                <p>
-                                    기부금 영수증 발급과 관련해 문의사항이 있으시다면 <br>
-                                    유니세프 후원본부(전화 02-737-1004 / 평일 09:00~18:00, 이메일 donor@unicef.or.kr)로 연락주시기 바랍니다.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="contact invisible">
+                        <li class="onetoone">
                             <ul class="contact_1">
                                 <li>FAQ에서 더 빠른 답변을 확인하실 수 있습니다.</li>
                                 <li>답변을 확인할 수 없다면 문의하기를 이용해 직접 문의해주세요.</li>
@@ -266,7 +217,6 @@
             </footer>
         </main>
     </div>
-    <script src="/static/js/mypage.js"></script>
     <script src="/static/js/header.js"></script>
 </body>
 </html>
