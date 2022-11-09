@@ -297,6 +297,8 @@ button{
     top: inherit;
     cursor: pointer;
     display: block;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAASUExURUdwTDg3Jy0pJy4qJy4rJy0pJruFN0kAAAAFdFJOUwAPxuCoiVkkIwAAAExJREFUOMtjYBgF1AaMAjgkhBVxaDANwq6FJTQUuxZG1VAcWoToryUUFSC0oEkgtBArgd12XO7F6Vzaa8AdUbiilhFXYsCdfEYBAwMAGeAjUrR1MSoAAAAASUVORK5CYII=
+    ) center center / cover no-repeat;
 }
 
 .swiper-button-next{
@@ -313,9 +315,11 @@ button{
     top: inherit;
     cursor: pointer;
     display: block;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAASUExURUdwTDg3Jy0pJy4qJy4rJy0pJruFN0kAAAAFdFJOUwAPxuCoiVkkIwAAAExJREFUOMtjYBgF1AaMAjgkhBVxaDANwq6FJTQUuxZG1VAcWoToryUUFSC0oEkgtBArgd12XO7F6Vzaa8AdUbiilhFXYsCdfEYBAwMAGeAjUrR1MSoAAAAASUVORK5CYII=
+    ) center center / cover no-repeat;
 }
 
-next::after{
+.next::after{
     content: "";
     display: block;
     width: 24px;
@@ -461,4 +465,252 @@ next::after{
     transition: all 0.2s ease 0s;
     text-decoration: none;
     vertical-align: middle;
+}
+
+dd{
+    margin-inline-start: 40px;
+}
+
+.pledgetab{
+    background: rgb(255, 255, 255);
+    display: inline-flex;
+    list-style: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.pledgetab-productlist{
+    margin-right: 16px;
+    white-space: nowrap;
+    list-style: none;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+button:not(:disabled){
+    cursor: pointer;
+}
+
+.maintab-button-sc{
+    color: rgb(255, 255, 255);
+    background: rgb(28, 171, 226);
+    font-size: 20px;
+    border-radius: 28px;
+    height: 56px;
+    padding: 0px 24px;
+    border: none;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: -1.2px;
+    transition: all 0.2s ease 0s;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.button-sc{
+    font-size: 20px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    transition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    position: relative;
+    overflow: hidden;
+    color: rgb(45, 41, 38);
+    background-color: rgb(255, 220, 14);
+    border-color: rgb(255, 220, 14);
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    vertical-align: middle;
+    appearance: auto;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+}
+
+.ripple-container{
+    position: absolute;
+    inset: 0px;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(45, 31, 38);
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: center;
+}
+
+.pledgetab-categorybutton-container{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 94px;
+}
+
+.button-sc-1h{
+    width: 136px;
+    height: 136px;
+    border: 1px solid rgb(28, 171, 226);
+    text-align: center;
+    line-height: normal;
+    background: rgb(28, 171, 226);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    vertical-align: middle;
+    appearance: auto;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    align-items: flex-start;
+}
+
+.ripple-container-sc{
+    position: absolute;
+    inset: 0px;
+    display: block;
+    text-align: center;
+    line-height: normal;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+}
+
+.pic{
+    width: 69px;
+    height: 69px;
+}
+
+.pledgetab-contentscontainer{
+    position: relative;
+    display: block;
+}
+
+.pledgetab-interviewcontainer{
+    display: block;
+}
+
+.pledgetab-interview-wrap{
+    padding-left: 40%;
+    padding-top: 80%;
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
+.pledgetab-interview-image{
+    width: 40%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: block;
+}
+
+.pledgetab-interviewtext{
+    width: 100%;
+    padding-top: 80px;
+    padding-left: 128px;
+    padding-bottom: 76px;
+    z-index: 1;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.titles-tit-sc{
+    line-height: 1.56;
+    letter-spacing: -0.8px;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700 !important;
+}
+
+.pledgetab-interviewee{
+    display: block;
+    margin-top: 8px;
+    font-weight: normal;
+    line-height: 2;
+    letter-spacing: -0.8px;
+}
+
+
+
+.pledgetab-giftcontainer{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-left: 40%;
+    position: relative;
+}
+
+.pledgetab-giftlist{
+    padding: 76px 0px 85px 128px;
+    list-style: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.pledgetab-giftitem{
+    position: relative;
+    padding-left: 16px;
+    list-style: none;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.title-tit-sc{
+    display: inline-block;
+    line-height: 1.56;
+    letter-spacing: -0.8px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 700 !important;
+}
+
+.img{
+    width: 448px;
+    height: 548px;
 }
