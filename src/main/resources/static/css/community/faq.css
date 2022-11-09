@@ -17,6 +17,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+   
 }
 
 .faq-img-1 {
@@ -35,27 +36,26 @@
     left: -400px;
 }
 
-.fap-title-wrap{
-    margin-left: 90px;
-    /* 배경이 안먹혀요...ㅜㅜ */
-    width: 100px;
-    height: 100px;
-    background-color:  rgb(82, 151, 219);
-}
-
-.fap-title{
-    text-align: justify;
-    word-break: break-all;
+.faq-title-wrap > h2{
     font-size: 32px;
     font-weight: 700 ;
 }
 
-.faq-subtexts {
-    padding-top: 32px ;
+.faq-title-wrap > p {
+    padding-top: 20px ;
     font-size: 16px;
     font-weight: normal;
 }
 
+.faq-img-bg{
+    width: 1200px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    right: -300px;
+    background-color:rgb(248, 249, 250);
+    z-index: -99;
+}
 
 /* 하단 list *//* 하단 list *//* 하단 list */
 .faq-container-2 {
@@ -64,15 +64,17 @@
     margin: 0px auto;
 }
 
-.faq-main{
-    padding-top: 64px;
+.faq-category{
+    margin-top: 64px;
     padding: 0 30px;
 }
 
-.form-group{
+.faq-search{
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 24px;
+
 }
 
 .search-input{
@@ -107,4 +109,72 @@
     width: 120px;
     font-size: 18px;
     margin-left: 16px;
+}
+
+
+/* list-tab *//* list-tab *//* list-tab */
+.tab-panel{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.tab-panel > li {
+    width: 20%;
+    padding: 0 12px;
+    margin-bottom: 24px;
+}
+/* .tab-panel > li >a.active{
+    color: coral;
+} */
+
+/* list-page *//* list-page *//* list-page */
+.faq-list-page ul{
+    margin-top: 32px;
+    margin-bottom: 64px;
+
+    padding: 0 12px;
+    cursor: pointer;
+}
+  
+.faq-list-page li {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 24px 54px 24px 12px;
+    font-weight: bold;
+    position: relative;
+    border-top: 1px solid rgb(229, 230, 232);
+    border-bottom: 1px solid rgb(229, 230, 232);
+   
+}
+
+.faq-list-page li:nth-child(1){
+    border-top:1px solid rgb(45, 41, 38);
+}
+
+.faq-list-page li dl{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.faq-list-page li dl dt{
+    font-size: 16px;
+    color: #1caBE2;
+    padding-right: 40px;
+}
+
+.faq-list-page li dl dd{
+    color: #2d2629;
+    font-size: 20px;
+}
+
+
+.fa-circle-arrow-down{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(168, 229, 253);
 }

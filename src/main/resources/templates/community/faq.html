@@ -89,61 +89,76 @@
                 <!-- 상단 text-->
                 <div class="faq-container-1">
                     <div class="faq-header">
-                        <div class="faq-img-1">
-                            <img src="/static/images/faq/faq_img1.png" alt="">
-                        </div>
-                        <div class="faq-img-2">
-                            <img src="/static/images/faq/faq_img2.png" alt="">
-                        </div>
-                        <div class="faq-title-wrap">
-                            <h2 class="faq-title">후원금은 투명하게 쓰이나요?</h2>
-                            <p class="faq-subtexts">유니세프한국위원회는 후원금 100원 중 85원을 어린이들을 위해 유니세프 본부로 송금하여, 전세계 33개
-                            유니세프국가위원회 중 가장 높은 송금률을 자랑합니다.
-                            유니세프한국위원회는 국내 평가 전문 기관으로부터 높은 효율성과 투명성도 인정받고 있습니다.<p>
-
-                            <p class="faq-subtexts">유니세프한국위원회는 독립적인 국내평가 기관이 실시한 공익법인 재무 종합평가에서 재무 안정성 및
-                            효율성, 투명성 및 책무성 종합평가에서 만점인 별3개와 크라운 인증을 2019~2020년 2년 연속
-                            획득했습니다. 특히 2020년에는 20개 세부항목 평가에서도 모두 만점을 받았습니다.
-                            이 3가지 사항을 모두 충족한 법인은 평가 대상 9,648곳 중 유니세프한국위원회를 포함해 4곳(0.04%)에 불과합니다.</p>
-                        </div>   
+                            <div class="faq-img-1">
+                                <img src="/static/images/faq/faq_img1.png" alt="">
+                            </div>
+                            <div class="faq-img-2">
+                                <img src="/static/images/faq/faq_img2.png" alt="">
+                            </div>
+                            <div class="faq-title-wrap">
+                                <h2>후원금은 투명하게 쓰이나요?</h2>
+                                <p>유니세프한국위원회는 후원금 100원 중 85원을 어린이들을 위해 유니세프 본부로 송금하여, 전세계 33개
+                                    유니세프국가위원회 중 가장 높은 송금률을 자랑합니다.
+                                    유니세프한국위원회는 국내 평가 전문 기관으로부터 높은 효율성과 투명성도 인정받고 있습니다.<p>
+                                        
+                                <p>유니세프한국위원회는 독립적인 국내평가 기관이 실시한 공익법인 재무 종합평가에서 재무 안정성 및
+                                    효율성, 투명성 및 책무성 종합평가에서 만점인 별3개와 크라운 인증을 2019~2020년 2년 연속
+                                    획득했습니다. 특히 2020년에는 20개 세부항목 평가에서도 모두 만점을 받았습니다.
+                                    이 3가지 사항을 모두 충족한 법인은 평가 대상 9,648곳 중 유니세프한국위원회를 포함해 4곳(0.04%)에 불과합니다.
+                                </p>
+                            </div>
+                            <div class="faq-img-bg">
+                             
+                            </div>
                     </div>
                 </div>
 
                 <!-- 하단 list -->
                 <div class="faq-container-2">
-                    <div class="faq-main">
+                    <div class="faq-category">
                         <!-- search -->
-                        <div class="faq-category">
-                            <div class="faq-search-wrap">
-                                <div class="faq-search">
-                                   
-                                    <form action="/community/faq" method="post">
-                                        <div class="form-group">
-                                            <div class="search-input">
-                                                <input placeholder="검색어를 입력하세요" class="input-text">
-                                                <button type="button" class="search-button">
-                                                    
-                                                </button>
-                                            </div>
-                                            <div class="all-btn">
-                                                <button type="button" class="button gray-button">전체보기</button>
-                                            </div>
-                                        </div>
-
-
-                                    </form>
+                        <div class="faq-search-wrap">               
+                            <div class="faq-search">
+                                <div class="search-input">
+                                    <input class="input-text" placeholder="검색어를 입력하세요" >
+                                    <button type="button" class="search-button"></button>
+                                </div>
+                                <div class="all-btn">
+                                    <button type="button" class="button gray-button all-button">전체보기</button>
                                 </div>
                             </div>
-                            
                         </div>
                         <!-- listTab -->
                         <div class="faq-list-tab">
-                          
+                          <ul class="tab-panel">
+                            <li><a href="#"><button type="button" class="button white-button active" value="ALL" >전체</button></a></li>
+                            <li><a href="#"><button type="button" class="button white-button" value="donate">후원</button></a></li>
+                            <li><a href="#"><button type="button" class="button white-button" value="childRights">아동권리</button></a></li>
+                            <li><a href="#"><button type="button" class="button white-button" value="activity">참여 활동</button></a></li>
+                            <li><a href="#"><button type="button" class="button white-button" value="promotion">홍보/자료</button></a></li>
+                            <li><a href="#"><button type="button" class="button white-button" value="recruitment">채용</button></a></li>
+                            <li><a href="#"><button type="button" class="button white-button" value="other">기타</button></a></li>
+                          </ul>
                             
                         </div>
                         <!-- listPage -->
                         <div class="faq-list-page">
-                          
+                          <ul>
+                            <li>
+                                <dl>
+                                    <dt>[개인 후원]</dt>
+                                    <dd>유니세프는 무엇이 다른가요?</dd>
+                                </dl>
+                                <i class="fa-solid fa-circle-arrow-down"></i>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>[개인 후원]</dt>
+                                    <dd>유니세프는 무엇이 다른가요?</dd>
+                                </dl>
+                                <i class="fa-solid fa-circle-arrow-down"></i>
+                            </li>
+                          </ul>
                             
                         </div>
 
