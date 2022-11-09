@@ -1,9 +1,9 @@
 // my-info //// my-info //
 // 아이디 재인증 > 개인정보 수정 이동 버튼 //
 $(function(){    
-    $('.my-info .eidt-go-btn').click(function(){
-        $('.my-info').addClass('invisible');
-        $('.my-info-edit').removeClass('invisible');
+    $('.my-info .eidt-go-btn').click(function(){ //확인버튼 클릭했을때
+        $('.my-info').addClass('invisible'); // my-info 열린페이지를 숨긴다
+        $('.my-info-edit').removeClass('invisible'); // my-info-edit 숨기페이지를 보이게한다
     });
  });
 

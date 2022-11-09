@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/44bcb903a4.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/donate.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <title>어린이 정기후원 및 정기기부 단체</title>
+</head>
+    <body>
+        <div class="container">
+            <main>
+    <!-- header -->
+            <header class="main-header">
+                <!-- header-top -->
+                <div class="header-top clearfix">
+                    <ul class="header-top-auto">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><button>기부금영수증</button></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><input type="text"></li>
+                    </ul>
+                </div>
+                <!-- header-mid -->
+                <div class="header-mid">
+                    <div class="header-mid-auto clearfix">                                    
+                        <a href="/templates/main.html" class="header-logo">
+                            <img src="/static/images/header/logo.png" alt="logo">
+                        </a>  
+                        <ul class="main-menu">
+                            <li>
+                                <a href="#">하는일</a>  
+                            </li>
+                            <li>
+                                <a href="#">후원하기</a>
+                            </li>
+                            <li>
+                                <a href="#">참여활동</a> 
+                            </li>
+                            <li>
+                                <a href="/templates/unicef/unicef_introduction.html">유니세프 소개</a>
+                            </li>
+                        </ul>
+                        <input type="button" value="후원하기" class="support-button button yellow-button">
+                    </div>
+                    <div class="header-midsub invisible">
+                        <div class="header-midsub-auto">                                
+                            <ul>
+                                <li><a href="#">활동지역</a></li>
+                                <li><a href="#">스쿨스포아시아</a></li>
+                                <li><a href="#">소식</a></li>
+                            </ul>                  
+                            <ul>
+                                <li><a href="#">정기후원</a></li>
+                                <li><a href="#">일시후원</a></li>
+                                <li><a href="/templates/sponsor/inspired_gifts.html">생명을 구하는 선물</a></li>
+                            </ul>                    
+                            <ul>
+                                <li><a href="#">후원자이야기</a></li>
+                                <li><a href="#">자원봉사</a></li>
+                            </ul>                
+                            <ul>
+                                <li><a href="/templates/unicef/unicef_introduction.html">소개</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">소식</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>  
+                <!-- header-bot -->
+                <div class="header-bot">
+                    <div class="header-bot-auto">
+                        <div class="header-bot-title">
+                            <h1>후원하기</h1>
+                            <strong>for every child, UNICEF</strong>
+                        </div>
+                        <img src="/static/images/header/pattern.png" alt="title">
+                    </div>
+                </div>
+    <!-- section -->
+                <section class="donate-content">                   
+                    <ul class="donate-content-auto">                        
+                        <li class="first-step">
+                            <div>   
+                                <img src="/static/images/donate/donate_1.png" alt="후원하기 Step1" class="donate__StepImage-sc-1a1buk4-4 kRJoPE">
+                                <h1>1.후원 방법</h1>
+                                <article class="donate1-1">
+                                    <h4>후원 방법</h4>
+                                    <div>
+                                        <button class="pledge-btn active white-button button">정기</button>
+                                        <button class="oneoff-btn white-button button">일시</button>
+                                    </div>
+                                </article>
+                                <article class="donate1-2">
+                                    <h4>후원 분야</h4>
+                                    <div> 
+                                        <select>
+                                            <option value="후원 분야 선택">후원 분야 선택</option>
+                                            <option value="세계 어린이 돕기">세계 어린이 돕기</option>
+                                            <option value="긴급 구호">긴급 구호</option>
+                                            <option value="난민 어린이 돕기">난민 어린이 돕기</option>
+                                            <option value="에이즈 감염 어린이 돕기">에이즈 감염 어린이 돕기</option>
+                                        </select>
+                                    </div>
+                                </article>
+                                <article class="donate1-3-pledge">
+                                    <h4>후원 금액(원)</h4>
+                                    <div>
+                                        <input type="button" class="active white-button button" value="30,000">
+                                        <input type="button" class="white-button button" value="50,000">
+                                        <input type="button" class="white-button button" value="100,000">
+                                        <input type="button" class="white-button button" value="200,000">
+                                        <input type="button" class="white-button button" value="300,000">
+                                        <input type="text" class="text-button" placeholder="금액 직접 입력">
+                                    </div>
+                                    <p>
+                                        <strong>월 30,000원</strong>이면, 전 세계 어린이를 위해 <strong>파상풍 예방백신 3,000회분</strong>을 지원할 수 있습니다.
+                                    </p>
+                                </article>
+                                <article class="donate1-3-oneoff invisible">
+                                    <h4>후원 금액(원)</h4>
+                                    <div>
+                                        <input type="button" class="active white-button button" value="50,000">
+                                        <input type="button" class="white-button button" value="100,000">
+                                        <input type="button" class="white-button button" value="200,000">
+                                        <input type="button" class="white-button button" value="300,000">
+                                        <input type="button" class="white-button button" value="500,000">
+                                        <input type="text" class="text-button" placeholder="금액 직접 입력">
+                                    </div>
+                                </article>
+                                <article class="donate1-4">
+                                    <h4>총 후원금액</h4>
+                                    <span><strong class="total-donate">30,000</strong>원</span>
+                                </article>
+                                <button class="sky-button button">다음</button>
+                            </div>
+                            <div class="next-step">
+                                2.후원자 정보
+                            </div>
+                            <div class="next-step">
+                                3.결제 정보
+                            </div>
+                        </li>                        
+                        <li class="my-info-edit  invisible">
+                            
+                        </li>
+                    </ul>
+                    <article class="edit-popup invisible">
+                        <div>
+                            <h1>저장되었습니다</h1>
+                            <button class="edit-done sky-button button">확인</button>    
+                        </div>
+                    </article>
+                </section>
+    <!-- footer -->
+                <footer class="main-footer">
+                    <ul>
+                        <li class="main-footer-left">
+                            <ul>
+                                <li><a href="#">이용약관</a></li>
+                                <li><a href="#">개인정보 처리방침</a></li>
+                                <li><a href="#">오시는 길</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">사이트맵</a></li>
+                                <li>후원문의 02.737.1004</li>
+                            </ul>
+                            <div>
+                                사단법인 유니세프한국위원회　대표자: 정갑영　고유번호: 102-82-07606[04099]　서울시 마포구 서강로 60(창전동)
+                            </div>
+                            <div>
+                                COPYRIGHT @ THE KOREAN COMMITTEE FOR UNICEF. ALL RIGHT RESERVED
+                            </div>
+                        </li>
+                        <li class="main-footer-right">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </footer>
+            </main>
+        </div>
+        <script src="/static/js/header.js"></script>
+        <script src="/static/js/donate.js"></script>
+    </body>
+</html>

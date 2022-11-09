@@ -98,22 +98,36 @@
 /* article5_본인확인 */
 .mypage-drop-auto .article5 > div{
     width: 100%;
+    border-bottom: 1px solid rgb(183, 184, 186);
+    margin-bottom: 100px;
 }
 
 .mypage-drop-auto .article5 > div > div{
     width: 50%;
+    padding-bottom: 30px;
 }
 
-.mypage-content-bot .my-info-edit .article2 > div label{
+.mypage-drop-auto .article5 > div label{
     display: block;
     margin-bottom: 5px;
     font-size: 16px;
 }
 
-.mypage-content-bot .my-info-edit .article2 > div input{
-    width: 100%;
+.mypage-drop-auto .article5 > div input{
+    width: 320px;
     padding: 16px;
-    margin-bottom: 24px;
     font-size: 16px;
     border: 1px solid rgb(229, 230, 232);
+}
+
+/* article6_취소/탈퇴 버튼 */
+.mypage-drop-auto .article6{
+    width: 550px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mypage-drop-auto .article6 button{
+    width: 260px;
 }
