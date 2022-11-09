@@ -9,6 +9,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0px auto;
+
 }
 
 .faq-header{
@@ -74,15 +75,15 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 24px;
-
+    padding: 0px 12px;
 }
 
-.search-input{
+.search-wrap{
     position: relative;
     padding-right: 56px
 }
 
-.input-text{
+.search-input{
     display: block;
     width: 100%;
     height: 60px;
@@ -112,21 +113,34 @@
 }
 
 
-/* list-tab *//* list-tab *//* list-tab */
-.tab-panel{
+/* category-Tab *//* category-Tab *//* category-Tab */
+.category-tab-panel{
     display: flex;
     text-align: center;
     flex-wrap: wrap;
 }
 
-.tab-panel > li {
+.category-tab-panel > li {
     width: 20%;
     padding: 0 12px;
     margin-bottom: 24px;
 }
-/* .tab-panel > li >a.active{
-    color: coral;
-} */
+
+.category-tab-panel button.white-button{
+    border-color: rgb(183, 184, 186);
+    color: rgb(130, 131, 133);
+    font-size: 16px;
+}
+
+.category-tab-panel button.active{
+    color: rgb(28,171,226);
+    border: 1px solid rgb(28,171,226);
+}
+
+.category-tab-panel button.white-button:hover{
+    color: white;
+}
+
 
 /* list-page *//* list-page *//* list-page */
 .faq-list-page ul{
@@ -137,7 +151,7 @@
     cursor: pointer;
 }
   
-.faq-list-page li {
+.list-header {
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -146,6 +160,7 @@
     position: relative;
     border-top: 1px solid rgb(229, 230, 232);
     border-bottom: 1px solid rgb(229, 230, 232);
+    position: relative;
    
 }
 
@@ -169,12 +184,21 @@
     color: #2d2629;
     font-size: 20px;
 }
-
+.faq-list-page li dl dd >span{
+    margin-right: 8px;
+}
 
 .fa-circle-arrow-down{
+    position: absolute;
+    right: 10px;
+    top: center;
     font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: rgb(168, 229, 253);
+
+}
+.list-boby{
+    padding: 24px 12px;
 }
