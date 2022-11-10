@@ -48,14 +48,23 @@ a:active{ /*눌렀을 때*/
     color: rgb(28, 171, 226);
 }
 
-input{
+input, textarea{
     padding: 0px 10px;
     border: 0.3px solid rgb(150, 150, 150);
 }
 
-input:focus{
+input:focus, textarea:focus{
     outline: none;
     border: 0.3px solid rgb(28, 171, 226);
+}
+input::placeholder {
+    color: rgb(190, 190, 190);
+    font-weight: 500;
+}
+
+textarea::placeholder {
+    color: rgb(190, 190, 190);
+    font-weight: 500;
 }
 
 /* 버튼 */
@@ -70,11 +79,6 @@ input:focus{
     background-color: rgb(28, 171, 226);
 }
 
-.button:focus{
-    outline: none;
-    border: none;
-}
-
 .yellow-button{
     color: rgb(45, 41, 38);
     background-color: rgb(255, 220, 14);
@@ -83,6 +87,7 @@ input:focus{
 .white-button{
     color: rgb(28, 171, 226);
     background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(28, 171, 226);
 }
 
 .sky-button{

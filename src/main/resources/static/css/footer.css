@@ -1,13 +1,14 @@
 /* main-footer *//* main-footer *//* main-footer *//* main-footer */
 .main-footer{
     width: 100%;
+    min-width: 1200px;
     background-color: #F8F9FA;
 }
 
 .main-footer > ul {
-    width: 1200px; height: 200px;
+    height: 200px;
+    min-width: 1200px;
     max-width: 1200px;
-    min-width: 1000px;
     margin: 0 auto;
     padding: 46px 60px;
     display: flex;
@@ -23,10 +24,7 @@
     color: #828385;
 }
 
-/* 좌_Adress */
-.main-footer .main-footer-left{
-}
-
+/* 좌_Address */
 .main-footer .main-footer-left > ul{
     display: flex;
     justify-content: space-between;
