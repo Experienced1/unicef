@@ -7,14 +7,17 @@
 }
 
 
-/* -------------------------------------------------------- */
-.patronage-story-container-1 {}
+/* ---------------------------------------------------------------------------------------------------- */
+/* 후원자 이야기 title 부분 */
+.patronage-story-container-1 {
+    padding: 96px 0 120px;
+}
 /* patronage-story-1 *//* patronage-story-1 */
 .patronage-story-1 {
     margin: 0 auto;
     max-width: 1200px;
-    min-width: 1000px;
-    padding: 96px 30px 120px;
+    min-width: 1200px;
+    padding: 0 30px;
 }
 .story-titles {
     font-size: 46px;
@@ -30,47 +33,59 @@
 
 
 
-/* ------------------------------------------ */
-.patronage-story-container-2 {}
+/* ---------------------------------------------------------------------------------------------------- */
+/* 후원자 인터뷰 title 부분 */
+.patronage-story-container-2 {
+    padding: 120px 0 0;
+}
 /* .patronage-story-2 *//* .patronage-story-2 */
 .patronage-story-2 {
     margin: 0 auto;
     max-width: 1200px;
-    min-width: 1000px;
-    padding: 120px 30px 396px;
-    background-color: rgb(187, 186, 101);
+    min-width: 1200px;
+    height: 1715px;
+    padding: 0px 30px;
 }
-/* 인터뷰 1 */
-.interview-1 {
-    width: 322px;
-    height: 757px;
-    padding: 0 16px;
-    background-color: aqua;
+.patronage-story-wrap {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1200px;
+    height: 1750px;
+    border-bottom: solid 2px rgb(229, 230, 232);
 }
 .interview-header {
     padding: 0 0 96px;
 }
+.story-titles {}
+/* 후원자 인터뷰 부분 */
 .interview-container {
     width: 100%;
-    height: 757px;
+    height: 1350px;
     display: flex;
     justify-content: space-between;
-    background-color: darksalmon;
+    flex-wrap: wrap;
+}
+
+/* 후원자 인터뷰 1 */
+.interview-1 {
+    width: 322px;
+    height: 495px;
+    padding: 0 16px;
+}
+.titles-wrap {
+    margin-bottom: 16px;
+    width: 500px;
 }
 .interview-titles {
-    width: 290px;
-    height: 116px;
     font-size: 24px;
     color: rgb(28, 171, 226);
     font-weight: 700 !important;
 }
 .sponsor-name {
-    margin: 16px 0 0;
     width: 290px;
     height: 32px;
     font-size: 16px;
     font-weight: 700 !important;
-    /* background-color: aliceblue; */
 }
 .sponsor-story-1 {
     margin: 32px 0 0;
@@ -79,58 +94,267 @@
     font-size: 16px;
     letter-spacing: -0.8px;
     font-weight: normal !important;
+    text-align: justify;
+    word-break: break-all;
 }
-/* 인터뷰 2 */
+
+/* 후원자 인터뷰 2 */
 .interview-2 {
     width: 672px;
-    height: 757px;
-    padding: 0 16px;
+    position: relative;
 }
-
-.img-wrap {
-    display: block;
+.interview-wrap {
+    width: 500px;
+    height: 450px;
+}
+.interview-img-wrap img {
     width: 100%;
-    /* width: 352px; */
-    height: 352px;
-    position: absolute;
-    top: 1110px;
-    left: 1070px;
 }
-
-.img-wrap > img {
+/* 후원자 이미지 */
+.interview-img-1 {
+    position: absolute;
+    top: 0;
+    right: -150px;
+    z-index: 1;
+}
+.interview-img-1 > img {
     width: 353px;
     height: 353px;
 }
-
-.img-wrap::before {
-    display: block;
-    left: -75px;
-    top: -40px;
-    content: "";
-    width: 542px;
-    height: 542px;
-    background: url(/static/images/sponsor/inspiredGifts_background_img.png);
+/* 배경 이미지 */
+.interwiew-img-2 {
     position: absolute;
-    display: none;
-    z-index: -1;
+    top: 0;
+    left: 0;
 }
-.interview-wrap {
-    width: 640px;
-    height: 757px;
-    padding: 280px 94px 0 0;
+.interview-img-2 > img {
+    width: 200px  ;
+    height: 200px  ;
+}
+.interview-title-wrap {
+    position: relative;
+    text-align: justify;
+    word-break: break-all;
 } 
+/* 인터뷰 설명 글 부분  */
 .des-wrap {
-    width: 548px;
-    height: 478px;
+    width: 579px;
+    z-index: 1;
+    position: absolute;
+    top: -212px;
+    right: 80px;
 }
 .sponsor-story-2 {
-    margin: 32px 0 0;
-    width: 542px;
-    height: 320px;
+    margin-top: 32px;
+    font-size: 16px;
+    letter-spacing: -0.9px;
+    font-weight: normal !important;
+    text-align: justify;
+    word-break: break-all; 
+}
+
+/* 후원자 인터뷰 3 */
+.interview-3 {
+    width: 100%;
+    
+}
+.interview-img-wrap{
+    position: relative;    
+}
+/* 배경 이미지 */
+.interview-img-3 {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+.interview-img-3 > img {
+    width: 108px;
+    height: 215px;
+}
+/* 후원자 이미지 */
+.interview-img-4 {
+    width: 100%;
+    position: absolute;
+    top: 190px;
+    left: 90px;
+    z-index: 1;
+}
+.interview-img-4 > img{
+    width: 353px;
+    height: 353px;
+} 
+/* 배경 이미지 */
+.interview-img-5{
+    width: 100%;
+    position: absolute;
+    top: 120px;
+    right: -150px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------ */
+/* 후원자 이야기 sub-title-1 부분 */
+.patronage-story-container-3 {
+    width: 100%;
+}
+/* .patronage-story-3 *//* .patronage-story-3 */
+/* 배경 이미지 */
+.interview-wrap-1 {
+    position: relative;
+}
+.interview-img-wrap-1 {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1200px;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 0 35px;
+}
+.interview-img-wrap-1 > img {
+    width: 67px;
+    height: 133px;
+    position: relative;
+    top: 60px;
+}
+.interview-img-wrap-2 {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.interview-img-wrap-2 > img {
+    width: 500px;
+    height: 500px;
+}
+
+
+/* 내용 부분 */
+.patronage-story-3 {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1200px;
+    padding: 0 30px;
+}
+.patronage-story-3 {
+    border-bottom: solid 2px rgb(229, 230, 232);
+}
+/* 후원자 인터뷰 4 */
+.interview-4 {
+    width: 698px;
+    height: 509px;
+    padding: 0 16px;
+}
+.interview-wrap-1 {
+    height: 130px;
+}
+.sponsor-story-wrap {
+    margin-top: 32px;
     font-size: 16px;
     letter-spacing: -0.8px;
-    font-weight: normal !important;
+    font-weight: normal !important; 
 }
+/* 배경 이미지 */
+.interview-img-wrap-3 {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1100px;
+    width: 1153px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.interview-img-wrap-3 > img {
+    width: 134px;
+    height: 252px;
+    position: relative;
+    top: -190px;
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------- */
+/* 후원자 이야기 sub-title-2 부분 */
+.patronage-story-container-4 {
+    width: 100%;
+    padding: 120px 0;
+}
+.interview-header-laout {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 30px;
+}
+.patronage-story-4 {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1200px;
+    padding: 0 30px;
+}
+/* 후원자 인터뷰 5 */
+.interview-5 {}
+
+
+
+/* --------------------------------------------------------------------------------------------- */
+/* 정보 영역(문의 영역) */
+.patronage-story-container-5 {
+    width: 100%;
+    padding-top: 120px;
+}
+.info-area {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1200px;
+    padding-bottom: 240px;
+}
+.info-area-header {
+    padding: 120px 44px 36px;
+    font-size: 24px;
+    color: rgb(28, 171, 226);
+    font-weight: 700 !important;
+}
+/* 문의 내용 부분 */
+.info-area-content {
+    /* width: 33.33%; */
+    font-size: 16px;
+    font-weight: normal !important;
+    display: flex;
+    justify-content: space-between;
+}
+.content-dl {
+    padding: 0 30px;
+}
+.content-dl > dt {
+    position: relative;
+    padding-left: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+.content-dl > dd {
+    padding-left: 14px;
+    line-height: 1.2;
+}
+.content-dl dd .link {
+    color: rgb(28, 171, 226);
+    font-weight: 700;
+    text-decoration: underline;
+}
+.content-dl > dt::before {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    background: rgb(28, 171, 226);
+    border-radius: 100%;
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    margin-top: -2px;
+}
+
+
+
 
 
 

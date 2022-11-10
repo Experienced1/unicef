@@ -143,6 +143,7 @@
 
 
 /* list-page *//* list-page *//* list-page */
+
 .faq-list-page ul{
     margin-top: 32px;
     margin-bottom: 64px;
@@ -151,17 +152,15 @@
     cursor: pointer;
 }
   
-.list-header {
-    display: flex;
+.faq-list-header {
+    /* display: flex;
     justify-content: space-between;
-    position: relative;
     padding: 24px 54px 24px 12px;
     font-weight: bold;
-    position: relative;
     border-top: 1px solid rgb(229, 230, 232);
     border-bottom: 1px solid rgb(229, 230, 232);
     position: relative;
-   
+    */
 }
 
 .faq-list-page li:nth-child(1){
@@ -172,33 +171,39 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding: 24px 54px 24px 12px;
+    font-weight: bold;
+    border-top: 1px solid rgb(229, 230, 232);
+    border-bottom: 1px solid rgb(229, 230, 232);
 }
 
 .faq-list-page li dl dt{
+    width: 5%;
     font-size: 16px;
     color: #1caBE2;
-    padding-right: 40px;
 }
 
 .faq-list-page li dl dd{
+    width: 95%;
+    position: relative;
     color: #2d2629;
     font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
-.faq-list-page li dl dd >span{
+.faq-list-page li dl dd >span, p{
     margin-right: 8px;
 }
 
 .fa-circle-arrow-down{
-    position: absolute;
-    right: 10px;
-    top: center;
     font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: rgb(168, 229, 253);
-
+    position: absolute;
+    right: 0px;
 }
-.list-boby{
+.faq-detail{
     padding: 24px 12px;
+    border-bottom: 1px solid rgb(28, 171, 226);
+
 }

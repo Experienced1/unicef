@@ -56,18 +56,10 @@ h2{
     color: #828385;
 }
 
-.id-save{
-    color: #2D2926;
-    font-weight: normal !important;
-}
+
 .input-checkbox{
     display: flex;
     align-items: center;
-}
-.id-check{
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
 }
 
 .id-text{

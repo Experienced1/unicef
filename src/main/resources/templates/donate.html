@@ -86,11 +86,19 @@
                 </div>
     <!-- section -->
                 <section class="donate-content">                   
-                    <ul class="donate-content-auto">                        
+                    <ul class="donate-content-auto">    
+        <!-- 1단계 --><!-- 1단계 -->
                         <li class="first-step">
-                            <div>   
-                                <img src="/static/images/donate/donate_1.png" alt="후원하기 Step1" class="donate__StepImage-sc-1a1buk4-4 kRJoPE">
-                                <h1>1.후원 방법</h1>
+                            <div>
+                                <img src="/static/images/donate/donate_1.png" alt="후원하기 Step1">
+                            </div>
+                            <div class="active-step">
+                                <div>                                    
+                                    <h1>1.후원 방법</h1>
+                                    <p class="step1-summary"></p>
+                                </div>
+                            </div>
+                            <section>
                                 <article class="donate1-1">
                                     <h4>후원 방법</h4>
                                     <div>
@@ -101,7 +109,7 @@
                                 <article class="donate1-2">
                                     <h4>후원 분야</h4>
                                     <div> 
-                                        <select>
+                                        <select name="sponsorship">
                                             <option value="후원 분야 선택">후원 분야 선택</option>
                                             <option value="세계 어린이 돕기">세계 어린이 돕기</option>
                                             <option value="긴급 구호">긴급 구호</option>
@@ -121,7 +129,7 @@
                                         <input type="text" class="text-button" placeholder="금액 직접 입력">
                                     </div>
                                     <p>
-                                        <strong>월 30,000원</strong>이면, 전 세계 어린이를 위해 <strong>파상풍 예방백신 3,000회분</strong>을 지원할 수 있습니다.
+                                        월 <strong>30,000원</strong>이면, 전 세계 어린이를 위해 <strong>파상풍 예방백신 3,000회분</strong>을 지원할 수 있습니다.
                                     </p>
                                 </article>
                                 <article class="donate1-3-oneoff invisible">
@@ -139,17 +147,107 @@
                                     <h4>총 후원금액</h4>
                                     <span><strong class="total-donate">30,000</strong>원</span>
                                 </article>
-                                <button class="sky-button button">다음</button>
+                                <button class="next-button sky-button button">다음</button>
+                            </section>
+                            <div class="inactive-step">
+                                <div>                                    
+                                    <h1>2.후원자 정보</h1>
+                                    <p class="step1-summary"></p>
+                                </div>
+                                <button class="prev-button invisible">변경</button>
                             </div>
-                            <div class="next-step">
-                                2.후원자 정보
-                            </div>
-                            <div class="next-step">
+                            <div class="inactive-step">
                                 3.결제 정보
                             </div>
-                        </li>                        
-                        <li class="my-info-edit  invisible">
-                            
+                        </li>                            
+        <!-- 2단계 --><!-- 2단계 -->
+                        <li class="second-step invisible">
+                            <div>
+                                <img src="/static/images/donate/donate_2.png" alt="후원하기 Step2">
+                            </div>
+                            <div class="inactive-step">
+                                <div>                                    
+                                    <h1>1.후원 방법</h1>
+                                    <p class="step1-summary"></p>
+                                </div>
+                                <button class="prev-button">변경</button>
+                            </div>
+                            <div class="active-step">
+                                2.후원자 정보
+                            </div>
+                            <section>
+                                <article class="donate2-1">
+                                    <h4>후원자 정보</h4>
+                                    <div>                                    
+                                        <label>성명</label>
+                                        <input type="text" placeholder="">
+                                    </div>
+                                    <div class="donate2-1-receipt">                                    
+                                        <label>기부금 영수증</label>
+                                        <label class="donate2-1-receipt-chk">
+                                            <input type="checkbox" id="chk_box">
+                                            <span>신청</span>
+                                        </label>
+                                        <div class="invisible">
+                                            <div>
+                                                <input type="text" placeholder="주민등록번호 입력(‘-’제외)">
+                                                <button class="white-button button">실명인증</button>
+                                            </div>
+                                            <p>* 입력하신 주민등록번호는 <strong>국세청 기부금 영수증 발급 대행</strong>을 위해 사용됩니다.</p>
+                                        </div>
+                                    </div>
+                                    <div>                                    
+                                        <label>생년월일</label>
+                                        <input type="text" placeholder="">
+                                    </div>
+                                    <div>                                    
+                                        <label>휴대폰번호</label>
+                                        <input type="text" placeholder="">
+                                    </div>
+                                    <div>                                    
+                                        <label>이메일</label>
+                                        <input type="text" placeholder="">
+                                    </div>
+                                </article>
+                                <button class="next-button sky-button button">다음</button>
+                            </section>
+                            <div class="inactive-step">
+                                3.결제 정보
+                            </div>
+                        </li>                                 
+        <!-- 3단계 --><!-- 3단계 -->
+                        <li class="third-step invisible">
+                            <div>
+                                <img src="/static/images/donate/donate_3.png" alt="후원하기 Step3">
+                            </div>
+                            <div class="inactive-step">
+                                <div>                                    
+                                    <h1>1.후원 방법</h1>
+                                    <p class="step1-summary"></p>
+                                </div>
+                                <button class="prev-button">변경</button>
+                            </div>
+                            <div class="inactive-step">
+                                <div>                                    
+                                    <h1>2.후원자 정보</h1>
+                                    <p class="step2-summary"></p>
+                                </div>
+                                <button class="prev-button">변경</button>
+                            </div>
+                            <div class="active-step">
+                                3.결제정보
+                            </div>
+                            <section>
+                                <article class="donate3-1">
+                                    <h4>결제수단</h4>
+                                    <div>
+                                        <button class="active white-button button">신용카드</button>
+                                        <button class="white-button button">무통장입금</button>
+                                        <button class="white-button button">네이버페이</button>
+                                    </div>                                    
+                                </article>
+                                <button class="submit-button yellow-button button">후원하기</button>
+                            </section>
                         </li>
                     </ul>
                     <article class="edit-popup invisible">
@@ -158,7 +256,7 @@
                             <button class="edit-done sky-button button">확인</button>    
                         </div>
                     </article>
-                </section>
+                </section>         
     <!-- footer -->
                 <footer class="main-footer">
                     <ul>
