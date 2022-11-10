@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/44bcb903a4.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/regular.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <title>어린이 정기후원 및 정기기부 단체</title>
+</head>
+<body>
+    <div class="container">
+        <main>
+<!-- header -->
+            <header class="main-header">
+                <!-- header-top -->
+                <div class="header-top clearfix">
+                    <ul class="header-top-auto">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><button>기부금영수증</button></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><input type="text"></li>
+                    </ul>
+                </div>
+                <!-- header-mid -->
+                <div class="header-mid">
+                    <div class="header-mid-auto clearfix">                                    
+                        <a href="#" class="header-logo">
+                            <img src="/static/images/header/logo.png" alt="logo">
+                        </a>  
+                        <ul class="main-menu">
+                            <li>
+                                <a href="#">하는일</a>  
+                            </li>
+                            <li>
+                                <a href="#">후원하기</a>
+                            </li>
+                            <li>
+                                <a href="#">참여활동</a> 
+                            </li>
+                            <li>
+                                <a href="#">유니세프 소개</a>
+                            </li>
+                        </ul>
+                        <input type="button" value="후원하기" class="support-button button yellow-button">
+                    </div>
+                    <div class="header-midsub invisible">
+                        <div class="header-midsub-auto">                                
+                            <ul>
+                                <li><a href="#">활동지역</a></li>
+                                <li><a href="#">스쿨스포아시아</a></li>
+                                <li><a href="#">소식</a></li>
+                            </ul>                  
+                            <ul>
+                                <li><a href="#">정기후원</a></li>
+                                <li><a href="#">일시후원</a></li>
+                                <li><a href="#">생명을 구하는 선물</a></li>
+                            </ul>                    
+                            <ul>
+                                <li><a href="#">후원자이야기</a></li>
+                                <li><a href="#">자원봉사</a></li>
+                            </ul>                
+                            <ul>
+                                <li><a href="#">소개</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">소식</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>   
+                <!-- header-bot -->
+                <div class="header-bot">
+                    <div class="header-bot-auto">
+                        <div class="header-bot-title">
+                            <h1>정기후원</h1>
+                            <strong>for every child, UNICEF</strong>
+                        </div>
+                        <img src="/static/images/header/pattern.png" alt="title">
+                    </div>
+                </div>
+            </header>
+<!-- section 매달 어린이를 위한 약속 -->
+<section class="main-content">
+    <div class="main-banner">
+        <h1>매달 어린이를 위한 약속</h1>
+    </div>
+    <div class="main-contents">
+        <h1>매달 일정 금액을 꾸준히 후원해 주시면</h1>
+        <h1>어린이에게 더 큰 도움을 줄 수 있습니다.</h1>
+        <h1>정기후원은 안정적인 후원금 확보로 어린이의 행복한 삶을</h1>
+        <h1>위한 장기적인 지원을 가능하게 해 줍니다.</h1>
+    </div>
+
+    <ul class="pledge-oneofflist">
+        <li>
+            <div class="pledge-oneoffitem">
+                <div class="pledge-oneoffthumb">
+                    <img src="/static/images/regular/img_pledge_01@2x-80fd80759e813d859e2d05f5f1b549c7.png" alt="">
+                </div>
+                <div class="pledge-oneoffflex">
+                    <div class="pledge-oneofftext">
+                        <strong class="world-children">세계 어린이 돕기</strong>
+                        <p class="world-children-text">전 세계 도움이 필요한 어린이들이 건강하게 자라고 안전하게 살 수 있도록 지원합니다.</p>
+                    </div>
+                    <div class="pledge-buttoncontainer">
+                        <input type="button" value="후원하기" class="support-button button yellow-button">
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="pledge-oneoffitem">
+                <div class="pledge-oneoffthumb">
+                    <img src="/static/images/regular/img_pledge_02@2x-314879f814ef12affa53f2b87f9f5e3f.png" alt="">
+                </div>
+                <div class="pledge-oneoffflex">
+                    <div class="pledge-oneofftext">
+                        <strong class="refugee-children">난민 어린이 돕기</strong>
+                        <p class="refugee-children-text">자연재해, 전쟁으로 집을 잃고 고생하는 난민 어린이를 지원합니다.</p>
+                    </div>
+                    <div class="pledge-buttoncontainer">
+                        <input type="button" value="후원하기" class="support-button button yellow-button">
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="pledge-oneoffitem">
+                <div class="pledge-oneoffthumb">
+                    <img src="/static/images/regular/img_pledge.jpg" alt="">
+                </div>
+                <div class="pledge-oneoffflex">
+                    <div class="pledge-oneofftext">
+                        <strong class="ukraine-children">우크라이나 어린이 돕기</strong>
+                        <p class="ukraine-children-text">우크라이나 어린이들이 건강하게 자라고 안전하게 살 수 있도록 지원합니다.</p>
+                    </div>
+                    <div class="pledge-buttoncontainer">
+                        <input type="button" value="후원하기" class="support-button button yellow-button">
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<!-- section 유니세프 어린이 정기후원자가 되면 -->
+<section class="section-sub">
+    <div class="container-become">
+        <header class="section-sub-header">
+            <strong class="section-sub-header-title">
+                유니세프 어린이 정기후원자가 되면
+            </strong>
+        </header>
+        <div class="pledge-pledgebenefit">
+            <div class="col-img">
+                <div class="pledge-benefitImageObject">
+                    <div class="pledge-img-box">
+                    </div>
+                </div>
+            </div>
+            <ul class="pledge-benefitList">
+                <li class="pledge-benefitItem-first">첫 정기후원 감사 및 안내</li>
+                <li class="pledge-benefitItem">
+                    후원자 소식지 제공 (연 4회)
+                    <button type="button" class="anchorText">[더 보기]</button>
+                </li>
+                <li class="pledge-benefitItem">
+                    연차 보고서 제공 (연 1회)
+                    <button type="button" class="anchorText">[더 보기]</button>
+                </li>
+                <li class="pledge-benefitItem">어린이 정기후원 감사인사</li>
+                <li class="pledge-benefitItem">1주년, 5주년, 10주년 등 감사장</li>
+                <li class="pledge-benefitItem">기부금 영수증</li>
+                <li class="pledge-benefitItem">
+                    후원자 해외 현장 방문 (연 1회)
+                    <button type="button" class="anchorText">[더 보기]</button>
+                </li>
+                <li class="pledge-benefitItem">
+                    정기후원자 초청행사 (수시)
+                    <button type="button" class="anchorText">[더 보기]</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- section 하지만 여전히 도움이 필요한 어린이가 많습니다 -->
+<section class="pledge-sectionSlide">
+    <div class="container-sectionSlide">
+        <header class="section-header">
+            <strong class="title-sectionSlide">
+                하지만 여전히 도움이 필요한
+                <br>
+                어린이가 많습니다
+            </strong>
+        </header>
+    </div>
+    <div class="swiper-basic">
+        <div class="swiper-container">
+            <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button"
+            aria-label="Previous slide" aria-controls="swiper-wrapper" aria-disabled="true">
+            </div>
+            <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next Slide"
+            aria-controls="swiper-wrapper" aria-disabled="false">
+            </div>
+            <div class="swiper-wrapper" id="swiper-wrapper" aria-live="polite">
+
+                <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 3"
+                style="width: 1224px; opacity: 0.957516; transform: translate3d(-52px, 0px, 0px);
+                transition-duration: 0ms;">
+                    <picture>
+                        <source srcset="/static/images/regular/img_pledge_children_01M@2x-c54bb2acc72d2d60240ecb9f3522ecaf.png 2x" media="(max-width: 640px)" type="image/png">
+                        <source srcset="/static/images/regular/img_pledge_children_01-d899692c62506f4643ec92addb131553.png 2x">
+                        <img class="styledImg" src="/static/images/regular/img_pledge_children_01-d899692c62506f4643ec92addb131553.png" alt="">
+                    </picture>
+                    <div class="container-qa">
+                        <div class="pledge-children">
+                            빈곤층 인구 전체 중 18세 이하 어린이
+                            <strong class="pledge-percent">47%</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 3">
+                    <picture>
+                        <source srcset="/static/images/regular/img_pledge_children_02M@2x-99c7e97d98c7712cba630c82d06a254e.png 2x" media="(max-width: 640px)" type="image/png">
+                        <source srcset="/static/images/regular/img_pledge_children_02-19133eb5814289ed6be7935ab64e7ce2.png 2x">
+                        <img class="styledImg" src="/static/images/regular/img_pledge_children_02-19133eb5814289ed6be7935ab64e7ce2.png" alt="">
+                    </picture>
+                    <div class="container-qa">
+                        <div class="pledge-children">
+                            기초교육을 못 받는 빈곤층 어린이는 일반 어린이의
+                            <strong class="pledge-percent">5배</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="3 / 3">
+                    <picture>
+                        <source srcset="/static/images/regular/img_pledge_children_03M@2x-b75e8782dd11b0746afdc2a84dad5863.png 2x" media="(max-width: 640px)" type="image/png">
+                        <source srcset="/static/images/regular/img_pledge_children_03-1259e507185d0bf043b379db24b07cad.png 2x">
+                        <img class="styledImg" src="/static/images/regular/img_pledge_children_03-1259e507185d0bf043b379db24b07cad.png" alt="">
+                    </picture>
+                    <div class="container-qa">
+                        <div class="pledge-children">
+                            5세 미만 빈곤층 어린이 사망률은 일반 어린이의
+                            <strong class="pledge-percent">1.9배</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+    </div>
+</section>
+
+<!-- section 어린이는 정기후원을 통해 어떤 도움을 받나요? -->
+<section class="section-sc-ln">
+    <div class="container-qaj">
+        <header class="sectionheader">
+            <strong class="titles">
+                어린이는 정기후원을 통해 어떤 도움을 받나요?
+            </strong>
+        </header>
+        <div class="pledge-tab">
+            <dl class="col-left">
+                <dt>
+                    <button class="maintab-button" disabled>
+                        매월
+                    </button>
+                </dt>
+                <dd>
+                    <ul class="pledgetab">
+                        <li class="pledgetab-productlist">
+                            <button type="button" class="maintab-button-sc">30,000원</button>
+                        </li>
+                        <li class="pledgetab-productlist">
+                            <button type="button" class="maintab-button-sc">50,000원</button>
+                        </li>
+                        <li class="pledgetab-productlist">
+                            <button type="button" class="maintab-button-sc">100,000원</button>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <form>
+                <button type="button" color="yellow" class="support-button button yellow-button">
+                    정기후원하기
+                    <div color="fff" class="ripple-container"></div>
+                </button>
+            </form>
+        </div>
+        <div class="pledgetab-categorybutton-container">
+            <button type="button" class="button-sc-1h">
+                <img src="/static/images/regular/education.png" alt="" class="pic">
+                교육
+                <div color="#fff" class="ripple-container-sc"></div>
+            </button>
+            <button type="button" class="button-sc-1h">
+                <img src="/static/images/regular/nutrition.png" alt=""  class="pic">
+                영양
+                <div color="#fff" class="ripple-container-sc"></div>
+            </button>
+            <button type="button" class="button-sc-1h">
+                <img src="/static/images/regular/vaccine.png" alt=""  class="pic">
+                예방접종
+                <div color="#fff" class="ripple-container-sc"></div>
+            </button>
+            <button type="button" class="button-sc-1h">
+                <img src="/static/images/regular/malaria.png" alt=""  class="pic">
+                말라리아
+                <div color="#fff" class="ripple-container-sc"></div>
+            </button>
+            <button type="button" class="button-sc-1h">
+                <img src="/static/images/regular/health.png" alt=""  class="pic">
+                건강
+                <div color="#fff" class="ripple-container-sc"></div>
+            </button>
+            <button type="button" class="button-sc-1h">
+                <img src="/static/images/regular/freshwater.png" alt=""  class="pic">
+                청정식수
+                <div color="#fff" class="ripple-container-sc"></div>
+            </button>
+            <button type="button" class="button-sc-1h">
+                <img src="/static/images/regular/transport_facilities.png" alt=""  class="pic">
+                보호시설
+                <div color="#fff" class="ripple-container-sc"></div>
+            </button>
+        </div>
+        <div class="pledgetab-contentscontainer">
+
+            <div class="pledgetab-interviewcontainer">
+                <div class="pledgetab-interview-wrap">
+                    <div class="pledgetab-interview-image">
+                        <img src="/static/images/regular/img_pledge_interview_01-8d71a63891081501b8574ff6f1bb45ec.png" alt="" class="img">
+                    </div>
+                    <p class="pledgetab-interviewtext">
+                        <strong class="titles-tit-sc">"유니세프의 지원으로 생활고로 그만두었던 학교도 다시 다닐 수 있게 되었어요."</strong>
+                        <span class="pledgetab-interviewee">– 아리나 (13세, 카자흐스탄 수혜 어린이)</span>
+                    </p>
+                </div>
+            </div>
+            <!-- 6개 더 추가 -->
+
+            <div class="pledgetab-giftcontainer">
+                <ul class="pledgetab-giftlist">
+                    <li class="pledgetab-giftitem">
+                        <strong color="white" class="title-tit-sc">매월 공책 80권, 연필 290자루 전달</strong>
+                    </li>
+                    <li class="pledgetab-giftitem">
+                        <strong color="white" class="title-tit-sc">어린이들이 공부할 수 있는 시설 지원</strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- footer -->
+            <footer class="main-footer">
+                <ul>
+                    <li class="main-footer-left">
+                        <ul>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">사이트맵</a></li>
+                            <li>후원문의 02.737.1004</li>
+                        </ul>
+                        <div>
+                            사단법인 유니세프한국위원회　대표자: 정갑영　고유번호: 102-82-07606[04099]　서울시 마포구 서강로 60(창전동)
+                        </div>
+                        <div>
+                            COPYRIGHT @ THE KOREAN COMMITTEE FOR UNICEF. ALL RIGHT RESERVED
+                        </div>
+                    </li>
+                    <li class="main-footer-right">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </footer>
+        </main>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/header.js"></script>
+</body>
+</html>
