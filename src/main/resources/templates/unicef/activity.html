@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/44bcb903a4.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/unicef/activity.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <title>어린이 정기후원 및 정기기부 단체</title>
+</head>
+
+<body>
+    <div class="containel">
+        <main>
+        <!-- header -->
+        <header class="main-header">
+        <!-- header-top -->
+            <div class="header-top">
+                <ul class="header-top-auto">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><button>기부금영수증</button></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><input type="text"></li>
+                </ul>
+            </div>
+        <!-- header-mid -->
+            <div class="header-mid">
+                <div class="header-mid-auto">                                    
+                    <a href="#" class="header-logo">
+                        <img src="/static/images/header/logo.png" alt="logo">
+                    </a>  
+                    <ul class="main-menu">
+                        <li>
+                            <a href="/templates/unicef/activity.html">하는일</a>  
+                        </li>
+                        <li>
+                            <a href="#">후원하기</a>
+                        </li>
+                        <li>
+                            <a href="#">참여활동</a> 
+                        </li>
+                        <li>
+                            <a href="/templates/unicef/unicef_introduction.html">유니세프 소개</a>
+                        </li>
+                    </ul>
+                    <input type="button" value="후원하기" class="support-button button yellow-button">
+                </div>
+                <div class="header-midsub invisible">
+                    <div class="header-midsub-auto">                                
+                        <ul>
+                            <li><a href="/templates/unicef/activity.html">활동지역</a></li>
+                            <li><a href="#">스쿨스포아시아</a></li>
+                            <li><a href="#">소식</a></li>
+                        </ul>                  
+                        <ul>
+                            <li><a href="#">정기후원</a></li>
+                            <li><a href="#">일시후원</a></li>
+                            <li><a href="#">생명을 구하는 선물</a></li>
+                        </ul>                    
+                        <ul>
+                            <li><a href="/templates/sponsor/patronage_story.html">후원자이야기</a></li>
+                            <li><a href="#">자원봉사</a></li>
+                        </ul>                
+                        <ul>
+                            <li><a href="/templates/unicef/unicef_introduction.html">소개</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">소식</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header-bot -->
+            <div class="header-bot">
+                <div class="header-bot-auto">
+                    <div class="header-bot-title">
+                        <h1>활동 지역</h1>
+                        <strong>for every child, everywhere</strong>
+                    </div>
+                    <img src="/static/images/header/pattern.png" alt="title">
+                </div>
+            </div>
+        <!-- activity- 활동 지역 -->
+            <div class="activity">
+                <!-- 활동 지역 main 부분 -->
+                <div class="activity-wrap">
+                    <section class="activity-1">
+                        <header class="activity-header-1">
+                            <h2 class="activity-title-1">
+                                <span>
+                                    모든 어린이가 행복한 나라
+                                </span>
+                            </h2>
+                            <p class="activity-title-desciption">
+                                유니세프는 
+                                <span>190여 개 나라와 영토</span> 
+                                에서 모든 어린이들, 특히 가장 소외된 어린이의 권리와 복지를 증진하기 위해 일합니다. 전 세계 거의 모든 나라에서 활동하기 때문에 긴급구호 상황에서<br>
+                                가장 신속하게 현장에 접근합니다. 재난 전에도, 재난 중에도, 재난 후에도 한결같이 어린이 곁을 지킵니다.
+                            </p>
+                        </header>
+                        <!-- 설명 리스트 -->
+                        <div class="desciption-wrap">
+                            <ol class="desciption-ol">
+                                <li class="list-item">
+                                    <dl class="list-item-dl">
+                                        <dt>
+                                            <div class="img-wrap">
+                                                <div class="list-item-img">
+                                                    <img src="/static/images/activity/list_item_img1.png" alt="아이콘 이미지">
+                                                </div>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            <ul class="list-item-desciption">
+                                                <li>
+                                                    <p>유니세프 활동 국가 및 영토</p>
+                                                </li>
+                                            </ul>
+                                            <h3 class="list-item-titles-wrap">
+                                                <span class="list-item-titles">
+                                                    약 190개 나라와 영토
+                                                </span>
+                                            </h3>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="list-item">
+                                    <dl class="list-item-dl">
+                                        <dt>
+                                            <div class="img-wrap">
+                                                <div class="list-item-img">
+                                                    <img src="/static/images/activity/list_item_img2.png" alt="아이콘 이미지">
+                                                </div>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            <ul class="list-item-desciption">
+                                                <li>
+                                                    <p>도움을 받는 나라</p>
+                                                </li>
+                                            </ul>
+                                            <h3 class="list-item-titles-wrap">
+                                                <span class="list-item-titles">
+                                                    158개국
+                                                </span>
+                                            </h3>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="list-item">
+                                    <dl class="list-item-dl">
+                                        <dt>
+                                            <div class="img-wrap">
+                                                <div class="list-item-img">
+                                                    <img src="/static/images/activity/list_item_img3.png" alt="아이콘 이미지">
+                                                </div>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            <ul class="list-item-desciption">
+                                                <li>
+                                                    <p>도움을 주는 나라</p>
+                                                </li>
+                                            </ul>
+                                            <h3 class="list-item-titles-wrap">
+                                                <span class="list-item-titles">
+                                                    33개국
+                                                </span>
+                                            </h3>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="list-item">
+                                    <dl class="list-item-dl">
+                                        <dt>
+                                            <div class="img-wrap">
+                                                <div class="list-item-img">
+                                                    <img src="/static/images/activity/list_item_img4.png" alt="아이콘 이미지">
+                                                </div>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            <ul class="list-item-desciption">
+                                                <li>
+                                                    <p>구호물품 물류센터</p>
+                                                </li>
+                                            </ul>
+                                            <h3 class="list-item-titles-wrap">
+                                                <span class="list-item-titles">
+                                                    6개국
+                                                </span>
+                                            </h3>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="list-item">
+                                    <dl class="list-item-dl">
+                                        <dt>
+                                            <div class="img-wrap">
+                                                <div class="list-item-img">
+                                                    <img src="/static/images/activity/list_item_img5.png" alt="아이콘 이미지">
+                                                </div>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            <ul class="list-item-desciption">
+                                                <li>
+                                                    <p>유니세프 직원 수</p>
+                                                </li>
+                                            </ul>
+                                            <h3 class="list-item-titles-wrap">
+                                                <span class="list-item-titles">
+                                                    약 15,000명 이상
+                                                </span>
+                                            </h3>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="list-item">
+                                    <dl class="list-item-dl">
+                                        <dt>
+                                            <div class="img-wrap">
+                                                <div class="list-item-img">
+                                                    <img src="/static/images/activity/list_item_img6.png" alt="아이콘 이미지">
+                                                </div>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            <ul class="list-item-desciption">
+                                                <li>
+                                                    <p>개발도상국 근무 직원</p>
+                                                </li>
+                                            </ul>
+                                            <h3 class="list-item-titles-wrap">
+                                                <span class="list-item-titles">
+                                                    85%
+                                                </span>
+                                            </h3>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                </div>
+                <!-- 활동 지역 sub-main 부분 -->
+                <div class="activity-container-1">
+                    <section class="activity-2">
+                       <header class="activity-header-2">
+                            <h3 class="activity-title-2">
+                                <span>
+                                    도움을 받는 나라
+                                </span>
+                            </h3>
+                       </header>
+                       <div class="activity-img-wrap">
+                            <img src="/static/images/activity/activity_img1.png" alt="">
+                       </div>
+                    </section>
+                    <section class="activity-2">
+                        <header class="activity-header-2">
+                             <h3 class="activity-title-3">
+                                 <span>
+                                     유니세프 본부
+                                 </span>
+                             </h3>
+                        </header>
+                        <div class="activity-img-wrap">
+                             <img src="/static/images/activity/activity_img2.png" alt="">
+                        </div>
+                     </section>
+                     <section class="activity-2">
+                        <header class="activity-header-2">
+                             <h3 class="activity-title-4">
+                                 <span>
+                                     도움을 주는 나라
+                                 </span>
+                             </h3>
+                        </header>
+                        <div class="activity-img-wrap">
+                             <img src="/static/images/activity/activity_img3.png" alt="">
+                        </div>
+                     </section>
+
+                </div>    
+            </div>
+        <!-- footer -->
+            <footer class="main-footer">
+                <ul>
+                    <li class="main-footer-left">
+                        <ul>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">사이트맵</a></li>
+                            <li>후원문의 02.737.1004</li>
+                        </ul>
+                        <div>
+                            사단법인 유니세프한국위원회　대표자: 정갑영　고유번호: 102-82-07606[04099]　서울시 마포구 서강로 60(창전동)
+                        </div>
+                        <div>
+                            COPYRIGHT @ THE KOREAN COMMITTEE FOR UNICEF. ALL RIGHT RESERVED
+                        </div>
+                    </li>
+                    <li class="main-footer-right">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </footer>
+        </main>
+    </div>
+    <script src="/static/js/header.js"></script>
+</body>
+</html>
