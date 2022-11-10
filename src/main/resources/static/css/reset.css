@@ -85,6 +85,7 @@ textarea::placeholder {
 }
 
 .white-button{
+    border: 1px solid rgb(28,171,226);
     color: rgb(28, 171, 226);
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(28, 171, 226);
@@ -93,6 +94,12 @@ textarea::placeholder {
 .sky-button{
     color: rgb(255, 255, 255);
     background-color: rgb(28, 171, 226);
+}
+
+.gray-button{
+    border: 1px solid rgb(130, 131, 133);
+    color:rgb(130, 131, 133);
+    background-color: rgb(255, 255, 255);
 }
 
 .yellow-button:hover{
@@ -106,6 +113,11 @@ textarea::placeholder {
 
 .sky-button:hover{
     background-color: rgb(28, 120, 226);
+}
+
+.gray-button:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(130, 131, 133);
 }
 
 /* 글자색상 */

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/account/join.css">
+    <link rel="stylesheet" href="/static/css/sponsor/patronage_story.css">
+    <title>어린이 정기후원 및 정기기부 단체</title>
+</head>
+<body>
+    <div class="containel">
+        <main>
+        <!-- header -->
+            <header class="main-header">
+        <!-- header-top -->
+            <div class="header-top">
+                <ul class="header-top-auto">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><button>기부금영수증</button></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><input type="text"></li>
+                </ul>
+            </div>
+        <!-- header-mid -->
+            <div class="header-mid">
+                <div class="header-mid-auto">                                    
+                    <a href="#" class="header-logo">
+                        <img src="/static/images/header/logo.png" alt="logo">
+                    </a>  
+                    <ul class="main-menu">
+                        <li>
+                            <a href="#">하는일</a>  
+                        </li>
+                        <li>
+                            <a href="#">후원하기</a>
+                        </li>
+                        <li>
+                            <a href="#">참여활동</a> 
+                        </li>
+                        <li>
+                            <a href="/templates/unicef/unicef_introduction.html">유니세프 소개</a>
+                        </li>
+                    </ul>
+                    <input type="button" value="후원하기" class="support-button button yellow-button">
+                </div>
+                <div class="header-midsub invisible">
+                    <div class="header-midsub-auto">                                
+                        <ul>
+                            <li><a href="#">활동지역</a></li>
+                            <li><a href="#">스쿨스포아시아</a></li>
+                            <li><a href="#">소식</a></li>
+                        </ul>                  
+                        <ul>
+                            <li><a href="#">정기후원</a></li>
+                            <li><a href="#">일시후원</a></li>
+                            <li><a href="#">생명을 구하는 선물</a></li>
+                        </ul>                    
+                        <ul>
+                            <li><a href="/templates/sponsor/patronage_story.html">후원자이야기</a></li>
+                            <li><a href="#">자원봉사</a></li>
+                        </ul>                
+                        <ul>
+                            <li><a href="/templates/unicef/unicef_introduction.html">소개</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">소식</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        <!-- header-bot -->
+            <div class="header-bot">
+                <div class="header-bot-auto">
+                    <div class="header-bot-title">
+                        <h1>후원자 이야기</h1>
+                        <strong>for every child, a donor story</strong>
+                    </div>
+                </div>
+            </div>
+            </header>
+        <!-- patronage_story-후원자 이야기 -->
+            <div class="sponsor">
+                <div class="patronage-story-container-1">
+                    <section class="patronage-story-1">
+                        <h2 class="story-titles">
+                            후원자님과의 만남을<br>
+                            이어가는 방법
+                        </h2>
+                        <p class="titles-des">
+                            <span>
+                                후원자님과 특별한 만남을 가지며 나눈 따뜻한 이야기를 소개합니다.
+                            </span>
+                        </p>
+                    </section>
+                </div>
+                <div class="patronage-story-container-2">
+                    <section class="patronage-story-2">
+                            <header class="interview-header">
+                                <h2 class="story-titles">
+                                    내가<br>
+                                    후원을 하는 이유
+                                </h2>
+                            </header>
+                            <div class="interview-container">
+                                <div class="interview-1">
+                                    <span class="interview-titles">
+                                        일흔 둘,<br>
+                                        다시 일하는 기쁨과<br>
+                                        감사를 담아
+                                    </span><br>
+                                    <span class="sponsor-name">
+                                        -우정미 후원자님
+                                    </span>
+                                    <p class="sponsor-story-1">
+                                        저는 작년부터 국가에서 시행하는 노인 일자리 사업에 참여해 다시 일하는 행복을 누리고 있습니다. 나이는 많지만 쓰임이 있다는 감사함에 받은 사랑을 실천할 길을 고민했답니다. 마침 며느리 소개로 유니세프를 알게 돼 후원한 지 어느새 1년이 됐네요. 제 노동의 대가로 누군가에게 힘이 되는 후원을 한다고 생각하니 출근길이 더욱 새롭고 행복합니다. 오늘도 이 할머니는 나눔을 실천할 줄 아는 직장 여성으로, 일흔둘에도 힘차게 출근합니다!
+                                    </p>
+                                </div>
+                                <div class="interview-2">
+                                    <div class="img-wrap">
+                                        <img src="/static/images/sponsor/interview_reviewer1_img.png.png" alt="">
+                                    </div>
+                                    <div class="interview-wrap">
+                                        <div class="des-wrap">
+                                            <span class="interview-titles">
+                                                캄보디아 여행이 바꾼<br>
+                                                나의 일상
+                                            </span><br>
+                                            <span class="sponsor-name">
+                                                - 장해용 후원자님
+                                            </span>
+                                            <p class="sponsor-story-2">
+                                                저는 평소 기부라는 걸 생각해 본 적이 없었어요. 부유하지 못한 가정에서 자랐기에 다른 사람의 불우함도 저와 큰 차이가 없다고 생각했거든요. 그러다 동남아 여행 중 생각이 달라졌습니다. 그때 캄보디아에서 학교도 가지 못한 채 물건을 팔며 생계를 책임지는 아이들을 보고 마음이 편치 못했어요. 한국에 돌아와 갓 태어난 조카를 볼 때마다 캄보디아 아이들이 생각났어요. 단지 다른 나라, 다른 환경에서 태어났다는 이유만으로 한창 사랑받고 공부할 시간에 일을 한다고 생각하니 안타까웠습니다. 그때 유니세프 정기후원을 시작해 호프링을 받았습니다. 평소 반지를 잘 끼지 않지만 일을 할 땐 끼려고 노력했어요. 일하다 피곤하고 힘들 땐 호프링을 보면서 나의 노력, 나의 월급 중 일부가 아이들에게 간다는 생각을 하고 다시 일할 힘을 얻곤 합니다. 이제는 다른 사람에게 기부를 권하고 다닐 정도로 만족감도 커요. 앞으로도 유니세프가 전 세계 아이들을 위해 많은 노력을 해주었으면 해요.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                </div>
+                <div>
+                    <section></section>
+                </div>
+                <div>
+                    <section></section>
+                </div>
+            </div>
+        </main>
+    </div>    
+    <script src="/static/js/main_header.js"></script>
+</body>
+</html>
