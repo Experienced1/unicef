@@ -1,0 +1,198 @@
+/* 하는 일 - 활동 지역 페이지  */
+
+/* patronage_story *//* patronage_story *//* patronage_story */
+/*  patronage story - 후원자 이야기 */
+.activity {
+    width: 100%;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* 활동 지역 main 부분 */
+.activity-wrap {
+    padding: 96px 0 120px;
+}
+/* activity-1 *//* activity-1 */
+.activity-1 {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1200px;
+    padding: 0 30px;
+}
+.activity-header-1 {}
+.activity-title-1 {
+    display: inline-block;
+    line-height: 1.56;
+    letter-spacing: -0.8px;
+    font-size: 48px;
+    font-weight: 700 !important;
+}
+.activity-title-desciption {
+    margin-top: 32px;
+    line-height: 2;
+    font-size: 16px;
+    letter-spacing: -0.9px;
+    font-weight: normal;
+}
+.activity-title-desciption > span {
+    color: rgb(28, 171, 226);
+    font-weight: 700;
+}
+
+/* 설명 리스트 */
+.description-wrap {
+    display: block;
+}
+.desciption-ol {
+    margin: 0 auto; 
+    padding: 0 30px;
+    width: 919px;
+    height: 665px;
+    
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+.list-item {
+    margin: 96px 0 0;
+    width: 215px;
+    height: 235px;
+    text-align: center;
+    padding: 0px 16px;
+}
+.list-item-dl {
+    /* width: 175px;
+    height: 146px; */
+}
+/* list-item 이미지 */
+.img-wrap {}
+.list-item-img {
+    width: 100%;
+}
+.list-item-img > img {
+    width: 160px;
+    height: 160px;
+}
+.list-item-titles-wrap {
+    margin-top: 10px;
+    line-height: 1.6;
+    letter-spacing: -1.2px;
+    text-align: center;
+}
+.list-item-titles {
+    display: inline-block;
+    line-height: 1.56;
+    letter-spacing: -0.8px;
+    color: rgb(28, 171, 226);
+    font-size: 20px;
+    font-weight: 700 !important;
+}
+.list-item-desciption {
+    font-size: 16px;
+    letter-spacing: -0.9px;
+    font-weight: normal !important;
+
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* 활동 지역 sub-main */
+.activity-container-1 {
+    padding: 120px 0;
+}
+/* activity-2 *//* activity-2 */
+.activity-2 {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1200px;
+    padding: 0 30px 45px;
+}
+.activity-header-2 {}
+.activity-title-2 {
+    width: 235px;
+    height: 56px;
+    border-radius: 28px;
+    padding: 0px 24px;
+    border: none;
+    font-weight: bold;
+    line-height: 1.8;
+    letter-spacing: -1.2px;
+    font-size: 28px;
+    font-weight: 700 !important;
+    color: rgb(255, 255, 255);
+    border-color: rgb(28, 171, 226);
+    background: rgb(28, 171, 226);
+}
+.activity-img-wrap {
+    padding: 60px 0;
+}
+.activity-img-wrap > img {
+    width: 1140px;
+    height: 600px;
+}
+.activity-title-3 {
+    width: 204px;
+    height: 56px;
+    border-radius: 28px;
+    padding: 0px 24px;
+    border: none;
+    font-weight: bold;
+    line-height: 1.8;
+    letter-spacing: -1.2px;
+    font-size: 28px;
+    font-weight: 700 !important;
+    color: rgb(255, 255, 255);
+    border-color: rgb(28, 171, 226);
+    background: rgb(28, 171, 226);
+}
+.activity-title-4 {
+    width: 235px;
+    height: 56px;
+    border-radius: 28px;
+    padding: 0px 24px;
+    border: none;
+    font-weight: bold;
+    line-height: 1.8;
+    letter-spacing: -1.2px;
+    font-size: 28px;
+    font-weight: 700 !important;
+    color: rgb(255, 255, 255);
+    border-color: rgb(28, 171, 226);
+    background: rgb(28, 171, 226);
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------------ */
+/* 후원자 이야기 sub-title-1 부분 */
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------- */
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
