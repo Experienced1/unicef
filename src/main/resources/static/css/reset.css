@@ -131,3 +131,33 @@ textarea::placeholder {
     content: ''; 
     clear: both;
 }
+
+/* 체크박스 *//*input 은 숨겨주기*/
+input#chk_box{
+    display:none;
+}
+
+/*input 바로 다음의 label:before 에 체크하기 전 CSS 설정*/
+input#chk_box + span:before{
+    content:"";
+    display:inline-block;
+    border:1px solid #cbcbcb;
+    vertical-align: middle;/*체크 전과 체크 후 높이 차이 때문에 설정*/
+    width:20px; height:20px; 
+    line-height:20px;
+    margin-right: 5px;
+    margin-bottom: 2.5px;
+}
+
+/*checked된 input 바로 다음의 label:before 에 체크 후 CSS 설정*/  
+input#chk_box:checked + span:before{
+    content:"\f00c";/*폰트어썸 유니코드*/
+    font-family:"Font Awesome 5 free"; /*폰트어썸 아이콘 사용*/
+    font-weight:900;/*폰트어썸 설정*/
+    color:rgb(28, 120, 226);
+    border-color:rgb(28, 120, 226);
+    font-size:13px;
+    text-align:center;
+}
+
+

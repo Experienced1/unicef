@@ -13,43 +13,62 @@
     display: flex;
 }
 
-/* 후원하기 1단계 *//* 후원하기 1단계 */
-.donate-content-auto .first-step{
+.donate-content-auto > li {
     width: 600px;
     margin: 0 auto;
 }
 
-.donate-content-auto .first-step > div{
-    padding: 29px 0px;
-    border-bottom: 1px solid rgb(183, 184, 186);
-}
-
-.donate-content-auto .first-step > div.next-step{
-    font-size: 24px;
-    color: #B7B8BA;
-}
-
-/* 0_이미지 */
-.donate-content-auto .first-step > div > img{
+/* 이미지 */
+.donate-content-auto > li > div > img{
     width: 100%;
-    padding: 24px 0px;
-    border-bottom: 1px solid rgb(183, 184, 186);
+    padding: 10px 0px;
 }
 
-/* 1_후원방법 */
-.donate-content-auto .first-step > div  > h1{
+/* 현재 단계 확인 */
+.donate-content-auto > li > div{
     font-size: 24px;
     padding: 29px 0px;
+    border-bottom: 1px solid rgb(183, 184, 186);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.donate-content-auto > li > div.active-step{
+    color: #2D2926;
     border-bottom: 1px solid rgb(28, 171, 226);
 }
 
-/* article_donate 1-1~1-4 */
-.donate-content-auto .first-step > div  > article{
+.donate-content-auto > li > div.inactive-step{
+    color: #B7B8BA;
+}
+
+.donate-content-auto > li > div > button.prev-button{
+    color: #828385;
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+
+}
+
+.donate-content-auto > li > div h1{
+    font-size: 24px;
+}
+
+.donate-content-auto > li > div p{
+    font-size: 16px;
+    color: #1CABE2;
+}
+
+/* article_donate 공통속성 */
+.donate-content-auto > li > section > article{
     padding: 24px 0px 40px;
     border-bottom: 1px solid rgb(229, 230, 232);
 }
 
-.donate-content-auto .first-step > div > article > h4{
+.donate-content-auto > li > section > article > h4{
     font-size: 20px;
     padding-bottom: 16px;
 }
@@ -59,6 +78,7 @@
     color: white;
 }
 
+/* 후원하기 1단계 *//* 후원하기 1단계 */
 /* article_donate1-1 */
 .donate-content-auto .first-step .donate1-1 > div{
     display: flex;
@@ -116,6 +136,62 @@
     color: #1CABE2;
 }
 
+
+/* 후원하기 2단계 *//* 후원하기 2단계 */
+/* article_donate2-1 */
+.donate-content-auto .second-step .donate2-1 > div{
+    margin-bottom: 24px;
+}
+
+.donate-content-auto .second-step .donate2-1 > div label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.donate-content-auto .second-step .donate2-1 > div > input{
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid rgb(229, 230, 232);
+}
+
+/* 후원하기 3단계 *//* 후원하기 3단계 */
+/* article_donate3-1 */
+.donate-content-auto .third-step .donate3-1 > div{
+    display: flex;
+}
+
+.donate-content-auto .first-step .donate1-1 button{
+    width: 33.3%;
+}
+
+
+
+
+/* 2-1-2. 기부금영수증 */
+.donate-content-auto .second-step .donate2-1 .donate2-1-receipt-chk{
+    display: inline-block;
+}
+
+.donate-content-auto .second-step .donate2-1 .donate2-1-receipt > div > div{
+    display: flex;
+}
+
+.donate-content-auto .second-step .donate2-1 .donate2-1-receipt > div input{
+    flex-basis: 70%;
+    font-size: 16px;
+    border: 1px solid rgb(229, 230, 232);
+}
+
+.donate-content-auto .second-step .donate2-1 .donate2-1-receipt > div button{
+    flex-basis: 30%;
+    margin-left: 30px;
+}
+
+.donate-content-auto .second-step .donate2-1 .donate2-1-receipt p{
+    padding: 7px 0px;
+}
 
 
 /* 최종 수정 완료 팝업창 *//* 최종 수정 완료 팝업창 */
