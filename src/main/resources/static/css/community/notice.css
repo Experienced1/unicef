@@ -144,9 +144,3 @@
     width: calc(100% - 190px);
     padding-left: 24px;
 }
-
-.notice-list-page li dl button{
-    width: 5%;
-    border: none;
-    background-color: white;
-}
