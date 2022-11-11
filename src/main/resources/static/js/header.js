@@ -5,22 +5,6 @@ const headerMidsub = document.querySelector(".header-midsub");
 
 const li = document.querySelectorAll("li");
 
-// 서브메뉴 보이게 하기 //
-mainMenu.onmouseover = () => {
-    headerMidsub.classList.remove("invisible");
-}
-
-mainMenu.onmouseout = () => {
-    headerMidsub.classList.add("invisible");
-}
-
-headerMidsub.onmouseover = () => {
-    headerMidsub.classList.remove("invisible");
-}
-
-headerMidsub.onmouseout = () => {
-    headerMidsub.classList.add("invisible");
-}
 
 // 후원하기 페이지 이동 //
 $(function(){
@@ -46,3 +30,20 @@ $(window).scroll(function(){
     }
 });
 
+
+// 서브메뉴 보이게 하기 //
+mainMenu.onmouseover = () => {
+    headerMidsub.classList.remove("invisible");
+}
+
+mainMenu.onmouseout = () => {
+    headerMidsub.classList.add("invisible");
+}
+
+headerMidsub.onmouseover = () => {
+    headerMidsub.classList.remove("invisible");
+}
+
+headerMidsub.onmouseout = () => {
+    headerMidsub.classList.add("invisible");
+}

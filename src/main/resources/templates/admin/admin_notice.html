@@ -8,8 +8,7 @@
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="/static/css/reset.css">
     <link rel="stylesheet" href="/static/css/header.css">
-    <link rel="stylesheet" href="/static/css/mypage/mypage_my_info.css">
-    <link rel="stylesheet" href="/static/css/mypage/mypage.css">
+    <link rel="stylesheet" href="/static/css/admin/admin.css">
     <link rel="stylesheet" href="/static/css/admin/admin_notice.css">
     <link rel="stylesheet" href="/static/css/footer.css">
     <title>어린이 정기후원 및 정기기부 단체</title>
@@ -22,10 +21,10 @@
                 <!-- header-top -->
                 <div class="header-top clearfix">
                     <ul class="header-top-auto">
-                        <li><a href="#">로그인</a></li>
-                        <li><a href="#">회원가입</a></li>
+                        <li><a href="">로그인</a></li>
+                        <li><a href="">회원가입</a></li>
                         <li><button>기부금영수증</button></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="/templates/community/faq.html">FAQ</a></li>
                         <li><input type="text"></li>
                     </ul>
                 </div>
@@ -37,13 +36,13 @@
                         </a>  
                         <ul class="main-menu">
                             <li>
-                                <a href="#">하는일</a>  
+                                <a href="/templates/unicef/activity.html">하는일</a>  
                             </li>
                             <li>
-                                <a href="#">후원하기</a>
+                                <a href="/templates/regular.html">후원하기</a>
                             </li>
                             <li>
-                                <a href="#">참여활동</a> 
+                                <a href="/templates/sponsor/patronage_story.html">참여활동</a> 
                             </li>
                             <li>
                                 <a href="/templates/unicef/unicef_introduction.html">유니세프 소개</a>
@@ -54,17 +53,17 @@
                     <div class="header-midsub invisible">
                         <div class="header-midsub-auto">                                
                             <ul>
-                                <li><a href="#">활동지역</a></li>
+                                <li><a href="/templates/unicef/activity.html">활동지역</a></li>
                                 <li><a href="#">스쿨스포아시아</a></li>
                                 <li><a href="#">소식</a></li>
                             </ul>                  
                             <ul>
-                                <li><a href="#">정기후원</a></li>
-                                <li><a href="#">일시후원</a></li>
+                                <li><a href="/templates/regular.html">정기후원</a></li>
+                                <li><a href="/templates/temporary_donate.html">일시후원</a></li>
                                 <li><a href="/templates/sponsor/inspired_gifts.html">생명을 구하는 선물</a></li>
                             </ul>                    
                             <ul>
-                                <li><a href="#">후원자이야기</a></li>
+                                <li><a href="/templates/sponsor/patronage_story.html">후원자이야기</a></li>
                                 <li><a href="#">자원봉사</a></li>
                             </ul>                
                             <ul>
@@ -97,7 +96,193 @@
                     </ul>
                 </div>
                 <div class="mypage-content-bot">                        
-                    공지사항
+                    <!-- NOTICE 페이지 부분 -->
+            <section class="notice">
+
+                <!-- list -->
+                <div class="notice-container">
+                    <div class="notice-category">
+                        <!-- search -->
+                        <div class="faq-search-wrap">               
+                            <div class="notice-search">
+                                <div class="search-wrap">
+                                    <input type="text" class="search-input" placeholder="검색어를 입력하세요" >
+                                    <button type="button" class="button search-button"></button>
+                                </div>
+                                <div class="all-btn">
+                                    <button type="button" class="button gray-button all-button">전체보기</button>
+                                </div>
+                            </div>
+                        </div>
+                                          
+                        <!-- listPage / innerHTML 부분이 맞을까요...ㅜㅜ??-->
+                        <div class="notice-list-page">
+                            <ul>
+                                <li class="notice-list-header">
+                                    <dl>
+                                        
+                                        <dt>
+                                             <!-- ${question}-->
+                                             <p>
+                                                <button type="button" class="button white-button">
+                                                    수정
+                                                </button>
+                                                <button type="button" class="button white-button">
+                                                    삭제
+                                                </button>
+                                                <a href="" class="notice-title">유니세프한국위원회 팩트 체크 “유니세프, 믿을 수 있나요”</a>
+                                            </p> 
+                                        </dt>
+                                        <dd>
+                                           <!-- ${date} -->
+                                            2022.08.25
+                                        </dd>
+                                         
+                                    </dl>
+                                        
+                                        <!-- ${questionDetail} -->
+                                    <div class="notice-detail detail-invisible">
+                                        
+                                        <p>
+                                            유니세프한국위원회 팩트 체크<br><br>
+
+                                            “유니세프, 믿을 수 있나요?” <br><br>
+                                        </p>
+                                        &nbsp
+
+                                        <P>
+                                            1. 유니세프한국위원회는 유니세프 본부와 연관이 있는 것은 맞지만, 유니세프와는 계약관계에 있으며 유니세프 이름만 빌려온 국내 사단법인이라는 보도를 보았는데 사실인지요?<br><br>
+
+                                            유니세프한국위원회는 한국에서 유니세프를 대표하여 유니세프의 이념을 실현하는 기관입니다. 한국에서 유니세프에 대해 '독점적인 대표성'을 가지고 있는 유니세프한국위원회를 '유니세프와 연관은 있지만 이름만 빌려온 계약관계에 있는' 기관이라고 설명하는 것은 사실에 대한 정확한 표현이 아닙니다. 구체적인 사유는 아래와 같습니다.<br><br>
+                                           
+                                            첫째, 유니세프한국위원회는 유니세프 본부의 승인을 받아 설립되었으며 한국에서 유니세프를 대표하는 기관입니다. 이는 전 세계 선진국 33개 국가의 국가위원회가 그 나라에서 유니세프를 대표하는 것과 마찬가지입니다. 이러한 이유에서 유니세프한국위원회가 작성하는 모든 공식문서에는 유니세프 로고를 사용해야 하며, 유니세프한국위원회는 유니세프 코리아라고 불리기도 합니다.<br><br>
+                                            둘째, 유니세프한국위원회는 거의 매일 유니세프 본부로부터 업무에 대한 지시를 받고 보고하고 의견을 교환합니다. 유니세프 본부는 한국위원회와 매년 유니세프한국위원회의 공동전략계획을 수립하고 성과를 평가합니다.<br><br>
+                                            셋째, 사무총장을 포함해 주요 팀장급 이상 직원을 채용할 때는 보통 유니세프 본부의 간부가 서울로 와서 면접 시험관으로 참석합니다.<br><br>
+
+                                            상기 내용을 근거로 '유니세프한국위원회는 유니세프의 이름만 빌려온 사단법인' 이라는 표현은 정확한 표현이 아닙니다. 유니세프한국위원회는 한국에서 유니세프를 대표하여 유니세프의 임무를 수행하는 기관입니다.<br><br>
+                                            
+                                        </P>
+                                        &nbsp
+
+                                        <p>
+                                            2. 내가 100원을 유니세프한국위원회에 기부하면 그 중 얼마를 유니세프 본부에 보내나요?<br><br>
+
+                                            여러분이 100원을 기부하시면 이 중 85원이 유니세프 본부로 송금됩니다. 나머지 15원 중 3원은 인건비로 사용되고, 나머지 12원은 아동권리 옹호 및 PR 등 국내 사업비와 운영비로 사용됩니다(2021년 기준). 구체적인 내용은 유니세프한국위원회 웹사이트에서 확인하실 수 있습니다. <br><br>
+
+                                            이러한 높은 송금률은 전 세계 33개 선진국 국가위원회 중 가장 높으며, 국내 구호단체들 중에서도 가장 높은 그룹에 속합니다.<br><br>
+                                        </p>
+                                        &nbsp
+
+                                        <p>
+                                            3. 유니세프에 보내진 후원금은 효율적으로 쓰이고 있나요?<br><br>
+
+                                            네. 유니세프 본부는 가장 효율적인 운영을 통해 전체 지출액65억 3,500만  달러 중 89% 수준인 58억 4천 1백만 달러(2020년 기준)를 어린이를 구호하는 데 직접 사용하고 있습니다.<br><br>
+  
+                                        </p>
+                                        &nbsp
+
+                                        <p>
+                                            4. 많은 어린이 구호기관 중 왜 유니세프를 선택해야 하나요?<br><br>
+
+                                            어려운 사람을 돕는 일이라면 어느 구호 기관을 선택하더라도 보람 있는 일입니다. 다만, 유니세프한국위원회는 한국에서 유엔기구인 유니세프를 대표하는 기관으로서 높은 투명성(100원 중 85원 송금)을 가지고 전 세계 어린이를 차별 없이 지원한다는 것을 고려해 주시기 바랍니다.<br><br>
+
+                                            특히, 한국은 1950년부터 44년간 한국의 어린이들을 도와준 유니세프에게 은혜를 갚는다는 의미에서 유니세프에 기부하는 것은 특별한 의미가 있습니다. 또한 한국은 원조를 받다가 1994년 유니세프에 기부하는 나라가 됨으로써 유니세프의 존재 이유를 강력하게 증명해 준 국가라는 평가를 받고 있습니다.<br><br>
+     
+                                        </p>
+                                        &nbsp
+                                        
+                                        <p>
+                                            5. 유니세프한국위원회와 관련된 연예인들에게 광고비를 주나요?<br><br>
+
+                                            아닙니다. 유니세프한국위원회 친선대사와 특별대표를 비롯해 협력하는 연예인들에게 광고비를 지급하지 않습니다. 이들은 유니세프의 취지에 공감하여 무료로 공익 광고나 캠페인에 참여합니다. <br><br>
+    
+                                        </p>
+                                        &nbsp
+
+                                        <p>
+                                            6. 유니세프한국위원회 직원은 출장 시 비즈니스석을 이용하나요?<br><br>
+
+                                            모든 유니세프한국위원회 직원은 출장 시 일반석(이코노미) 항공권을 이용합니다. 다만 사무총장 등 임원은 7시간 이상의 장거리 비행을 하는 경우에 한해 비즈니스석을 이용할 수 있다고 규정되어 있습니다.<br><br>
+
+                                            그러나 유니세프한국위원회는 신임 이기철 사무총장 부임 후 비용 절감을 위해 더욱 노력하고 있습니다. 
+                                            이 사무총장은 장거리 출장을 포함한 모든 출장 시 비즈니즈석이 아닌 일반석을 이용하고 있고, 직원들은 이코노미석 중에서도 더욱 저렴한 항공권을 찾아 예약하고 있습니다. 유니세프한국위원회는 후원자들의 후원금을 소중히 여기며 제반 비용을 절감하기 위해 최선을 다합니다.<br><br>
+     
+                                        </p>
+                                        &nbsp
+
+                                        <p>
+                                            7. 한국에도 불쌍한 어린이가 많은데, 왜 해외 어린이만 돕나요?<br><br>
+
+                                            지난 날 우리가 어려울 때 도와준 친구가 지금 어려움에 처해 있다고 생각해 보세요. 유니세프한국위원회는 그 동안 한국이 국제 사회로부터 받은 도움을 되돌려 주기 위해서 전쟁, 빈곤의 고통에 있는 해외 어린이를 돕고 있습니다. 국내 어린이에게는 유니세프가 직접적인 지원을 하기보다는 어린이 권리 옹호 사업을 다방면으로 전개하고 있습니다.<br><br>
+                                        </p>
+                                        &nbsp
+
+                                        <p>
+                                            8. 유니세프는 아프리카 어린이만 돕나요?<br><br>
+
+                                            유니세프는 전 세계 190개 국가 및 지역에서 어린이를 돕고 있습니다.<br><br>
+                                            2020년 지역별 사업 비중 중 43%가 사하라 이남 아프리카, 26%가 중동 및 북아프리카, 17%가 아시아이며 이외에도 라틴아메리카, 카리브해, 동유럽 등을 지원합니다. 한국에서는 '어린이 권리 옹호 사업'을 중점적으로 진행하고 있습니다.<br><br>
+
+                                        </p>
+                                        &nbsp
+
+                                        <p>
+                                            9. 저는 후원의 효과를 쉽게 느낄 수 있는 1:1 후원이 좋은데, 유니세프는 왜 1:1 후원을 하지 않나요?<br><br>
+
+                                            1:1 후원보다 집단에 대한 후원이 비용 측면에서 더 효율적이며 동일한 후원금으로 더 많은 혜택을 줄 수 있기 때문입니다. <br>
+
+                                            유니세프는 '차별없는 구호'의 정신으로, 특정 아동을 지정해 후원하기보다는 근본적인 문제 해결을 통해 더 많은 어린이의 삶을 개선하기 위해 노력합니다. 각 나라 정부 및 지역사회와 협력하여 보건, 영양, 식수, 위생, 교육, 보호, 긴급구호 등 폭넓은 지원을 합니다. <br><br>
+          
+                                        </p>
+                                        &nbsp
+
+                                        <p>
+                                            10. 유니세프한국위원회 사무총장은 주로 낙하산 인사로 결정된다고 하는데 사실인가요?<br><br>
+
+                                            2012년부터 유니세프한국위원회는 공개채용 시험으로 사무총장을 선임해 왔습니다.<br>
+                                            2018년 5월 1일자로 취임한 이기철 사무총장 역시 철저한 채용시험을 거쳐 선발되었는데, 면접시험은 제네바에서 출장 온 유니세프 본부의 부국장을 비롯한 3인의 면접관 참석하에 1시간 동안 시행되었으며, 외부의 관여는 전혀 없습니다.<br><br><br>
+
+                                        </p>
+
+                                            ※ 관련 기사<br>
+                                            [중앙일보] 정의연 논란 속···40만명에 총장 폰 번호 뿌린 유니세프, 왜 (2020.6.28.)<br>
+                                            [연합뉴스] "후원금 어떻게 쓰였는지 궁금하세요? 제 번호로 전화하세요" (2020.6.22.)
+                                         
+                                        
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <div class="list-button-wrap">
+                                            <button type="button" class="button list-button">목록</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="prevnext">
+                                            <i class="fa-solid fa-chevron-up"></i>
+                                            <p>이전글</p>
+                                            <!-- ${question}-->
+                                            <a href="" class="notice-title">유니세프한국위원회 팩트 체크 “유니세프, 믿을 수 있나요”</a>
+                                            <!-- ${date} -->
+                                            <p>2022.08.25</p>
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+                                
+                                
+                            
+                            </ul>
+                            <button type="button" class="button white-button add-button">추가</button>
+                        </div>
+                      
+
+                    </div>
+
+                </div>
+
+
+
+            </section>
                 </div>
             </section>
 <!-- footer -->
