@@ -1,0 +1,92 @@
+/* 일시후원 페이지 */
+
+/* temporary-donate *//* temporary-donate *//* temporary-donate */
+/* temporary-donate - 후원자 이야기 */
+.donate {
+    width: 100%;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* 활동 지역 main 부분 */
+.temporary-donate-wrap {
+    padding: 96px 0 120px;
+}
+/* temporary-donate  *//* temporary-donate  */
+.temporary-donate {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1200px;
+    padding: 20px 30px;
+}
+.temporary-donate-header {
+    padding-bottom: 96px;
+}
+.temporary-donate-title {
+    display: inline-block;
+    line-height: 1.56;
+    letter-spacing: -0.8px;
+    font-size: 48px;
+    font-weight: 700 !important;
+}
+/* donate 리스트 1 */
+.donate-list-wrap {}
+.donate-list-1 {
+    border: 1px solid rgb(229, 230, 232);
+    background: rgb(255, 255, 255);
+    display: flex;
+    padding: 32px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+/* donate 리스트 이미지 */
+.donate-list-img {
+    width: 390px;
+    height: 218px;
+}
+.donate-list-img > img {
+    width: 390px;
+    height: 218px;
+}
+/* donate 리스트 설명 */
+.donate-list-description {
+    width: 680px;
+    height: 217px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.list-title {
+    padding-left: 32px;
+    width: 100%;
+    letter-spacing: -0.8px;
+}
+.list-title > span {
+    display: inline-block;
+    line-height: 1.56;
+    letter-spacing: -0.8px;
+    color: rgb(28, 171, 226);
+    font-size: 20px;
+    font-weight: 700 !important;
+}
+.list-title > p {
+    margin-top: 16px;
+    font-weight: normal !important;
+}
+/* 후원하기 버튼 */
+.donate-button {
+    display: flex;
+    align-items: flex-end;
+    padding-left: 32px;
+    width: 352px;
+}
+/* donate 리스트 2 */
+.donate-list-2 {
+    margin: 32px 0 0;
+    border: 1px solid rgb(229, 230, 232);
+    background: rgb(255, 255, 255);
+    display: flex;
+    padding: 32px 24px;
+    display: flex;
+    justify-content: space-between;
+}
