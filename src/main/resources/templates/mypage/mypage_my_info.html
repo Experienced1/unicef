@@ -1,80 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{fragment/head :: head}"></head>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/44bcb903a4.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <link rel="stylesheet" href="/static/css/reset.css">
-    <link rel="stylesheet" href="/static/css/header.css">
     <link rel="stylesheet" href="/static/css/mypage/mypage_my_info.css">
     <link rel="stylesheet" href="/static/css/mypage/mypage.css">
-    <link rel="stylesheet" href="/static/css/footer.css">
-    <title>어린이 정기후원 및 정기기부 단체</title>
 </head>
 <body>
     <div class="container">
         <main>
 <!-- header -->
-            <header class="main-header">
-                <!-- header-top -->
-                <div class="header-top clearfix">
-                    <ul class="header-top-auto">
-                        <li><a href="">로그인</a></li>
-                        <li><a href="">회원가입</a></li>
-                        <li><button>기부금영수증</button></li>
-                        <li><a href="/templates/community/faq.html">FAQ</a></li>
-                        <li><input type="text"></li>
-                    </ul>
-                </div>
-                <!-- header-mid -->
-                <div class="header-mid">
-                    <div class="header-mid-auto clearfix">                                    
-                        <a href="/templates/main.html" class="header-logo">
-                            <img src="/static/images/header/logo.png" alt="logo">
-                        </a>  
-                        <ul class="main-menu">
-                            <li>
-                                <a href="/templates/unicef/activity.html">하는일</a>  
-                            </li>
-                            <li>
-                                <a href="/templates/regular.html">후원하기</a>
-                            </li>
-                            <li>
-                                <a href="/templates/sponsor/patronage_story.html">참여활동</a> 
-                            </li>
-                            <li>
-                                <a href="/templates/unicef/unicef_introduction.html">유니세프 소개</a>
-                            </li>
-                        </ul>
-                        <input type="button" value="후원하기" class="support-button button yellow-button">
-                    </div>
-                    <div class="header-midsub invisible">
-                        <div class="header-midsub-auto">                                
-                            <ul>
-                                <li><a href="/templates/unicef/activity.html">활동지역</a></li>
-                                <li><a href="#">스쿨스포아시아</a></li>
-                                <li><a href="#">소식</a></li>
-                            </ul>                  
-                            <ul>
-                                <li><a href="/templates/regular.html">정기후원</a></li>
-                                <li><a href="/templates/temporary_donate.html">일시후원</a></li>
-                                <li><a href="/templates/sponsor/inspired_gifts.html">생명을 구하는 선물</a></li>
-                            </ul>                    
-                            <ul>
-                                <li><a href="/templates/sponsor/patronage_story.html">후원자이야기</a></li>
-                                <li><a href="#">자원봉사</a></li>
-                            </ul>                
-                            <ul>
-                                <li><a href="/templates/unicef/unicef_introduction.html">소개</a></li>
-                                <li><a href="#">공지사항</a></li>
-                                <li><a href="#">소식</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </header>      
+<header th:replace="~{fragment/header :: header}"></header>      
             <!-- header-bot -->
             <div class="header-bot">
                 <div class="header-bot-auto">
@@ -170,37 +105,9 @@
                 </div>
             </section>
 <!-- footer -->
-            <footer class="main-footer">
-                <ul>
-                    <li class="main-footer-left">
-                        <ul>
-                            <li><a href="#">이용약관</a></li>
-                            <li><a href="#">개인정보 처리방침</a></li>
-                            <li><a href="#">오시는 길</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">사이트맵</a></li>
-                            <li>후원문의 02.737.1004</li>
-                        </ul>
-                        <div>
-                            사단법인 유니세프한국위원회　대표자: 정갑영　고유번호: 102-82-07606[04099]　서울시 마포구 서강로 60(창전동)
-                        </div>
-                        <div>
-                            COPYRIGHT @ THE KOREAN COMMITTEE FOR UNICEF. ALL RIGHT RESERVED
-                        </div>
-                    </li>
-                    <li class="main-footer-right">
-                        <ul>
-                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </footer>
+<footer th:replace="~{fragment/footer :: footer}"></footer>
         </main>
     </div>
     <script src="/static/js/mypage/mypage_my_info.js"></script>
-    <script src="/static/js/header.js"></script>
 </body>
 </html>
