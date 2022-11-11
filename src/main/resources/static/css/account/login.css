@@ -49,6 +49,9 @@ h2{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    font-weight: normal;
+    font-size: 16px;
 }
 
 .login-save-find a{
@@ -60,12 +63,6 @@ h2{
 .input-checkbox{
     display: flex;
     align-items: center;
-}
-
-.id-text{
-    font-size: 15px;
-    font-weight: normal !important;
-    padding-left: 8px;
 }
 
 .login-form-group > p{
