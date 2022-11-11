@@ -153,19 +153,13 @@
 
 
 
-
- $(function(){
+$(function(){
     $('.faq-list-header > dl').click(function(){
-        // 리스트 글자를 클릭했을 때
         if($(this).siblings().hasClass("invisible") === false){
-            // 만약에 상세 페이지가 있다면
             $(this).siblings().addClass('invisible');
-            // 상세 페이지를 닫고
-        }else{ 
+        }else{
             $('.faq-list-header .faq-detail').addClass('invisible');
-            // 상세페이지를 닫으면
             $(this).siblings().removeClass('invisible');
-            // 상세페이지를 보이지 않게 하라
         }
     });
  });
