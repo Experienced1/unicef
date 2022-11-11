@@ -150,3 +150,16 @@
 
 
 // }
+
+
+
+$(function(){
+    $('.faq-list-header > dl').click(function(){
+        if($(this).siblings().hasClass("invisible") === false){
+            $(this).siblings().addClass('invisible');
+        }else{
+            $('.faq-list-header .faq-detail').addClass('invisible');
+            $(this).siblings().removeClass('invisible');
+        }
+    });
+ });
