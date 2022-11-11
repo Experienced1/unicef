@@ -15,4 +15,9 @@ public class MainController {
     public String individualPledge(){
         return "individual/pledge";
     }
+
+    @RequestMapping(value = "/involve/individual/oneOff")
+    public String individualOneOff(){
+        return "individual/oneoff";
+    }
 }
