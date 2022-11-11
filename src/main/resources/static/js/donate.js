@@ -1,4 +1,26 @@
 const totalDonate = $('.donate1-4 .total-donate'); // 총액
+const headerMid = document.querySelector(".header-mid");
+
+
+// 후원 헤더 관리 //// 후원 헤더 관리 //
+$(function(){
+    $('.header-logo').click(function(){
+        location.href = '/templates/donate.html';
+    });
+});
+
+// 스크롤 이동에 따른 헤더 변형 //
+$(window).scroll(function(){
+    $('.header-mid').css('left', 0-$(this).scrollLeft());
+
+    const scrollP = $(window).scrollTop();
+    
+    if(scrollP > 50){
+        headerMid.style.top = "0px";       
+    }else{
+        headerMid.style.top = "50px";     
+    }
+});
 
 // 스텝 단계 이동 btn //
 $(function(){
@@ -37,7 +59,7 @@ $(function(){
     });
  });
 
-// first-step //// first-step //
+// 1.first-step //// 1.first-step //
 // 정기+일시 구분 btn //
 $(function(){
     $('.first-step .pledge-btn').click(function(){
@@ -106,7 +128,7 @@ $(function(){
  });
  
  
-// second-step //// second-step //
+// 2.second-step //// 2.second-step //
 // 기부금 영수증 chk-box btn //
 $(function(){
     $('#chk_box').click(function(){
@@ -117,4 +139,14 @@ $(function(){
         }
 
     })
+ });
+
+// 3.third-step //// 3.third //
+// 신용카드+무통장입금+네이버페이 구분 btn //
+$(function(){
+    $('.donate3-1 button').click(function(){
+        //정기후원 클릭시
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+
  });

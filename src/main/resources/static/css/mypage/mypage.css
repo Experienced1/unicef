@@ -13,6 +13,7 @@
 
 .mypage-content-top ul{
     min-width: 1200px;
+    max-width: 1200px;
     height: 80px;
     margin: 0 auto;
     padding: 0px 30px;
