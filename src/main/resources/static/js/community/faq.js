@@ -166,6 +166,7 @@
             // 상세페이지를 닫으면
             $(this).siblings().removeClass('invisible');
             // 상세페이지를 보이지 않게 하라
+
         }
     });
  });

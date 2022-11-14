@@ -9,7 +9,7 @@ const li = document.querySelectorAll("li");
 // 후원하기 페이지 이동 //
 $(function(){
     $('.support-button').click(function(){
-        location.href = '/templates/donate.html';
+        location.href = '/donate';
     });
 });
 
