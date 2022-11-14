@@ -153,7 +153,6 @@
 
 
 
-
  $(function(){
     $('.faq-list-header > dl').click(function(){
         // 리스트 글자를 클릭했을 때
@@ -166,6 +165,7 @@
             // 상세페이지를 닫으면
             $(this).siblings().removeClass('invisible');
             // 상세페이지를 보이지 않게 하라
+
 
         }
     });
