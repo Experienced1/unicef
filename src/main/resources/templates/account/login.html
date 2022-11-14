@@ -1,16 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{fragment/head :: head}"></head>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/44bcb903a4.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <link rel="stylesheet" href="/static/css/reset.css">
-    <link rel="stylesheet" href="/static/css/header.css">
     <link rel="stylesheet" href="/static/css/account/login.css">
-    <link rel="stylesheet" href="/static/css/footer.css">
-    <title>어린이 정기후원 및 정기기부 단체</title>
 </head>
 <body>
     <div class="container">
@@ -78,7 +70,6 @@
 <footer th:replace="~{fragment/footer :: footer}"></footer>
         </main>
     </div>
-    <script src="/static/js/header.js"></script>
     <script src="/static/js/account/login.js"></script>
 </body>
 </html>
