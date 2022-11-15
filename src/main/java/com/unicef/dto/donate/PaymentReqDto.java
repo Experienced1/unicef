@@ -11,6 +11,4 @@ public class PaymentReqDto {
     private int paymentName;
     private String paymentMethod;
     private String paymentInfo;
-    private LocalDateTime createDate;
-    private LocalDateTime updateDate;
 }

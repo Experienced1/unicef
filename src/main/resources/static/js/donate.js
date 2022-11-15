@@ -1,5 +1,10 @@
-const totalDonate = $('.donate1-4 .total-donate'); // 총액
-const headerMid = document.querySelector(".header-mid");
+var totalDonate = $('.donate1-4 .total-donate'); // 총액
+var headerMid = document.querySelector(".header-mid");
+var donateArea = null; // 후원분야선택
+var donateAmount = null;// 후원금액
+var donateType = null; // 후원종류
+var donateName = null; // 후원자 성명
+var userBirthdate = null; // 후원자 생년월일
 
 
 // 후원 헤더 관리 //// 후원 헤더 관리 //
@@ -36,15 +41,15 @@ $(function(){
         }
 
     // 선택정보 명시 //
-        // 후원방법
-        var sponsorship = $("select[name=sponsorship]").val();
+        // 후원방법sponsorship
+        donateArea = $("select[name=sponsorship]").val(); // 후원분야
         var buttonpick = $(".first-step .donate1-1 button.active").html();
-        $('.step1-summary').html(sponsorship + '/' + totalDonate.html() + '/' + buttonpick + '후원');
+        $('.step1-summary').html(donateArea + '/' + totalDonate.html() + '/' + buttonpick + '후원');
 
         // 후원자정보
-        var username = $('.donate2-1 > div:nth-child(2) > input').val();
+        donateName = $('.donate2-1 > div:nth-child(2) > input').val();
         var userbirth = $('.donate2-1 > div:nth-child(4) > input').val();
-        $('.step2-summary').html(username + '/' + userbirth);
+        $('.step2-summary').html(donateName + '/' + userbirth);
 
     });
 
@@ -150,3 +155,54 @@ $(function(){
     });
 
  });
+
+//  ajax ----------------------------------------------------------------- //
+
+const submitButton = document.querySelector("#submit-button");
+
+submitButton.onclick = () => {
+    let donateAreaInfo = {
+        donateName: donateName,        
+        donateArea: donateArea
+    }
+
+    $.ajax({
+        async: false,
+        type: "post",
+        url: "/api/donate/area",
+        contentType: "application/json",
+        data: JSON.stringify(donateAreaInfo), // obj -> json
+        dataType: "json",
+        success: (response) => {
+            alert(response);
+            console.log(response);
+            //location.replace("/account/login"); //이전기록 날려야함.
+        },
+        error: (error) => {
+            alert(response);
+            console.log(error);
+            // validationError(error.responseJSON.data);
+        }
+    })
+
+    // $.ajax({
+    //     async: false,
+    //     type: "post",
+    //     url: "/api/donate/area",
+    //     contentType: "application/json",
+    //     data: JSON.stringify(registerInfo), // obj -> json
+    //     dataType: "json",
+    //     success: (response) => {
+    //         alert(response);
+    //         console.log(response);
+    //         //location.replace("/account/login"); //이전기록 날려야함.
+    //     },
+    //     error: (error) => {
+    //         alert(response);
+    //         console.log(error);
+    //         // validationError(error.responseJSON.data);
+    //     }
+    // })
+}
+
+

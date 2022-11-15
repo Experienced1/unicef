@@ -9,6 +9,4 @@ public class DonateReqDto {
     private String donateType;
     private int donateAmount;
     private int donateAreaId;
-    private LocalDateTime createDate;
-    private LocalDateTime updateDate;
 }

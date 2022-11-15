@@ -15,7 +15,7 @@ public class Donate {
     private String donate_type;
     private int donate_amount;
     private int donate_area_id;
-    private DonateArea donate_area;
+    private DonateArea donate_area; //Join용도
     private LocalDateTime createDate;
     private LocalDateTime updateDate;
 }
