@@ -2,16 +2,13 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.unicef.repository.FaqRepository">
-    <insert id="save" parameterType="com.unicef.domain.Faq">
+<mapper namespace="com.unicef.repository.CategoryRepository">
+    <insert id="save" parameterType="com.unicef.domain.Category">
         insert into
-            faq_mst
+            category_mst
         values(
             0,
-            #{faq_writer},
-            #{category_id},
-            #{faq_title},
-            #{faq_detail},
+            #{category_list},
             now(),
             now()
         )
