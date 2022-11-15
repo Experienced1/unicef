@@ -13,9 +13,9 @@ import java.time.LocalDateTime;
 @Data
 public class Notice {
 
-    private int noticeId;
-    private String noticeTitle;
-    private String noticeDetail;
+    private int notice_id;
+    private String notice_title;
+    private String notice_detail;
     private LocalDateTime create_date;
     private LocalDateTime update_date;
 }

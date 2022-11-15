@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper  namespace="com.unicef.repository.NoticeRepository">
+    <resultMap id="notice_img_files" type="com.unicef.domain.NoticeImgFile">
+        <result property="img_id" column="img_id"></result>
+        <result property="origin_name" column="origin_name"></result>
+        <result property="temp_name" column="temp_name"></result>
+    </resultMap>
+    <resultMap id="notice" type="com.unicef.domain.Notice">
+        <result property="notice_id" column="notice_id"></result>
+        <result property="notice_title" column="notice_title"></result>
+        <result property="notice_detail" column="notice_detail"></result>
+        <result property="create_date" column="create_date"></result>
+        <result property="update_date" column="update_date"></result>
+        <collection property="notice_img_files" javaType="list" resultMap="notice_img_files"></collection>
+    </resultMap>
+
+    <insert
+            id="noticeSave"
+            parameterType="com.unicef.domain.Notice"
+            useGeneratedKeys="true"
+            keyProperty="notice_id"
+    >
+        insert into
+            notice_mst
+
+
+    </insert>
+
+</mapper>
