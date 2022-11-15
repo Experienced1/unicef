@@ -14,6 +14,4 @@ import java.time.LocalDateTime;
 public class Category {
     private int category_id;
     private String category_list;
-    private LocalDateTime create_date;
-    private LocalDateTime update_date;
 }
