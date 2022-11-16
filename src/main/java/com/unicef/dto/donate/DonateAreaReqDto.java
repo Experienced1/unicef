@@ -1,10 +1,12 @@
 package com.unicef.dto.donate;
 
 import com.unicef.domain.DonateArea;
+import lombok.Builder;
 import lombok.Data;
 
 import java.time.LocalDateTime;
 
+@Builder
 @Data
 public class DonateAreaReqDto {
     private String donateName;
