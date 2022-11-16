@@ -6,11 +6,14 @@ import com.unicef.service.donate.DonateAreaService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
-@RestController
 @RequestMapping("/api")
+@RestController
 @RequiredArgsConstructor
 public class DonateApi {
     private final DonateAreaService donateAreaService;
@@ -19,8 +22,16 @@ public class DonateApi {
     public ResponseEntity<?> donateArea(@RequestBody DonateAreaReqDto donateAreaReqDto) throws Exception {
         log.info("{}", donateAreaReqDto);
 
-//        donateAreaService.donateArea(donateAreaReqDto);
+        donateAreaService.donateArea(donateAreaReqDto);
         return ResponseEntity.ok(new CMRespDto<>(1, "table4.후원분야", donateAreaReqDto));
+    }
+
+    @PostMapping("/donate")
+    public ResponseEntity<?> donate(@RequestBody DonateAreaReqDto donateAreaReqDto) throws Exception {
+        log.info("{}", donateAreaReqDto);
+
+        donateAreaService.donateArea(donateAreaReqDto);
+        return ResponseEntity.ok(new CMRespDto<>(1, "table5.후원", donateAreaReqDto));
     }
 
 }

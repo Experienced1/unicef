@@ -9,11 +9,17 @@
             keyProperty="donate_area_id"
     >
         insert into
-        donate_mst
+        donate_area_mst(
+            donate_area_id,
+            donate_name,
+            donate_area,
+            create_date,
+            update_date
+        )
         values(
         0,
         #{donate_name},
-        #{donate_area}
+        #{donate_area},
         now(),
         now()
         )

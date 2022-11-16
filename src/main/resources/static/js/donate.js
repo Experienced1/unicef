@@ -43,8 +43,9 @@ $(function(){
     // 선택정보 명시 //
         // 후원방법sponsorship
         donateArea = $("select[name=sponsorship]").val(); // 후원분야
-        var buttonpick = $(".first-step .donate1-1 button.active").html();
-        $('.step1-summary').html(donateArea + '/' + totalDonate.html() + '/' + buttonpick + '후원');
+        donateAmount = totalDonate.html();
+        donateType = $(".first-step .donate1-1 button.active").html() + '후원';
+        $('.step1-summary').html(donateArea + '/' + donateAmount + '/' + donateType);
 
         // 후원자정보
         donateName = $('.donate2-1 > div:nth-child(2) > input').val();
@@ -166,6 +167,13 @@ submitButton.onclick = () => {
         donateArea: donateArea
     }
 
+    let donateInfo = {
+        donateAmount: donateAmount, //후원금액    
+        donateType: donateType, // 후원종류
+    }
+    
+    console.log(donateInfo);
+
     $.ajax({
         async: false,
         type: "post",
@@ -174,35 +182,34 @@ submitButton.onclick = () => {
         data: JSON.stringify(donateAreaInfo), // obj -> json
         dataType: "json",
         success: (response) => {
+            console.log(response);
+        },
+        error: (error) => {
+            alert(response);
+            console.log(error);
+        }
+    })
+
+    $.ajax({
+        async: false,
+        type: "post",
+        url: "/api/donate",
+        contentType: "application/json",
+        data: JSON.stringify(donateInfo),
+        dataType: "json",
+        success: (response) => {
             alert(response);
             console.log(response);
+            //후원성공 팝업 띄우기
             //location.replace("/account/login"); //이전기록 날려야함.
         },
         error: (error) => {
             alert(response);
             console.log(error);
+            //후원실패 팝업 띄우기
             // validationError(error.responseJSON.data);
         }
     })
-
-    // $.ajax({
-    //     async: false,
-    //     type: "post",
-    //     url: "/api/donate/area",
-    //     contentType: "application/json",
-    //     data: JSON.stringify(registerInfo), // obj -> json
-    //     dataType: "json",
-    //     success: (response) => {
-    //         alert(response);
-    //         console.log(response);
-    //         //location.replace("/account/login"); //이전기록 날려야함.
-    //     },
-    //     error: (error) => {
-    //         alert(response);
-    //         console.log(error);
-    //         // validationError(error.responseJSON.data);
-    //     }
-    // })
 }
 
 

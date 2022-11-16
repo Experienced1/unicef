@@ -7,10 +7,10 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-@NoArgsConstructor
-@Data
-@AllArgsConstructor
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class DonateArea {
     private int donate_area_id;
     private String donate_name;
