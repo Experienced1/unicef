@@ -15,6 +15,10 @@
 //
 //    @Override
 //    public boolean donate(DonateReqDto donateReqDto) throws Exception {
+//
+//
+//
+//
 //        Donate donateEntity = donateReqDto.toDonateEntity();
 //        int result = donateRepository.donateInsert(donateEntity);
 //
