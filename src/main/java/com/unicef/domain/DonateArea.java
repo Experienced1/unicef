@@ -1,6 +1,5 @@
 package com.unicef.domain;
 
-import com.unicef.dto.donate.DonateAreaReqDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

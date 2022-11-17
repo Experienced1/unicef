@@ -14,10 +14,11 @@ import java.util.List;
 @Data
 public class Donate {
     private int donate_id;
+    private String donate_name;
+    private String donate_area;
     private String donate_type;
     private int donate_amount;
     private int donate_area_id;
-    private DonateArea donate_area; //Join용도
     private LocalDateTime createDate;
     private LocalDateTime updateDate;
 }

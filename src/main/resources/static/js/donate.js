@@ -157,38 +157,26 @@ $(function(){
 
  });
 
+ // 금액 숫자 컴마 제거 //
+function minusComma(value){
+    value = value.replace(/[^\d]+/g, "");
+    return value; 
+}
+
 //  ajax ----------------------------------------------------------------- //
 
 const submitButton = document.querySelector("#submit-button");
 
 submitButton.onclick = () => {
-    let donateAreaInfo = {
-        donateName: donateName,        
-        donateArea: donateArea
-    }
 
     let donateInfo = {
-        donateAmount: donateAmount, //후원금액    
+        donateName: donateName, //후원자이름     
+        donateArea: donateArea, //후원분야
+        donateAmount: minusComma(donateAmount), //후원금액    
         donateType: donateType, // 후원종류
     }
     
     console.log(donateInfo);
-
-    $.ajax({
-        async: false,
-        type: "post",
-        url: "/api/donate/area",
-        contentType: "application/json",
-        data: JSON.stringify(donateAreaInfo), // obj -> json
-        dataType: "json",
-        success: (response) => {
-            console.log(response);
-        },
-        error: (error) => {
-            alert(response);
-            console.log(error);
-        }
-    })
 
     $.ajax({
         async: false,
