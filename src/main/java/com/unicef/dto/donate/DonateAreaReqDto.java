@@ -1,0 +1,21 @@
+package com.unicef.dto.donate;
+
+import com.unicef.domain.DonateArea;
+import lombok.Builder;
+import lombok.Data;
+
+import java.time.LocalDateTime;
+
+@Builder
+@Data
+public class DonateAreaReqDto {
+    private String donateName;
+    private String donateArea;
+
+    public DonateArea toDonateAreaEntity(){
+        return DonateArea.builder()
+                .donate_name(donateName)
+                .donate_area(donateArea)
+                .build();
+    }
+}

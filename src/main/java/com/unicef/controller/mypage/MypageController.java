@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MypageController {
 
-    @RequestMapping(value = "/mypage/my_info")
+    @RequestMapping(value = "/mypage/myinfo")
     public String myInfo(){
         return "mypage/mypage_my_info";
     }
@@ -16,22 +16,22 @@ public class MypageController {
         return "mypage/mypage_drop";
     }
 
-    @RequestMapping(value = "/mypage/support_info")
+    @RequestMapping(value = "/mypage/supportinfo")
     public String supportInfo(){
         return "mypage/mypage_support_info";
     }
 
-    @RequestMapping(value = "/mypage/my_receipt")
+    @RequestMapping(value = "/mypage/myreceipt")
     public String myReceipt(){
         return "mypage/mypage_my_receipt";
     }
 
-    @RequestMapping(value = "/mypage/oneToOne")
+    @RequestMapping(value = "/mypage/onetoone")
     public String oneToOne(){
         return "mypage/mypage_onetoone";
     }
 
-    @RequestMapping(value = "/mypage/oneToOne/form")
+    @RequestMapping(value = "/mypage/onetoone/form")
     public String oneToOneForm(){
         return "mypage/mypage_onetoone_form";
     }
