@@ -49,6 +49,7 @@ a:active{ /*눌렀을 때*/
 }
 
 input, textarea{
+    width: 100%;
     padding: 0px 10px;
     border: 0.3px solid rgb(150, 150, 150);
 }

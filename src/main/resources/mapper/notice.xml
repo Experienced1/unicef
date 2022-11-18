@@ -11,7 +11,7 @@
     <resultMap id="notice" type="com.unicef.domain.Notice">
         <result property="notice_id" column="notice_id"></result>
         <result property="notice_title" column="notice_title"></result>
-        <result property="notice_detail" column="notice_detail"></result>
+        <result property="notice_content" column="notice_content"></result>
         <result property="create_date" column="create_date"></result>
         <result property="update_date" column="update_date"></result>
         <collection property="notice_img_files" javaType="list" resultMap="notice_img_files"></collection>
@@ -25,8 +25,21 @@
     >
         insert into
             notice_mst
-
-
+        values(
+            0,
+            #{notice_title},
+            #{img_id},
+            #{notice_detail},
+            now(),
+            now()
+        );
     </insert>
+
+    <select id="noticeList" resultMap="com.unicef.domain.Notice">
+        SELECT
+        *
+        FROM notice_mst;
+
+    </select>
 
 </mapper>
