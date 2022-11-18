@@ -163,41 +163,103 @@ function minusComma(value){
     return value; 
 }
 
-//  ajax ----------------------------------------------------------------- //
+
+//   import 결제API ----------------------------------------------------------------- //
+
+document.cookie = "safeCookie1=foo; SameSite=Lax"; 
+document.cookie = "safeCookie2=foo";  
+document.cookie = "crossCookie=bar; SameSite=None; Secure";
+
+var IMP = window.IMP; // 생략 가능
+IMP.init("imp04038076"); // 예: imp00000000
 
 const submitButton = document.querySelector("#submit-button");
 
+// let paymentInfo = {
+//     paymentName: paymentName, //결제자
+//     paymentMethod: paymentMethod, //결제수단
+//     paymentInfo: paymentInfo //결제정보
+// }
+
+// let donateInfo = {
+//     donateName: donateName, //후원자이름     
+//     donateArea: donateArea, //후원분야
+//     donateAmount: minusComma(donateAmount), //후원금액    
+//     donateType: donateType, // 후원종류
+// }
+
 submitButton.onclick = () => {
-
-    let donateInfo = {
-        donateName: donateName, //후원자이름     
-        donateArea: donateArea, //후원분야
-        donateAmount: minusComma(donateAmount), //후원금액    
-        donateType: donateType, // 후원종류
-    }
-    
-    console.log(donateInfo);
-
-    $.ajax({
-        async: false,
-        type: "post",
-        url: "/api/donate",
-        contentType: "application/json",
-        data: JSON.stringify(donateInfo),
-        dataType: "json",
-        success: (response) => {
-            alert(response);
-            console.log(response);
-            //후원성공 팝업 띄우기
-            //location.replace("/account/login"); //이전기록 날려야함.
-        },
-        error: (error) => {
-            alert(response);
-            console.log(error);
-            //후원실패 팝업 띄우기
-            // validationError(error.responseJSON.data);
+    // IMP.request_pay(param, callback) 결제창 호출
+    IMP.request_pay({ // param
+        pg: "kakaopay",
+        pay_method: "card",
+        merchant_uid: "ORD20180131-0000011",
+        name: "노르웨이 회전 의자",
+        amount: 333300,
+        buyer_email: "gildong@gmail.com",
+        buyer_name: "홍길동",
+        buyer_tel: "010-4242-4242",
+        buyer_addr: "서울특별시 강남구 신사동",
+        buyer_postcode: "01181"
+    }, function (rsp) { // callback
+        if (rsp.success) {
+            alert("성공!");
+        } else {
+            alert("실패!");
         }
-    })
+    });
+    
+    // console.log(paymentInfo);
+
+    // $.ajax({
+    //     async: false,
+    //     type: "post",
+    //     url: "/api/donate",
+    //     contentType: "application/json",
+    //     data: JSON.stringify(paymentInfo),
+    //     dataType: "json",
+    //     success: (response) => {
+    //         alert(response);
+    //         console.log(response);
+    //         //후원성공 팝업 띄우기
+    //         //location.replace("/account/login"); //이전기록 날려야함.
+    //     },
+    //     error: (error) => {
+    //         alert(response);
+    //         console.log(error);
+    //         //후원실패 팝업 띄우기
+    //         // validationError(error.responseJSON.data);
+    //     }
+    // })
 }
 
 
+// //  후원관련 기타 ajax ----------------------------------------------------------------- //
+
+// const submitButton = document.querySelector("#submit-button");
+
+// submitButton.onclick = () => {
+    
+//     console.log(donateInfo);
+
+//     $.ajax({
+//         async: false,
+//         type: "post",
+//         url: "/api/donate",
+//         contentType: "application/json",
+//         data: JSON.stringify(donateInfo),
+//         dataType: "json",
+//         success: (response) => {
+//             alert(response);
+//             console.log(response);
+//             //후원성공 팝업 띄우기
+//             //location.replace("/account/login"); //이전기록 날려야함.
+//         },
+//         error: (error) => {
+//             alert(response);
+//             console.log(error);
+//             //후원실패 팝업 띄우기
+//             // validationError(error.responseJSON.data);
+//         }
+//     })
+// }
