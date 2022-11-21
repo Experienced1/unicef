@@ -5,5 +5,5 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface OnetooneRepository {
-    public int save(Onetoone onetoone) throws Exception;
+    public int save(Onetoone onetoone);
 }

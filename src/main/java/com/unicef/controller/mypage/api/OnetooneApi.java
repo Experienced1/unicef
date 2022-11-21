@@ -4,13 +4,16 @@ import com.unicef.dto.CMRespDto;
 import com.unicef.dto.mypage.OnetooneReqDto;
 import com.unicef.service.mypage.OnetooneService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping("/api/mypage")
+@Slf4j
+@RequestMapping("/api")
 @RestController
 @RequiredArgsConstructor
 public class OnetooneApi {
@@ -18,10 +21,11 @@ public class OnetooneApi {
     private final OnetooneService onetooneService;
 
 
-    @PostMapping("/onetoone")
-    public ResponseEntity<?> submit(OnetooneReqDto onetooneReqDto, BindingResult bindingResult) throws Exception{
-        return ResponseEntity
-                .created(null)
-                .body(new CMRespDto<>(1, "Successfully submitted", onetooneService.submit(onetooneReqDto)));
+    @PostMapping("/mypage/onetoone")
+    public ResponseEntity<?> submit(OnetooneReqDto onetooneReqDto) throws Exception{
+        log.info("{}", onetooneReqDto);
+
+        onetooneService.submit(onetooneReqDto);
+        return ResponseEntity.ok(new CMRespDto<>(1, "문의 제출완료", onetooneReqDto));
     }
 }

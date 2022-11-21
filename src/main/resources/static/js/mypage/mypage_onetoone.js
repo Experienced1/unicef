@@ -7,8 +7,8 @@ submitButton.onclick = () => {
 
     formData.append("category", null);
     formData.append("onetoone_writer", null);
-    formData.append("title", $('input[class=onetoone-title]').val());
-    formData.append("detail", $('input[class=onetoone-detail]').val());
+    formData.append("title", $('input[class=onetoone-input-title]').val());
+    formData.append("detail", document.querySelector(".onetoone-input-detail").value);
 
     request(formData);
 }
@@ -18,13 +18,14 @@ function request(formData) {
         async: false,
         type: "post",
         url: "/api/mypage/onetoone",
-        enctype: "application/x-www-form-urlencoded",
+        enctype: "multipart/form-data",
         contentType: false,
         processData: false,
         data: formData,
         dataType: "json",
         success: (response) => {
             alert("1:1 문의 등록 완료");
+            console.log(response);
         },
         error: (error) => {
             alert("1:1 문의 등록 실패");

@@ -4,8 +4,9 @@ import com.unicef.domain.Onetoone;
 import com.unicef.dto.mypage.OnetooneReqDto;
 import com.unicef.repository.mypage.OnetooneRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class OnetooneServiceImpl implements OnetooneService{
@@ -17,18 +18,11 @@ public class OnetooneServiceImpl implements OnetooneService{
         int resultCount;
 
         Onetoone onetoone = onetooneReqDto.toOnetooneEntity();
-        Onetoone onetooneEntity = Onetoone.builder()
-                .onetoone_id(onetoone.getOnetoone_id())
-                .onetoone_writer(onetoone.getOnetoone_writer())
-                .category(onetoone.getCategory())
-                .title(onetoone.getTitle())
-                .detail(onetoone.getDetail())
-                .build();
 
         resultCount = onetooneRepository.save(onetoone);
 
         if(resultCount == 0){
-            throw new Exception("실패");
+            log.info("에러발생");
         }
         return false;
     }
