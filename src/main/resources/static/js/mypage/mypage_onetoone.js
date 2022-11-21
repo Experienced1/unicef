@@ -2,291 +2,114 @@ const submitButton = document.querySelector(".submit-button");
 const onetooneInputDetail = document.querySelector(".onetoone-input-detail");
 // const cancelButton = document.querySelector(".cancel-button");
 
+let formData = new FormData();
+
+// 클릭시 활성화
+$(function(){
+    $('.onetoone-btn > button').click(function(){
+        $(this).addClass('mypage-active').siblings().removeClass('mypage-active');
+    });
+ });
+
 // 개인후원 버튼클릭
 $(function(){
     $('.private-donate-btn').click(function(){
-        $(this).css('backgroundColor', 'rgb(28, 171, 226)').css('color', 'white');
-        $('.bracelet-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.promotion-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.volunteer-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.recruit-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.kids-right-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.school-campaign-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.mothermilk-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.company-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.anniversary-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.coin-funding-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.hospital-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.legacy-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.foundation-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
+        formData.append("category", document.getElementById("개인후원").value);
     });
 });
 
 // 팔찌,반지 버튼클릭
 $(function(){
     $('.bracelet-btn').click(function(){
-        $(this).css('backgroundColor', 'rgb(28, 171, 226)').css('color', 'white');
-        $('.private-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.promotion-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.volunteer-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.recruit-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.kids-right-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.school-campaign-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.mothermilk-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.company-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.anniversary-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.coin-funding-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.hospital-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.legacy-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.foundation-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
+        formData.append("category", document.getElementById("팔찌,반지").value);
     });
 });
 
 // 홍보,자료문의 버튼클릭
 $(function(){
     $('.promotion-btn').click(function(){
-        $(this).css('backgroundColor', 'rgb(28, 171, 226)').css('color', 'white');
-        $('.bracelet-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.private-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.volunteer-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.recruit-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.kids-right-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.school-campaign-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.mothermilk-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.company-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.anniversary-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.coin-funding-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.hospital-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.legacy-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.foundation-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
+        formData.append("category", document.getElementById("홍보,자료문의").value);
     });
 });
 
 // 자원봉사 버튼클릭
 $(function(){
     $('.volunteer-btn').click(function(){
-        $(this).css('backgroundColor', 'rgb(28, 171, 226)').css('color', 'white');
-        $('.bracelet-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.promotion-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.private-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.recruit-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.kids-right-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.school-campaign-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.mothermilk-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.company-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.anniversary-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.coin-funding-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.hospital-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.legacy-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.foundation-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
+        formData.append("category", document.getElementById("자원봉사").value);
     });
 });
 
 // 채용 버튼클릭
 $(function(){
     $('.recruit-btn').click(function(){
-        $(this).css('backgroundColor', 'rgb(28, 171, 226)').css('color', 'white');
-        $('.bracelet-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.promotion-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.volunteer-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.private-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.kids-right-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.school-campaign-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.mothermilk-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.company-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.anniversary-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.coin-funding-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.hospital-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.legacy-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.foundation-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
+        formData.append("category", document.getElementById("채용").value);
     });
 });
 
-// 아동권리 버튼클릭
+// 아동권리·아동친화사업 버튼클릭
 $(function(){
     $('.kids-right-btn').click(function(){
-        $(this).css('backgroundColor', 'rgb(28, 171, 226)').css('color', 'white');
-        $('.bracelet-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.promotion-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.volunteer-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.recruit-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.private-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.school-campaign-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.mothermilk-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.company-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.anniversary-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.coin-funding-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.hospital-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.legacy-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.foundation-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
+        formData.append("category", document.getElementById("아동권리·아동친화사업").value);
     });
 });
 
 // 학교캠페인 버튼클릭
 $(function(){
     $('.school-campaign-btn').click(function(){
-        $(this).css('backgroundColor', 'rgb(28, 171, 226)').css('color', 'white');
-        $('.bracelet-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.promotion-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.volunteer-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.recruit-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.kids-right-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.private-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.mothermilk-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.company-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.anniversary-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.coin-funding-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.hospital-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.legacy-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.foundation-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
+        formData.append("category", document.getElementById("학교캠페인").value);
     });
 });
 
 // 모유수유 버튼클릭
 $(function(){
     $('.mothermilk-btn').click(function(){
-        $(this).css('backgroundColor', 'rgb(28, 171, 226)').css('color', 'white');
-        $('.bracelet-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.promotion-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.volunteer-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.recruit-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.kids-right-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.school-campaign-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.private-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.company-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.anniversary-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.coin-funding-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.hospital-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.legacy-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.foundation-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
+        formData.append("category", document.getElementById("모유수유").value);
     });
 });
 
 // 기업후원 버튼클릭
 $(function(){
     $('.company-donate-btn').click(function(){
-        $(this).css('backgroundColor', 'rgb(28, 171, 226)').css('color', 'white');
-        $('.bracelet-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.promotion-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.volunteer-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.recruit-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.kids-right-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.school-campaign-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.mothermilk-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.private-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.anniversary-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.coin-funding-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.hospital-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.legacy-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.foundation-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
+        formData.append("category", document.getElementById("기업후원").value);
     });
 });
 
 // 기념기부 버튼클릭
 $(function(){
     $('.anniversary-btn').click(function(){
-        $(this).css('backgroundColor', 'rgb(28, 171, 226)').css('color', 'white');
-        $('.bracelet-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.promotion-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.volunteer-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.recruit-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.kids-right-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.school-campaign-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.mothermilk-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.company-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.private-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.coin-funding-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.hospital-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.legacy-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.foundation-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
+        formData.append("category", document.getElementById("기념기부").value);
     });
 });
 
 // 동전모금 버튼클릭
 $(function(){
     $('.coin-funding-btn').click(function(){
-        $(this).css('backgroundColor', 'rgb(28, 171, 226)').css('color', 'white');
-        $('.bracelet-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.promotion-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.volunteer-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.recruit-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.kids-right-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.school-campaign-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.mothermilk-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.company-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.anniversary-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.private-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.hospital-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.legacy-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.foundation-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
+        formData.append("category", document.getElementById("동전모금").value);
     });
 });
 
 // 후원병원 버튼클릭
 $(function(){
     $('.hospital-btn').click(function(){
-        $(this).css('backgroundColor', 'rgb(28, 171, 226)').css('color', 'white');
-        $('.bracelet-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.promotion-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.volunteer-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.recruit-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.kids-right-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.school-campaign-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.mothermilk-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.company-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.anniversary-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.coin-funding-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.private-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.legacy-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.foundation-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
+        formData.append("category", document.getElementById("후원병원").value);
     });
 });
 
 // 유산기부 버튼클릭
 $(function(){
     $('.legacy-btn').click(function(){
-        $(this).css('backgroundColor', 'rgb(28, 171, 226)').css('color', 'white');
-        $('.bracelet-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.promotion-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.volunteer-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.recruit-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.kids-right-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.school-campaign-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.mothermilk-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.company-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.anniversary-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.coin-funding-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.hospital-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.private-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.foundation-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
+        formData.append("category", document.getElementById("유산기부").value);
     });
 });
 
-// 재단/비영리 버튼클릭
+// 재단/비영리/기관 및 단체 버튼클릭
 $(function(){
     $('.foundation-btn').click(function(){
-        $(this).css('backgroundColor', 'rgb(28, 171, 226)').css('color', 'white');
-        $('.bracelet-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.promotion-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.volunteer-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.recruit-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.kids-right-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.school-campaign-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.mothermilk-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.company-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.anniversary-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.coin-funding-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.hospital-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.legacy-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
-        $('.private-donate-btn').css('backgroundColor', 'white').css('color', 'rgb(28, 171, 226)');
+        formData.append("category", document.getElementById("재단/비영리/기관 및 단체").value);
     });
 });
 
-
 submitButton.onclick = () => {
-    let formData = new FormData();
-
-    formData.append("category", null);
     formData.append("onetoone_writer", "홍길동");
     formData.append("title", $('input[class=onetoone-input-title]').val());
     formData.append("detail", onetooneInputDetail.value);
