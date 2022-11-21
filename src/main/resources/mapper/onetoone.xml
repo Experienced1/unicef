@@ -3,32 +3,30 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.unicef.repository.mypage.OnetooneRepository">
-    <resultMap id="onetoone" type="com.unicef.domain.Onetoone">
-        <result property="category" column="category"></result>
-        <result property="title" column="title"></result>
-        <result property="detail" column="detail"></result>
-    </resultMap>
 
     <insert
             id="save"
             parameterType="com.unicef.domain.Onetoone"
             useGeneratedKeys="true"
-            keyProperty="id">
+            keyProperty="onetoone_id">
         INSERT INTO
-            onetoone_mst
+            onetoone_mst(
+            onetoone_id,
+            onetoone_writer,
+            category,
+            title,
+            detail,
+            create_date,
+            update_date
+        )
         VALUES (
-                NULL,
-                NULL,
+                0,
+                #{onetoone_writer},
                 #{category},
                 #{title},
                 #{detail},
                 now(),
                 now(),
-                NULL,
-                NULL,
-                NULL,
-                NULL,
-                NULL
         )
     </insert>
 </mapper>

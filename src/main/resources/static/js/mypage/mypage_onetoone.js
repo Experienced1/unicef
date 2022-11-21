@@ -1,13 +1,14 @@
 const submitButton = document.querySelector(".submit-button");
-const onetooneInput = document.querySelector(".onetoone-input");
-const cancelButton = document.querySelector(".cancel-button");
+// const onetooneInput = document.querySelector(".onetoone-input");
+// const cancelButton = document.querySelector(".cancel-button");
 
 submitButton.onclick = () => {
     let formData = new FormData();
 
-    formData.append("category", onetooneInput[0].value);
-    formData.append("title", onetooneInput[1].value);
-    formData.append("detail", onetooneInput[2].value);
+    formData.append("category", null);
+    formData.append("onetoone_writer", null);
+    formData.append("title", $('input[class=onetoone-title]').val());
+    formData.append("detail", $('input[class=onetoone-detail]').val());
 
     request(formData);
 }
@@ -31,3 +32,14 @@ function request(formData) {
         }
     });
 }
+
+
+
+
+
+// $(function(){
+//     $('.private-donate-btn').click(function(){
+//         $(this).addClass('active');
+//         console.log('개인후원 click');
+//     });
+// });

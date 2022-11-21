@@ -14,14 +14,22 @@ public class OnetooneServiceImpl implements OnetooneService{
 
     @Override
     public boolean submit(OnetooneReqDto onetooneReqDto) throws Exception {
-        int resultCount = 0;
+        int resultCount;
 
         Onetoone onetoone = onetooneReqDto.toOnetooneEntity();
+        Onetoone onetooneEntity = Onetoone.builder()
+                .onetoone_id(onetoone.getOnetoone_id())
+                .onetoone_writer(onetoone.getOnetoone_writer())
+                .category(onetoone.getCategory())
+                .title(onetoone.getTitle())
+                .detail(onetoone.getDetail())
+                .build();
+
         resultCount = onetooneRepository.save(onetoone);
 
         if(resultCount == 0){
             throw new Exception("실패");
         }
-        return true;
+        return false;
     }
 }

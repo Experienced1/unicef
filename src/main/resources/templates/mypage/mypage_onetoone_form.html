@@ -49,26 +49,32 @@
                             </article>
                             <article class="contact-2">
                                 <h3>문의 유형</h3>
-                                <div>
-                                    <input class="onetoone-input" type="button">                                    
-                                        <button class="white-button button">개인후원</button>
-                                        <button class="white-button button">팔찌,반지</button>
-                                        <button class="white-button button">홍보,자료문의</button>
-                                        <button class="white-button button">자원봉사</button>
-                                        <button class="white-button button">채용</button>
+                                <div>                                    
+                                    <button class="private-donate-btn white-button button">개인후원</button>
+                                    <button class="bracelet-btn white-button button">팔찌,반지</button>
+                                    <button class="promotion-btn white-button button">홍보,자료문의</button>
+                                    <button class="volunteer-btn white-button button">자원봉사</button>
+                                    <button class="recruit-btn white-button button">채용</button>
 
-                                        <button class="white-button button">아동권리·아동친화사업</button>
-                                        <button class="white-button button">학교캠페인</button>
-                                    </input>
+                                    <button class="kids-right-btn white-button button">아동권리·아동친화사업</button>
+                                    <button class="school-campaign-btn white-button button">학교캠페인</button>
+                                    <button class="mothermilk-btn white-button button">모유수유</button>
+                                    <button class="company-donate-btn white-button button">기업후원</button>
+                                    <button class="anniversary-btn white-button button">기념기부</button>
+
+                                    <button class="coin-funding-btn white-button button">동전모금</button>
+                                    <button class="hospital-btn white-button button">후원병원</button>
+                                    <button class="legacy-btn white-button button">유산기부</button>
+                                    <button class="foundation-btn white-button button">재단/비영리/기관 및 단체</button>
                                 </div>                                
                             </article>
                             <article class="contact-3">
                                 <h3>제목</h3>
-                                <input class="onetoone-input" type="text" placeholder="제목을 입력해주세요. (최소 5자 이상)" maxlength="30">
+                                <input class="onetoone-input-title" type="text" placeholder="제목을 입력해주세요. (최소 5자 이상)" maxlength="30">
                             </article>
                             <article class="contact-4">
                                 <h3>문의내용</h3>
-                                <textarea class="onetoone-input" type="text" placeholder="문의 내용을 입력해주세요. (최소 10자 이상)"></textarea>
+                                <textarea class="onetoone-input-detail" type="text" placeholder="문의 내용을 입력해주세요. (최소 10자 이상)"></textarea>
                             </article>
                             
                             <ul class="contact-5">
@@ -87,5 +93,6 @@
 <footer th:replace="~{fragment/footer :: footer}"></footer>
         </main>
     </div>
+    <script src="/static/js/mypage/mypage_onetoone.js"></script>
 </body>
 </html>

@@ -12,6 +12,8 @@ import java.time.LocalDateTime;
 @Data
 @Builder
 public class Onetoone {
+    private int onetoone_id;
+    private String onetoone_writer;
     private String category;
     private String title;
     private String detail;
