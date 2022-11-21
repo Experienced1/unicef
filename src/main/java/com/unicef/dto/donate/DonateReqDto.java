@@ -1,16 +1,7 @@
 package com.unicef.dto.donate;
 
 import com.unicef.domain.Donate;
-import com.unicef.domain.DonateArea;
 import lombok.Data;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-
-import java.io.InputStream;
-import java.time.LocalDateTime;
 
 @Data
 public class DonateReqDto {
@@ -20,8 +11,8 @@ public class DonateReqDto {
     private int donateAmount;
     private String donateType;
 
-    public DonateArea toDonateAreaEntity(){ // table4 후원분야
-        return DonateArea.builder()
+    public Donate toDonateAreaEntity(){ // table4 후원분야
+        return Donate.builder()
                 .donate_name(donateName)
                 .donate_area(donateArea)
                 .build();

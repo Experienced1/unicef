@@ -1,7 +1,6 @@
 package com.unicef.service.donate;
 
 import com.unicef.domain.Donate;
-import com.unicef.domain.DonateArea;
 import com.unicef.dto.donate.DonateReqDto;
 import com.unicef.repository.donate.DonateRepository;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +17,8 @@ public class DonateServiceImpl implements DonateService {
     @Override
     public boolean donate(DonateReqDto donateReqDto) throws Exception {
         // table4
-        DonateArea donateAreaEntity = donateReqDto.toDonateAreaEntity();
+        Donate donateAreaEntity = donateReqDto.toDonateAreaEntity();
+        log.info("4번 테이블: {}", donateAreaEntity);
         int result4 = donateAreaData.donateAreaInsert(donateAreaEntity);
 
         if(result4 == 0){ // 위에가 문제될 경우 resultCount가 0이되어 강제발생된다.
@@ -34,6 +34,7 @@ public class DonateServiceImpl implements DonateService {
                 .donate_area_id(donateAreaEntity.getDonate_area_id()) // 현재 table4의 id값
                 .build();
 
+        log.info("5번 테이블: {}", donateEntityData);
         int result3 = donateData.donateInsert(donateEntityData);
 
         if(result3 == 0){ // 위에가 문제될 경우 resultCount가 0이되어 강제발생된다.

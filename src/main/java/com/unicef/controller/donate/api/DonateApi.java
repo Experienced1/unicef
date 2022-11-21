@@ -16,22 +16,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 public class DonateApi {
-    private final DonateService donateAreaService;
     private final DonateService donateService;
 
-    @PostMapping("/donate/area")
-    public ResponseEntity<?> donateArea(@RequestBody DonateReqDto donateReqDto) throws Exception {
-        log.info("{}", donateReqDto);
-
-        donateAreaService.donate(donateReqDto);
-        return ResponseEntity.ok(new CMRespDto<>(1, "table4.후원분야", donateReqDto));
-    }
 
     @PostMapping("/donate") //Json은 늘 @RequestBody가 따라와야한다
     public ResponseEntity<?> donate(@RequestBody DonateReqDto donateReqDto) throws Exception {
-        log.info("{}", donateReqDto);
+        log.info("donateInfoData 데이터: {}", donateReqDto);
+        // donateReqDto: DonateReqDto(donateAreaId=0, donateName=김이름, donateArea=난민 어린이 돕기, donateAmount=100, donateType=정기후원)
 
         donateService.donate(donateReqDto);
+
         return ResponseEntity.ok(new CMRespDto<>(1, "table4.후원분야 성공, table5.후원 성공", donateReqDto));
     }
 

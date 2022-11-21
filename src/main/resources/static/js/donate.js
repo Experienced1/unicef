@@ -159,107 +159,69 @@ $(function(){
 
  // 금액 숫자 컴마 제거 //
 function minusComma(value){
-    value = value.replace(/[^\d]+/g, "");
-    return value; 
+    value = String(value).replace(/[^\d]+/g, "");
+    return Number(value); 
 }
 
 
 //   import 결제API ----------------------------------------------------------------- //
 
-document.cookie = "safeCookie1=foo; SameSite=Lax"; 
-document.cookie = "safeCookie2=foo";  
-document.cookie = "crossCookie=bar; SameSite=None; Secure";
+const submitButton = document.querySelector("#submit-button");
 
 var IMP = window.IMP; // 생략 가능
 IMP.init("imp04038076"); // 예: imp00000000
 
-const submitButton = document.querySelector("#submit-button");
-
-// let paymentInfo = {
-//     paymentName: paymentName, //결제자
-//     paymentMethod: paymentMethod, //결제수단
-//     paymentInfo: paymentInfo //결제정보
-// }
-
-// let donateInfo = {
-//     donateName: donateName, //후원자이름     
-//     donateArea: donateArea, //후원분야
-//     donateAmount: minusComma(donateAmount), //후원금액    
-//     donateType: donateType, // 후원종류
-// }
-
 submitButton.onclick = () => {
     // IMP.request_pay(param, callback) 결제창 호출
     IMP.request_pay({ // param
-        pg: "kakaopay",
+        pg: "html5_inicis", // "kakaopay", // pg사 선택
         pay_method: "card",
-        merchant_uid: "ORD20180131-0000011",
-        name: "노르웨이 회전 의자",
-        amount: 333300,
-        buyer_email: "gildong@gmail.com",
-        buyer_name: "홍길동",
-        buyer_tel: "010-4242-4242",
-        buyer_addr: "서울특별시 강남구 신사동",
-        buyer_postcode: "01181"
+        merchant_uid: "ORD32220280131-00e082d394", // 주문번호
+        name: donateType, // 결제정보(상품명)
+        amount: donateAmount, // 후원금액
+        // buyer_email: "gildoneg@gmail.com",
+        buyer_name: donateName, // 후원자 이름
+        buyer_tel: "010-0000-0000"
     }, function (rsp) { // callback
         if (rsp.success) {
-            alert("성공!");
+            console.log('빌링키 발급 성공', rsp);
+            donateInfoData();
+            alert("예약 결제가 완료되었습니다!");
+            //후원성공 팝업 띄우기
+            //location.replace("/account/login"); //이전기록 날려야함.
         } else {
-            alert("실패!");
+            var msg = '결제에 실패했습니다. \n';
+            msg += rsp.error_msg
+            alert(msg);            
+            return false;
         }
     });
-    
-    // console.log(paymentInfo);
 
-    // $.ajax({
-    //     async: false,
-    //     type: "post",
-    //     url: "/api/donate",
-    //     contentType: "application/json",
-    //     data: JSON.stringify(paymentInfo),
-    //     dataType: "json",
-    //     success: (response) => {
-    //         alert(response);
-    //         console.log(response);
-    //         //후원성공 팝업 띄우기
-    //         //location.replace("/account/login"); //이전기록 날려야함.
-    //     },
-    //     error: (error) => {
-    //         alert(response);
-    //         console.log(error);
-    //         //후원실패 팝업 띄우기
-    //         // validationError(error.responseJSON.data);
-    //     }
-    // })
 }
 
+ function donateInfoData(){    
+    let donateInfo = {
+        donateName: donateName, //후원자이름     
+        donateArea: donateArea, //후원분야
+        donateAmount: minusComma(donateAmount), //후원금액    
+        donateType: donateType // 후원종류
+    }
 
-// //  후원관련 기타 ajax ----------------------------------------------------------------- //
-
-// const submitButton = document.querySelector("#submit-button");
-
-// submitButton.onclick = () => {
-    
-//     console.log(donateInfo);
-
-//     $.ajax({
-//         async: false,
-//         type: "post",
-//         url: "/api/donate",
-//         contentType: "application/json",
-//         data: JSON.stringify(donateInfo),
-//         dataType: "json",
-//         success: (response) => {
-//             alert(response);
-//             console.log(response);
-//             //후원성공 팝업 띄우기
-//             //location.replace("/account/login"); //이전기록 날려야함.
-//         },
-//         error: (error) => {
-//             alert(response);
-//             console.log(error);
-//             //후원실패 팝업 띄우기
-//             // validationError(error.responseJSON.data);
-//         }
-//     })
-// }
+    $.ajax({
+        async: false,
+        type: "post",
+        url: "/api/donate",
+        contentType: "application/json",
+        data: JSON.stringify(donateInfo),
+        dataType: "json",
+        success: (response) => {
+            console.log(response);
+        },
+        error: (error) => {
+            alert(error);
+            console.log(error);
+            //후원실패 팝업 띄우기
+            // validationError(error.responseJSON.data);
+        }
+    })
+}
