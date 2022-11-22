@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{fragment/head :: head}"></head>
+<head>
+    <link rel="stylesheet" href="/static/css/admin/admin.css">
+    <link rel="stylesheet" href="/static/css/admin/admin_notice.css">
+    <link rel="stylesheet" href="/static/css/admin/admin_notice_add.css">
+</head>
+<body>
+    <div class="container">
+        <main>
+<!-- header -->
+<header th:replace="~{fragment/header :: header}"></header>      
+            <!-- header-bot -->
+            <div class="header-bot">
+                <div class="header-bot-auto">
+                    <div class="header-bot-title">
+                        <h1>관리자페이지</h1>
+                        <strong>for every child, UNICEF</strong>
+                    </div>
+                    <img src="/static/images/header/pattern.png" alt="title">
+                </div>
+            </div>
+<!-- section -->
+            <section class="mypage-content">
+                <div class="mypage-content-top">                        
+                    <ul>
+                        <li><a href="/admin/userlist">회원관리</a></li>
+                        <li><a href="/admin/donation">후원금</a></li>
+                        <li><a href="/admin/faq">FAQ</a></li>
+                        <li><a href="/admin/notice" class="active">공지사항</a></li>
+                    </ul>
+                </div>
+                <div class="mypage-content-bot">                        
+                    <!-- NOTICE 페이지 부분 -->
+            <section class="notice">
+
+                <article class="contact-3">
+                    <h3>제목</h3>
+                    <input class="onetoone-input-title" type="text" placeholder="제목을 입력해주세요. (최소 5자 이상)" maxlength="30">
+                </article>
+                <article class="contact-4">
+                    <h3>문의내용</h3>
+                    <textarea class="onetoone-input-detail" type="text" placeholder="문의 내용을 입력해주세요. (최소 10자 이상)"></textarea>
+                </article>
+                <input type="file">
+
+                <article class="contact-6">
+                    <button class="cancel-button white-button button">취소</button>
+                    <button class="submit-button sky-button button">등록</button>
+                </article>
+
+
+            </section>
+                </div>
+            </section>
+<!-- footer -->
+<footer th:replace="~{fragment/footer :: footer}"></footer>
+        </main>
+    </div>
+    <script src="/static/js/admin/admin_notice_add.js"></script>
+</body>
+</html>

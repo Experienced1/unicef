@@ -25,4 +25,9 @@ public class AdminPageController {
     public String adminNotice(){
         return "admin/admin_notice";
     }
+
+    @RequestMapping(value = "/admin/notice/add")
+    public String adminNoticeAdd(){
+        return "admin/admin_notice_add";
+    }
 }
