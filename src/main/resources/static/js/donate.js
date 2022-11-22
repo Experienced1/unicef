@@ -172,11 +172,26 @@ var IMP = window.IMP; // 생략 가능
 IMP.init("imp04038076"); // 예: imp00000000
 
 submitButton.onclick = () => {
+    if(donateType == "정기후원"){
+        alert("정기후원");
+        donatePledge();
+    }else if(donateType == "일시후원"){
+        donateOneoff();
+    }else{
+        alert("에러!")
+    }
+}
+
+
+// 정기결제 api
+function donatePledge(){    
     // IMP.request_pay(param, callback) 결제창 호출
     IMP.request_pay({ // param
-        pg: "html5_inicis", // "kakaopay", // pg사 선택
+        customer_uid: "gildong_0001_1234", // 카드(빌링키)와 1:1로 대응하는 값
+        schedule_at: 1519862400, // 결제 시도 시각 in Unix Time Stamp. 예: 다음 달 1일
+        pg: "danal_tpay",
         pay_method: "card",
-        merchant_uid: "ORD32220280131-00e082d394", // 주문번호
+        merchant_uid: "ORD32320280131-00e0ssd395", // 주문번호
         name: donateType, // 결제정보(상품명)
         amount: donateAmount, // 후원금액
         // buyer_email: "gildoneg@gmail.com",
@@ -196,9 +211,37 @@ submitButton.onclick = () => {
             return false;
         }
     });
-
 }
 
+// 일시결제 api
+function donateOneoff(){    
+    // IMP.request_pay(param, callback) 결제창 호출
+    IMP.request_pay({ // param
+        pg: "html5_inicis", // "kakaopay", // pg사 선택
+        pay_method: "card",
+        merchant_uid: "ORD32320280131-00e0ssd395", // 주문번호
+        name: donateType, // 결제정보(상품명)
+        amount: donateAmount, // 후원금액
+        // buyer_email: "gildoneg@gmail.com",
+        buyer_name: donateName, // 후원자 이름
+        buyer_tel: "010-0000-0000"
+    }, function (rsp) { // callback
+        if (rsp.success) {
+            console.log('빌링키 발급 성공', rsp);
+            donateInfoData();
+            alert("예약 결제가 완료되었습니다!");
+            //후원성공 팝업 띄우기
+            //location.replace("/account/login"); //이전기록 날려야함.
+        } else {
+            var msg = '결제에 실패했습니다. \n';
+            msg += rsp.error_msg
+            alert(msg);            
+            return false;
+        }
+    });
+}
+
+// ajax로 보내야 하는 데이터
  function donateInfoData(){    
     let donateInfo = {
         donateName: donateName, //후원자이름     

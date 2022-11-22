@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class DonateApi {
     private final DonateService donateService;
 
-
     @PostMapping("/donate") //Json은 늘 @RequestBody가 따라와야한다
     public ResponseEntity<?> donate(@RequestBody DonateReqDto donateReqDto) throws Exception {
         log.info("donateInfoData 데이터: {}", donateReqDto);
