@@ -133,9 +133,12 @@ label::after{
 
 /* error *//* error *//* error */
 .account-errors{
+    margin-bottom: 15px;
+    text-align: center;
     color: #e2231a;
-
 }
+
 .errors-invisible{
     display: none;
 }
+

@@ -39,14 +39,17 @@ joinGoButton.onclick = () => {
     data: JSON.stringify(joinInfo),
     dataType: "json",
     success: (response) => {
+      console.log(response);
       // location.replace("/account/login");
     },
     error: (error) => {
-      // console.log(error);
-      // validationError(error.responseJSON.data);
-    },
+      console.log(error);
+      validationError(error.responseJSON.data);
+    }
   });
-};
+}
+
+
 
 // // 비밀번호 일치 확인
 //   $('.join-input').focusout(function () {

@@ -1,4 +1,4 @@
-package com.unicef.dto.account;
+package com.unicef.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
