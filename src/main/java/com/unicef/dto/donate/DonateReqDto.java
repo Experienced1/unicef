@@ -1,6 +1,6 @@
 package com.unicef.dto.donate;
 
-import com.unicef.domain.Donate;
+import com.unicef.domain.donate.Donate;
 import lombok.Data;
 
 @Data

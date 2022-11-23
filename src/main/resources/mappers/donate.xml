@@ -5,7 +5,7 @@
 <mapper namespace="com.unicef.repository.donate.DonateRepository">
 <!--table4 후원분야-->
     <insert id="donateAreaInsert"
-            parameterType="com.unicef.domain.Donate"
+            parameterType="com.unicef.domain.donate.Donate"
             useGeneratedKeys="true"
             keyProperty="donate_area_id"
     >
@@ -27,7 +27,7 @@
     </insert>
 <!--table5 후원-->
     <insert id="donateInsert"
-            parameterType="com.unicef.domain.Donate"
+            parameterType="com.unicef.domain.donate.Donate"
             useGeneratedKeys="true"
             keyProperty="donate_id"
     >

@@ -1,6 +1,6 @@
 package com.unicef.repository.donate;
 
-import com.unicef.domain.Donate;
+import com.unicef.domain.donate.Donate;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

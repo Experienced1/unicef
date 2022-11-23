@@ -1,4 +1,4 @@
-package com.unicef.domain;
+package com.unicef.domain.donate;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,6 +1,6 @@
 package com.unicef.service.donate;
 
-import com.unicef.domain.Donate;
+import com.unicef.domain.donate.Donate;
 import com.unicef.dto.donate.DonateReqDto;
 import com.unicef.repository.donate.DonateRepository;
 import lombok.RequiredArgsConstructor;

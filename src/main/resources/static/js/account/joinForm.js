@@ -1,7 +1,6 @@
 const joinGoButton = document.querySelector(".join-button");
 const joinInputs = document.querySelectorAll(".join-input");
 
-joinGoButton.onclick = () => {};
 
 //enter누르면 회원가입 되기!
 for (let i = 0; i < joinInputs.length; i++) {
@@ -21,26 +20,31 @@ for (let i = 0; i < joinInputs.length; i++) {
 
 joinGoButton.onclick = () => {
   let joinInfo = {
-    id: joinInputs[0].value,
-    password: joinInputs[1].value,
-    passwordCheck: joinInputs[2].value,
-    name: joinInputs[3].value,
-    email: joinInputs[4].value,
+    mainUsername: joinInputs[0].value,
+    userPw: joinInputs[1].value,
+    // passwordCheck: joinInputs[2].value,
+    userName: joinInputs[3].value,
+    userEmail: joinInputs[4].value,
   };
+
+  console.log(joinInfo);
 
   $.ajax({
     async: false,
     type: "post",
-    url: "/account/joinForm",
+    url: "/api/account/joinform",
     contentType: "application/json",
     data: JSON.stringify(joinInfo),
     dataType: "json",
     success: (response) => {
-      location.replace("/account/login");
+      console.log(response);
+      alert("성공");
+      // location.replace("/account/login");
     },
     error: (error) => {
       console.log(error);
-      validationError(error.responseJSON.data);
+      alert("실패~");
+      // validationError(error.responseJSON.data);
     },
   });
 };
