@@ -2,34 +2,37 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.unicef.repository.FaqRepository">
+<mapper namespace="com.unicef.repository.faq.FaqRepository">
 
-    <resultMap id="category" type="com.unicef.domain.Category">
-        <result property="category_id" column="category_id"></result>
-        <result property="category_list" column="category_list"></result>
-    </resultMap>
-    <resultMap id="faq" type="com.unicef.domain.Faq">
-        <result property="faq_id" column="faq_id"></result>
-        <result property="faq_writer" column="faq_writer"></result>
-        <result property="category_id" column="category_id"></result>
-        <result property="faq_title" column="faq_title"></result>
-        <result property="faq_detail" column="faq_detail"></result>
-        <result property="create_date" column="create_date"></result>
-        <result property="update_date" column="update_date"></result>
-        <collection property="category" resultMap="category"></collection>
-    </resultMap>
-    <insert id="save" parameterType="com.unicef.domain.Faq"
-            useGeneratedKeys="true" keyProperty="id">
+    <insert id="save"
+            parameterType="com.unicef.domain.Faq"
+            useGeneratedKeys="true"
+            keyProperty="faq_id"
+    >
         insert into
-            faq_mst
+        faq_mst(
+        faq_id,
+        category,
+        faq_title,
+        faq_detail,
+        create_date,
+        update_date
+        )
         values(
-            #{faq_id},
-            #{faq_writer},
-            #{category_id},
-            #{faq_title},
-            #{faq_detail},
-            now(),
-            now()
+        0,
+        #{category},
+        #{faq_title},
+        #{faq_detail},
+        now(),
+        now()
         )
     </insert>
+
+    <select id="getFaqList"
+            parameterType="com.unicef.domain.Faq">
+        select *
+        from
+        faq_mst
+    </select>
+
 </mapper>
