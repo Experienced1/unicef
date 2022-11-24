@@ -29,9 +29,8 @@ public class FaqApi {
     }
 
     @GetMapping("/faqList")
-    public ResponseEntity<?> getFaqList(FaqReqDto faqReqDto) throws Exception {
+    public ResponseEntity<?> getFaqList() throws Exception {
 
-        log.info("{}", faqReqDto);
         return ResponseEntity.ok(new CMRespDto<>(1, "Successfully", faqService.getFaqList()));
     }
 }

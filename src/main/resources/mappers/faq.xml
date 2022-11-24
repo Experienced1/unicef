@@ -29,8 +29,12 @@
     </insert>
 
     <select id="getFaqList"
-            parameterType="com.unicef.domain.Faq">
-        select *
+            parameterType="java.util.HashMap"
+            resultType="com.unicef.domain.Faq">
+        select
+        category,
+        faq_title,
+        faq_detail
         from
         faq_mst
     </select>
