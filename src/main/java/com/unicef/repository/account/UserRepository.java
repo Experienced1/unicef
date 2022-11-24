@@ -7,5 +7,6 @@ import org.apache.ibatis.annotations.Mapper;
 public interface UserRepository {
     // table2 사용자
     public int userInsert(User user);
+    public User userSelect(String main_username);
 
 }

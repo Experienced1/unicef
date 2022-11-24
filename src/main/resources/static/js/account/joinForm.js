@@ -1,5 +1,6 @@
 const joinGoButton = document.querySelector(".join-button");
 const joinInputs = document.querySelectorAll(".join-input");
+const checkButton = document.querySelector(".check-button");
 
 
 //enter누르면 회원가입 되기!
@@ -15,10 +16,14 @@ for (let i = 0; i < joinInputs.length; i++) {
   };
 }
 
-// 가입하기 누를 경우 //
+// 아이디 중복 확인 누를 경우 //
+checkButton.onclick = () => {
+  donateInfoData();
+};
 
+// 가입하기 누를 경우 //
 joinGoButton.onclick = () => {
-        donateInfoData();
+  donateInfoData();
 };
 
 // ajax로 보내야 하는 데이터
@@ -26,7 +31,6 @@ function donateInfoData(){
   let joinInfo = {
     mainUsername: joinInputs[0].value,
     userPw: joinInputs[1].value,
-    // passwordCheck: joinInputs[2].value,
     userName: joinInputs[3].value,
     userEmail: joinInputs[4].value,
   };
@@ -63,6 +67,8 @@ function validationError(error) {
     const errorUserPw = error.userPw;
     const errorUserName = error.userName;
     const errorUserEmail = error.userEmail;
+
+    const errorDuplicateFlag = error.duplicateFlag;
     
     for(i = 0; i < accountErrorList.length; i++){
       accountErrorList[i].innerHTML = "";
@@ -74,6 +80,12 @@ function validationError(error) {
           <li>${errorMainUsername}</li>
       `
     };
+    
+    if(errorDuplicateFlag != undefined){
+      accountErrorList[0].innerHTML = `
+          <li>${errorDuplicateFlag}</li>
+      `
+    }
 
     //비밀번호
     if(errorUserPw != undefined){

@@ -13,6 +13,6 @@ public class Role {
     private int role_id;
     private String role;
     private String role_name;
-    private LocalDateTime createDate;
-    private LocalDateTime updateDate;
+    private LocalDateTime create_date;
+    private LocalDateTime update_date;
 }

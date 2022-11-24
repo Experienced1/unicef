@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 public class User {
     private int user_id;
     private int role_id;
+    private Role role;
     private String main_username;
     private String oauth_username;
     private String user_provider;
@@ -22,6 +23,6 @@ public class User {
     private int user_phone;
     private int user_birthdate;
     private String user_email;
-    private LocalDateTime createDate;
-    private LocalDateTime updateDate;
+    private LocalDateTime create_date;
+    private LocalDateTime update_date;
 }
