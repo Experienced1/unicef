@@ -42,12 +42,12 @@ function donateInfoData(){
     dataType: "json",
     success: (response) => {
       console.log(response);
-      alert("성공");
-      // location.replace("/account/login");
+      alert("회원가입 완료");
+      location.replace("/account/login");
     },
     error: (error) => {
       console.log(error);
-      alert("실패~");
+      alert("회원가입 실패");
       validationError(error.responseJSON.data);
     },
   });
@@ -60,28 +60,48 @@ function validationError(error) {
     const accountErrorList = $('.account-errors > ul');
 
     const errorMainUsername = error.mainUsername;
-    const errorUserEmail = error.userEmail;
     const errorUserPw = error.userPw;
     const errorUserName = error.userName;
+    const errorUserEmail = error.userEmail;
+    
+    for(i = 0; i < accountErrorList.length; i++){
+      accountErrorList[i].innerHTML = "";
+    }
 
-    alert(accountErrorList[0].innerHTML);
-    alert(accountErrorList[1].innerHTML);
-    // alert(accountErrorList[2].innerHTML);
-    alert(accountErrorList[3].innerHTML);
-    alert(accountErrorList[4].innerHTML);
+    //아이디
+    if(errorMainUsername != undefined){
+      accountErrorList[0].innerHTML = `
+          <li>${errorMainUsername}</li>
+      `
+    };
 
-    accountErrorList[0].innerHTML = `
-        <li>${errorMainUsername}</li>
-    `;
-    accountErrorList[1].innerHTML = `
-        <li>${errorUserPw}</li>
-    `;
-    accountErrorList[3].innerHTML = `
-        <li>${errorUserName}</li>
-    `;
-    accountErrorList[4].innerHTML = `
-        <li>${errorUserEmail}</li>
-    `;
+    //비밀번호
+    if(errorUserPw != undefined){
+      accountErrorList[1].innerHTML = `
+          <li>${errorUserPw}</li>
+      `
+    };
+
+    //비밀번호 확인
+    if($('#user-pw-check').val() != $('#user-pw').val()){
+      accountErrorList[2].innerHTML = `
+          <li>비밀번호가 일치하지 않습니다</li>
+      `
+    };
+
+    //성명
+    if(errorUserName != undefined){
+      accountErrorList[3].innerHTML = `
+          <li>${errorUserName}</li>
+      `
+    };
+
+    //이메일
+    if(errorUserEmail != undefined){
+      accountErrorList[4].innerHTML = `
+          <li>${errorUserEmail}</li>
+      `
+    };
 
     accountErrors.removeClass('errors-invisible');
 }

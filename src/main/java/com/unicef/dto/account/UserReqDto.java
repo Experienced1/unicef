@@ -12,13 +12,14 @@ public class UserReqDto {
     private int userId;
     private int roleId;
 
-    @NotBlank(message = "아이디는 비워 둘 수 없습니다")
+    @Pattern(regexp = "^[a-z]+[a-z0-9]{7,16}$",
+            message = "아이디는 8자 이상 16자 이하여야 하며 숫자, 영문만 입력 가능합니다")
     private String mainUsername;
     private String oauthUsername;
     private String userProvider;
 
     @Pattern(regexp = "^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[~!@#$%^&*_])[a-zA-Z\\d-!@#$%^&*_]{8,16}$",
-            message="숫자, 영문, 특수기호를 하나 이상 포함하여 작성해야 합니다")
+            message="비밀번호는 8자 이상 16자 이하여야 하며 숫자, 영문, 특수기호를 포함해야 합니다")
     private String userPw;
 
     @Pattern(regexp = "^[가-힇]{1,3}$",
