@@ -3,6 +3,8 @@
     <head th:replace="~{fragment/head :: head}"></head>
 <head>
     <link rel="stylesheet" href="/static/css/community/faq.css">
+    <link rel="stylesheet" href="/static/css/admin/admin.css">
+    <link rel="stylesheet" href="/static/css/admin/admin_faq.css">
 </head>
 <body>
     <div class="containel">
@@ -78,19 +80,13 @@
                         </div>
 
                         
-                            <!-- listPage / innerHTML 부분이 맞을까요...ㅜㅜ??-->
-                            <div class="faq-list-page">
-                                <ul>
-                                    <li class="faq-list-header">
-                                        <strong color="grey" class="faq-no-search-result">
-                                            검색결과가 없습니다
-                                        </strong>
-                                    </li>
-                                    
+                        <div class="faq-list-page">
+                            <ul class="faq-list-body">
                                 
-                                </ul>
-                                
-                            </div>
+                                                     
+                            </ul>
+                            
+                        </div>
                       
 
                     </div>
@@ -105,5 +101,6 @@
         </main>
     </div>    
     <script src="/static/js/community/faq.js"></script>
+    <script src="/static/js/community/faq_list_activity.js"></script>
 </body>
 </html>

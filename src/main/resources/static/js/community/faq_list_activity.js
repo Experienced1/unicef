@@ -29,25 +29,21 @@ function showFaqList(faqList){
 
     faqList.forEach((faq) => {
         
-        listBody.innerHTML += `
-        <li class="faq-list-header">
-            <dl>
-                <button type="button" class="button white-button">
-                    수정
-                </button>
-                <button type="button" class="button white-button">
-                    삭제
-                </button>
-                <dt>${faq.category}</dt>
-                <dd>
-                    <p>${faq.faq_title}</p>
-                    <i class="fa-solid fa-circle-arrow-down"></i>
-                </dd>
-            </dl>
-            <div class="faq-detail detail-invisible invisible">
-                <p>${faq.faq_detail}</p>
-            </div>
-        </li>
-        `;
+        if(faq.category == "참여 활동"){
+            listBody.innerHTML += `
+            <li class="faq-list-header">
+                <dl>
+                    <dt>${faq.category}</dt>
+                    <dd>
+                        <p>${faq.faq_title}</p>
+                        <i class="fa-solid fa-circle-arrow-down"></i>
+                    </dd>
+                </dl>
+                <div class="faq-detail detail-invisible invisible">
+                    <p>${faq.faq_detail}</p>
+                </div>
+            </li>
+            `;
+        };
     });
 }

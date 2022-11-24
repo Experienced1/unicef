@@ -32,12 +32,6 @@ function showFaqList(faqList){
         listBody.innerHTML += `
         <li class="faq-list-header">
             <dl>
-                <button type="button" class="button white-button">
-                    수정
-                </button>
-                <button type="button" class="button white-button">
-                    삭제
-                </button>
                 <dt>${faq.category}</dt>
                 <dd>
                     <p>${faq.faq_title}</p>
