@@ -15,10 +15,14 @@ for (let i = 0; i < joinInputs.length; i++) {
   };
 }
 
-// 가입하기 버튼 누를 시 form첫번째 선택하기도
-// 부탁드려요~
+// 가입하기 누를 경우 //
 
 joinGoButton.onclick = () => {
+        donateInfoData();
+};
+
+// ajax로 보내야 하는 데이터
+function donateInfoData(){   
   let joinInfo = {
     mainUsername: joinInputs[0].value,
     userPw: joinInputs[1].value,
@@ -44,26 +48,40 @@ joinGoButton.onclick = () => {
     error: (error) => {
       console.log(error);
       alert("실패~");
-      // validationError(error.responseJSON.data);
+      validationError(error.responseJSON.data);
     },
   });
-};
+}
 
 //<<<<<validationError>>>>>>
 
-// function validationError(error) {
-//     const accountErrors = document.querySelectorAll(".account-errors");
-//     const accountErrorList = accountErrors.querySelectorAll("ul");
+function validationError(error) {
+    const accountErrors = $('.account-errors');
+    const accountErrorList = $('.account-errors > ul');
 
-//     const errorValues = Object.values(error);
+    const errorMainUsername = error.mainUsername;
+    const errorUserEmail = error.userEmail;
+    const errorUserPw = error.userPw;
+    const errorUserName = error.userName;
 
-//     accountErrorList.innerHTML = "";
+    alert(accountErrorList[0].innerHTML);
+    alert(accountErrorList[1].innerHTML);
+    // alert(accountErrorList[2].innerHTML);
+    alert(accountErrorList[3].innerHTML);
+    alert(accountErrorList[4].innerHTML);
 
-//     errorValues.forEach((value) => {
-//         accountErrorList.innerHTML += `
-//             <li>${value}</li>
-//         `;
-//     });
+    accountErrorList[0].innerHTML = `
+        <li>${errorMainUsername}</li>
+    `;
+    accountErrorList[1].innerHTML = `
+        <li>${errorUserPw}</li>
+    `;
+    accountErrorList[3].innerHTML = `
+        <li>${errorUserName}</li>
+    `;
+    accountErrorList[4].innerHTML = `
+        <li>${errorUserEmail}</li>
+    `;
 
-//     accountErrors.classList.remove("errors-invisible");
-// }
+    accountErrors.removeClass('errors-invisible');
+}

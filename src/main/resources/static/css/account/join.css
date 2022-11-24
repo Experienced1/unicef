@@ -108,8 +108,13 @@ label::after{
 
 .id-group{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+}
+
+.id-group > input{
+    width: 348px;
 }
 
 .join-input{
@@ -134,6 +139,7 @@ label::after{
 /* error *//* error *//* error */
 .account-errors{
     color: #e2231a;
+    width: 540px;
 
 }
 .errors-invisible{
