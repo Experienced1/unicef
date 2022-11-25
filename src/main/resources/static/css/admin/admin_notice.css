@@ -20,6 +20,7 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    position: relative;
     margin-bottom: 24px;
     padding: 0px 12px;
 }
@@ -107,6 +108,14 @@
 .notice-detail{
     padding: 24px 12px 64px 12px;
 }
+
+/* 추가 버튼 */
+.add-button{
+    max-width: 100px;
+    position: absolute; 
+    left: 30px;
+}
+
 
 /* 목록 버튼 */
 .list-button-wrap{

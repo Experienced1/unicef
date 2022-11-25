@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.unicef.repository.faq.FaqRepository">
+
+    <insert id="save"
+            parameterType="com.unicef.domain.Faq"
+            useGeneratedKeys="true"
+            keyProperty="faq_id"
+    >
+        insert into
+        faq_mst(
+        faq_id,
+        category,
+        faq_title,
+        faq_detail,
+        create_date,
+        update_date
+        )
+        values(
+        0,
+        #{category},
+        #{faq_title},
+        #{faq_detail},
+        now(),
+        now()
+        )
+    </insert>
+
+    <select id="getFaqList"
+            parameterType="java.util.HashMap"
+            resultType="com.unicef.domain.Faq">
+        select
+        category,
+        faq_title,
+        faq_detail
+        from
+        faq_mst
+    </select>
+
+</mapper>
