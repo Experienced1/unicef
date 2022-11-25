@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{fragment/head :: head}"></head>
+<head>
+    <link rel="stylesheet" href="/static/css/admin/admin.css">
+    <link rel="stylesheet" href="/static/css/admin/admin_faq.css">
+</head>
+<body>
+    <div class="container">
+        <main>
+<!-- header -->
+<header th:replace="~{fragment/header :: header}"></header>      
+            <!-- header-bot -->
+            <div class="header-bot">
+                <div class="header-bot-auto">
+                    <div class="header-bot-title">
+                        <h1>관리자페이지</h1>
+                        <strong>for every child, UNICEF</strong>
+                    </div>
+                    <img src="/static/images/header/pattern.png" alt="title">
+                </div>
+            </div>
+<!-- section -->
+            <section class="mypage-content">
+                <div class="mypage-content-top">
+                    <ul>
+                        <li><a href="/admin/userlist">회원관리</a></li>
+                        <li><a href="/admin/donation">후원금</a></li>
+                        <li><a href="/admin/faq" class="active">FAQ</a></li>
+                        <li><a href="/admin/notice">공지사항</a></li>
+                    </ul>     
+                </div>
+                <div class="mypage-content-bot">                        
+                    <div class="faq-container-2">
+                        <div class="faq-category">
+                            <!-- search -->
+                            <div class="faq-search-wrap">
+                                <div class="faq-search">
+                                    <a href="/admin/faq/add"><button type="button" class="button white-button add-button">추가</button></a>
+                                    <div class="search-wrap">
+                                        <input type="text" class="search-input" placeholder="검색어를 입력하세요" >
+                                        <button type="button" class="button search-button"></button>
+                                    </div>
+                                    <!-- <div class="all-btn">
+                                        <button type="button" class="button gray-button all-button">전체보기</button>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <!-- category-Tab -->
+                            <div class="category-tab">
+                              <ul class="category-tab-panel">
+                                <li><a href="/admin/faq"><button type="button" class="button white-button" value="ALL" >전체</button></a></li>
+                                <li><a href="/admin/faq/donate"><button type="button" class="button white-button" value="donate">후원</button></a></li>
+                                <li><a href="/admin/faq/childRights"><button type="button" class="button white-button" value="childRights">아동권리</button></a></li>
+                                <li><a href="/admin/faq/activity"><button type="button" class="button white-button" value="activity">참여 활동</button></a></li>
+                                <li><a href="/admin/faq/promotion"><button type="button" class="button white-button" value="promotion">홍보/자료</button></a></li>
+                                <li><a href="/admin/faq/recruitment"><button type="button" class="button white-button" value="recruitment">채용</button></a></li>
+                                <li><a href="/admin/faq/other"><button type="button" class="button white-button active" value="other">기타</button></a></li>
+                              </ul>
+                                
+                            </div>
+                            
+                            <div class="faq-list-page">
+                                <ul class="faq-list-body">
+                                    
+                                                         
+                                </ul>
+                                
+                            </div>
+                          
+    
+                        </div>
+    
+                    </div>                    
+                </div>
+
+            </section>
+<!-- footer -->
+<footer th:replace="~{fragment/footer :: footer}"></footer>
+        </main>
+    </div>
+    <script src="/static/js/admin/admin_faq_list_other.js"></script>
+</body>
+</html>

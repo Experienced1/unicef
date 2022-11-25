@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/static/css/header.css">
     <link rel="stylesheet" href="/static/css/donate.css">
     <link rel="stylesheet" href="/static/css/footer.css">
+    <script src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
     <title>어린이 정기후원 및 정기기부 단체</title>
 </head>
     <body>
@@ -25,7 +26,7 @@
                     <!-- header-mid -->
                     <div class="header-mid">
                         <div class="header-mid-auto clearfix">                                    
-                            <a href="/templates/main.html" class="header-logo">
+                            <a href="/main" class="header-logo">
                                 <img src="/static/images/header/logo.png" alt="logo">
                             </a>
                         </div>
@@ -196,14 +197,9 @@
                             </div>
                             <section>
                                 <article class="donate3-1">
-                                    <h4>결제수단</h4>
-                                    <div>
-                                        <button class="active white-button button">신용카드</button>
-                                        <button class="white-button button">무통장입금</button>
-                                        <button class="white-button button">네이버페이</button>
-                                    </div>                                    
+                                    <h4>결제수단</h4>                     
                                 </article>
-                                <button class="submit-button yellow-button button">후원하기</button>
+                                <button id="submit-button" class="yellow-button button">후원하기</button>
                             </section>
                         </li>
                     </ul>
@@ -213,38 +209,13 @@
                             <button class="edit-done sky-button button">확인</button>    
                         </div>
                     </article>
-                </section>         
-    <!-- footer -->
-                <footer class="main-footer">
-                    <ul>
-                        <li class="main-footer-left">
-                            <ul>
-                                <li><a href="#">이용약관</a></li>
-                                <li><a href="#">개인정보 처리방침</a></li>
-                                <li><a href="#">오시는 길</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">사이트맵</a></li>
-                                <li>후원문의 02.737.1004</li>
-                            </ul>
-                            <div>
-                                사단법인 유니세프한국위원회　대표자: 정갑영　고유번호: 102-82-07606[04099]　서울시 마포구 서강로 60(창전동)
-                            </div>
-                            <div>
-                                COPYRIGHT @ THE KOREAN COMMITTEE FOR UNICEF. ALL RIGHT RESERVED
-                            </div>
-                        </li>
-                        <li class="main-footer-right">
-                            <ul>
-                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </footer>
+                </section>   
+                <!-- footer -->
+                <footer th:replace="~{fragment/footer :: footer}"></footer>
             </main>
         </div>
+        <!-- iamport.payment.js -->
+       
         <script src="/static/js/donate.js"></script>
     </body>
 </html>

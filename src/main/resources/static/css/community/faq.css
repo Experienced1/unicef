@@ -180,13 +180,13 @@
 
 
 .faq-list-page li dl dt{
-    width: 5%;
+    width: 7%;
     font-size: 16px;
     color: #1caBE2;
 }
 
 .faq-list-page li dl dd{
-    width: 95%;
+    width: 93%;
     position: relative;
     color: #2d2629;
     font-size: 20px;
@@ -208,4 +208,16 @@
     padding: 24px 12px;
     border-bottom: 1px solid rgb(28, 171, 226);
 
+}
+
+.faq-no-search-result{
+    padding-top: 96px;
+    line-height: 1.6;
+    padding-bottom: 119px;
+    text-align: center;
+    display: block;
+    letter-spacing: -1px;
+    color: rgb(130, 131, 133);
+    font-size: 20px;
+    font-weight: 700 !important;
 }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{fragment/head :: head}"></head>
+<head>
+    <link rel="stylesheet" href="/static/css/community/faq.css">
+    <link rel="stylesheet" href="/static/css/admin/admin.css">
+    <link rel="stylesheet" href="/static/css/admin/admin_faq.css">
+</head>
+<body>
+    <div class="containel">
+        <main>
+        <!-- header -->
+<header th:replace="~{fragment/header :: header}"></header>
+            <!-- header-bot -->
+            <div class="header-bot">
+                <div class="header-bot-auto">
+                    <div class="header-bot-title">
+                        <h1>FAQ</h1>
+                        <strong></strong>
+                    </div>
+                </div>
+            </div>
+<!-- FAQ 페이지 부분 -->
+            <section class="faq">
+
+                <!-- 상단 text-->
+                <div class="faq-container-1">
+                    <div class="faq-header">
+                            <div class="faq-img-1">
+                                <img src="/static/images/faq/faq_img1.png" alt="">
+                            </div>
+                            <div class="faq-img-2">
+                                <img src="/static/images/faq/faq_img2.png" alt="">
+                            </div>
+                            <div class="faq-title-wrap">
+                                <h2>후원금은 투명하게 쓰이나요?</h2>
+                                <p>유니세프한국위원회는 후원금 100원 중 85원을 어린이들을 위해 유니세프 본부로 송금하여, 전세계 33개
+                                    유니세프국가위원회 중 가장 높은 송금률을 자랑합니다.
+                                    유니세프한국위원회는 국내 평가 전문 기관으로부터 높은 효율성과 투명성도 인정받고 있습니다.<p>
+                                        
+                                <p>유니세프한국위원회는 독립적인 국내평가 기관이 실시한 공익법인 재무 종합평가에서 재무 안정성 및
+                                    효율성, 투명성 및 책무성 종합평가에서 만점인 별3개와 크라운 인증을 2019~2020년 2년 연속
+                                    획득했습니다. 특히 2020년에는 20개 세부항목 평가에서도 모두 만점을 받았습니다.
+                                    이 3가지 사항을 모두 충족한 법인은 평가 대상 9,648곳 중 유니세프한국위원회를 포함해 4곳(0.04%)에 불과합니다.
+                                </p>
+                            </div>
+                            <div class="faq-img-bg">
+                             
+                            </div>
+                    </div>
+                </div>
+
+                <!-- 하단 list -->
+                <div class="faq-container-2">
+                    <div class="faq-category">
+                        <!-- search -->
+                        <div class="faq-search-wrap">               
+                            <div class="faq-search">
+                                <div class="search-wrap">
+                                    <input type="text" class="search-input" placeholder="검색어를 입력하세요" >
+                                    <button type="button" class="button search-button"></button>
+                                </div>
+                                <!-- <div class="all-btn">
+                                    <button type="button" class="button gray-button all-button">전체보기</button>
+                                </div> -->
+                            </div>
+                        </div>
+                        <!-- category-Tab -->
+                        <div class="category-tab">
+                          <ul class="category-tab-panel">
+                            <li><form action="/community/faq" method="post"><button type="submit" class="button white-button" value="ALL" >전체</button></form></li>
+                            <li><form action="/community/faq/donate" method="post"><button type="submit" class="button white-button active" value="donate">후원</button></form></li>
+                            <li><form action="/community/faq/childRights" method="post"><button type="submit" class="button white-button" value="childRights">아동권리</button></form></li>
+                            <li><form action="/community/faq/activity" method="post"><button type="submit" class="button white-button" value="activity">참여 활동</button></form></li>
+                            <li><form action="/community/faq/promotion" method="post"><button type="submit" class="button white-button" value="promotion">홍보/자료</button></form></li>
+                            <li><form action="/community/faq/recruitment" method="post"><button type="submit" class="button white-button" value="recruitment">채용</button></form></li>
+                            <li><form action="/community/faq/other" method="post"><button type="submit" class="button white-button" value="other">기타</button></form></li>
+                          </ul>
+                            
+                        </div>
+
+                        
+                        <div class="faq-list-page">
+                            <ul class="faq-list-body">
+                                
+                                                     
+                            </ul>
+                            
+                        </div>
+                      
+
+                    </div>
+
+                </div>
+
+
+
+            </section>
+<!-- footer -->
+<footer th:replace="~{fragment/footer :: footer}"></footer>
+        </main>
+    </div>    
+    <script src="/static/js/community/faq.js"></script>
+    <script src="/static/js/community/faq_list_donate.js"></script>
+</body>
+</html>

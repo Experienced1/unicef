@@ -1,5 +1,10 @@
-const totalDonate = $('.donate1-4 .total-donate'); // 총액
-const headerMid = document.querySelector(".header-mid");
+var totalDonate = $('.donate1-4 .total-donate'); // 총액
+var headerMid = document.querySelector(".header-mid");
+var donateArea = null; // 후원분야선택
+var donateAmount = null;// 후원금액
+var donateType = null; // 후원종류
+var donateName = null; // 후원자 성명
+var userBirthdate = null; // 후원자 생년월일
 
 
 // 후원 헤더 관리 //// 후원 헤더 관리 //
@@ -36,15 +41,16 @@ $(function(){
         }
 
     // 선택정보 명시 //
-        // 후원방법
-        var sponsorship = $("select[name=sponsorship]").val();
-        var buttonpick = $(".first-step .donate1-1 button.active").html();
-        $('.step1-summary').html(sponsorship + '/' + totalDonate.html() + '/' + buttonpick + '후원');
+        // 후원방법sponsorship
+        donateArea = $("select[name=sponsorship]").val(); // 후원분야
+        donateAmount = totalDonate.html();
+        donateType = $(".first-step .donate1-1 button.active").html() + '후원';
+        $('.step1-summary').html(donateArea + '/' + donateAmount + '/' + donateType);
 
         // 후원자정보
-        var username = $('.donate2-1 > div:nth-child(2) > input').val();
+        donateName = $('.donate2-1 > div:nth-child(2) > input').val();
         var userbirth = $('.donate2-1 > div:nth-child(4) > input').val();
-        $('.step2-summary').html(username + '/' + userbirth);
+        $('.step2-summary').html(donateName + '/' + userbirth);
 
     });
 
@@ -150,3 +156,115 @@ $(function(){
     });
 
  });
+
+ // 금액 숫자 컴마 제거 //
+function minusComma(value){
+    value = String(value).replace(/[^\d]+/g, "");
+    return Number(value); 
+}
+
+
+//   import 결제API ----------------------------------------------------------------- //
+
+const submitButton = document.querySelector("#submit-button");
+
+var IMP = window.IMP; // 생략 가능
+IMP.init("imp04038076"); // 예: imp00000000
+
+submitButton.onclick = () => {
+    if(donateType == "정기후원"){
+        alert("정기후원");
+        donatePledge();
+    }else if(donateType == "일시후원"){
+        donateOneoff();
+    }else{
+        alert("에러!")
+    }
+}
+
+
+// 정기결제 api
+function donatePledge(){    
+    // IMP.request_pay(param, callback) 결제창 호출
+    IMP.request_pay({ // param
+        customer_uid: "gildong_0001_1234", // 카드(빌링키)와 1:1로 대응하는 값
+        schedule_at: 1519862400, // 결제 시도 시각 in Unix Time Stamp. 예: 다음 달 1일
+        pg: "danal_tpay",
+        pay_method: "card",
+        merchant_uid: "ORD32320280131-00e0ssd395", // 주문번호
+        name: donateType, // 결제정보(상품명)
+        amount: donateAmount, // 후원금액
+        // buyer_email: "gildoneg@gmail.com",
+        buyer_name: donateName, // 후원자 이름
+        buyer_tel: "010-0000-0000"
+    }, function (rsp) { // callback
+        if (rsp.success) {
+            console.log('빌링키 발급 성공', rsp);
+            donateInfoData();
+            alert("예약 결제가 완료되었습니다!");
+            //후원성공 팝업 띄우기
+            //location.replace("/account/login"); //이전기록 날려야함.
+        } else {
+            var msg = '결제에 실패했습니다. \n';
+            msg += rsp.error_msg
+            alert(msg);            
+            return false;
+        }
+    });
+}
+
+// 일시결제 api
+function donateOneoff(){    
+    // IMP.request_pay(param, callback) 결제창 호출
+    IMP.request_pay({ // param
+        pg: "html5_inicis", // "kakaopay", // pg사 선택
+        pay_method: "card",
+        merchant_uid: "ORD32320280131-00e0ssd395", // 주문번호
+        name: donateType, // 결제정보(상품명)
+        amount: donateAmount, // 후원금액
+        // buyer_email: "gildoneg@gmail.com",
+        buyer_name: donateName, // 후원자 이름
+        buyer_tel: "010-0000-0000"
+    }, function (rsp) { // callback
+        if (rsp.success) {
+            console.log('빌링키 발급 성공', rsp);
+            donateInfoData();
+            alert("예약 결제가 완료되었습니다!");
+            //후원성공 팝업 띄우기
+            //location.replace("/account/login"); //이전기록 날려야함.
+        } else {
+            var msg = '결제에 실패했습니다. \n';
+            msg += rsp.error_msg
+            alert(msg);            
+            return false;
+        }
+    });
+}
+
+// ajax로 보내야 하는 데이터
+ function donateInfoData(){    
+    let donateInfo = {
+        donateName: donateName, //후원자이름     
+        donateArea: donateArea, //후원분야
+        donateAmount: minusComma(donateAmount), //후원금액    
+        donateType: donateType // 후원종류
+    }
+
+    $.ajax({
+        async: false,
+        type: "post",
+        url: "/api/donate",
+        contentType: "application/json",
+        data: JSON.stringify(donateInfo),
+        dataType: "json",
+        success: (response) => {
+            console.log(response);
+        },
+        error: (error) => {
+            alert(error);
+            console.log(error);
+            //후원실패 팝업 띄우기
+            // validationError(error.responseJSON.data);
+        }
+    })
+}
