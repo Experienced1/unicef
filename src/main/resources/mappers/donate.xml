@@ -2,15 +2,32 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.unicef.repository.donate.DonateAreaRepository">
-    <resultMap id="donate_area" type="com.unicef.domain.DonateArea">
-        <!-- 조인을 위함 Select 할 때 사용 -->
-        <result property="donate_area_id" column="donate_area_id"></result>
-        <result property="donate_name" column="donate_name"></result>
-        <result property="donate_area" column="donate_area"></result>
-    </resultMap>
+<mapper namespace="com.unicef.repository.donate.DonateRepository">
+<!--table4 후원분야-->
+    <insert id="donateAreaInsert"
+            parameterType="com.unicef.domain.donate.Donate"
+            useGeneratedKeys="true"
+            keyProperty="donate_area_id"
+    >
+        insert into
+        donate_area_mst(
+        donate_area_id,
+        donate_name,
+        donate_area,
+        create_date,
+        update_date
+        )
+        values(
+        0,
+        #{donate_name},
+        #{donate_area},
+        now(),
+        now()
+        )
+    </insert>
+<!--table5 후원-->
     <insert id="donateInsert"
-            parameterType="com.unicef.domain.Donate"
+            parameterType="com.unicef.domain.donate.Donate"
             useGeneratedKeys="true"
             keyProperty="donate_id"
     >
@@ -25,10 +42,9 @@
         )
         values(
             0,
-            #{donate_id},
             #{donate_type},
             #{donate_amount},
-            #{donate_area_id}
+            #{donate_area_id},
             now(),
             now()
         )

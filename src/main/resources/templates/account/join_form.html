@@ -23,60 +23,51 @@
             <section class="join">
                 <div class="join-container">
                     <div class="join-form">
-                        <form action="/account/join-form" method="post">
-                            <div class="form-group">
-                                <label for="user-id">아이디</label>
-                                <div class="id-group">
-                                    <input type="text" id="user-id" class="join-input" name="user-id" placeholder="8-16문자의 영문 소문자,숫자(-)(-)" required>
-                                    <button type="button" class="button sky-button check-button">중복확인</button>
-                                    <div class="account-errors errors-invisible">
-                                        <ul>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="user-pw">비밀번호</label>
-                                <input type="password" id="user-pw" class="join-input" name="user-pw" placeholder="8-16문자의 영문 및 숫자 특수문자를 모두 포함" required>
+                        <div class="form-group">
+                            <label for="user-id">아이디</label>
+                            <div class="id-group">
+                                <input type="text" id="user-id" class="join-input" name="user-id" placeholder="8-16문자의 영문 소문자,숫자(-)(-)" required>
+                                <button type="button" class="button sky-button check-button">중복확인</button>
                                 <div class="account-errors errors-invisible">
                                     <ul>
-                                        
                                     </ul>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="user-pw-check">비밀번호 확인</label>
-                                <input type="password" id="user-pw-check" class="join-input" name="user-pw-check" placeholder="8-16문자의 영문 및 숫자 특수문자를 모두 포함" required>
-                                <div class="account-errors errors-invisible">
-                                    <ul>
-                                        
-                                    </ul>
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-pw">비밀번호</label>
+                            <input type="password" id="user-pw" class="join-input" name="user-pw" placeholder="8-16문자의 영문 및 숫자 특수문자를 모두 포함" required>
+                            <div class="account-errors">
+                                <ul>
+                                </ul>
                             </div>
-                            <div class="form-group">
-                                <label for="user-name">성명</label>
-                                <input type="text" id="user-name" class="join-input" name="user-name" placeholder="성명 입력" required>
-                                <div class="account-errors errors-invisible">
-                                    <ul>
-                                        
-                                    </ul>
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-pw-check">비밀번호 확인</label>
+                            <input type="password" id="user-pw-check" class="join-input" name="user-pw-check" placeholder="8-16문자의 영문 및 숫자 특수문자를 모두 포함" required>
+                            <div class="account-errors errors-invisible">
+                                <ul>
+                                    2
+                                </ul>
                             </div>
-                            <div class="form-group">
-                                <label for="user-email">이메일</label>
-                                <input type="email" id="user-email" class="join-input" name="user-email" placeholder="이메일주소입력" required>
-                                <div class="account-errors errors-invisible">
-                                    <ul>
-                                        
-                                    </ul>
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-name">성명</label>
+                            <input type="text" id="user-name" class="join-input" name="user-name" placeholder="성명 입력" required>
+                            <div class="account-errors errors-invisible">
+                                <ul>
+                                </ul>
                             </div>
-
-                            
-                            <button type="button" class="button sky-button join-button">가입하기</button>
-
-                        </form>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-email">이메일</label>
+                            <input type="email" id="user-email" class="join-input" name="user-email" placeholder="이메일주소입력" required>
+                            <div class="account-errors errors-invisible">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>                            
+                        <button type="button" class="button sky-button join-button">가입하기</button>
                     </div>
                 </div>
             </section>
@@ -84,6 +75,6 @@
 <footer th:replace="~{fragment/footer :: footer}"></footer>
         </main>
     </div>
-    <script src="/static/js/account/join-form.js"></script>
+    <script src="/static/js/account/joinForm.js"></script>
 </body>
 </html>

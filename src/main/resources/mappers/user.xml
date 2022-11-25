@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.unicef.repository.account.UserRepository">
+<!--table2  사용자-->
+    <insert id="userInsert"
+            parameterType="com.unicef.domain.account.User"
+    >
+        insert into
+            user_mst(
+                main_username,
+                oauth_username,
+                user_provider,
+                user_pw,
+                user_name,
+                user_phone,
+                user_birthdate,
+                user_email,
+                create_date,
+                update_date
+            )
+            values(
+                #{main_username},
+                #{oauth_username},
+                #{user_provider},
+                #{user_pw},
+                #{user_name},
+                #{user_phone},
+                #{user_birthdate},
+                #{user_email},
+                now(),
+                now()
+            )
+    </insert>
+
+    <!-- SELECT --><!-- SELECT --><!-- SELECT --><!-- SELECT --><!-- SELECT --><!-- SELECT --><!-- SELECT -->
+    <resultMap id="role" type="com.unicef.domain.account.Role">
+        <!-- 조인을 위함 -->
+        <result property="role_id" column="role_id"></result>
+        <result property="role" column="role"></result>
+        <result property="role_name" column="role_name"></result>
+    </resultMap>
+    <resultMap id="user" type="com.unicef.domain.account.User">
+        <!-- 조인을 위함 -->
+        <result property="user_id" column="user_id"></result>
+        <result property="main_username" column="main_username"></result>
+        <result property="oauth_username" column="oauth_username"></result>
+        <result property="user_provider" column="user_provider"></result>
+        <result property="user_pw" column="user_pw"></result>
+        <result property="user_name" column="user_name"></result>
+        <result property="user_phone" column="user_phone"></result>
+        <result property="user_birthdate" column="user_birthdate"></result>
+        <result property="user_email" column="user_email"></result>
+        <result property="create_date" column="create_date"></result>
+        <result property="update_date" column="update_date"></result>
+        <result property="role_id" column="role_id"></result>
+        <collection property="role" resultMap="role"></collection>
+    </resultMap>
+    <select id="userSelect" parameterType="String" resultMap="user">
+        select
+            um.user_id,
+            um.main_username,
+            um.oauth_username,
+            um.user_provider,
+            um.user_pw,
+            um.user_name,
+            um.user_phone,
+            um.user_birthdate,
+            um.user_email,
+            um.role_id,
+
+            rm.role,
+            rm.role_name,
+
+            um.create_date,
+            um.update_date
+        from
+            user_mst um
+            left outer join role_mst rm on (rm.role_id = um.role_id)
+        where
+            main_username = #{main_username}
+    </select>
+</mapper>
