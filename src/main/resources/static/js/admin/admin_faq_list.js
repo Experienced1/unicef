@@ -32,21 +32,52 @@ function showFaqList(faqList){
         listBody.innerHTML += `
         <li class="faq-list-header">
             <dl>
-                <button type="button" class="button white-button">
+                <button type="button" class="button white-button modify-button">
                     수정
                 </button>
-                <button type="button" class="button white-button">
+                <button type="button" class="button white-button delete-button">
                     삭제
                 </button>
-                <dt>${faq.category}</dt>
+                <dt><input type="text" class="faq-input" value="${faq.category}" placeholder="카테고리"></dt>
                 <dd>
-                    <p>${faq.faq_title}</p>
+                    <input type="text" class="faq-input" value="${faq.faq_title}" placeholder="문의 제목">
                     <i class="fa-solid fa-circle-arrow-down"></i>
                 </dd>
             </dl>
             <div class="faq-detail detail-invisible invisible">
-                <p>${faq.faq_detail}</p>
+                <textarea class="faq-input" placeholder="문의 내용">${faq.faq_detail}</textarea>
+                <button type="button" class="black-button update-button">수정하기</button>
             </div>
+
+
+
+            <!-- 
+            <div class="faq-modify invisible">
+                <td colspan="8">
+                    <table class="faq-info">
+                        <tr>
+                            <td><input type="text" class="faq-input-category" value="${faq.category}" placeholder="카테고리"></td>
+                            <td><input type="text" class="faq-input-title" value="${faq.faq_title}" placeholder="문의 제목"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <textarea class="faq-input" placeholder="문의 내용">${faq.faq_detail}</textarea>
+                            </td>
+                        </tr>
+                        
+                        
+                        <tr>
+                            <td colspan="3">
+                                <button type="button" class="black-button update-button">수정하기</button>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </div>
+            -->
+
+
+
         </li>
         `;
     });
@@ -64,4 +95,38 @@ function showFaqList(faqList){
             // 상세페이지를 보이지 않게 하라
         }
     });
+
+    // 수정
+    const updateButton = document.querySelector('.update-button');
+    
+    let formData = new FormData();
+
+    updateButton.onclick = () => {
+        formData.append("category", $('input[class=faq-input-category]').val());
+        formData.append("faq_title", $('input[class=faq-input-title]').val());
+        formData.append("faq_detail", $('textarea[class=faq-input]').val());
+        
+        request(formData);
+    }
+
+    function request(formData) {
+        $.ajax({
+            async: false,
+            type: "post",
+            url: "/api/admin/faq/modification",
+            enctype: "multipart/form-data",
+            contentType: false,
+            processData: false,
+            data: formData,
+            dataType: "json",
+            success: (response) => {
+                alert("FAQ 수정 완료");
+                location.reload();
+            },
+            error: (error) => {
+                alert("FAQ 수정 실패");
+                console.log(error);
+            }
+        });
+    }
 }

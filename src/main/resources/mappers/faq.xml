@@ -39,4 +39,16 @@
         faq_mst
     </select>
 
+    <update id="setFaq" parameterType="com.unicef.domain.Faq">
+        update
+            faq_mst
+        set
+            category = #{category},
+            faq_title = #{faq_title},
+            faq_detail = #{faq_detail},
+            update_date = now()
+        where
+            id = #{id}
+    </update>
+
 </mapper>
