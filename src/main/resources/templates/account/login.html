@@ -20,8 +20,13 @@
                     <div class="login-current">
                         <form action="/account/login" method="post">
                             <div class="login-form-group">
-                                <input type="text" class="login-input" name="user-id" placeholder="아이디" required>
-                                <input type="password" class="login-input" name="user-pw" placeholder="비밀번호" required>
+                                <input type="text" class="login-input" name="main_username" placeholder="아이디" required>
+                                <input type="password" class="login-input" name="user_pw" placeholder="비밀번호" required>
+                                <div class="account-errors">
+                                    <ul>
+                                        <li th:text="${error}"></li>
+                                    </ul>
+                                </div>
                                 <div class="login-save-find">
                                     <label>
                                         <input type="checkbox" id="chk_box">
@@ -30,7 +35,7 @@
                                     <a href="#">아이디/비밀번호 찾기</a>
                                 </div>
                             </div>   
-                            <button type="button" class="button sky-button login-button">로그인</button>
+                            <button type="submit" class="button sky-button login-button">로그인</button>
                             
                             <div class="login-form-group">
                                 <p>회원이 아니시라면, 지금 회원에 가입하세요.</p>

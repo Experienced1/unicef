@@ -2,6 +2,7 @@ package com.unicef.dto.account;
 
 import com.unicef.domain.account.User;
 import lombok.Data;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -37,7 +38,7 @@ public class UserReqDto {
                 .main_username(mainUsername)
                 .oauth_username(oauthUsername)
                 .user_provider(userProvider)
-                .user_pw(userPw)
+                .user_pw(new BCryptPasswordEncoder().encode(userPw))
                 .user_name(userName)
                 .user_phone(userPhone)
                 .user_birthdate(userBirthdate)

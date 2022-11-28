@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean checkDuplicateMainUsername(String mainUsername) {
         User user = joinInfo.userSelect(mainUsername); // select 된다.
-        log.info("mainUsername!!!!!!! {}", mainUsername);
+        log.info("mainUsername 회원가입 중복체크 >> {}", mainUsername);
 
         if (user != null) { // 아이디가 기존에 이미 있다면, (중복)
             Map<String, String> errorMap = new HashMap<String, String>();

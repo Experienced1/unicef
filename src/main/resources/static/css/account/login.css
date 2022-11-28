@@ -1,7 +1,6 @@
 /* login *//* login *//* login *//* login */
 .login{
     width: 100%; 
-    height: 1200px;
 }
 
 /* login-container *//* login-container *//* login-container */
@@ -109,3 +108,7 @@ h3{
 
 }
 
+.account-errors{
+    color: #e2231a;
+    margin-bottom: 20px;
+}
