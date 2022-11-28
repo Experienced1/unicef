@@ -12,8 +12,8 @@ public class UserReqDto {
     private int userId;
     private int roleId;
 
-    @Pattern(regexp = "^[a-z]+[a-z0-9]{7,16}$",
-            message = "아이디는 8자 이상 16자 이하여야 하며 숫자, 영문만 입력 가능합니다")
+    @Pattern(regexp = "^[a-z]+[a-z0-9]{4,20}$",
+            message = "아이디는 5자 이상 20자 이하여야 하며 숫자, 영문만 입력 가능합니다")
     private String mainUsername;
     private String oauthUsername;
     private String userProvider;
@@ -22,8 +22,8 @@ public class UserReqDto {
             message="비밀번호는 8자 이상 16자 이하여야 하며 숫자, 영문, 특수기호를 포함해야 합니다")
     private String userPw;
 
-    @Pattern(regexp = "^[가-힇]{1,3}$",
-            message="이름은 한글자에서 세글자여야 하며 한글만 입력 가능합니다")
+    @Pattern(regexp = "^[가-힇]{2,6}$",
+            message="이름은 2자 이상 6글자 이하여야 하며 한글만 입력 가능합니다")
     private String userName; // 사용자 이름
     private int userPhone;
     private int userBirthdate;

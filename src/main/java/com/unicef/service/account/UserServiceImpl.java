@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
     public boolean checkDuplicateMainUsername(String mainUsername) {
         User user = joinInfo.userSelect(mainUsername); // select 된다.
         log.info("mainUsername!!!!!!! {}", mainUsername);
-        log.info("mainUsername!!!!!!! {}", user);
+
         if (user != null) { // 아이디가 기존에 이미 있다면, (중복)
             Map<String, String> errorMap = new HashMap<String, String>();
             errorMap.put("duplicateFlag", "이미 가입된 아이디입니다");

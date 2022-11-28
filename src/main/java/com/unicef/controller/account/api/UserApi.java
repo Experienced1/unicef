@@ -22,7 +22,14 @@ import javax.validation.Valid;
 public class UserApi {
     private final UserService userService;
 
+    @PostMapping("/account/joinform/checkduplicate")
+    public ResponseEntity<?> joinformcheckDuplicate(@RequestBody UserReqDto userReqDto) throws Exception {
 
+        log.info("userInfoData 데이터: {}", userReqDto);
+        userService.checkDuplicateMainUsername(userReqDto.getMainUsername());
+
+        return ResponseEntity.ok(new CMRespDto<>(1, "아이디 중복체크 성공", userReqDto));
+    }
 
     @ValidAspect
     @PostMapping("/account/joinform") //Json은 늘 @RequestBody가 따라와야한다

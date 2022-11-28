@@ -182,6 +182,7 @@ submitButton.onclick = () => {
     }
 }
 
+alert(donateAmount);
 
 // 정기결제 api
 function donatePledge(){    
@@ -191,7 +192,7 @@ function donatePledge(){
         schedule_at: 1519862400, // 결제 시도 시각 in Unix Time Stamp. 예: 다음 달 1일
         pg: "danal_tpay",
         pay_method: "card",
-        merchant_uid: "ORD32320280131-00e0ssd395", // 주문번호
+        merchant_uid: "ORD44320280131-00e0ssd395", // 주문번호
         name: donateType, // 결제정보(상품명)
         amount: donateAmount, // 후원금액
         // buyer_email: "gildoneg@gmail.com",
@@ -219,10 +220,11 @@ function donateOneoff(){
     IMP.request_pay({ // param
         pg: "html5_inicis", // "kakaopay", // pg사 선택
         pay_method: "card",
-        merchant_uid: "ORD32320280131-00e0ssd395", // 주문번호
+        merchant_uid: "ORD32444220131-00e0ssd395", // 주문번호
         name: donateType, // 결제정보(상품명)
         amount: donateAmount, // 후원금액
-        // buyer_email: "gildoneg@gmail.com",
+        currency : 'KRW',
+        buyer_email: "gildoneg@gmail.com",
         buyer_name: donateName, // 후원자 이름
         buyer_tel: "010-0000-0000"
     }, function (rsp) { // callback
