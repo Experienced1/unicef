@@ -32,6 +32,7 @@
             parameterType="java.util.HashMap"
             resultType="com.unicef.domain.Faq">
         select
+        faq_id,
         category,
         faq_title,
         faq_detail
@@ -48,7 +49,7 @@
             faq_detail = #{faq_detail},
             update_date = now()
         where
-            id = #{id}
+            faq_id = #{faq_id}
     </update>
 
 </mapper>

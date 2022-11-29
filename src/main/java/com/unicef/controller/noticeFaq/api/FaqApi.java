@@ -11,10 +11,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -42,9 +39,9 @@ public class FaqApi {
 
     @LogAspect
     @ValidAspect
-    @PostMapping("/faq/modification")
-    public ResponseEntity<?> updateFaq(@Valid FaqModificationReqDto faqModificationReqDto, BindingResult bindingResult) throws Exception {
-
-        return ResponseEntity.ok(new CMRespDto<>(1, "Successfully", true));
+    @PutMapping("/faq/modification")
+    public ResponseEntity<?> updateFaq(@Valid @RequestBody FaqModificationReqDto faqModificationReqDto, BindingResult bindingResult) throws Exception {
+        System.out.println(faqModificationReqDto);
+        return ResponseEntity.ok(new CMRespDto<>(1, "Successfully", faqService.updateFaq(faqModificationReqDto)));
     }
 }
