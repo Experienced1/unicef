@@ -48,7 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll() // 모두 접근 권한 허용해라
 
                 /*<<<<<<<<< API >>>>>>>>>*/
-                .antMatchers("/api/account/joinform", "/api/account/joinform/**", "/api/donate")
+                .antMatchers("/api/account/**", "/api/donate")
                 .permitAll()
 
                 .anyRequest() // antMatchers외의 다른 모든 요청들은
@@ -58,7 +58,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and() // 그리고!!!
                 .formLogin() // [메인객체] 폼 로그인 방식으로 인증해라
                     .usernameParameter("main_username") //username일 경우 생략가능 (기본값이 username)
-                .passwordParameter("user_pw")
+                    .passwordParameter("user_pw")
                     //PrincipalDetailService 에서 loadUserByUsername의 (파라미터)와 값이 동일해야함!
                     .loginPage("/account/login") // 우리가 만든 로그인 페이지를 사용해라 (GET 요청)
                     .loginProcessingUrl("/account/login")
@@ -66,7 +66,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     // security 라이브러리에서 컨트롤러가 이미 만들어져있다. 거기에 포스트매핑한다.
                     // html form 에서 /account/login 로 요청을 날림!
                     .failureHandler(new AuthFailureHandler()) // 로그인실패시
-                    .defaultSuccessUrl("/main");
+                    .defaultSuccessUrl("/main")
+                .and()
+                    .logout()
+                    .logoutSuccessUrl("/main");
 
 //                .and()
 //                    .oauth2Login()
