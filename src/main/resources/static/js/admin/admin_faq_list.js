@@ -85,23 +85,30 @@ function showFaqList(faqList){
     });
 
     // 수정
-        
-    const updateButton = document.querySelector('.update-button');
+    const updateButton = document.querySelectorAll('.update-button');
+    const idInput = document.querySelectorAll('.faq-input-id');
+    const categoryInput = document.querySelectorAll('.faq-input-category');
+    const titleInput = document.querySelectorAll('.faq-input-title');
+    const detailInput = document.querySelectorAll('.faq-input-detail');
     
     let faq = null;
     
-    updateButton.onclick = () => {
-        
-        faq = {
-            "id": $('input[class=faq-input-id]').val(),
-            "category": $('input[class=faq-input-category]').val(),
-            "faq_title": $('input[class=faq-input-title]').val(),
-            "faq_detail": $('textarea[class=faq-input]').val()
-        }
-        if(confirm("수정하시겠습니까?")){
-            updateRequest(faq);
-        }else{
-            alert("FAQ 수정이 취소되었습니다");
+    for(i=0; i<updateButton.length; i++){        
+        updateButton[i].onclick = () => {
+            
+            faq = {
+                "id": $('input[class=faq-input-id]').val(),
+                "category": $('input[class=faq-input-category]').val(),
+                "faq_title": $('input[class=faq-input-title]').val(),
+                "faq_detail": $('textarea[class=faq-input]').val()
+            }
+
+            if(confirm("수정하시겠습니까?")){
+                updateRequest(faq);
+            }else{
+                alert("FAQ 수정이 취소되었습니다");
+            }
+            
         }
         
     }
@@ -127,22 +134,25 @@ function showFaqList(faqList){
     }
 
     // 삭제
-    const deleteButton = document.querySelector(".delete-button");
+    const deleteButton = document.querySelectorAll(".delete-button");
 
-    deleteButton.onclick = () => {
+    for(i=0; i < deleteButton.length; i++){
         
-        faq = {
-            "id": $('input[class=faq-input-id]').val(),
-            "category": $('input[class=faq-input-category]').val(),
-            "faq_title": $('input[class=faq-input-title]').val(),
-            "faq_detail": $('textarea[class=faq-input]').val()
-        }
-        if(confirm("삭제하시겠습니까?")){
-            deleteRequest(faq);
-        }else{
-            alert("FAQ 삭제가 취소되었습니다");
-        }
+        deleteButton[i].onclick = () => {
+            
+            faq = {
+                "id": $('input[class=faq-input-id]').val(),
+                "category": $('input[class=faq-input-category]').val(),
+                "faq_title": $('input[class=faq-input-title]').val(),
+                "faq_detail": $('textarea[class=faq-input]').val()
+            }
+            if(confirm("삭제하시겠습니까?")){
+                deleteRequest(faq);
+            }else{
+                alert("FAQ 삭제가 취소되었습니다");
+            }
         
+        }
     }
 
     function deleteRequest(id) {
@@ -162,6 +172,7 @@ function showFaqList(faqList){
         });
     }
 
+    // 상세페이지 클릭
     $('.faq-list-header > dl').click(function(){
         // 리스트 글자를 클릭했을 때
         if($(this).siblings().hasClass("invisible") === false){
