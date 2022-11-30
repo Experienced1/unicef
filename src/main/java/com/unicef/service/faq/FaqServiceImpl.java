@@ -63,5 +63,14 @@ public class FaqServiceImpl implements FaqService{
         return status;
     }
 
+    @Override
+    public boolean deleteFaq(int id) throws Exception {
+
+        if(faqRepository.deleteFaq(id) > 0){
+            return true;
+        }
+        return false;
+    }
+
 
 }

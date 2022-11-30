@@ -11,4 +11,5 @@ public interface FaqRepository {
     public int save(Faq faq);
     public List<Faq> getFaqList(Map<String, Object> map) throws Exception;
     public int setFaq(Faq faq) throws Exception;
+    public int deleteFaq(int id) throws Exception;
 }

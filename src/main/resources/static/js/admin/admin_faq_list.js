@@ -81,15 +81,17 @@ function showFaqList(faqList){
 
         </li>
         `;
+
     });
 
     // 수정
         
     const updateButton = document.querySelector('.update-button');
     
-    //let faq = null;
+    let faq = null;
     
     updateButton.onclick = () => {
+        
         faq = {
             "id": $('input[class=faq-input-id]').val(),
             "category": $('input[class=faq-input-category]').val(),
@@ -97,14 +99,15 @@ function showFaqList(faqList){
             "faq_detail": $('textarea[class=faq-input]').val()
         }
         if(confirm("수정하시겠습니까?")){
-            request(faq);
+            updateRequest(faq);
         }else{
             alert("FAQ 수정이 취소되었습니다");
         }
         
     }
 
-    function request(faq) {
+    function updateRequest(faq) {
+
         $.ajax({
             async: false,
             type: "put",
@@ -118,6 +121,42 @@ function showFaqList(faqList){
             },
             error: (error) => {
                 alert("FAQ 수정 실패");
+                console.log(error);
+            }
+        });
+    }
+
+    // 삭제
+    const deleteButton = document.querySelector(".delete-button");
+
+    deleteButton.onclick = () => {
+        
+        faq = {
+            "id": $('input[class=faq-input-id]').val(),
+            "category": $('input[class=faq-input-category]').val(),
+            "faq_title": $('input[class=faq-input-title]').val(),
+            "faq_detail": $('textarea[class=faq-input]').val()
+        }
+        if(confirm("삭제하시겠습니까?")){
+            deleteRequest(faq);
+        }else{
+            alert("FAQ 삭제가 취소되었습니다");
+        }
+        
+    }
+
+    function deleteRequest(id) {
+        $.ajax({
+            async: false,
+            type: "delete",
+            url: "/api/admin/faq/" + id.id,
+            dataType: "json",
+            success: (response) => {
+                alert("상품 삭제 완료!");
+                location.reload();
+            },
+            error: (error) => {
+                alert("상품 삭제 실패!");
                 console.log(error);
             }
         });

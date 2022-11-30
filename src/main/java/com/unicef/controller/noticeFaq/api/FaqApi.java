@@ -44,4 +44,9 @@ public class FaqApi {
         System.out.println(faqModificationReqDto);
         return ResponseEntity.ok(new CMRespDto<>(1, "Successfully", faqService.updateFaq(faqModificationReqDto)));
     }
+
+    @DeleteMapping("/faq/{id}")
+    public ResponseEntity<?> deleteFaq(@PathVariable int id) throws Exception{
+        return ResponseEntity.ok(new CMRespDto<>(1, "Successfully", faqService.deleteFaq(id)));
+    }
 }

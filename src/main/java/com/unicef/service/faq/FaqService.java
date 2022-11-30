@@ -12,4 +12,6 @@ public interface FaqService {
     public List<FaqListRespDto> getFaqList() throws Exception;
 
     public boolean updateFaq(FaqModificationReqDto faqModificationReqDto) throws Exception;
+
+    public boolean deleteFaq(int id) throws Exception;
 }

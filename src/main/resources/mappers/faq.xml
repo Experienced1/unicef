@@ -51,5 +51,13 @@
         where
             faq_id = #{faq_id}
     </update>
+    
+    <delete id="deleteFaq" parameterType="com.unicef.domain.Faq">
+        delete
+        from
+            faq_mst
+        where
+            faq_id = #{faq_id}
+    </delete>
 
 </mapper>
