@@ -1,11 +1,58 @@
-var totalDonate = $('.donate1-4 .total-donate'); // 총액
-var headerMid = document.querySelector(".header-mid");
-var donateArea = null; // 후원분야선택
-var donateAmount = null;// 후원금액
-var donateType = null; // 후원종류
-var donateName = null; // 후원자 성명
-var userBirthdate = null; // 후원자 생년월일
+let totalDonate = $('.donate1-4 .total-donate'); // 총액
+let headerMid = document.querySelector(".header-mid");
+let donateArea = null; // 후원분야선택
+let donateAmount = null;// 후원금액
+let donateType = null; // 후원종류
+let donateName = null; // 후원자 성명
+let userBirthdate = null; // 후원자 생년월일
+let userEmail = null; // 후원자 이메일
 
+
+// principal 정보 관리 //
+$(function(){
+    const donate2_1 = document.querySelector(".donate2-1");
+    
+    donateName = getPrincipal().user.user_name; // 후원자 성명
+    userEmail = getPrincipal().user.user_email; // 후원자 이메일  
+
+    if(getPrincipal() == "") {
+        alert("접근금지")
+    } else {
+        donate2_1.innerHTML = `
+        <h4>후원자 정보</h4>
+        <div>                                    
+            <label>성명</label>
+            <input type="text" value="${donateName}" readonly>
+        </div>
+        <div class="donate2-1-receipt">                                    
+            <label>기부금 영수증</label>
+            <label class="donate2-1-receipt-chk">
+                <input type="checkbox" id="chk_box">
+                <span>신청</span>
+            </label>
+            <div class="invisible">
+                <div>
+                    <input type="text" placeholder="주민등록번호 입력(‘-’제외)">
+                    <button class="white-button button">실명인증</button>
+                </div>
+                <p>* 입력하신 주민등록번호는 <strong>국세청 기부금 영수증 발급 대행</strong>을 위해 사용됩니다.</p>
+            </div>
+        </div>
+        <div>                                    
+            <label>생년월일</label>
+            <input type="text" placeholder="">
+        </div>
+        <div>                                    
+            <label>휴대폰번호</label>
+            <input type="text" placeholder="">
+        </div>
+        <div>                                    
+            <label>이메일</label>
+            <input type="text" value="${userEmail}" readonly>
+        </div>
+        `;
+    }
+});
 
 // 후원 헤더 관리 //// 후원 헤더 관리 //
 $(function(){
@@ -163,6 +210,12 @@ function minusComma(value){
     return Number(value); 
 }
 
+// 주문 번호 UUID 생성 //
+function uuidv4() {
+    return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+      (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+    );
+}
 
 //   import 결제API ----------------------------------------------------------------- //
 
@@ -173,7 +226,6 @@ IMP.init("imp04038076"); // 예: imp00000000
 
 submitButton.onclick = () => {
     if(donateType == "정기후원"){
-        alert("정기후원");
         donatePledge();
     }else if(donateType == "일시후원"){
         donateOneoff();
@@ -181,8 +233,6 @@ submitButton.onclick = () => {
         alert("에러!")
     }
 }
-
-alert(donateAmount);
 
 // 정기결제 api
 function donatePledge(){    
@@ -192,10 +242,10 @@ function donatePledge(){
         schedule_at: 1519862400, // 결제 시도 시각 in Unix Time Stamp. 예: 다음 달 1일
         pg: "danal_tpay",
         pay_method: "card",
-        merchant_uid: "ORD44320280131-00e0ssd395", // 주문번호
+        merchant_uid: uuidv4(), // 주문번호
         name: donateType, // 결제정보(상품명)
-        amount: donateAmount, // 후원금액
-        // buyer_email: "gildoneg@gmail.com",
+        amount: minusComma(donateAmount), // 후원금액
+        buyer_email: userEmail,
         buyer_name: donateName, // 후원자 이름
         buyer_tel: "010-0000-0000"
     }, function (rsp) { // callback
@@ -203,7 +253,6 @@ function donatePledge(){
             console.log('빌링키 발급 성공', rsp);
             donateInfoData();
             alert("예약 결제가 완료되었습니다!");
-            //후원성공 팝업 띄우기
             //location.replace("/account/login"); //이전기록 날려야함.
         } else {
             var msg = '결제에 실패했습니다. \n';
@@ -214,17 +263,17 @@ function donatePledge(){
     });
 }
 
+
 // 일시결제 api
 function donateOneoff(){    
     // IMP.request_pay(param, callback) 결제창 호출
     IMP.request_pay({ // param
         pg: "html5_inicis", // "kakaopay", // pg사 선택
         pay_method: "card",
-        merchant_uid: "ORD32444220131-00e0ssd395", // 주문번호
+        merchant_uid: uuidv4(), // 주문번호
         name: donateType, // 결제정보(상품명)
-        amount: donateAmount, // 후원금액
-        currency : 'KRW',
-        buyer_email: "gildoneg@gmail.com",
+        amount: minusComma(donateAmount), // 후원금액
+        buyer_email: userEmail,
         buyer_name: donateName, // 후원자 이름
         buyer_tel: "010-0000-0000"
     }, function (rsp) { // callback
@@ -232,7 +281,6 @@ function donateOneoff(){
             console.log('빌링키 발급 성공', rsp);
             donateInfoData();
             alert("예약 결제가 완료되었습니다!");
-            //후원성공 팝업 띄우기
             //location.replace("/account/login"); //이전기록 날려야함.
         } else {
             var msg = '결제에 실패했습니다. \n';
@@ -265,8 +313,6 @@ function donateOneoff(){
         error: (error) => {
             alert(error);
             console.log(error);
-            //후원실패 팝업 띄우기
-            // validationError(error.responseJSON.data);
         }
     })
 }

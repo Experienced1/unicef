@@ -18,4 +18,3 @@ function getPrincipal(){
 
     return responseData;
 }
-

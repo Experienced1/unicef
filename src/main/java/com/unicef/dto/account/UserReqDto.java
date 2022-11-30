@@ -26,8 +26,14 @@ public class UserReqDto {
     @Pattern(regexp = "^[가-힇]{2,6}$",
             message="이름은 2자 이상 6글자 이하여야 하며 한글만 입력 가능합니다")
     private String userName; // 사용자 이름
-    private int userPhone;
-    private int userBirthdate;
+
+    @Pattern(regexp = "^[0-9]{10,11}$",
+            message="휴대폰 번호는 10자 이상 11자 이하여야 하며 숫자만 입력 가능합니다")
+    private String userPhone;
+
+    @Pattern(regexp = "^[0-9]{8}$",
+            message="생년월일은 8자여야 하며 숫자만 입력 가능합니다")
+    private String userBirthdate;
 
     @Email(message = "잘못된 이메일 형식입니다")
     @NotBlank(message = "이메일은 비워 둘 수 없습니다")

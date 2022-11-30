@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{fragment/head :: head}"></head>
 <head>
     <link rel="stylesheet" href="/static/css/account/join.css">
 </head>
@@ -58,8 +59,24 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="user-birthdate">생년월일</label>
+                            <input type="text" id="user-birthdate" class="join-input" name="user-birthdate" placeholder="생년월일 8자리 입력" required>
+                            <div class="account-errors errors-invisible">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>    
+                        <div class="form-group">
+                            <label for="user-phone">휴대폰번호</label>
+                            <input type="text" id="user-phone" class="join-input" name="user-phone" placeholder="하이픈 제외 숫자만 입력" required>
+                            <div class="account-errors errors-invisible">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>    
+                        <div class="form-group">
                             <label for="user-email">이메일</label>
-                            <input type="email" id="user-email" class="join-input" name="user-email" placeholder="이메일주소입력" required>
+                            <input type="email" id="user-email" class="join-input" name="user-email" placeholder="이메일주소 입력" required>
                             <div class="account-errors errors-invisible">
                                 <ul>
                                 </ul>

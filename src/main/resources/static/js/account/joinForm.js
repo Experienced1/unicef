@@ -15,6 +15,7 @@ var emailCheck = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
 var birthdayCheck = RegExp(/^(19|20)[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])$/);
 var phonNumberCheck = RegExp(/^01[0179][0-9]{7,8}$/);
 
+
 // 아이디
 joinInputs[0].onkeyup = () => {
   const mainUsername = joinInputs[0].value;
@@ -85,21 +86,51 @@ joinInputs[3].onkeyup = () => {
   accountErrors.removeClass('errors-invisible');
 };
 
-//이메일
+//생년월일
 joinInputs[4].onkeyup = () => {
-  const userEmail = joinInputs[4].value;
+  const userBirthdate = joinInputs[4].value;
 
-  if(emailCheck.test(userEmail)){
+  if(birthdayCheck.test(userBirthdate)){
     accountErrorList[4].innerHTML = "";
   }
   else{
     accountErrorList[4].innerHTML = `
-    <li>잘못된 이메일 형식입니다</li>
+    <li>잘못된 생년월일 형식입니다</li>
   `
   }
   accountErrors.removeClass('errors-invisible');
 };
 
+
+//휴대폰 번호
+joinInputs[5].onkeyup = () => {
+  const userPhone = joinInputs[5].value;
+
+  if(phonNumberCheck.test(userPhone)){
+    accountErrorList[5].innerHTML = "";
+  }
+  else{
+    accountErrorList[5].innerHTML = `
+    <li>잘못된 휴대폰 형식입니다</li>
+  `
+  }
+  accountErrors.removeClass('errors-invisible');
+};
+
+//이메일
+joinInputs[6].onkeyup = () => {
+  const userEmail = joinInputs[6].value;
+
+  if(emailCheck.test(userEmail)){
+    accountErrorList[6].innerHTML = "";
+  }
+  else{
+    accountErrorList[6].innerHTML = `
+    <li>잘못된 이메일 형식입니다</li>
+  `
+  }
+  accountErrors.removeClass('errors-invisible');
+};
 
 // 아이디 중복 확인 누를 경우 //
 checkButton.onclick = () => {
@@ -113,10 +144,7 @@ checkButton.onclick = () => {
 // 중복확인으로 보내야 하는 데이터
 function checkDuplicate(){   
   let joinInfo = {
-    mainUsername: joinInputs[0].value,
-    userPw: joinInputs[1].value,
-    userName: joinInputs[3].value,
-    userEmail: joinInputs[4].value,
+    mainUsername: joinInputs[0].value
   };
 
   console.log("joinInfo: " + joinInfo);
@@ -141,7 +169,14 @@ function checkDuplicate(){
 
 // 가입하기 누를 경우 //
 joinGoButton.onclick = () => {
-  donateInfoData();
+  if($('#user-pw-check').val() != $('#user-pw').val()){
+    accountErrorList[2].innerHTML = `
+        <li>비밀번호가 일치하지 않습니다</li>
+    `
+    accountErrors.removeClass('errors-invisible');
+  }else{
+    donateInfoData();
+  };  
 };
 
 // 가입하기로 보내야 하는 데이터
@@ -150,7 +185,9 @@ function donateInfoData(){
     mainUsername: joinInputs[0].value,
     userPw: joinInputs[1].value,
     userName: joinInputs[3].value,
-    userEmail: joinInputs[4].value,
+    userBirthdate: joinInputs[4].value,
+    userPhone: joinInputs[5].value,
+    userEmail: joinInputs[6].value
   };
 
   console.log("joinInfo: " + joinInfo);
@@ -169,7 +206,18 @@ function donateInfoData(){
     },
     error: (error) => {
       console.log(error);
-      alert("회원가입 실패");
+      var msg = ">> 회원가입 실패";
+      msg += JSON.stringify(error.responseJSON.data.mainUsername)
+      msg += JSON.stringify(error.responseJSON.data.userPw)
+      msg += JSON.stringify(error.responseJSON.data.userName)
+      msg += JSON.stringify(error.responseJSON.data.userBirthdate) 
+      msg += JSON.stringify(error.responseJSON.data.userPhone)
+      msg += JSON.stringify(error.responseJSON.data.userEmail)
+      msg = msg.replaceAll("undefined", "")
+      msg = msg.replace(/\"/gi, "\n")
+      msg = msg.replaceAll("\n\n", "\n")
+      alert(msg);
     },
   });
 }
+ 

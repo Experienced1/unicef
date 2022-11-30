@@ -21,8 +21,6 @@ main{
 .header-top-auto{
     float: right;
     display: flex;
-    justify-content: space-between;
-    width: 480px;
 }
 
 .header-top-auto li{
@@ -30,7 +28,7 @@ main{
 }
 
 .header-top-auto li::before{
-    padding-right: 10px;
+    padding: 0px 10px;
     content: "|";
     color: #999;
 }
