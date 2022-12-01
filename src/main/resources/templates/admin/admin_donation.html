@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{fragment/head :: head}"></head>
+<head>
+    <link rel="stylesheet" href="/static/css/admin/admin.css">
+    <link rel="stylesheet" href="/static/css/admin/admin_donation.css">
+</head>
+<body>
+    <div class="container">
+        <main>
+<!-- header -->
+<header th:replace="~{fragment/header :: header}"></header>      
+            <!-- header-bot -->
+            <div class="header-bot">
+                <div class="header-bot-auto">
+                    <div class="header-bot-title">
+                        <h1>관리자페이지</h1>
+                        <strong>for every child, UNICEF</strong>
+                    </div>
+                    <img src="/static/images/header/pattern.png" alt="title">
+                </div>
+            </div>
+<!-- section -->
+            <section class="admin-content">
+                <div class="admin-content-top">                        
+                    <ul>
+                        <li><a href="/admin/userlist">회원관리</a></li>
+                        <li><a href="/admin/donation" class="active">후원금</a></li>
+                        <li><a href="/admin/faq">FAQ</a></li>
+                        <li><a href="/admin/notice">공지사항</a></li>
+                    </ul>
+                </div>
+                <div class="admin-content-bot">
+                    <div class="container-userlist">                       
+                    <header class="section-header">
+                        <h2>
+                            <strong class="userlist">후원금 결산</strong>
+                        </h2>
+                    </header>
+                    
+                    <div class="tbl-wrap">
+                        <table class="user-info">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>금액 (원)</th>
+                                    <th>비율</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>정기후원</td>
+                                    <td>120,797,239,724</td>
+                                    <td>83.3%</td>
+                                </tr>
+                                <tr>
+                                    <td>일시후원</td>
+                                    <td>5,637,096,515</td>
+                                    <td>3.9%</td>
+                                </tr>
+                                <tr>
+                                    <td>기업후원</td>
+                                    <td>3,795,954,009</td>
+                                    <td>2.6%</td>
+                                </tr>
+                                <tr>
+                                    <td>비영리기관 후원</td>
+                                    <td>448,221,620</td>
+                                    <td>0.3%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </div>
+            </section>
+<!-- footer -->
+<footer th:replace="~{fragment/footer :: footer}"></footer>
+        </main>
+    </div>
+</body>
+</html>

@@ -2,6 +2,7 @@ package com.unicef.service.faq;
 
 import com.unicef.domain.Faq;
 import com.unicef.dto.faq.FaqListRespDto;
+import com.unicef.dto.faq.FaqModificationReqDto;
 import com.unicef.dto.faq.FaqReqDto;
 import com.unicef.repository.faq.FaqRepository;
 import lombok.RequiredArgsConstructor;
@@ -46,6 +47,29 @@ public class FaqServiceImpl implements FaqService{
         });
 
         return list;
+    }
+
+    @Override
+    public boolean updateFaq(FaqModificationReqDto faqModificationReqDto) throws Exception {
+
+        boolean status;
+
+        status = faqRepository.setFaq(faqModificationReqDto.toFaqEntity()) > 0;
+
+        if(!status){
+            log.info("error!!");
+        }
+        
+        return status;
+    }
+
+    @Override
+    public boolean deleteFaq(int id) throws Exception {
+
+        if(faqRepository.deleteFaq(id) > 0){
+            return true;
+        }
+        return false;
     }
 
 
