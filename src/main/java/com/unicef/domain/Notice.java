@@ -27,6 +27,7 @@ public class Notice {
                 .notice_title(notice_title)
                 .img_id(img_id)
                 .notice_detail(notice_detail)
+                .update_date(update_date)
                 .build();
     }
 

@@ -1,8 +1,10 @@
-const submitButton = document.querySelector(".submit-button");
 const noticeInputTitle = document.querySelector(".notice-input-title");
 const noticeInputDetail = document.querySelector(".notice-input-detail");
+const submitButton = document.querySelector(".submit-button");
+const fileInputButton = document.querySelector(".file-input");
 
 let formData = new FormData();
+let attachedFiles = new Array();
 
 submitButton.onclick = () => {
     formData.append("notice_title", noticeInputTitle.value);
