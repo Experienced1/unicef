@@ -12,14 +12,12 @@
         insert into
         donate_area_mst(
         donate_area_id,
-        donate_name,
         donate_area,
         create_date,
         update_date
         )
         values(
         0,
-        #{donate_name},
         #{donate_area},
         now(),
         now()
@@ -34,6 +32,7 @@
         insert into
         donate_mst(
             donate_id,
+            user_id,
             donate_type,
             donate_amount,
             donate_area_id,
@@ -42,6 +41,7 @@
         )
         values(
             0,
+            #{user_id},
             #{donate_type},
             #{donate_amount},
             #{donate_area_id},

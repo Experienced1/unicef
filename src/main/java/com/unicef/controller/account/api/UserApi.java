@@ -24,7 +24,7 @@ public class UserApi {
     @PostMapping("/account/joinform/checkduplicate")
     public ResponseEntity<?> joinformcheckDuplicate(@RequestBody UserReqDto userReqDto) throws Exception {
 
-        log.info("userInfoData 데이터: {}", userReqDto);
+        log.info("[UserApi] userInfoData 데이터: {}", userReqDto);
         userService.checkDuplicateMainUsername(userReqDto.getMainUsername());
 
         return ResponseEntity.ok(new CMRespDto<>(1, "아이디 중복체크 성공", userReqDto));
@@ -35,7 +35,7 @@ public class UserApi {
     public ResponseEntity<?> joinform(@Valid @RequestBody UserReqDto userReqDto,
                                        BindingResult bindingResult) throws Exception {
 
-        log.info("userInfoData 데이터: {}", userReqDto);
+        log.info("[UserApi] userInfoData 데이터: {}", userReqDto);
 
         userService.checkDuplicateMainUsername(userReqDto.getMainUsername());
         userService.user(userReqDto);
@@ -46,7 +46,7 @@ public class UserApi {
     @GetMapping("/account/principal/member")
     public ResponseEntity<?> getPrincipalMember(@AuthenticationPrincipal PrincipalDetails principalDetails){
 
-        log.info("js에 뿌려줄 principalDetail 데이터: {}", principalDetails);
+        log.info("[UserApi] js에 뿌려줄 principalDetail 데이터: {}", principalDetails);
 
         return ResponseEntity.ok().body(new CMRespDto<>(1, "로그인 사용자 정보", principalDetails == null ? "" : principalDetails));
     }

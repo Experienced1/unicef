@@ -52,7 +52,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
 
                 .anyRequest() // antMatchers외의 다른 모든 요청들은
-//                .permitAll() // 수업을 위해 잠시 허용시켜둠
+//                .permitAll() // 작업을 위해 잠시 허용시켜둠
                 .denyAll() // 모두 접근 권한 차단해라
 
                 .and() // 그리고!!!

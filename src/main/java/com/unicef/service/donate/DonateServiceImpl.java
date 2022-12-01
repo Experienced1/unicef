@@ -1,7 +1,9 @@
 package com.unicef.service.donate;
 
+import com.unicef.domain.account.User;
 import com.unicef.domain.donate.Donate;
 import com.unicef.dto.donate.DonateReqDto;
+import com.unicef.repository.account.UserRepository;
 import com.unicef.repository.donate.DonateRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,27 +20,29 @@ public class DonateServiceImpl implements DonateService {
     public boolean donate(DonateReqDto donateReqDto) throws Exception {
         // table4
         Donate donateAreaEntity = donateReqDto.toDonateAreaEntity();
-        log.info("4번 테이블: {}", donateAreaEntity);
+        log.info("[DonateServiceImpl] 4번 테이블: {}", donateAreaEntity);
         int result4 = donateAreaData.donateAreaInsert(donateAreaEntity);
 
         if(result4 == 0){ // 위에가 문제될 경우 resultCount가 0이되어 강제발생된다.
-            log.info("에러4!!!!!!!!!!!!!!!!!!!! 페이지 만들어야함");
+            log.info("[DonateServiceImpl] 에러4! 페이지 만들어야함");
 //            throw new CustomInternalServerErrorException("상품 등록 실패"); //e.getMessage가 상품등록실패뜸
         }
 
         // table3
         Donate donateEntity = donateReqDto.toDonateEntity();
+
         Donate donateEntityData = Donate.builder()
+                .user_id(donateEntity.getUser_id())
                 .donate_type(donateEntity.getDonate_type())
                 .donate_amount(donateEntity.getDonate_amount())
                 .donate_area_id(donateAreaEntity.getDonate_area_id()) // 현재 table4의 id값
                 .build();
 
-        log.info("5번 테이블: {}", donateEntityData);
+        log.info("[DonateServiceImpl] 5번 테이블: {}", donateEntityData);
         int result3 = donateData.donateInsert(donateEntityData);
 
         if(result3 == 0){ // 위에가 문제될 경우 resultCount가 0이되어 강제발생된다.
-            log.info("에러3!!!!!!!!!!!!!!!!!!!! 페이지 만들어야함");
+            log.info("[DonateServiceImpl] 에러3! 페이지 만들어야함");
 //            throw new CustomInternalServerErrorException("상품 등록 실패"); //e.getMessage가 상품등록실패뜸
         }
 

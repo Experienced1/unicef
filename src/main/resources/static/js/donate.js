@@ -6,6 +6,9 @@ let donateType = null; // 후원종류
 let donateName = null; // 후원자 성명
 let userBirthdate = null; // 후원자 생년월일
 let userEmail = null; // 후원자 이메일
+let userId = null; // 사용자 아이디 순번
+
+var donateAmountCheck = RegExp(/^[0-9]*$/);
 
 
 // principal 정보 관리 //
@@ -13,6 +16,8 @@ $(function(){
     const donate2_1 = document.querySelector(".donate2-1");
     
     donateName = getPrincipal().user.user_name; // 후원자 성명
+    userBirthdate = getPrincipal().user.user_birthdate; // 후원자 생년월일  
+    userPhone = getPrincipal().user.user_phone; // 후원자 휴대폰
     userEmail = getPrincipal().user.user_email; // 후원자 이메일  
 
     if(getPrincipal() == "") {
@@ -40,11 +45,11 @@ $(function(){
         </div>
         <div>                                    
             <label>생년월일</label>
-            <input type="text" placeholder="">
+            <input type="text" value="${userBirthdate}" readonly>
         </div>
         <div>                                    
             <label>휴대폰번호</label>
-            <input type="text" placeholder="">
+            <input type="text" value="${userPhone}" readonly>
         </div>
         <div>                                    
             <label>이메일</label>
@@ -76,11 +81,21 @@ $(window).scroll(function(){
 
 // 스텝 단계 이동 btn //
 $(function(){
+    
     $('.next-button').click(function(){
+        donateArea = $("select[name=sponsorship]").val(); // 후원분야
+        donateAmount = totalDonate.html(); // 총액 
+
     //다음버튼 클릭시 //
         var liIndex = $(this).closest('li').index();
 
-        if(liIndex < 3){
+        if(donateArea == "후원 분야 선택"){
+            alert("후원 분야를 선택해주세요");
+        }else if(!donateAmountCheck.test(donateAmount.replace(",",""))){
+            alert("후원금은 숫자만 입력 가능합니다");
+        }else if(donateAmount < 100){
+            alert("후원금은 100원 이상부터 가능합니다");
+        }else if(liIndex < 3){
             $('.donate-content-auto > li:eq('+liIndex+')').addClass('invisible');
             
             $('html').scrollTop(0);
@@ -89,8 +104,6 @@ $(function(){
 
     // 선택정보 명시 //
         // 후원방법sponsorship
-        donateArea = $("select[name=sponsorship]").val(); // 후원분야
-        donateAmount = totalDonate.html();
         donateType = $(".first-step .donate1-1 button.active").html() + '후원';
         $('.step1-summary').html(donateArea + '/' + donateAmount + '/' + donateType);
 
@@ -247,13 +260,13 @@ function donatePledge(){
         amount: minusComma(donateAmount), // 후원금액
         buyer_email: userEmail,
         buyer_name: donateName, // 후원자 이름
-        buyer_tel: "010-0000-0000"
+        buyer_tel: userPhone
     }, function (rsp) { // callback
         if (rsp.success) {
             console.log('빌링키 발급 성공', rsp);
             donateInfoData();
             alert("예약 결제가 완료되었습니다!");
-            //location.replace("/account/login"); //이전기록 날려야함.
+            //location.replace("/mypage/supportinfo"); //이전기록 날려야함.
         } else {
             var msg = '결제에 실패했습니다. \n';
             msg += rsp.error_msg
@@ -265,7 +278,7 @@ function donatePledge(){
 
 
 // 일시결제 api
-function donateOneoff(){    
+function donateOneoff(){ 
     // IMP.request_pay(param, callback) 결제창 호출
     IMP.request_pay({ // param
         pg: "html5_inicis", // "kakaopay", // pg사 선택
@@ -275,13 +288,13 @@ function donateOneoff(){
         amount: minusComma(donateAmount), // 후원금액
         buyer_email: userEmail,
         buyer_name: donateName, // 후원자 이름
-        buyer_tel: "010-0000-0000"
+        buyer_tel: userPhone
     }, function (rsp) { // callback
         if (rsp.success) {
             console.log('빌링키 발급 성공', rsp);
             donateInfoData();
             alert("예약 결제가 완료되었습니다!");
-            //location.replace("/account/login"); //이전기록 날려야함.
+            //location.replace("/mypage/supportinfo"); //이전기록 날려야함.
         } else {
             var msg = '결제에 실패했습니다. \n';
             msg += rsp.error_msg
@@ -292,9 +305,11 @@ function donateOneoff(){
 }
 
 // ajax로 보내야 하는 데이터
- function donateInfoData(){    
+ function donateInfoData(){   
+    userId = getPrincipal().user.user_id;
+     
     let donateInfo = {
-        donateName: donateName, //후원자이름     
+        userId: userId,
         donateArea: donateArea, //후원분야
         donateAmount: minusComma(donateAmount), //후원금액    
         donateType: donateType // 후원종류

@@ -1,17 +1,17 @@
 
-/* .mypage-content *//* .mypage-content *//* .mypage-content *//* .mypage-content */
-.mypage-content{
+/* .admin-content *//* .admin-content *//* .admin-content *//* .admin-content */
+.admin-content{
     width: 100%;
     min-width: 1200px;
 }
 
-/* mypage-content-top *//* mypage-content-top */
-.mypage-content-top{
+/* admin-content-top *//* admin-content-top */
+.admin-content-top{
     width: 100%; height: 80px;
     border-bottom:2px solid rgb(200,200,200);
 }
 
-.mypage-content-top ul{
+.admin-content-top ul{
     min-width: 1200px;
     max-width: 1200px;
     height: 80px;
@@ -20,12 +20,12 @@
     display: flex;
 }
 
-.mypage-content-top li{
+.admin-content-top li{
     width: 25%;
     text-align: center;
 }
 
-.mypage-content-top a{
+.admin-content-top a{
     display: block;
     font-size: 20px;
     color: #B7B8BA;
@@ -33,23 +33,23 @@
     font-weight: 600;
 }
 
-.mypage-content-top a.active{
+.admin-content-top a.active{
     color: #1CABE2;
     border-bottom: 3px solid #1CABE2;
 }
 
-/* mypage-content-bot *//* mypage-content-bot */
-.mypage-content-bot{
+/* admin-content-bot *//* admin-content-bot */
+.admin-content-bot{
     width: 100%;
 }
 
-.mypage-content-bot > ul{
+.admin-content-bot > ul{
     min-width: 1200px;
     margin: 0 auto;
     padding: 96px 30px 240px 30px;
     display: flex;
 }
 
-.mypage-content-bot > ul > li{
+.admin-content-bot > ul > li{
     width: 100%;
 }
