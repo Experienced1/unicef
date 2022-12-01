@@ -1,7 +1,6 @@
 package com.unicef.dto.notice;
 
 import com.unicef.domain.Notice;
-import com.unicef.dto.validation.ValidationGroups;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;

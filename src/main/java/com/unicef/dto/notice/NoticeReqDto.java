@@ -1,7 +1,6 @@
 package com.unicef.dto.notice;
 
 import com.unicef.domain.Notice;
-import com.unicef.dto.validation.ValidationGroups;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
@@ -9,10 +8,10 @@ import javax.validation.constraints.NotBlank;
 @Data
 public class NoticeReqDto {
     private int notice_id;
-    @NotBlank(message = "빈 값일 수 없습니다", groups = ValidationGroups.NotBlankGroup.class)
+    @NotBlank(message = "빈 값일 수 없습니다")
     private String notice_title;
     private int img_id;
-    @NotBlank(message = "빈 값일 수 없습니다", groups = ValidationGroups.NotBlankGroup.class)
+    @NotBlank(message = "빈 값일 수 없습니다")
     private String notice_detail;
 
     public Notice toNoticeEntity(){
