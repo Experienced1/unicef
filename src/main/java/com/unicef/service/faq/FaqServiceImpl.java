@@ -52,7 +52,7 @@ public class FaqServiceImpl implements FaqService{
     @Override
     public boolean updateFaq(FaqModificationReqDto faqModificationReqDto) throws Exception {
 
-        boolean status = false;
+        boolean status;
 
         status = faqRepository.setFaq(faqModificationReqDto.toFaqEntity()) > 0;
 
