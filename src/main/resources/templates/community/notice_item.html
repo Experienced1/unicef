@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{fragment/head :: head}"></head>
+<head>
+    <link rel="stylesheet" href="/static/css/community/notice_detail.css">
+</head>
+<body>
+    <div class="containel">
+        <main>
+        <!-- header -->
+<header th:replace="~{fragment/header :: header}"></header>
+            <!-- header-bot -->
+            <div class="header-bot">
+                <div class="header-bot-auto">
+                    <div class="header-bot-title">
+                        <h1>공지사항</h1>
+                        <strong>for every child, notice</strong>
+                    </div>
+                </div>
+            </div>
+<!-- NOTICE 페이지 부분 -->
+            <section class="notice">
+
+                <!-- list -->
+                <div class="notice-container">
+                    <div class="notice-category">
+                                          
+                        <div class="notice-list-page">
+                            <ul>
+                                <li class="notice-list-header">
+                                    
+                                    
+                                </li>
+                                
+                            
+                            </ul>
+                            
+                        </div>
+                      
+
+                    </div>
+
+                </div>
+
+
+
+            </section>
+<!-- footer -->
+<footer th:replace="~{fragment/footer :: footer}"></footer>
+        </main>
+    </div>
+    <script src="/static/js/community/notice_item.js"></script>
+</body>
+</html>

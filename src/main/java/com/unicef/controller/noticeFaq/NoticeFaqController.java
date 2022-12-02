@@ -15,9 +15,9 @@ public class NoticeFaqController {
     public String notice(){
         return "community/noticeMain";
     }
-    @RequestMapping(value = "/community/noticeMain/item1")
+    @RequestMapping(value = "/community/noticeMain/item")
     public String noticeItem(){
-        return "community/notice_item1";
+        return "community/notice_item";
     }
     @RequestMapping(value = "/community/faq/donate")
     public String donate(){
