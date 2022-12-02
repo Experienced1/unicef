@@ -20,7 +20,7 @@ public class DonateApi {
 
     @PostMapping("/donate") //Json은 늘 @RequestBody가 따라와야한다
     public ResponseEntity<?> donate(@RequestBody DonateReqDto donateReqDto) throws Exception {
-        log.info("donateInfoData 데이터: {}", donateReqDto);
+        log.info("[DonateApi] donateInfoData 데이터: {}", donateReqDto);
         // donateReqDto: DonateReqDto(donateAreaId=0, donateName=김이름, donateArea=난민 어린이 돕기, donateAmount=100, donateType=정기후원)
 
         donateService.donate(donateReqDto);

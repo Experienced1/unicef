@@ -1,6 +1,6 @@
-package com.unicef.dto.account;
+package com.unicef.dto.user;
 
-import com.unicef.domain.account.User;
+import com.unicef.domain.user.User;
 import lombok.Data;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 

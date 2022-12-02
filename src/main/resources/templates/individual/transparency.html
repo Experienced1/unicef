@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{fragment/head :: head}"></head>
+<head>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/regular/transparency.css">
+</head>
+<body>
+    <div class="container">
+        <main>
+    <!-- header -->
+            <header th:replace="~{fragment/header :: header}"></header>
+    <!-- header-bot -->
+            <div class="header-bot">
+                <div class="header-bot-auto">
+                    <div class="header-bot-title">
+                        <h1>재정 투명성</h1>
+                        <strong>for every child, transparency</strong>
+                    </div>
+                    <img src="/static/images/header/pattern.png" alt="title">
+                </div>
+            </div>
+    <!-- section -->
+            <section class="donate-content">                   
+                <ul class="donate-content-auto">
+                    <li>
+                    </li>  
+                </ul>
+                <article class="edit-popup invisible">
+                    <div>
+                        <h1>저장되었습니다</h1>
+                        <button class="edit-done sky-button button">확인</button>    
+                    </div>
+                </article>
+            </section>
+    <!-- footer -->
+            <footer th:replace="~{fragment/footer :: footer}"></footer>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,175 +1,183 @@
-.container-userlist{
+
+.admin-content-bot .userlist {
+    width: 1200px;
+    padding: 0px 30px;
+    margin: 70px auto;
+}
+
+/* 회원검색 search *//* 회원검색 search */
+.userlist .search{
     width: 100%;
-    max-width: 1160px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    display: block;
-    margin-top: 100px;
-}
-
-.section-header{
-    padding-bottom: 96px;
-    display: block;
-}
-
-.userlist{
-    display: inline-block;
-    line-height: 1.56;
-    letter-spacing: -0.8px;
-    font-size: 48px;
-    font-weight: 700 !important;
-}
-
-.tbl-wrap{
-    overflow-x: auto;
-}
-
-.user-info{
-    min-width: 470px;
-    margin-bottom: 64px;
-    border-bottom: 1px solid rgb(45, 41, 38);
-    width: 100%;
-    border-spacing: 0px;
-    table-layout: fixed;
-    display: table;
-    text-indent: initial;
-    border-color: grey;
-    margin-top: 32px;
-    border-top: 3px solid rgb(0, 0, 0);
-    border-left: 1px solid rgb(221, 221, 221);
-    border-collapse: initial;
-}
-
-colgroup, col{
-    display: table-column-group;
-}
-
-thead{
-    display: table-header-group;
-    vertical-align: middle;
-    border-color: inherit;
-}
-
-table tr:last-child{
-    border-bottom-color: rgb(0, 0, 0);
-}
-
-tr{
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit;
-}
-
-th{
-    padding: 12px 7px;
-    height: 60px;
-    border-bottom: none;
-    display: table-cell;
-    vertical-align: inherit;
-    font-weight: bold;
-}
-
-table th{
-    line-height: 1.7;
-    border-right: 1px solid rgb(221, 221, 221);
-    text-align: center;
-}
-
-tbody{
-    display: table-row-group;
-    vertical-align: middle;
-    border-color: inherit;
-}
-
-tbody td{
-    text-align: left;
-    border-bottom: none;
-    border-bottom: 1px solid rgb(221, 221, 221) !important;
-}
-
-td{
-    padding: 12px 7px;
-    height: 60px;
-    display: table-cell;
-    vertical-align: inherit;
-}
-
-table td{
-    line-height: 1.7;
-    border-color: rgb(221, 221, 221);
-    border-right: 1px solid rgb(221, 221, 221);
-}
-
-.board-boardsearch{
-    width: 100%;
-    max-width: 528px;
     display: flex;
-    font-size: 0px;
-    margin-right: auto;
-    text-align: right;
-}
-
-.label-wrap{
-    width: calc(100% - 176px);
+    justify-content: flex-end;
     position: relative;
-    padding-right: 56px;
-    display: block;
+    margin-bottom: 24px;
+    padding: 0px 12px;
 }
 
-.input-text{
+.userlist .search >p{
+    line-height: 60px;
+    font-size: 40px;
+    font-weight: 700;
+    position: absolute; left: 0px;
+}
+
+.userlist .search .search-wrap{
+    position: relative;
+    padding-right: 56px
+}
+
+.userlist .search .search-input{
     display: block;
     width: 100%;
-    height: 56px;
+    height: 60px;
     padding: 0px 16px;
     background: rgb(255, 255, 255);
     border: 1px solid rgb(229, 230, 232);
     font-size: 16px;
 }
 
-input{
-    outline: 0px;
-    color: rgb(45, 41, 38);
-    vertical-align: middle;
-    writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    text-align: start;
-    appearance: auto;
-    -webkit-rtl-ordering: logical;
-    cursor: text;
-}
-
-.label-wrap button{
+.userlist .search .search-button{
     position: absolute;
     right: 0px;
     top: 0px;
     display: block;
     width: 56px;
-    height: 56px;
+    height: 60px;
     border: none;
-    background-color: rgb(28, 171, 226);
-    background-image: url(/static/images/admin/search.png);
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: rgb(28, 171, 226) url(/static/images/faq/search.png) no-repeat center center;
     background-size: 24px;
-    cursor: pointer;
 }
 
-.col-btn{
-    width: 176px;
-    padding-left: 16px;
-    display: block;
+.userlist .search .all-btn > button{
+    width: 120px;
+    font-size: 18px;
+    margin-left: 10px;
 }
 
-.col-btn button{
+/* 회원목록 userdata *//* 회원목록 userdata *//* 회원목록 userdata */
+.userlist .userdata{
     width: 100%;
-    height: 100%;
+    margin: 30px 0px;
+}
+
+.userlist .userdata ul{
+    width: 100%;
+}
+
+/* 전체 사용자 userdata-total*//* 전체 사용자 userdata-total*/
+.userlist .userdata-total{
+    font-size: 16px;
+    padding: 10px 0px;
+}
+
+.userlist .userdata-total{
+    display: flex;
+    justify-content: space-between;
+}
+
+.userlist .userdata-total span{
+    color: rgb(28, 171, 226);
+}
+
+.userlist .userdata-total article{
+    display: flex;    
+}
+
+.userlist .userdata-total article > div{
+    width: 25px; height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: rgb(130, 131, 133);
+    border: 1px solid rgb(200,200,200);
     cursor: pointer;
-    font-size: 20px;
+}
+
+/* 페이지 색상 활성화 */
+#page-active{    
+    border-color:rgb(28, 171, 226);
+}
+
+/* 타이틀 ~ 회원정보 */
+.userlist .userdata li > ul i{
+    cursor: pointer;
+}
+
+.userlist .userdata li > ul{
+    display: flex;    
+    text-align: right;
+    border-bottom: 1px solid rgb(200,200,200);
+}
+
+.userlist .userdata li > ul > li{
+    height: 60px;
+    line-height: 60px;
+    padding: 0px 15px;
+    text-align: center;
+}
+
+/* 회원목록 타이틀 */
+.userlist .userdata .userdata-title > ul > li{
+    font-size: 16px;
+    color: #828385;
+    background-color: #F8F9FA;
+    border-top: 1px solid rgb(200,200,200);
+}
+
+/* 회원목록 표 비율 *//* 회원목록 표 비율 */
+/* 아이디 */
+.userlist .userdata li > ul > li:nth-child(1){
+    width: 10%;
+}
+
+/* 후원자 */
+.userlist .userdata li > ul > li:nth-child(2){
+    width: 10%;
+    background-color:  #F8F9FA;
+}
+
+/* 휴대폰번호 */
+.userlist .userdata li > ul > li:nth-child(3){
+    width: 13%;
+}
+
+/* 이메일 */
+.userlist .userdata li > ul > li:nth-child(4){
+    width: 19%;
+    background-color:  #F8F9FA;
+}
+
+/* 가입일 */
+.userlist .userdata li > ul > li:nth-child(5){
+    width: 13%;
+}
+
+/* 문의/후원 */
+.userlist .userdata li > ul > li:nth-child(6){
+    width: 10%;
+    background-color:  #F8F9FA;
+}
+
+/* 누적후원금 */
+.userlist .userdata li > ul > li:nth-child(7){
+    width: 10%;
+}
+
+/* 상세 */
+.userlist .userdata li > ul > li:nth-child(8){
+    width: 7%;
+    background-color:#F8F9FA;
+}
+
+/* 삭제 */
+.userlist .userdata li > ul > li:nth-child(9){
+    width: 8%;
+}
+
+
+/* 개개인 회원 정보 */
+.userlist .userdata .userdata-list > ul{
+}
+
+.userlist .userdata .userdata-list > ul > li{
 }

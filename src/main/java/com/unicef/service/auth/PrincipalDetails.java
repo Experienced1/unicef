@@ -1,14 +1,12 @@
 package com.unicef.service.auth;
 
-import com.unicef.domain.account.User;
+import com.unicef.domain.user.User;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.oauth2.core.user.OAuth2User;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Map;
 
 @Getter //해당 user정보를 가져다쓰기위함
 public class PrincipalDetails implements UserDetails {

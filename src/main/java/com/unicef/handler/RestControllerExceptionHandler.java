@@ -15,7 +15,7 @@ public class RestControllerExceptionHandler {
     @ExceptionHandler(CustomValidationException.class) //CustomValidationException 예외가 발생하면 실행
     public ResponseEntity<?> validationErrorException(CustomValidationException e){
 
-        log.info("e.getErrorMap()가 뭐냐면!!!: {}", e.getErrorMap());
+        log.info("[RestControllerExceptionHandler] e.getErrorMap(): {}", e.getErrorMap());
 
         return ResponseEntity
                 .badRequest()

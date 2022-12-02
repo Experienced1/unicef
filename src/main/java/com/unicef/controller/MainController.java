@@ -20,4 +20,9 @@ public class MainController {
     public String individualOneOff(){
         return "individual/oneoff";
     }
+
+    @RequestMapping(value = "/involve/individual/transparency")
+    public String individualTransparency(){
+        return "individual/transparency";
+    }
 }

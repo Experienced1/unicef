@@ -11,9 +11,9 @@ public class AdminPageController {
         return "admin/admin_userlist";
     }
 
-    @RequestMapping(value = "/admin/donation")
+    @RequestMapping(value = "/admin/onetoone")
     public String adminDonation(){
-        return "admin/admin_donation";
+        return "admin/admin_onetoone";
     }
 
     @RequestMapping(value = "/admin/faq")

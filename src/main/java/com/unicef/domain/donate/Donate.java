@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Builder
 @NoArgsConstructor
@@ -14,7 +13,7 @@ import java.util.List;
 @Data
 public class Donate {
     private int donate_id;
-    private String donate_name;
+    private int user_id;
     private String donate_area;
     private String donate_type;
     private int donate_amount;

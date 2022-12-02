@@ -52,7 +52,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
 
                 .anyRequest() // antMatchers외의 다른 모든 요청들은
-//                .permitAll() // 수업을 위해 잠시 허용시켜둠
+//                .permitAll() // 작업을 위해 잠시 허용시켜둠
                 .denyAll() // 모두 접근 권한 차단해라
 
                 .and() // 그리고!!!
@@ -66,10 +66,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     // security 라이브러리에서 컨트롤러가 이미 만들어져있다. 거기에 포스트매핑한다.
                     // html form 에서 /account/login 로 요청을 날림!
                     .failureHandler(new AuthFailureHandler()) // 로그인실패시
-                    .defaultSuccessUrl("/main")
-                .and()
-                    .logout()
-                    .logoutSuccessUrl("/main");
+                    .defaultSuccessUrl("/main");
+//                .and()
+//                    .logout()
+//                    .logoutSuccessUrl("/main");
 
 //                .and()
 //                    .oauth2Login()

@@ -1,5 +1,6 @@
-package com.unicef.domain.account;
+package com.unicef.domain.user;
 
+import com.unicef.dto.user.UserRespDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -25,4 +26,16 @@ public class User {
     private String user_email;
     private LocalDateTime create_date;
     private LocalDateTime update_date;
+
+    public UserRespDto getUserEntity(){
+        return UserRespDto.builder()
+                .userId(user_id)
+                .mainUsername(main_username)
+                .userName(user_name)
+                .userPhone(user_phone)
+                .userBirthdate(user_birthdate)
+                .userEmail(user_email)
+                .createDate(create_date)
+                .build();
+    }
 }
