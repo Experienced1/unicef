@@ -59,4 +59,12 @@ public class UserServiceImpl implements UserService {
 
         return list;
     }
+
+    @Override
+    public boolean deleteUser(int id) throws Exception {
+        if(joinInfo.deleteUser(id) > 0){
+            return true;
+        }
+        return false;
+    }
 }

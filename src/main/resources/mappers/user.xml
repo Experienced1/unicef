@@ -97,5 +97,12 @@
         from
             user_mst
     </select>
+    <delete id="deleteUser" parameterType="com.unicef.domain.user.User">
+        delete
+        from
+            user_mst
+        where
+            user_id = #{user_id}
+    </delete>
 
 </mapper>
