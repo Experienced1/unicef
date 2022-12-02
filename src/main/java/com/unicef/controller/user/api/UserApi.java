@@ -1,9 +1,9 @@
-package com.unicef.controller.account.api;
+package com.unicef.controller.user.api;
 
 import com.unicef.aop.annotation.ValidAspect;
-import com.unicef.dto.account.UserReqDto;
+import com.unicef.dto.user.UserReqDto;
 import com.unicef.dto.donate.CMRespDto;
-import com.unicef.service.account.UserService;
+import com.unicef.service.user.UserService;
 import com.unicef.service.auth.PrincipalDetails;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -51,5 +51,11 @@ public class UserApi {
         return ResponseEntity.ok().body(new CMRespDto<>(1, "로그인 사용자 정보", principalDetails == null ? "" : principalDetails));
     }
 
+
+    @GetMapping("/admin/userlist")
+    public ResponseEntity<?> getUserList() throws Exception {
+
+        return ResponseEntity.ok(new com.unicef.dto.CMRespDto<>(1, "UserList 정보", userService.getUserList()));
+    }
 
 }

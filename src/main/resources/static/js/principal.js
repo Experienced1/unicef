@@ -18,3 +18,27 @@ function getPrincipal(){
 
     return responseData;
 }
+
+
+function getUserList(){
+    let userListData;
+
+    $.ajax({
+        async: false,
+        type: "GET",
+        url: "/api/admin/userlist",
+        dataType: "json",
+        success: (response) => {
+            userListData = response.data;
+        },
+        error: (error) => {
+            console.log(error);
+        }
+    });
+
+    return userListData;
+}
+
+
+
+

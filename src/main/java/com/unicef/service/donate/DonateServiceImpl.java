@@ -1,9 +1,7 @@
 package com.unicef.service.donate;
 
-import com.unicef.domain.account.User;
 import com.unicef.domain.donate.Donate;
 import com.unicef.dto.donate.DonateReqDto;
-import com.unicef.repository.account.UserRepository;
 import com.unicef.repository.donate.DonateRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -9,8 +9,6 @@ for (let i = 0; i < loginInputs.length; i++) {
     if (window.event.keyCode == 13) {
       if (i != 1) {
         loginInputs[i + 1].focus();
-      } else {
-        loginGoButton.click();
       }
     }
   };

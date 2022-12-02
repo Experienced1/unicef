@@ -1,4 +1,4 @@
-package com.unicef.domain.account;
+package com.unicef.domain.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

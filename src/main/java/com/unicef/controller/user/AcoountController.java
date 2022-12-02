@@ -1,4 +1,4 @@
-package com.unicef.controller.account;
+package com.unicef.controller.user;
 
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Controller;

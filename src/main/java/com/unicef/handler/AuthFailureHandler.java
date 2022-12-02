@@ -13,6 +13,7 @@ import java.io.IOException;
 public class AuthFailureHandler implements AuthenticationFailureHandler {
     @Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
+        System.out.println("로그인 오류");
         // 로그인에서 아이디나 비밀번호가 잘못되었습니다.
         if(exception.getClass() == UsernameNotFoundException.class || exception.getClass() == BadCredentialsException.class){
             response.sendRedirect("/account/login?error=auth");

@@ -51,15 +51,15 @@ headerMidsub.onmouseout = () => {
 // principal 로그인 로그아웃 관리 //
 $(function(){
     const headerTopAuto = document.querySelector(".header-top-auto");
-    
-    if(getPrincipal() == "") {
+    let principal = getPrincipal();
+    if(principal == "") {
         headerTopAuto.innerHTML = `
             <li><a href="/account/login">로그인</a></li>
             <li><a href="/account/join">회원가입</a></li>
             <li><button>기부금영수증</button></li>
             <li><a href="/community/faq">FAQ</a></li>
         `
-    } else if(getPrincipal().user.role_id == "2") {
+    } else if(principal.user.role_id == "2") {
         headerTopAuto.innerHTML = `
             <li><a href="/logout">로그아웃</a></li>
             <li><a href="/admin/userlist">관리자페이지</a></li>

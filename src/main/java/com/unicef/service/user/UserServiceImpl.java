@@ -1,14 +1,17 @@
-package com.unicef.service.account;
+package com.unicef.service.user;
 
-import com.unicef.domain.account.User;
-import com.unicef.dto.account.UserReqDto;
+import com.unicef.domain.user.User;
+import com.unicef.dto.user.UserReqDto;
+import com.unicef.dto.user.UserRespDto;
 import com.unicef.exception.CustomValidationException;
-import com.unicef.repository.account.UserRepository;
+import com.unicef.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Slf4j
@@ -21,7 +24,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean checkDuplicateMainUsername(String mainUsername) {
         User user = joinInfo.userSelect(mainUsername); // select 된다.
-        log.info("mainUsername 회원가입 중복체크 >> {}", mainUsername);
+        log.info("[UserServiceImpl] mainUsername 회원가입 중복체크 >> {}", mainUsername);
 
         if (user != null) { // 아이디가 기존에 이미 있다면, (중복)
             Map<String, String> errorMap = new HashMap<String, String>();
@@ -39,8 +42,21 @@ public class UserServiceImpl implements UserService {
         int result2 = joinInfo.userInsert(userEntity);
 
         if(result2 == 0){ // 위에가 문제될 경우 resultCount가 0이되어 강제발생된다.
-            log.info("에러2!!!!!!!!!!!!!!!!!!!! 페이지 만들어야함");
+            log.info("[UserServiceImpl] 에러2! 페이지 만들어야함");
         }
         return false;
+    }
+
+
+    @Override
+    public List<UserRespDto> getUserList() throws Exception {
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        List<UserRespDto> list = new ArrayList<UserRespDto>();
+
+        joinInfo.getUserList(paramsMap).forEach(user -> {
+            list.add(user.getUserEntity());
+        });
+
+        return list;
     }
 }
