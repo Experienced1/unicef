@@ -31,74 +31,113 @@
                     </ul>     
                 </div>
                 <div class="admin-content-bot">                        
-                    <div class="container-userlist">
-                        <header class="section-header">
-                            <h2>
-                                <strong class="userlist">회원목록</strong>
-                                <div class="board-boardsearch">
-                                    <div class="label-wrap">
-                                        <input name="keyword" placeholder="검색어를 입력하세요" class="input-text">
-                                        <button type="submit">
-                                        </button>
-                                    </div>
-                                    <div class="col-btn">
-                                        <button type="button" color="white-grey">
-                                            전체보기
-                                            <div color="#fff" class="ripple"></div>
-                                        </button>
-                                    </div>
-                                </div>
-                            </h2>
-                            
-                        </header>
-                        <div class="tbl-wrap">
-                            <table class="user-info">
-                                <colgroup>
-                                    <col>
-                                    <col>
-                                    <col>
-                                    <col>
-                                    <col>
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th>이름</th>
-                                        <th>연락처</th>
-                                        <th>E-mail</th>
-                                        <th>후원구분</th>
-                                        <th>후원총액 (원)</th>
-                                        <th>가입일</th>
-                                        <th>최근후원</th>
-                                        <th>1:1 문의유형</th>
-                                        <th>문의내용</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>오유리</td>
-                                        <td>010-5633-2204</td>
-                                        <td>youri@gmail.com</td>
-                                        <td>정기후원</td>
-                                        <td>100,000</td>
-                                        <td>2022-11-10</td>
-                                        <td>2022-11-11</td>
-                                        <td>개인후원</td>
-                                        <td><button>더보기</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>홍원일</td>
-                                        <td>010-3333-3333</td>
-                                        <td>wonil@gmail.com</td>
-                                        <td>일시후원</td>
-                                        <td>10,000</td>
-                                        <td>2022-11-11</td>
-                                        <td>2022-11-11</td>
-                                        <td>자원봉사</td>
-                                        <td><button>더보기</button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <div class="userlist">
+                    <!-- 회원검색 -->
+                        <article class="search">
+                            <p>회원목록</p>
+                            <div class="search-wrap">
+                                <input type="text" class="search-input" placeholder="검색어를 입력하세요" >
+                                <button type="button" class="button search-button"></button>
+                            </div>
+                            <div class="all-btn">
+                                <button type="button" class="button gray-button all-button">전체보기</button>
+                            </div>
+                        </article>
+                    <!-- 회원목록 -->
+                        <article class="userdata">
+                            <ul>
+                                <li class="userdata-total">
+                                    <p>
+                                        전체 후원자 <span>n</span>명
+                                    </p>
+                                    <article>
+                                        <div><i class="fa-solid fa-angles-left"></i></div>
+                                        <div><i class="fa-solid fa-angle-left"></i></div>
+                                        <div id="page-active">1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                        <div>4</div>
+                                        <div>5</div>
+                                        <div><i class="fa-solid fa-angle-right"></i></div>
+                                        <div><i class="fa-solid fa-angles-right"></i></div>
+                                    </article>
+                                </li>
+                            <!-- 타이틀 -->
+                                <li class="userdata-title">
+                                    <ul>
+                                        <li>아이디</li>
+                                        <li>후원자</li>
+                                        <li>휴대폰 번호</li>
+                                        <li>이메일</li>
+                                        <li>가입일</li>
+                                        <li>문의/후원</li>
+                                        <li>누적후원금</li>
+                                        <li>상세</li>
+                                        <li></li>
+                                    </ul>
+                                </li>
+                            <!-- 회원정보 -->
+                                <li class="userdata-list">
+                                    <ul>
+                                        <li>admin1</li>
+                                        <li>홍일동</li>
+                                        <li>010-1234-5678</li>
+                                        <li>hong@naver.com</li>
+                                        <li>2022-12-01</li>
+                                        <li>
+                                            <span>0</span>
+                                            <span> / </span>
+                                            <span>1</span>
+                                        </li>
+                                        <li>1,000</li>
+                                        <li>
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-minus"></i>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>admin2</li>
+                                        <li>홍이동</li>
+                                        <li>010-1234-5678</li>
+                                        <li>hong@naver.com</li>
+                                        <li>2022-12-01</li>
+                                        <li>
+                                            <span>0</span>
+                                            <span> / </span>
+                                            <span>1</span>
+                                        </li>
+                                        <li>1,000</li>
+                                        <li>
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-minus"></i>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>admin3</li>
+                                        <li>홍삼동</li>
+                                        <li>010-1234-5678</li>
+                                        <li>hong@naver.com</li>
+                                        <li>2022-12-01</li>
+                                        <li>
+                                            <span>0</span>
+                                            <span> / </span>
+                                            <span>1</span>
+                                        </li>
+                                        <li>1,000</li>
+                                        <li>
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-minus"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </article>
                     </div>
                 </div>
             </section>
