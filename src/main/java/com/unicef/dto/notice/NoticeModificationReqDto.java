@@ -1,6 +1,6 @@
 package com.unicef.dto.notice;
 
-import com.unicef.domain.Notice;
+import com.unicef.domain.notice.Notice;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
@@ -21,7 +21,6 @@ public class NoticeModificationReqDto {
         return Notice.builder()
                 .notice_id(notice_id)
                 .notice_title(notice_title)
-                .img_id(img_id)
                 .notice_detail(notice_detail)
                 .update_date(update_date)
                 .build();

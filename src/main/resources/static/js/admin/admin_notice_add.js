@@ -9,7 +9,7 @@ let attachedFiles = new Array();
 submitButton.onclick = () => {
     formData.append("notice_title", noticeInputTitle.value);
     formData.append("notice_detail", noticeInputDetail.value);
-
+    getFormData();
     request(formData);
 }
 
@@ -32,4 +32,10 @@ function request(formData) {
             console.log(error);
         }
     });
+}
+
+function getFormData(){
+    const form = document.querySelector("form");
+    formData.append("attachedFiles", fileInputButton.value);
+    return new FormData(form);
 }

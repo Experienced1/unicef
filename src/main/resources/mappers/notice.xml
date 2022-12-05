@@ -4,8 +4,20 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.unicef.repository.notice.NoticeRepository">
 
+    <resultMap id="attached_file" type="com.unicef.domain.notice.AttachedFile">
+        <result property="file_origin_name" column="file_origin_name"></result>
+        <result property="file_temp_name" column="file_temp_name"></result>
+    </resultMap>
+    <resultMap id="notice" type="com.unicef.domain.notice.Notice">
+        <result property="notice_id" column="notice_id"></result>
+        <result property="notice_title" column="notice_title"></result>
+        <result property="notice_detail" column="notice_detail"></result>
+        <result property="create_date" column="create_date"></result>
+        <collection property="attached_file" javaType="List" resultMap="attached_file"></collection>
+    </resultMap>
+
     <insert id="save"
-            parameterType="com.unicef.domain.Notice"
+            parameterType="com.unicef.domain.notice.Notice"
             useGeneratedKeys="true"
             keyProperty="notice_id"
     >
@@ -30,10 +42,35 @@
 
     <select id="getNoticeList"
             parameterType="java.util.HashMap"
-            resultType="com.unicef.domain.Notice">
-        select *
+            resultType="com.unicef.domain.notice.Notice"
+            resultMap="notice">
+
+        select
+            *
         from
-        notice_mst
+            notice_mst nm
+            left outer join attached_file af ON(nm.notice_id = af.notice_id)
+        where
+            nm.notice_id = #{notice_id};
     </select>
+
+    <insert
+            id="saveFiles"
+            parameterType="java.util.List"
+            useGeneratedKeys="true"
+            keyProperty="file_id"
+    >
+        insert into
+            attachedFile
+        values
+        <foreach item="attachedFile" collection="attachedFileList" separator=",">
+            (
+                0,
+                #{attachedFile.notice_id},
+                #{attachedFile.file_origin_name},
+                #{attachedFile.file_temp_name}
+            )
+        </foreach>
+    </insert>
 
 </mapper>

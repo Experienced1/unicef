@@ -1,6 +1,6 @@
 package com.unicef.service.notice;
 
-import com.unicef.domain.Notice;
+import com.unicef.domain.notice.Notice;
 import com.unicef.dto.notice.NoticeListRespDto;
 import com.unicef.dto.notice.NoticeModificationReqDto;
 import com.unicef.dto.notice.NoticeReqDto;
