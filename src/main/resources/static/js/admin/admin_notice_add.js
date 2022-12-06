@@ -1,15 +1,27 @@
 const noticeInputTitle = document.querySelector(".notice-input-title");
 const noticeInputDetail = document.querySelector(".notice-input-detail");
-const submitButton = document.querySelector(".submit-button");
 const fileInputButton = document.querySelector(".file-input");
+const submitButton = document.querySelector(".submit-button");
+const form = document.querySelector("form");
 
-let formData = new FormData();
+
 let attachedFiles = new Array();
 
 submitButton.onclick = () => {
+    let formData = new FormData();
+    let tempFormData = new FormData(form);
+
+    tempFormData.forEach((value, key) => {
+        if(key == "files") {
+            attachedFiles.push(value);
+        }
+    })
+
     formData.append("notice_title", noticeInputTitle.value);
     formData.append("notice_detail", noticeInputDetail.value);
-    getFormData();
+    attachedFiles.forEach(file => {
+        formData.append("attachedFiles", file);
+    })
     request(formData);
 }
 
@@ -35,7 +47,5 @@ function request(formData) {
 }
 
 function getFormData(){
-    const form = document.querySelector("form");
-    formData.append("attachedFiles", fileInputButton.value);
     return new FormData(form);
 }

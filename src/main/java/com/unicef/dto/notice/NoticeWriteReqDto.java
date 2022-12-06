@@ -1,34 +1,26 @@
 package com.unicef.dto.notice;
 
-import com.unicef.domain.notice.AttachedFile;
 import com.unicef.domain.notice.Notice;
 import lombok.Data;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
-public class NoticeReqDto {
+public class NoticeWriteReqDto {
     private int notice_id;
-    @NotBlank(message = "빈 값일 수 없습니다")
     private String notice_title;
-    @NotBlank(message = "빈 값일 수 없습니다")
     private String notice_detail;
-
-    private List<AttachedFile> files;
+    private List<MultipartFile> attachedFiles;
 
     private LocalDateTime update_date;
-
-    public Notice toNoticeEntity(){
+    public Notice toEntity(){
         return Notice.builder()
                 .notice_id(notice_id)
                 .notice_title(notice_title)
                 .notice_detail(notice_detail)
                 .update_date(update_date)
-                .attachedFiles(files)
                 .build();
     }
-
 }

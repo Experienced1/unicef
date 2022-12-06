@@ -30,7 +30,10 @@ public class Notice {
                 .notice_id(notice_id)
                 .notice_title(notice_title)
                 .notice_detail(notice_detail)
-                .update_date(update_date.format(DateTimeFormatter.ofPattern("yyyy.MM.dd")))
+//                .create_date(create_date.format(DateTimeFormatter.ofPattern("yyyy.MM.dd")))
+//                .update_date(update_date.format(DateTimeFormatter.ofPattern("yyyy.MM.dd")))
+                .create_date(create_date)
+                .update_date(update_date)
                 .attachedFileList(attachedFiles)
                 .build();
     }
@@ -40,7 +43,10 @@ public class Notice {
                 .notice_id(notice_id)
                 .notice_title(notice_title)
                 .notice_detail(notice_detail)
-                .update_date(update_date.format(DateTimeFormatter.ofPattern("yyyy.MM.dd")))
+//                .create_date(create_date.format(DateTimeFormatter.ofPattern("yyyy.MM.dd")))
+//                .update_date(update_date.format(DateTimeFormatter.ofPattern("yyyy.MM.dd")))
+                .create_date(create_date)
+                .update_date(update_date)
                 .attachedFileList(attachedFileList)
                 .build();
     }

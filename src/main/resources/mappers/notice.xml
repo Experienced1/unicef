@@ -25,7 +25,6 @@
         notice_mst(
         notice_id,
         notice_title,
-        img_id,
         notice_detail,
         create_date,
         update_date
@@ -33,7 +32,6 @@
         values(
         0,
         #{notice_title},
-        #{img_id},
         #{notice_detail},
         now(),
         now()
@@ -61,7 +59,7 @@
             keyProperty="file_id"
     >
         insert into
-            attachedFile
+            attached_file(file_id, notice_id, file_origin_name, file_temp_name)
         values
         <foreach item="attachedFile" collection="attachedFileList" separator=",">
             (

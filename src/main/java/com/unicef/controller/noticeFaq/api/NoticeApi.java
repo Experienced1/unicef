@@ -5,10 +5,7 @@ import com.unicef.aop.annotation.ValidAspect;
 import com.unicef.domain.notice.AttachedFile;
 import com.unicef.domain.notice.Notice;
 import com.unicef.dto.CMRespDto;
-import com.unicef.dto.notice.NoticeListRespDto;
-import com.unicef.dto.notice.NoticeModificationReqDto;
-import com.unicef.dto.notice.NoticeReqDto;
-import com.unicef.dto.notice.NoticeWriteRespDto;
+import com.unicef.dto.notice.*;
 import com.unicef.repository.notice.NoticeRepository;
 import com.unicef.service.notice.NoticeService;
 import lombok.RequiredArgsConstructor;
@@ -43,13 +40,13 @@ public class NoticeApi {
     private final NoticeService noticeService;
 
     @PostMapping("/notice")
-    public ResponseEntity<?> submit(NoticeReqDto noticeReqDto) throws Exception {
+    public ResponseEntity<?> submit(NoticeWriteReqDto noticeWriteReqDto) throws Exception {
 
-        log.info("{}", noticeReqDto);
+        log.info("{}", noticeWriteReqDto);
 
         List<AttachedFile> attachedFileList = null;
 
-        MultipartFile firstFile = noticeReqDto.getFiles().get(0);
+        MultipartFile firstFile = noticeWriteReqDto.getAttachedFiles().get(0);
         String firstFileName = firstFile.getOriginalFilename();
 
         if(!firstFileName.isBlank()){
@@ -57,7 +54,7 @@ public class NoticeApi {
 
             attachedFileList = new ArrayList<AttachedFile>();
 
-            for(MultipartFile file : noticeReqDto.getFiles()){
+            for(MultipartFile file : noticeWriteReqDto.getAttachedFiles()){
                 String originFileName = file.getOriginalFilename();
 
                 String uuid = UUID.randomUUID().toString();
@@ -85,7 +82,7 @@ public class NoticeApi {
                 attachedFileList.add(attachedFile);
             }
         }
-        Notice notice = noticeReqDto.toNoticeEntity();
+        Notice notice = noticeWriteReqDto.toEntity();
         int result = noticeRepository.save(notice);
 
         if(result == 0){
@@ -106,7 +103,6 @@ public class NoticeApi {
 
         NoticeWriteRespDto noticeWriteRespDto = notice.toNoticeWriteRespDto(attachedFileList);
 
-        noticeService.submit(noticeReqDto);
         return ResponseEntity.ok(new CMRespDto<>(1, "공지사항 등록완료", noticeWriteRespDto));
     }
 
@@ -116,18 +112,18 @@ public class NoticeApi {
         return ResponseEntity.ok(new CMRespDto<>(1, "Successfully", noticeService.getNoticeList()));
     }
 
-//    @GetMapping("/noticeList/{noticeId}")
-//    public ResponseEntity<?> read(@PathVariable int noticeId){
-//        log.info("{}", noticeId);
-//
-//        Notice notice = noticeRepository.getNotice(noticeId);
-//
-//        log.info("{}", notice);
-//
-//        NoticeListRespDto noticeListRespDto = notice.toListRespDto();
-//
-//        return ResponseEntity.ok(new CMRespDto<>(1, "Successfully", noticeListRespDto));
-//    }
+    @GetMapping("/noticeList/{noticeId}")
+    public ResponseEntity<?> read(@PathVariable int noticeId){
+        log.info("{}", noticeId);
+
+        Notice notice = noticeRepository.getNotice(noticeId);
+
+        log.info("{}", notice);
+
+        NoticeListRespDto noticeListRespDto = notice.toListRespDto();
+
+        return ResponseEntity.ok(new CMRespDto<>(1, "Successfully", noticeListRespDto));
+    }
 
     @LogAspect
     @ValidAspect

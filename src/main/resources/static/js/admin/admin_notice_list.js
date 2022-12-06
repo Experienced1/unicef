@@ -11,7 +11,7 @@ function getList(){
         data: JSON.stringify(),
         dataType: "json",
         success: (response) => {
-            console.log(response);
+            alert(notice);
             showNoticeList(response.data);
         },
         error: (error) => {
