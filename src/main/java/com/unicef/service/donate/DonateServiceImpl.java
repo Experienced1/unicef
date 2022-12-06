@@ -2,10 +2,14 @@ package com.unicef.service.donate;
 
 import com.unicef.domain.donate.Donate;
 import com.unicef.dto.donate.DonateReqDto;
+import com.unicef.dto.donate.DonateRespDto;
 import com.unicef.repository.donate.DonateRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 @Service
@@ -13,6 +17,7 @@ import org.springframework.stereotype.Service;
 public class DonateServiceImpl implements DonateService {
     private final DonateRepository donateAreaData;
     private final DonateRepository donateData;
+    private final DonateRepository myListData;
 
     @Override
     public boolean donate(DonateReqDto donateReqDto) throws Exception {
@@ -44,6 +49,26 @@ public class DonateServiceImpl implements DonateService {
 //            throw new CustomInternalServerErrorException("상품 등록 실패"); //e.getMessage가 상품등록실패뜸
         }
 
+        return false;
+    }
+
+    @Override
+    public List<DonateRespDto> getDonateList(int userId) throws Exception {
+        List<DonateRespDto> list = new ArrayList<DonateRespDto>();
+
+        myListData.getDonateList(userId).forEach(user -> {
+            list.add(user.getDonateEntity());
+        });
+
+        log.info("[DonateServiceImpl] myList정보: {}", list);
+        return list;
+    }
+
+    @Override
+    public boolean deleteDonate(int id) throws Exception {
+        if(myListData.deleteDonate(id) > 0){
+            return true;
+        }
         return false;
     }
 }

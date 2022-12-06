@@ -1,8 +1,11 @@
 package com.unicef.controller.user.api;
 
 import com.unicef.aop.annotation.ValidAspect;
+import com.unicef.domain.user.User;
+import com.unicef.dto.donate.DonateReqDto;
 import com.unicef.dto.user.UserReqDto;
 import com.unicef.dto.donate.CMRespDto;
+import com.unicef.dto.user.UserRespDto;
 import com.unicef.service.user.UserService;
 import com.unicef.service.auth.PrincipalDetails;
 import lombok.RequiredArgsConstructor;
@@ -13,6 +16,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 @RequestMapping("/api")
@@ -54,8 +59,10 @@ public class UserApi {
 
     @GetMapping("/admin/userlist")
     public ResponseEntity<?> getUserList() throws Exception {
+        List<UserRespDto> list = new ArrayList<UserRespDto>();
+        list = userService.getUserList();
 
-        return ResponseEntity.ok(new com.unicef.dto.CMRespDto<>(1, "UserList 정보", userService.getUserList()));
+        return ResponseEntity.ok(new com.unicef.dto.CMRespDto<>(1, "UserList 정보", list));
     }
 
     @DeleteMapping("/admin/user/{id}")

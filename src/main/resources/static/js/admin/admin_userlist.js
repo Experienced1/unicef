@@ -1,8 +1,11 @@
-
-
+let userId = null;
+let count_donate = 1;
+let totalAmount = 0;
 
 $(function(){
     let userList = getUserList();
+
+    console.log(JSON.stringify(userList));
 
     const userdataTotal = document.querySelector(".userdata-total");
     const userdataList = document.querySelector(".userdata-list");
@@ -27,20 +30,28 @@ $(function(){
 
 
     // 회원정보
-    for(i=0; i<userList.length; i++){
-        userId = userList[i].userId;
-        mainUsername = userList[i].mainUsername;
-        oauthUsername = userList[i].oauthUsername;
-        userProvider = userList[i].userProvider;
-        userBirthdate = userList[i].userBirthdate;
-        userEmail = userList[i].userEmail;
-        userName = userList[i].userName;
-        userPhone = userList[i].userPhone.replace(/(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})$/,"$1-$2-$3").replace("--", "-");
-        createDate = userList[i].createDate.substr(0, 10);  
+    for(i=0; i < userList.length; i++){
+
+        if(userList[i].userId == userList[i+1].userId){
+            count_donate += 1;
+            totalAmount += userList[i].donateAmount;
+
+            continue;
+        }else{
+            mainUsername = userList[i].mainUsername;
+            oauthUsername = userList[i].oauthUsername;
+            userProvider = userList[i].userProvider;
+            userBirthdate = userList[i].userBirthdate;
+            userEmail = userList[i].userEmail;
+            userName = userList[i].userName;
+            userPhone = userList[i].userPhone.replace(/(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})$/,"$1-$2-$3").replace("--", "-");
+            createDate = userList[i].createDate.substr(0, 10);  
+            totalAmount = userList[i].donateAmount;
+        }
 
 
         userdataList.innerHTML += `
-            <ul>
+            <ul class="userId-${userId}">
                 <li>${mainUsername}</li>
                 <li>${userName}</li>
                 <li>${userPhone}</li>
@@ -49,9 +60,9 @@ $(function(){
                 <li>
                     <span>0</span>
                     <span> / </span>
-                    <span>1</span>
+                    <span>${count_donate}</span>
                 </li>
-                <li>1,000</li>
+                <li>${totalAmount}</li>
                 <li>
                     <i class="fa-regular fa-pen-to-square"></i>
                 </li>
@@ -60,14 +71,18 @@ $(function(){
                 </li>
             </ul>
         `;
+
+        count_donate = 1;
     }
 
     
     $('.delete-button').click(function(){
-        var deleteIndex = $(this).closest('ul').index();
+        // var deleteIndex = $(this).closest('ul').index();
+        var thisUserId = $(this).closest('ul').attr('class').substr(7);
+        alert(thisUserId);
 
         if(confirm("삭제하시겠습니까?")){
-            deleteRequest(userList[deleteIndex].userId);
+            deleteRequest(thisUserId);
         }else{
             alert("회원 삭제가 취소되었습니다");
         }

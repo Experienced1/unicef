@@ -6,20 +6,19 @@
     margin: 0 auto;
 }
 
-.mypage-content-bot .support-info article h2{
+.mypage-content-bot .support-info .support-info-container h2{
     font-size: 32px;
     margin-bottom: 32px;
 }
 
-.mypage-content-bot .support-info article p{
+.mypage-content-bot .support-info .support-info-container p{
     font-size: 16px;    
     margin-bottom: 20px;
 }
 
-.mypage-content-bot .support-info article div{
+.mypage-content-bot .support-info > .support-info-container > div{
     text-align: center;
-    font-size: 20px;
-    padding: 96px 16px;
+    padding: 40px 16px;
     border-top: 2px solid #1CABE2;
     border-bottom: 2px solid rgb(200,200,200);
 }
@@ -27,4 +26,111 @@
 .mypage-content-bot .support-info img{
     width: 100%;
     margin: 50px 0px;
+}
+
+/* 후원내역 */
+
+/* 회원목록 mydata *//* 회원목록 mydata *//* 회원목록 mydata */
+.support-info .mydata{
+    width: 100%;
+    margin: 30px 0px;
+}
+
+.mydata ul{
+    width: 100%;
+}
+
+/* 전체 사용자 mydata-total*//* 전체 사용자 mydata-total*/
+.mydata-total{
+    font-size: 16px;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mydata-total span{
+    color: rgb(28, 171, 226);
+}
+
+.mydata-total article{
+    display: flex;    
+}
+
+.mydata-total article > div{
+    width: 25px; height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: rgb(130, 131, 133);
+    border: 1px solid rgb(200,200,200);
+    cursor: pointer;
+}
+
+/* 페이지 색상 활성화 */
+#page-active{    
+    border-color:rgb(28, 171, 226);
+}
+
+/* 타이틀 ~ 회원정보 */
+.mydata li > ul i{
+    cursor: pointer;
+}
+
+.mydata li > ul{
+    display: flex;    
+    text-align: right;
+    border-bottom: 1px solid rgb(200,200,200);
+}
+
+.mydata li > ul > li{
+    height: 60px;
+    line-height: 60px;
+    padding: 0px 15px;
+    text-align: center;
+}
+
+/* 회원목록 타이틀 */
+.mydata .mydata-title > ul > li{
+    font-size: 16px;
+    color: #828385;
+    background-color: #F8F9FA;
+    border-top: 1px solid rgb(200,200,200);
+}
+
+/* 후원정보 표 *//* 후원정보 표 */
+/* 후원일시 */
+.mydata li > ul > li:nth-child(1){
+    width: 15%;
+}
+
+/* 후원분야 */
+.mydata li > ul > li:nth-child(2){
+    width: 16%;
+    background-color:  #F8F9FA;
+}
+
+/* 후원종류 */
+.mydata li > ul > li:nth-child(3){
+    width: 15%;
+}
+
+/* 후원금 */
+.mydata li > ul > li:nth-child(4){
+    width: 15%;
+    background-color:  #F8F9FA;
+}
+
+/* 누적후원금 */
+.mydata li > ul > li:nth-child(5){
+    width: 15%;
+}
+
+/* 기부금 영수증 */
+.mydata li > ul > li:nth-child(6){
+    width: 12%;
+    background-color:  #F8F9FA;
+}
+
+/* 후원취소 */
+.mydata li > ul > li:nth-child(7){
+    width: 12%;
 }

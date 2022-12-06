@@ -1,6 +1,8 @@
 package com.unicef.service.user;
 
 import com.unicef.domain.user.User;
+import com.unicef.dto.donate.DonateRespDto;
+import com.unicef.dto.faq.FaqListRespDto;
 import com.unicef.dto.user.UserReqDto;
 import com.unicef.dto.user.UserRespDto;
 import com.unicef.exception.CustomValidationException;
@@ -50,10 +52,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<UserRespDto> getUserList() throws Exception {
-        Map<String, Object> paramsMap = new HashMap<String, Object>();
         List<UserRespDto> list = new ArrayList<UserRespDto>();
 
-        joinInfo.getUserList(paramsMap).forEach(user -> {
+        joinInfo.getUserList().forEach(user -> {
             list.add(user.getUserEntity());
         });
 

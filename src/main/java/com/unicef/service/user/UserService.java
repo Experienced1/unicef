@@ -1,5 +1,6 @@
 package com.unicef.service.user;
 
+import com.unicef.domain.user.User;
 import com.unicef.dto.user.UserReqDto;
 import com.unicef.dto.user.UserRespDto;
 

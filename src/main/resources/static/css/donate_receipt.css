@@ -1,0 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+
+.sp-receipt{
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 900;
+    width: 210mm; height: 297mm;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 120px;
+    position: relative;
+    word-break: keep-all;
+}
+
+.sp-receipt h1{
+    text-decoration: underline;
+    font-size: 50px;
+    text-align: center;
+}
+
+.sp-receipt > div{
+    font-size: 33px;
+}
+
+.sp-receipt .sp-receipt1{
+    letter-spacing: -1px;
+    padding: 60px 0px;
+    line-height: 80px;
+    text-decoration: underline;
+}
+
+.sp-receipt .sp-receipt2{
+    padding: 10px 40px;
+    font-weight: 500;
+}
+
+.sp-receipt .sp-receipt2 p{
+    padding: 90px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.sp-receipt .sp-receipt3{
+    padding: 20px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.sp-receipt .sp-receipt3 p{
+    padding: 20px;
+    font-size: 30px;
+    letter-spacing: 0px;
+    font-weight: 500;
+}
+
+.sp-receipt img{
+    position: absolute;
+    width: 110px;
+    z-index: -1;
+    opacity: 0.5;
+    right: 170px; bottom: 200px;
+}

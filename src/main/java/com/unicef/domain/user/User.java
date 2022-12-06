@@ -27,6 +27,9 @@ public class User {
     private LocalDateTime create_date;
     private LocalDateTime update_date;
 
+    private int donate_amount;
+    private int donate_id;
+
     public UserRespDto getUserEntity(){
         return UserRespDto.builder()
                 .userId(user_id)
@@ -36,6 +39,8 @@ public class User {
                 .userBirthdate(user_birthdate)
                 .userEmail(user_email)
                 .createDate(create_date)
+                .donateAmount(donate_amount)
+                .donateId(donate_id)
                 .build();
     }
 }

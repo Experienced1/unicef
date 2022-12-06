@@ -33,28 +33,58 @@
                 <div class="mypage-content-bot">                        
                     <ul>
                         <li class="support-info">
-                            <article>
-                                <h2>정기후원 정보</h2>
-                                <p>현재 유니세프에 후원하고 계신 정기후원 정보입니다.</p>
+                            <article class="support-info-container">
+                                <h2>후원정보</h2>
+                                <p>유니세프에 후원하신 정보입니다.</p>
                                 <div>
-                                    후원내역이 없습니다.
+                                    <!-- 후원내역이 없습니다. -->                                    
+                                    <article class="mydata">
+                                        <ul>
+                                            <li class="mydata-total">
+                                                <p>
+                                                    총 후원 횟수 <span>n</span>번
+                                                </p>
+                                                <article>
+                                                    <div><i class="fa-solid fa-angles-left"></i></div>
+                                                    <div><i class="fa-solid fa-angle-left"></i></div>
+                                                    <div id="page-active">1</div>
+                                                    <div>2</div>
+                                                    <div>3</div>
+                                                    <div>4</div>
+                                                    <div>5</div>
+                                                    <div><i class="fa-solid fa-angle-right"></i></div>
+                                                    <div><i class="fa-solid fa-angles-right"></i></div>
+                                                </article>
+                                            </li>
+                                        <!-- 타이틀 -->
+                                            <li class="mydata-title">
+                                                <ul>
+                                                    <li>후원일시</li>
+                                                    <li>후원분야</li>
+                                                    <li>후원종류</li>
+                                                    <li>후원금</li>
+                                                    <li>누적후원금</li>
+                                                    <li>간이영수증</li>
+                                                    <li>후원취소</li>
+                                                </ul>
+                                            </li>
+                                        <!-- 회원정보 -->
+                                            <li class="mydata-list">
+                                            </li>
+                                        </ul>
+                                    </article>
                                 </div>
                             </article>
                                 <a href="#"><img src="/static/images/mypage/mypage_support.png" alt="mypage_support.png"></a>
-                            <article>
-                                <h2>결제정보</h2>
-                                <p>후원금의 결제정보 변경을 원하시면 [수정]버튼을 눌러주세요.</p>
-                                <div>
-                                    결제 정보가 없습니다.
-                                </div>
-                            </article>
                         </li>
                     </ul>
                 </div>
             </section>
-<!-- footer -->
-<footer th:replace="~{fragment/footer :: footer}"></footer>
+            <!-- footer -->
+            <footer th:replace="~{fragment/footer :: footer}"></footer>
         </main>
     </div>
+    <script src="/static/js/mypage/mypage_support_info.js"></script>
 </body>
+
 </html>

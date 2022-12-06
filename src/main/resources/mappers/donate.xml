@@ -49,4 +49,48 @@
             now()
         )
     </insert>
+
+
+    <!-- SELECT --><!-- SELECT --><!-- SELECT --><!-- SELECT --><!-- SELECT --><!-- SELECT --><!-- SELECT -->
+    <resultMap id="donateArea" type="com.unicef.domain.donate.Donate">
+        <!-- 조인을 위함 -->
+        <result property="donate_area_id" column="donate_area_id"></result>
+        <result property="donate_area" column="donate_area"></result>
+    </resultMap>
+    <resultMap id="donate" type="com.unicef.domain.donate.Donate">
+        <!-- 조인을 위함 -->
+        <result property="donate_id" column="donate_id"></result>
+        <result property="user_id" column="user_id"></result>
+        <result property="donate_type" column="donate_type"></result>
+        <result property="donate_amount" column="donate_amount"></result>
+        <result property="create_date" column="create_date"></result>
+        <result property="update_date" column="update_date"></result>
+    </resultMap>
+    <select id="getDonateList"
+            parameterType="Integer"
+            resultMap="donate">
+        select
+            dm.donate_id,
+            dm.user_id,
+            dm.donate_type,
+            dm.donate_amount,
+
+            dam.donate_area,
+
+            dm.create_date,
+            dm.update_date
+        from
+            donate_mst dm
+            left outer join donate_area_mst dam on (dam.donate_area_id = dm.donate_area_id)
+        where
+            user_id = #{user_id}
+    </select>
+
+    <delete id="deleteDonate" parameterType="com.unicef.domain.donate.Donate">
+        delete
+        from
+            donate_mst
+        where
+            donate_id = #{donate_id}
+    </delete>
 </mapper>

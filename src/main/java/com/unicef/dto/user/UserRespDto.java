@@ -33,4 +33,7 @@ public class UserRespDto {
     private String userEmail;
     private LocalDateTime createDate;
 
+    private int donateAmount;
+    private int donateId;
+
 }
