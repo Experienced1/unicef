@@ -9,10 +9,11 @@ import java.util.List;
 
 @Builder
 @Data
-public class NoticeListRespDto {
+public class NoticeWriteRespDto {
     private int notice_id;
     private String notice_title;
     private String notice_detail;
+
     private LocalDateTime create_date;
     private LocalDateTime update_date;
 

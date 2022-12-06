@@ -2,7 +2,7 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
     <head th:replace="~{fragment/head :: head}"></head>
 <head>
-    <link rel="stylesheet" href="/static/css/community/notice.css">
+    <link rel="stylesheet" href="/static/css/community/notice_detail.css">
 </head>
 <body>
     <div class="containel">
@@ -24,25 +24,15 @@
                 <!-- list -->
                 <div class="notice-container">
                     <div class="notice-category">
-                        <!-- search -->
-                        <div class="faq-search-wrap">               
-                            <div class="notice-search">
-                                <div class="search-wrap">
-                                    <input type="text" class="search-input" placeholder="검색어를 입력하세요" >
-                                    <button type="button" class="button search-button"></button>
-                                </div>
-                                <div class="all-btn">
-                                    <button type="button" class="button gray-button all-button">전체보기</button>
-                                </div>
-                            </div>
-                        </div>
                                           
-                        <!-- listPage / innerHTML 부분이 맞을까요...ㅜㅜ??-->
                         <div class="notice-list-page">
-                            <ul class="notice-list-body">
+                            <ul>
+                                <li class="notice-list-header">
+                                    
+                                    
+                                </li>
                                 
-                                
-
+                            
                             </ul>
                             
                         </div>
@@ -58,7 +48,7 @@
 <!-- footer -->
 <footer th:replace="~{fragment/footer :: footer}"></footer>
         </main>
-    </div>    
-    <script src="/static/js/community/notice_list.js"></script>
+    </div>
+    <script src="/static/js/community/notice_item.js"></script>
 </body>
 </html>

@@ -1,9 +1,7 @@
 package com.unicef.service.notice;
 
-import com.unicef.domain.Notice;
-import com.unicef.dto.notice.NoticeListRespDto;
-import com.unicef.dto.notice.NoticeModificationReqDto;
-import com.unicef.dto.notice.NoticeReqDto;
+import com.unicef.domain.notice.Notice;
+import com.unicef.dto.notice.*;
 import com.unicef.repository.notice.NoticeRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -22,17 +20,17 @@ public class NoticeServiceImpl implements NoticeService{
     private final NoticeRepository noticeRepository;
 
     @Override
-    public boolean submit(NoticeReqDto noticeReqDto) throws Exception {
+    public int submit(NoticeWriteReqDto noticeWriteReqDto) throws Exception {
         int result;
 
-        Notice notice = noticeReqDto.toNoticeEntity();
+        Notice notice = noticeWriteReqDto.toEntity();
 
         result = noticeRepository.save(notice);
 
         if(result == 0){
             log.info("에러발생");
         }
-        return false;
+        return notice.getNotice_id();
     }
 
     @Override

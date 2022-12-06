@@ -32,12 +32,9 @@
             parameterType="java.util.HashMap"
             resultType="com.unicef.domain.Faq">
         select
-            faq_id,
-            category,
-            faq_title,
-            faq_detail
+        *
         from
-            faq_mst
+        faq_mst
     </select>
 
     <update id="setFaq" parameterType="com.unicef.domain.Faq">

@@ -15,8 +15,16 @@ spring:
     #?allowMultiQueries=true 는 Insert into가 두번 가능
     username: admin
     password: 1q2w3e4r
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
 
 mybatis:
 
   mapper-locations:
     - /mappers/*.xml
+
+file:
+  path: C:/unicef-wonil/upload/
