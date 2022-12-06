@@ -10,4 +10,6 @@ public interface UserService {
     public boolean user(UserReqDto userReqDto) throws Exception;
 
    public List<UserRespDto> getUserList() throws Exception;
+
+    boolean deleteUser(int id) throws Exception;
 }

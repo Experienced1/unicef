@@ -16,4 +16,5 @@ public interface UserRepository {
     public User userSelect(String main_username);
     public List<User> getUserList(Map<String, Object> map) throws Exception;
 
+    public int deleteUser(int id) throws Exception;
 }

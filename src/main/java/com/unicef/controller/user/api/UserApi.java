@@ -58,4 +58,9 @@ public class UserApi {
         return ResponseEntity.ok(new com.unicef.dto.CMRespDto<>(1, "UserList 정보", userService.getUserList()));
     }
 
+    @DeleteMapping("/admin/user/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable int id) throws Exception{
+        return ResponseEntity.ok(new com.unicef.dto.CMRespDto<>(1, "후원자 삭제", userService.deleteUser(id)));
+    }
+
 }

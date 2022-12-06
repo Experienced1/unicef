@@ -13,14 +13,15 @@ var donateAmountCheck = RegExp(/^[0-9]*$/);
 
 // principal 정보 관리 //
 $(function(){
+    let principal = getPrincipal();
     const donate2_1 = document.querySelector(".donate2-1");
     
-    donateName = getPrincipal().user.user_name; // 후원자 성명
-    userBirthdate = getPrincipal().user.user_birthdate; // 후원자 생년월일  
-    userPhone = getPrincipal().user.user_phone; // 후원자 휴대폰
-    userEmail = getPrincipal().user.user_email; // 후원자 이메일  
+    donateName = principal.user.user_name; // 후원자 성명
+    userBirthdate = principal.user.user_birthdate; // 후원자 생년월일  
+    userPhone = principal.user.user_phone; // 후원자 휴대폰
+    userEmail = principal.user.user_email; // 후원자 이메일  
 
-    if(getPrincipal() == "") {
+    if(principal == "") {
         alert("접근금지")
     } else {
         donate2_1.innerHTML = `
@@ -306,7 +307,8 @@ function donateOneoff(){
 
 // ajax로 보내야 하는 데이터
  function donateInfoData(){   
-    userId = getPrincipal().user.user_id;
+    let principal = getPrincipal();
+    userId = principal.user.user_id;
      
     let donateInfo = {
         userId: userId,
