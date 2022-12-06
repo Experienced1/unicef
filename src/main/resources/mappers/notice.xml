@@ -59,14 +59,16 @@
             keyProperty="file_id"
     >
         insert into
-            attached_file(file_id, notice_id, file_origin_name, file_temp_name)
+            attached_file(file_id, notice_id, file_origin_name, file_temp_name, create_date, update_date)
         values
         <foreach item="attachedFile" collection="attachedFileList" separator=",">
             (
                 0,
                 #{attachedFile.notice_id},
                 #{attachedFile.file_origin_name},
-                #{attachedFile.file_temp_name}
+                #{attachedFile.file_temp_name},
+                now(),
+                now()
             )
         </foreach>
     </insert>

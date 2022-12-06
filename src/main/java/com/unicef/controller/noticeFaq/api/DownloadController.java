@@ -26,10 +26,10 @@ public class DownloadController {
     @Value("${file.path}")
     private String filePath;
 
-    @GetMapping("/news")
+    @GetMapping("/notice")
     public ResponseEntity<?> download(@RequestParam String originFileName, @RequestParam String tempFileName) throws IOException {
 
-        Path path = Paths.get(filePath + "news/" + tempFileName);
+        Path path = Paths.get(filePath + "notice/" + tempFileName);
         String contentType = Files.probeContentType(path);
         log.info("ContentType: {}", contentType);
 

@@ -13,6 +13,6 @@ public interface NoticeRepository {
     public int saveFiles(List<AttachedFile> attachedFileList);
     public List<Notice> getNoticeList(Map<String, Object> map) throws Exception;
     public Notice getNotice(int notice_id);
-    public int setNotice(Notice notice)throws Exception;
+    public int setNotice(Notice notice) throws Exception;
     public int deleteNotice(int notice_id) throws Exception;
 }

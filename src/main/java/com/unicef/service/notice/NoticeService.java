@@ -1,9 +1,6 @@
 package com.unicef.service.notice;
 
-import com.unicef.dto.notice.NoticeListRespDto;
-import com.unicef.dto.notice.NoticeModificationReqDto;
-import com.unicef.dto.notice.NoticeReqDto;
-import com.unicef.dto.notice.NoticeWriteReqDto;
+import com.unicef.dto.notice.*;
 
 import java.util.List;
 
