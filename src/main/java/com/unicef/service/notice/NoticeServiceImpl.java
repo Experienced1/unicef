@@ -35,11 +35,9 @@ public class NoticeServiceImpl implements NoticeService{
 
     @Override
     public List<NoticeListRespDto> getNoticeList() throws Exception {
-        Map<String, Object> paramsMap = new HashMap<String, Object>();
-
         List<NoticeListRespDto> list = new ArrayList<NoticeListRespDto>();
 
-        noticeRepository.getNoticeList(paramsMap).forEach(notice -> {
+        noticeRepository.getNoticeList().forEach(notice -> {
             list.add(notice.toListRespDto());
         });
         return list;

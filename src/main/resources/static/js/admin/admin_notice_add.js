@@ -45,7 +45,3 @@ function request(formData) {
         }
     });
 }
-
-function getFormData(){
-    return new FormData(form);
-}

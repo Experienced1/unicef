@@ -27,7 +27,7 @@ public class NoticeReqDto {
                 .notice_title(notice_title)
                 .notice_detail(notice_detail)
                 .update_date(update_date)
-                .attachedFiles(files)
+                .attached_file(files)
                 .build();
     }
 

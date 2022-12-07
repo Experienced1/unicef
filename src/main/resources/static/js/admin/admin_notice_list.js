@@ -41,12 +41,12 @@ function showNoticeList(noticeList){
                             삭제
                         </button>
                         <input type="hidden" class="notice-input-id" value="${notice.notice_id}">
-                        <dt><input type="text" class="notice-input-title" value="${notice.notice_title}"></dt>
+                        <dt><input type="text" class="notice-input-title" value="${notice.notice_title}">${notice.attachedFileList[0].file_origin_name}</dt>
                     </p> 
                 </dt>
                 <dd>
                     <!-- date -->
-                    ${notice.update_date}
+                    ${notice.create_date}
                 </dd>
                     
             </dl>
