@@ -37,7 +37,7 @@ function showNoticeList(noticeList){
                         <a href="/community/noticeMain/item">${notice.notice_title}</a>
                     </dt>
                     <dd>
-                        ${notice.update_date}
+                        ${notice.create_date}
                     </dd>
                     
                 </dl>

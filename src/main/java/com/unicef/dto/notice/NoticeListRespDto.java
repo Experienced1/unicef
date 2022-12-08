@@ -13,8 +13,8 @@ public class NoticeListRespDto {
     private int notice_id;
     private String notice_title;
     private String notice_detail;
-    private LocalDateTime create_date;
-    private LocalDateTime update_date;
+    private String create_date;
+    private String update_date;
 
     private List<AttachedFile> attachedFileList;
 }

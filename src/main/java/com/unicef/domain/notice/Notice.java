@@ -23,18 +23,18 @@ public class Notice {
     private LocalDateTime create_date;
     private LocalDateTime update_date;
 
-    private List<AttachedFile> attachedFiles;
+    private List<AttachedFile> attached_file;
 
     public NoticeListRespDto toListRespDto(){
         return NoticeListRespDto.builder()
                 .notice_id(notice_id)
                 .notice_title(notice_title)
                 .notice_detail(notice_detail)
-//                .create_date(create_date.format(DateTimeFormatter.ofPattern("yyyy.MM.dd")))
+                .create_date(create_date.format(DateTimeFormatter.ofPattern("yyyy.MM.dd")))
 //                .update_date(update_date.format(DateTimeFormatter.ofPattern("yyyy.MM.dd")))
-                .create_date(create_date)
-                .update_date(update_date)
-                .attachedFileList(attachedFiles)
+//                .create_date(create_date)
+//                .update_date(update_date)
+                .attachedFileList(attached_file)
                 .build();
     }
 
@@ -45,8 +45,8 @@ public class Notice {
                 .notice_detail(notice_detail)
 //                .create_date(create_date.format(DateTimeFormatter.ofPattern("yyyy.MM.dd")))
 //                .update_date(update_date.format(DateTimeFormatter.ofPattern("yyyy.MM.dd")))
-                .create_date(create_date)
-                .update_date(update_date)
+//                .create_date(create_date)
+//                .update_date(update_date)
                 .attachedFileList(attachedFileList)
                 .build();
     }

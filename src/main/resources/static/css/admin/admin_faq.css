@@ -125,6 +125,7 @@
     display: flex;
     text-align: center;
     flex-wrap: wrap;
+    margin-top: 100px;
 }
 
 .category-tab-panel > li {
@@ -219,5 +220,25 @@
     padding: 24px 12px;
     border-bottom: 1px solid rgb(28, 171, 226);
 
+}
+
+.category{
+    font-size: larger;
+}
+
+.title{
+    size: 30px 100px;
+    font-size: large;
+    margin-left: 50px;
+}
+
+.detail{
+    font-size: 20px;
+}
+
+.update-button{
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
 }
 

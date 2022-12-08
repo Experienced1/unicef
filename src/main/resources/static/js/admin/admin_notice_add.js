@@ -17,6 +17,7 @@ submitButton.onclick = () => {
         }
     })
 
+
     formData.append("notice_title", noticeInputTitle.value);
     formData.append("notice_detail", noticeInputDetail.value);
     attachedFiles.forEach(file => {
@@ -44,8 +45,4 @@ function request(formData) {
             console.log(error);
         }
     });
-}
-
-function getFormData(){
-    return new FormData(form);
 }

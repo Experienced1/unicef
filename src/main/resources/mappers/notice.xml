@@ -39,18 +39,41 @@
     </insert>
 
     <select id="getNoticeList"
-            parameterType="java.util.HashMap"
-            resultType="com.unicef.domain.notice.Notice"
             resultMap="notice">
 
         select
-            *
+            nm.notice_id,
+            nm.notice_title,
+            nm.notice_detail,
+            nm.create_date,
+            nm.update_date,
+            af.file_origin_name,
+            af.file_temp_name,
+            af.create_date,
+            af.update_date
         from
             notice_mst nm
             left outer join attached_file af ON(nm.notice_id = af.notice_id)
-        where
-            nm.notice_id = #{notice_id};
     </select>
+
+    <update id="setNotice" parameterType="com.unicef.domain.notice.Notice">
+        update
+            notice_mst
+        set
+            notice_title = #{notice_title},
+            notice_detail = #{notice_detail},
+            update_date = now()
+        where
+            notice_id = #{notice_id}
+    </update>
+
+    <delete id="deleteNotice" parameterType="com.unicef.domain.notice.Notice">
+        delete
+        from
+            notice_mst
+        where
+            notice_id = #{notice_id}
+    </delete>
 
     <insert
             id="saveFiles"

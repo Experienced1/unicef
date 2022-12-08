@@ -47,7 +47,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll() // 전원 접근 가능
 
                 /*<<<<<<<<< Resource >>>>>>>>>*/
-                .antMatchers("/static/**", "/image/**")
+                .antMatchers("/static/**", "/image/**", "/download/**")
                 .permitAll() // 모두 접근 권한 허용해라
 
                 /*<<<<<<<<< API >>>>>>>>>*/

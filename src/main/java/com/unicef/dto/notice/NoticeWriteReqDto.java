@@ -14,12 +14,14 @@ public class NoticeWriteReqDto {
     private String notice_detail;
     private List<MultipartFile> attachedFiles;
 
+    private LocalDateTime create_date;
     private LocalDateTime update_date;
     public Notice toEntity(){
         return Notice.builder()
                 .notice_id(notice_id)
                 .notice_title(notice_title)
                 .notice_detail(notice_detail)
+                .create_date(create_date)
                 .update_date(update_date)
                 .build();
     }
