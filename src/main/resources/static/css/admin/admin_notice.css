@@ -107,6 +107,7 @@
 /* 세부 내용 invisible*/
 .notice-detail{
     padding: 24px 12px 64px 12px;
+    
 }
 
 /* 추가 버튼 */
@@ -158,4 +159,13 @@
     width: 15%;
     border: none;
     background-color: white;
+}
+
+.notice-input-title{
+    width: 50%;
+}
+
+.notice-input-detail{
+    width: 750px;
+    height: 300px;
 }
