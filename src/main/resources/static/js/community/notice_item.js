@@ -58,14 +58,14 @@ function showNoticeList(noticeList){
         <div class="prevnext">
             <i class="fa-solid fa-chevron-up"></i>
             <p>이전글</p>
-            <a href="" class="notice-title-prev">유니세프한국위원회 팩트 체크 “유니세프, 믿을 수 있나요”</a>
-            <p>2022.08.25</p>
+            <a href="" class="notice-title-prev">${noticeList[1].notice_title}</a>
+            <p>${noticeList[1].create_date}</p>
         </div>
         <div class="prevnext">
             <i class="fa-solid fa-chevron-down"></i>
             <p>다음글</p>
-            <a href="" class="notice-title-next">유니세프한국위원회 팩트 체크 “유니세프, 믿을 수 있나요”</a>
-            <p>2022.08.25</p>
+            <a href="" class="notice-title-next">${noticeList[2].notice_title}</a>
+            <p>${noticeList[2].create_date}</p>
         </div>
     </div>
     `;

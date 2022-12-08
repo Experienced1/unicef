@@ -19,6 +19,7 @@ public class NoticeReqDto {
 
     private List<AttachedFile> files;
 
+    private LocalDateTime create_date;
     private LocalDateTime update_date;
 
     public Notice toNoticeEntity(){
@@ -26,6 +27,7 @@ public class NoticeReqDto {
                 .notice_id(notice_id)
                 .notice_title(notice_title)
                 .notice_detail(notice_detail)
+                .create_date(create_date)
                 .update_date(update_date)
                 .attached_file(files)
                 .build();

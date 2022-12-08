@@ -56,6 +56,25 @@
             left outer join attached_file af ON(nm.notice_id = af.notice_id)
     </select>
 
+    <update id="setNotice" parameterType="com.unicef.domain.notice.Notice">
+        update
+            notice_mst
+        set
+            notice_title = #{notice_title},
+            notice_detail = #{notice_detail},
+            update_date = now()
+        where
+            notice_id = #{notice_id}
+    </update>
+
+    <delete id="deleteNotice" parameterType="com.unicef.domain.notice.Notice">
+        delete
+        from
+            notice_mst
+        where
+            notice_id = #{notice_id}
+    </delete>
+
     <insert
             id="saveFiles"
             parameterType="java.util.List"

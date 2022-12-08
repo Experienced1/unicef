@@ -39,14 +39,21 @@ function showFaqList(faqList){
                     삭제
                 </button>
                 <input type="hidden" class="faq-input-id" value="${faq.id}">
-                <dt><input type="text" class="faq-input-category" value="${faq.category}" placeholder="카테고리"></dt>
+                <dt>
+                    <div class="category">
+                        <input type="text" class="faq-input-category" value="${faq.category}" placeholder="카테고리" style="width:300px;height:100px;font-size:20px;"></dt>
+                    </div>
                 <dd>
-                    <input type="text" class="faq-input-title" value="${faq.faq_title}" placeholder="문의 제목">
+                    <div class="title">
+                        <input type="text" class="faq-input-title" value="${faq.faq_title}" placeholder="문의 제목" style="width:750px;height:100px;font-size:20px;">
+                    </div>
                     <i class="fa-solid fa-circle-arrow-down"></i>
                 </dd>
             </dl>
             <div class="faq-detail detail-invisible invisible">
-                <textarea class="faq-input" placeholder="문의 내용">${faq.faq_detail}</textarea>
+                <div class="detail">
+                    <textarea class="faq-input" placeholder="문의 내용" style="width:750px;height:300px;font-size:20px;">${faq.faq_detail}</textarea>
+                </div>
                 <button type="button" class="black-button update-button">수정하기</button>
             </div>
 
@@ -162,11 +169,11 @@ function showFaqList(faqList){
             url: "/api/admin/faq/" + id.id,
             dataType: "json",
             success: (response) => {
-                alert("상품 삭제 완료!");
+                alert("FAQ 삭제 완료!");
                 location.reload();
             },
             error: (error) => {
-                alert("상품 삭제 실패!");
+                alert("FAQ 삭제 실패!");
                 console.log(error);
             }
         });

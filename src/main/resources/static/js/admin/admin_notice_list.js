@@ -53,7 +53,7 @@ function showNoticeList(noticeList){
                 
                 <!-- questionDetail -->
             <div class="notice-detail detail-invisible invisible">
-                <textarea class="notice-input">${notice.notice_detail}</textarea>
+                <textarea class="notice-input-detail">${notice.notice_detail}</textarea>
                 <button type="button" class="black-button update-button">수정하기</button>
                 
             </div>
@@ -72,6 +72,91 @@ function showNoticeList(noticeList){
             </a>
         </div>
     </div>`;
+
+    // 수정
+    const updateButton = document.querySelectorAll('.update-button');
+    const idInput = document.querySelectorAll('.notice-input-id');
+    const titleInput = document.querySelectorAll('.notice-input-title');
+    const detailInput = document.querySelectorAll('.notice-input-detail');
+    
+    let notice = null;
+    
+    for(i=0; i<updateButton.length; i++){        
+        updateButton[i].onclick = () => {
+            
+            notice = {
+                "id": $('input[class=notice-input-id]').val(),
+                "notice_title": $('input[class=notice-input-title]').val(),
+                "notice_detail": $('textarea[class=notice-input-detail]').val()
+            }
+
+            if(confirm("수정하시겠습니까?")){
+                updateRequest(notice);
+            }else{
+                alert("공지사항 수정이 취소되었습니다");
+            }
+            
+        }
+        
+    }
+
+    function updateRequest(notice) {
+
+        $.ajax({
+            async: false,
+            type: "put",
+            url: "/api/admin/notice/modification",
+            contentType: "application/json",
+            data: JSON.stringify(notice),
+            dataType: "json",
+            success: (response) => {
+                alert("공지사항 수정 완료");
+                location.reload();
+            },
+            error: (error) => {
+                alert("공지사항 수정 실패");
+                console.log(error);
+            }
+        });
+    }
+
+    // 삭제
+    const deleteButton = document.querySelectorAll(".delete-button");
+
+    for(i=0; i < deleteButton.length; i++){
+        
+        deleteButton[i].onclick = () => {
+            
+            notice = {
+                "id": $('input[class=notice-input-id]').val(),
+                "notice_title": $('input[class=notice-input-title]').val(),
+                "notice_detail": $('textarea[class=notice-input-detail]').val()
+            }
+            if(confirm("삭제하시겠습니까?")){
+                deleteRequest(notice);
+            }else{
+                alert("공지사항 삭제가 취소되었습니다");
+            }
+        
+        }
+    }
+
+    function deleteRequest(id) {
+        $.ajax({
+            async: false,
+            type: "delete",
+            url: "/api/admin/notice/" + id.id,
+            dataType: "json",
+            success: (response) => {
+                alert("공지사항 삭제 완료!");
+                location.reload();
+            },
+            error: (error) => {
+                alert("공지사항 삭제 실패!");
+                console.log(error);
+            }
+        });
+    }
 
     // 상세페이지 클릭
     $('.notice-list-header > dl').click(function(){
