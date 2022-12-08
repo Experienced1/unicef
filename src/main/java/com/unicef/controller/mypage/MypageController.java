@@ -16,6 +16,11 @@ public class MypageController {
         return "mypage/mypage_drop";
     }
 
+    @RequestMapping(value = "/mypage/search")
+    public String mypageSearch(){
+        return "mypage/mypage_search";
+    }
+
     @RequestMapping(value = "/mypage/supportinfo")
     public String supportInfo(){
         return "mypage/mypage_support_info";

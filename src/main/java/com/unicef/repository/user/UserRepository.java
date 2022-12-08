@@ -15,6 +15,10 @@ public interface UserRepository {
     public int userInsert(User user);
     public User userSelect(String main_username);
     public List<User> getUserList() throws Exception;
+    public int updateUser(User user) throws Exception;
+    public int updateUserPw(User user) throws Exception;
+    public User getSearchId(User user) throws Exception;
+    public User getSearchPw(User user) throws Exception;
 
     public int deleteUser(int id) throws Exception;
 }

@@ -14,8 +14,10 @@ public class PrincipalDetails implements UserDetails {
     private User user; //db에서 가져온 객체
 //    private Map<String, Object> attributes;
 
-
     public PrincipalDetails(User user) {
+        this.user = user;
+    }
+    public void setPrincipal(User user) {
         this.user = user;
     }
 

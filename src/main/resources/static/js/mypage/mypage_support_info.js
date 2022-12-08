@@ -1,12 +1,6 @@
 let totaldonateAmount = 0;
 let myList = null;
 
-//콤마찍기
-function comma(str) {
-    str = String(str);
-    return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
-}
-
 
 $(function(){
     let principal = getPrincipal();
@@ -24,17 +18,6 @@ $(function(){
         <p>
             총 후원 횟수 <span>${myList.length}</span>번
         </p>
-        <article>
-            <div><i class="fa-solid fa-angles-left"></i></div>
-            <div><i class="fa-solid fa-angle-left"></i></div>
-            <div id="page-active">1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div><i class="fa-solid fa-angle-right"></i></div>
-            <div><i class="fa-solid fa-angles-right"></i></div>
-        </article>
 `;
 
 
@@ -70,7 +53,6 @@ $(function(){
     
     $('.receipt-button').click(function(){
         var thisIndex = $(this).closest('ul').index();
-        alert(thisIndex);
         receiptRequest(thisIndex);
     });
     
@@ -78,7 +60,7 @@ $(function(){
         var thisDonateId = $(this).closest('ul').attr('class').substr(9);
 
         if(confirm("후원을 취소하시겠습니까?")){
-            deleteRequest(thisDonateId);
+            donateDeleteRequest(thisDonateId);
         }else{
             alert("후원 취소가 요청되었습니다");
         }
@@ -100,7 +82,7 @@ function receiptRequest(index) {
 }
 
 // 후원 삭제 요청
-function deleteRequest(id) {
+function donateDeleteRequest(id) {
     $.ajax({
         async: false,
         type: "delete",

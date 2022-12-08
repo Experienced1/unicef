@@ -35,13 +35,13 @@
                     <!-- 회원검색 -->
                         <article class="search">
                             <p>회원목록</p>
-                            <div class="search-wrap">
+                            <!-- <div class="search-wrap">
                                 <input type="text" class="search-input" placeholder="검색어를 입력하세요" >
                                 <button type="button" class="button search-button"></button>
                             </div>
                             <div class="all-btn">
                                 <button type="button" class="button gray-button all-button">전체보기</button>
-                            </div>
+                            </div> -->
                         </article>
                     <!-- 회원목록 -->
                         <article class="userdata">
@@ -50,7 +50,7 @@
                                     <p>
                                         전체 후원자 <span>n</span>명
                                     </p>
-                                    <article>
+                                    <!-- <article>
                                         <div><i class="fa-solid fa-angles-left"></i></div>
                                         <div><i class="fa-solid fa-angle-left"></i></div>
                                         <div id="page-active">1</div>
@@ -60,7 +60,7 @@
                                         <div>5</div>
                                         <div><i class="fa-solid fa-angle-right"></i></div>
                                         <div><i class="fa-solid fa-angles-right"></i></div>
-                                    </article>
+                                    </article> -->
                                 </li>
                             <!-- 타이틀 -->
                                 <li class="userdata-title">
@@ -70,7 +70,7 @@
                                         <li>휴대폰 번호</li>
                                         <li>이메일</li>
                                         <li>가입일</li>
-                                        <li>문의/후원</li>
+                                        <li>후원</li>
                                         <li>누적후원금</li>
                                         <li>상세</li>
                                         <li></li>
@@ -84,6 +84,33 @@
                     </div>
                 </div>
             </section>
+            <div class="mydata invisible">         
+                <ul>
+                    <li class="mydata-total">
+                        <p>
+                            후원자 <span>n</span>님
+                        </p>
+                        <p class="x-button">
+                            <i class="fa-solid fa-xmark"></i>
+                        </p>
+                    </li>
+                <!-- 타이틀 -->
+                    <li class="mydata-title">
+                        <ul>
+                            <li>후원일시</li>
+                            <li>후원분야</li>
+                            <li>후원종류</li>
+                            <li>후원금</li>
+                            <li>후원취소</li>
+                        </ul>
+                    </li>
+                <!-- 회원정보 -->
+                    <li class="mydata-list">
+                        <ul class="donateId-${donateId}">
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         <!-- footer -->
             <footer th:replace="~{fragment/footer :: footer}"></footer>
         </main>

@@ -37,6 +37,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/admin/**")
                 .hasRole(("ADMIN")) // 관리자만 접근가능
 
+                .antMatchers("/mypage/search")
+                .permitAll() // 전원 접근 가능
+
                 .antMatchers("/donate/**", "/mypage/**")
                 .access("hasRole('USER') or hasRole('ADMIN')") // 회원과 관리자만 접근가능
 

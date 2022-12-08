@@ -24,13 +24,24 @@
 .mypage-content-bot .my-info input{
     width: 100%;
     padding: 16px;
-    margin-bottom: 24px;
     font-size: 16px;   
     border: 1px solid rgb(229, 230, 232);
 }
 
+.mypage-content-bot .my-info .pwchk{
+    margin-bottom: 24px;
+}
 
-/* my-info-eidt_회원정보수정 *//* my-info-eidt_회원정보수정 *//* my-info-eidt_회원정보수정 */
+.account-errors li{
+    color: red;
+}
+
+.errors-invisible{
+    display: none;
+}
+
+
+/* my-info-edit_회원정보수정 *//* my-info-edit_회원정보수정 *//* my-info-edit_회원정보수정 */
 .mypage-content-bot .my-info-edit{
     width: 1100px;
     margin: 0 auto;
@@ -67,6 +78,7 @@
 
 .mypage-content-bot .my-info-edit .article2 > div{
     width: 100%;
+    margin-bottom: 24px;
 }
 
 .mypage-content-bot .my-info-edit .article2 > div label{
@@ -78,7 +90,6 @@
 .mypage-content-bot .my-info-edit .article2 > div input{
     width: 100%;
     padding: 16px;
-    margin-bottom: 24px;
     font-size: 16px;
     border: 1px solid rgb(229, 230, 232);
 }

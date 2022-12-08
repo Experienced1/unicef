@@ -1,10 +1,4 @@
 
-//콤마찍기
-function comma(str) {
-    str = String(str);
-    return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
-}
-
 //년월일
 function datekr(date) {
     date = String(date);

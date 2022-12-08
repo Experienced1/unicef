@@ -81,23 +81,24 @@
                         <div>
                             <div>                                    
                                 <label>아이디</label>
-                                <input type="text" placeholder="">
+                                <input class="idchk" type="text" placeholder="아이디 입력">
                             </div>
                             <div>                                    
                                 <label>비밀번호</label>
-                                <input type="password" placeholder="비밀번호 입력">
+                                <input class="pwchk"  type="password" placeholder="비밀번호 입력">
                             </div>
                         </div>
                     </article>
                     <article class="article6">
                         <a href="/mypage/myinfo"><button class="sky-button button">취소하기</button></a>
-                        <button class="white-button button">탈퇴하기</button>
+                        <button class="delete-button white-button button">탈퇴하기</button>
                     </article>
                 </div>
             </section>
-<!-- footer -->
-<footer th:replace="~{fragment/footer :: footer}"></footer>
+        <!-- footer -->
+        <footer th:replace="~{fragment/footer :: footer}"></footer>
         </main>
     </div>
+    <script src="/static/js/mypage/mypage_drop.js"></script>
 </body>
 </html>

@@ -29,6 +29,8 @@ public class User {
 
     private int donate_amount;
     private int donate_id;
+    private int total_amount;
+    private int count_donate;
 
     public UserRespDto getUserEntity(){
         return UserRespDto.builder()
@@ -41,6 +43,8 @@ public class User {
                 .createDate(create_date)
                 .donateAmount(donate_amount)
                 .donateId(donate_id)
+                .totalAmount(total_amount)
+                .countDonate(count_donate)
                 .build();
     }
 }

@@ -1,3 +1,7 @@
+.admin-content{
+    position: relative;
+}
+
 
 .admin-content-bot .userlist {
     width: 1200px;
@@ -72,8 +76,10 @@
 }
 
 .userlist .userdata-total{
-    display: flex;
-    justify-content: space-between;
+    text-align: right;
+    width: 100%;
+    /* display: flex; */
+    /* justify-content: space-between; */
 }
 
 .userlist .userdata-total span{
@@ -175,9 +181,94 @@
 }
 
 
-/* 개개인 회원 정보 */
-.userlist .userdata .userdata-list > ul{
+/* 후원상세 팝업 mydata *//* 회원목록 mydata *//* 회원목록 mydata */
+.mydata{
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,10%);
+    z-index: 100;
+    position: fixed;
+    top: 0px; left: 0px;
 }
 
-.userlist .userdata .userdata-list > ul > li{
+.mydata > ul{
+    width: 1200px; max-height: 70vh;
+    overflow-y: auto;
+    padding: 50px;
+    background-color: white;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 전체 사용자 mydata-total*//* 전체 사용자 mydata-total*/
+.mydata-total{
+    font-size: 16px;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mydata-total span{
+    color: rgb(28, 171, 226);
+}
+
+/* 타이틀 ~ 회원정보 */
+.mydata li > ul i{
+    cursor: pointer;
+}
+
+.mydata li > ul{
+    display: flex;    
+    text-align: right;
+    border-bottom: 1px solid rgb(200,200,200);
+}
+
+.mydata li > ul > li{
+    height: 60px;
+    line-height: 60px;
+    padding: 0px 15px;
+    text-align: center;
+}
+
+/* 회원목록 타이틀 */
+.mydata .mydata-title > ul > li{
+    font-size: 16px;
+    color: #828385;
+    background-color: #F8F9FA;
+    border-top: 1px solid rgb(200,200,200);
+}
+
+.mydata .mydata-list > ul > p{
+    font-size: 20px;
+    width: 100%;
+    padding: 50px 0px;
+    text-align: center;
+}
+
+/* 후원정보 표 *//* 후원정보 표 */
+/* 후원일시 */
+.mydata li > ul > li:nth-child(1){
+    width: 20%;
+}
+
+/* 후원분야 */
+.mydata li > ul > li:nth-child(2){
+    width: 20%;
+    background-color:  #F8F9FA;
+}
+
+/* 후원종류 */
+.mydata li > ul > li:nth-child(3){
+    width: 20%;
+}
+
+/* 후원금 */
+.mydata li > ul > li:nth-child(4){
+    width: 20%;
+    background-color:  #F8F9FA;
+}
+
+/* 후원취소 */
+.mydata li > ul > li:nth-child(5){
+    width: 20%;
 }

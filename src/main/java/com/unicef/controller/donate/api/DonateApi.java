@@ -34,7 +34,7 @@ public class DonateApi {
         List<DonateRespDto> list = new ArrayList<DonateRespDto>();
         list = donateService.getDonateList(userId);
 
-        log.info("[DonateApi] donateInfoData 데이터: {}", list);
+//        log.info("[DonateApi] donateInfoData 데이터: {}", list);
         return ResponseEntity.ok(new com.unicef.dto.CMRespDto<>(1, "myList 정보", list));
     }
 

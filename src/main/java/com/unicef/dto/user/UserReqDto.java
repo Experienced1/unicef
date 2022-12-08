@@ -51,4 +51,21 @@ public class UserReqDto {
                 .user_email(userEmail)
                 .build();
     }
+    
+    public User toSearchEntity(){ // 아이디찾기
+        return User.builder()
+                .main_username(mainUsername)
+                .user_name(userName)
+                .user_phone(userPhone)
+                .build();
+    }
+
+    public User toEditPwEntity(){ // 비밀번호 변경
+        return User.builder()
+                .user_pw(new BCryptPasswordEncoder().encode(userPw))
+                .main_username(mainUsername)
+                .user_name(userName)
+                .user_phone(userPhone)
+                .build();
+    }
 }

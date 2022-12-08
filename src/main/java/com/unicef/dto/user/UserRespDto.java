@@ -35,5 +35,7 @@ public class UserRespDto {
 
     private int donateAmount;
     private int donateId;
+    private int totalAmount;
+    private int countDonate;
 
 }
