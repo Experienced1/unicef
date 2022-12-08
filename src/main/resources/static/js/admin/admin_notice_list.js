@@ -41,10 +41,11 @@ function showNoticeList(noticeList){
                             삭제
                         </button>
                         <input type="hidden" class="notice-input-id" value="${notice.notice_id}">
-                        <dt><input type="text" class="notice-input-title" value="${notice.notice_title}">${notice.attachedFileList[0].file_origin_name}</dt>
+                        <dt><input type="text" class="notice-input-title" value="${notice.notice_title}" style="width:300px;height:100px;font-size:20px;"></dt>
+                        <dt>${notice.attachedFileList[0].file_origin_name}</dt>
                     </p> 
                 </dt>
-                <dd>
+                <dd class="create_date">
                     <!-- date -->
                     ${notice.create_date}
                 </dd>
@@ -53,7 +54,7 @@ function showNoticeList(noticeList){
                 
                 <!-- questionDetail -->
             <div class="notice-detail detail-invisible invisible">
-                <textarea class="notice-input-detail">${notice.notice_detail}</textarea>
+                <textarea class="notice-input-detail" style="width:300px;height:100px;font-size:20px;">${notice.notice_detail}</textarea>
                 <button type="button" class="black-button update-button">수정하기</button>
                 
             </div>
