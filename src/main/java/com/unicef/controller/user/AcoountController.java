@@ -16,7 +16,7 @@ public class AcoountController {
 
     @RequestMapping(value = "/account/join/form")
     public String accountJoinForm(){
-        return "/account/join_form";
+        return "account/join_form";
     }
 
     @RequestMapping(value = "/account/login")
@@ -25,6 +25,6 @@ public class AcoountController {
             model.addAttribute("error", error.equals("auth")
                     ? "아이디 또는 비밀번호가 잘못되었습니다" : "");
         }
-        return "/account/login";
+        return "account/login";
     }
 }
