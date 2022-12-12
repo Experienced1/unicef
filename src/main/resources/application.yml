@@ -27,4 +27,5 @@ mybatis:
     - /mappers/*.xml
 
 file:
-  path: C:/unicef-wonil/upload/
+  path: /home/ubuntu/springboot/project/upload/
+#  path: C:/unicef-wonil/upload/
