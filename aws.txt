@@ -1,0 +1,41 @@
+20221209
+
+ls
+ls -a
+mkdir springboot
+ls
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install openjdk-11-jdk
+java --version
+ls
+
+target 폴더 powershell
+java -jar .\unicef-1.0.0.jar
+
+
+
+20221212
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install git
+git --version
+ls
+cd springboot
+mkdir project
+ls
+cd project
+git clone -b main https://github.com/Experienced1/unicef.git
+ls
+cd unicef
+ls
+sudo chmod +x mvnw
+./mvnw clean package -DskipTests
+cd target
+ls
+java -jar unicef-0.0.1-SNAPSHOT.jar
+netstat -tnlp|grep 8000
+sudo apt-get install net-tools
+kill -9 19159
+nohup java -jar unicef-0.0.1-SNAPSHOT.jar &
